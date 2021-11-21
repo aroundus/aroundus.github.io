@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "checkJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "~assets/*": ["./src/assets/*"],
+      "~components/*": ["./src/components/*"],
+      "~constants/*": ["./src/constants/*"],
+      "~containers/*": ["./src/containers/*"],
+      "~helpers/*": ["./src/helpers/*"],
+      "~pages/*": ["./src/pages/*"],
+      "~services/*": ["./src/services/*"],
+      "~shared/*": ["./src/shared/*"],
+      "~states/*": ["./src/states/*"],
+      "~types/*": ["./src/types/*"],
+      "~validations/*": ["./src/validations/*"],
+      "~views/*": ["./src/views/*"]
+    },
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es5"
+  },
+}
