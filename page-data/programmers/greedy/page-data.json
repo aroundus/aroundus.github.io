@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-post-tsx",
+    "path": "/programmers/greedy/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"AROUND US"}},"markdownRemark":{"id":"f71532b8-127c-51c4-85ca-ccb1ef1dcf63","excerpt":"GATSBY_EMPTY_ALT;","html":"<p><img src=\"https://cdn.pixabay.com/photo/2016/09/09/23/27/the-ostrich-1658267_1280.jpg\" alt=\"GATSBY_EMPTY_ALT\">;</p>","frontmatter":{"title":"현재 상황에서 가장 최선인 선택을 하자, 탐욕법 (Greedy)","date":"2021-01-01","description":"탐욕 알고리즘은 미래를 생각하지 않고 각 단계에서 가장 최선의 선택을 합니다. 언제나 통하지는 않지만 이런 방법이 통하는 문제들이 있어요."}},"previous":{"fields":{"slug":"/programmers/sort/"},"frontmatter":{"title":"어떤 언어로 개발해도 수없이 마주치는 알고리즘, 정렬 (Sort)"}},"next":{"fields":{"slug":"/programmers/exhaustive-search/"},"frontmatter":{"title":"무식해 보여도 사실은 최고의 방법, 완전 탐색 (Exhaustive Search)"}}},"pageContext":{"id":"f71532b8-127c-51c4-85ca-ccb1ef1dcf63","previousPostID":"ca5fe4df-6123-5633-928a-05210ebc9218","nextPostID":"983b6b05-a476-5eda-a6a2-5a061a4e73cc"}},
+    "staticQueryHashes": ["3000541721"]}
