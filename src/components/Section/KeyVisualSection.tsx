@@ -24,6 +24,7 @@ const KeyVisualSection = () => {
             }
             html
             frontmatter {
+              category
               index
               title
               date(formatString: "YYYY-MM-DD")
@@ -88,7 +89,7 @@ const KeyVisualSection = () => {
           sx={{ mb: 2 }}
           position="relative"
         >
-          #{post.index} Episode{isMobile ? '' : ' AROUND US'}
+          #{post.category} Episode {post.index}
         </Typography>
         <Typography
           variant={isMobile ? 'h4' : 'h3'}
