@@ -11,7 +11,7 @@ const theme = createTheme({
   spacing: 4,
   palette: {
     primary: {
-      main: colors.teal[400],
+      main: colors.cyan[600],
       contrastText: colors.common.white,
     },
   },
@@ -48,6 +48,10 @@ const theme = createTheme({
     },
     subtitle1: {
       fontFamily: HEADING_FONT_FAMILY,
+      lineHeight: 1.5,
+    },
+    body1: {
+      letterSpacing: 0.2,
     },
   },
   components: {

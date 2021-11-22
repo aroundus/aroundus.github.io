@@ -4,7 +4,7 @@ import Layout from '~components/Layout';
 import SEO from '~components/SEO';
 
 import KeyVisualSection from '~components/Section/KeyVisualSection';
-import PostSection from '~components/Section/PostSection';
+import PostPreviewSection from '~components/Section/PostPreviewSection';
 
 const App = () => {
   const [isMount, setMount] = useState(false);
@@ -20,7 +20,7 @@ const App = () => {
           <SEO />
           <Layout>
             <KeyVisualSection />
-            <PostSection />
+            <PostPreviewSection />
           </Layout>
         </>
       )}

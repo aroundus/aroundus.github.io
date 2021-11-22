@@ -80,6 +80,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
+      category: String
       index: Int
       title: String
       description: String
