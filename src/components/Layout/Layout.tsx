@@ -6,7 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './helpers/theme';
 
 import Content from './Content';
-import Header from './Header';
+import Navbar from './Navbar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ const Layout = ({
 }: LayoutProps) => (
   <ThemeProvider theme={theme}>
     <CSSBaseline />
-    <Header />
+    <Navbar />
     <Content>
       {children}
     </Content>

@@ -17,7 +17,7 @@ import { useTheme } from '@mui/material/styles';
 
 import Logo from '~components/Logo';
 
-const Header = () => {
+const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const scrollTrigger = useScrollTrigger({ target: typeof window === 'undefined' ? undefined : window });
@@ -30,7 +30,7 @@ const Header = () => {
       height: 60px;
     `,
   }, {
-    name: 'Header',
+    name: 'Navbar',
   });
 
   const styles = useStyles();
@@ -40,9 +40,10 @@ const Header = () => {
   return (
     <AppBar
       className={classNames({ [styles.isContainerFixed]: isContainerFixed })}
+      component="nav"
+      position="absolute"
       color="transparent"
       elevation={0}
-      position="absolute"
       style={{
         padding: `0 ${isMobile ? theme.spacing(4) : theme.spacing(16)}`,
       }}
@@ -72,4 +73,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
