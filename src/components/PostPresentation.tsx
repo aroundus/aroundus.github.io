@@ -7,13 +7,13 @@ import { styled } from '@mui/material/styles';
 
 import { PostFrontmatter } from '~types/global';
 
-interface PostPreviewProps {
+interface PostPresentationProps {
   post: PostFrontmatter;
 }
 
-const PostPreview = ({
+const PostPresentation = ({
   post,
-}: PostPreviewProps) => {
+}: PostPresentationProps) => {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&:hover': {
       backgroundColor: 'transparent',
@@ -46,4 +46,4 @@ const PostPreview = ({
   );
 };
 
-export default PostPreview;
+export default PostPresentation;

@@ -6,9 +6,9 @@ import { List } from '@mui/material';
 
 import { AnyObeject, PostFrontmatter } from '~types/global';
 
-import PostPreview from '../PostPreview';
+import PostPresentation from '../PostPresentation';
 
-const PostPreviewSection = () => {
+const PostPresentationSection = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
@@ -48,7 +48,7 @@ const PostPreviewSection = () => {
       position: relative;
     `,
   }, {
-    name: 'PostPreviewSection',
+    name: 'PostPresentationSection',
   })();
 
   return (
@@ -59,11 +59,11 @@ const PostPreviewSection = () => {
         }}
       >
         {posts.map((post) => (
-          <PostPreview post={post} key={post.id} />
+          <PostPresentation post={post} key={post.id} />
         ))}
       </List>
     </section>
   );
 };
 
-export default PostPreviewSection;
+export default PostPresentationSection;
