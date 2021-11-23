@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AnyObeject = Record<string, any>;
+export type AnyObject = Record<string, any>;
 
-export interface PostFrontmatter {
+export interface Post {
   id: string;
   path: string;
   category?: string;
@@ -9,5 +9,6 @@ export interface PostFrontmatter {
   title: string;
   description?: string;
   image: string;
+  html?: string;
   date: string;
 }

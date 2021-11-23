@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = queriedPosts.data.allMarkdownRemark.nodes;
-  const Post = path.resolve('./src/components/Post.tsx');
+  const PostTemplate = path.resolve('./src/components/Template/PostTemplate.tsx');
 
   posts.forEach((post, index) => {
     const previousPostID = index === 0 ? null : posts[index - 1].id
@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: post.fields.slug,
-      component: Post,
+      component: PostTemplate,
       context: {
         id: post.id,
         previousPostID,

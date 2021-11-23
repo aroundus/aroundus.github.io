@@ -1,26 +1,33 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from './Layout';
-import SEO from './SEO';
+import Layout from '~components/Layout';
+import SEO from '~components/SEO';
+import PostContainer from '~containers/PostContainer';
+import { AnyObject } from '~types/global';
 
-interface PostProps {
-  data: any;
-  location: any;
+interface PostTemplateProps {
+  data: {
+    markdownRemark: AnyObject;
+  };
 }
 
-const Post = ({ data, location }: PostProps) => {
-  const post = data?.markdownRemark;
+const PostTemplate = ({
+  data: {
+    markdownRemark,
+  },
+}: PostTemplateProps) => {
+  const post = {
+    id: markdownRemark.id,
+    html: markdownRemark.html,
+    ...markdownRemark.frontmatter,
+  };
 
   return (
     <>
       <SEO />
       <Layout>
-        <article>
-          <h1>{post?.frontmatter?.title}</h1>
-          <p>{post?.frontmatter?.date}</p>
-          <section dangerouslySetInnerHTML={{ __html: post?.html }} />
-        </article>
+        <PostContainer post={post} />
       </Layout>
     </>
   );
@@ -42,9 +49,12 @@ export const query = graphql`
       excerpt(pruneLength: 160)
       html
       frontmatter {
+        category
+        index
         title
-        date(formatString: "YYYY-MM-DD")
         description
+        image
+        date(formatString: "YYYY-MM-DD")
       }
     }
     previous: markdownRemark(id: { eq: $previousPostID }) {
@@ -66,4 +76,4 @@ export const query = graphql`
   }
 `;
 
-export default Post;
+export default PostTemplate;

@@ -76,6 +76,27 @@ const theme = createTheme({
         section {
           position: relative;
         }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: ${HEADING_FONT_FAMILY};
+          line-height: 1.3;
+        }
+        h1 {
+          font-size: 1.8em;
+        }
+        h2 {
+          font-size: 1.5em;
+        }
+        p {
+          line-height: 1.5;
+        }
+        img {
+          max-width: 100%;
+        }
       `,
     },
   },

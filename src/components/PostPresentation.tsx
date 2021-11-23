@@ -5,10 +5,10 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import { PostFrontmatter } from '~types/global';
+import { Post } from '~types/global';
 
 interface PostPresentationProps {
-  post: PostFrontmatter;
+  post: Post;
 }
 
 const PostPresentation = ({
@@ -39,7 +39,8 @@ const PostPresentation = ({
       >
         <Grid sx={{ width: '100%', maxWidth: 640 }}>
           <Typography variant="h4">{post.title}</Typography>
-          <Typography variant="body1" sx={{ mt: 4 }}>{post.description}</Typography>
+          <Typography variant="body1" sx={{ mt: 6, color: colors.grey[700] }}>{post.description}</Typography>
+          <Typography variant="subtitle1" sx={{ mt: 4, color: colors.grey[700] }}>{post.date}</Typography>
         </Grid>
       </StyledContent>
     </ListItem>
