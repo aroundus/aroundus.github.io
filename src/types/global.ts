@@ -8,5 +8,6 @@ export interface PostFrontmatter {
   index: number;
   title: string;
   description?: string;
+  image: string;
   date: string;
 }

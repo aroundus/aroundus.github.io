@@ -84,6 +84,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       index: Int
       title: String
       description: String
+      image: String
       date: Date @dateformat
     }
 
