@@ -28,6 +28,7 @@ const PostTemplate = ({
       <SEO
         title={post.title}
         description={post.description}
+        image={post.image}
       />
       <Layout>
         <PostContainer post={post} />
