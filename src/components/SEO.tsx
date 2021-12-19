@@ -59,8 +59,13 @@ const SEO = (props: SEOProps) => {
           content: 'website',
         },
       ]}
+      link={[
+        {
+          rel: 'stylesheet',
+          href: 'http://fonts.cdnfonts.com/css/sf-mono',
+        },
+      ]}
     />
-
   );
 };
 
