@@ -25,7 +25,10 @@ const PostTemplate = ({
 
   return (
     <>
-      <SEO />
+      <SEO
+        title={post.title}
+        description={post.description}
+      />
       <Layout>
         <PostContainer post={post} />
       </Layout>
