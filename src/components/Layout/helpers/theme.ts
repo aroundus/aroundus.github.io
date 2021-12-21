@@ -154,6 +154,7 @@ const theme = createTheme({
           margin: 0;
 
           figcaption {
+            margin-top: 4px;
             color: ${colors.grey[600]};
             font-size: 0.86em;
             text-align: center;
@@ -162,7 +163,6 @@ const theme = createTheme({
 
         img {
           max-width: 100%;
-          border-radius: 8px;
         }
 
         li {
@@ -206,6 +206,12 @@ const theme = createTheme({
 
           th {
             background-color: ${colors.grey[200]}
+          }
+        }
+
+        .gatsby-resp-image-wrapper {
+          a {
+            border-bottom: none;
           }
         }
 
