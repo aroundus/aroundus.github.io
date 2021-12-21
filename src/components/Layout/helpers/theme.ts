@@ -1,4 +1,4 @@
-import { colors } from '@mui/material';
+import { alpha, colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 import '@fontsource/montserrat';
@@ -178,6 +178,11 @@ const theme = createTheme({
             background-color: ${colors.grey[100]};
             zoom: 0.86;
           }
+        }
+
+        mark {
+          padding: 2px 4px;
+          background-color: ${alpha(colors.cyan[100], 0.6)};
         }
 
         table {
