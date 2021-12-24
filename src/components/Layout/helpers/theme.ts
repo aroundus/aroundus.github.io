@@ -1,4 +1,4 @@
-import { colors } from '@mui/material';
+import { alpha, colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 import '@fontsource/montserrat';
@@ -96,20 +96,23 @@ const theme = createTheme({
 
         h1 {
           font-size: 2em;
-          margin-block-start: 2.2em;
+          margin-top: 2.2em;
         }
 
         h2 {
           font-size: 1.8em;
-          margin-block-start: 2em;
+          margin-top: 2em;
         }
 
         h3 {
           font-size: 1.4em;
-          margin-block-start: 1.8em;
+          margin-top: 1.8em;
         }
 
         p {
+          margin-top: 1.4em;
+          margin-bottom: 1.4em;
+          color: ${colors.grey[900]};
           letter-spacing: 0.2px;
           line-height: 1.6;
 
@@ -150,19 +153,8 @@ const theme = createTheme({
           font-weight: 500;
         }
 
-        figure {
-          margin: 0;
-
-          figcaption {
-            color: ${colors.grey[600]};
-            font-size: 0.86em;
-            text-align: center;
-          }
-        }
-
         img {
           max-width: 100%;
-          border-radius: 8px;
         }
 
         li {
@@ -178,6 +170,11 @@ const theme = createTheme({
             background-color: ${colors.grey[100]};
             zoom: 0.86;
           }
+        }
+
+        mark {
+          padding: 2px 4px;
+          background-color: ${alpha(colors.cyan[100], 0.6)};
         }
 
         table {
@@ -200,7 +197,42 @@ const theme = createTheme({
           }
 
           th {
-            background-color: ${colors.grey[200]}
+            background-color: ${colors.grey[200]};
+          }
+        }
+
+        .gatsby-resp-image {
+          &-figure {
+            margin: 0;
+
+            a {
+              border-bottom: none;
+            }
+
+          }
+
+          &-image {
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]} !important;
+          }
+
+          &-figcaption {
+            margin-top: 4px;
+            font-size: 0.86em;
+            text-align: center;
+
+            p {
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+              color: ${colors.grey[500]};
+
+              a {
+                color: ${colors.grey[500]};
+
+                &:hover {
+                  color: ${colors.cyan[600]};
+                }
+              }
+            }
           }
         }
 

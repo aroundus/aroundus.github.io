@@ -70,14 +70,17 @@ module.exports = {
               maintainCase: true,
               removeAccents: true,
               isIconAfterHeader: true,
-              elements: ['h1', 'h2', 'h3'],
+              elements: ['h2', 'h3'],
             },
           },
           {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1920,
+              showCaptions: true,
+              markdownCaptions: true,
               quality: 100,
+              disableBgImage: true,
             },
           },
           {
