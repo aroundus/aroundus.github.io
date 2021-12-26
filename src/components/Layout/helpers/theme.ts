@@ -122,6 +122,10 @@ const theme = createTheme({
             background-color: ${colors.grey[200]};
             zoom: 0.8;
           }
+
+          img {
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]}
+          }
         }
 
         strong {
@@ -145,6 +149,10 @@ const theme = createTheme({
           border-left: 4px solid ${colors.grey[300]};
           font-size: 0.96em;
           color: ${colors.grey[600]};
+
+          p {
+            color: ${colors.grey[600]};
+          }
         }
 
         code {
@@ -157,6 +165,8 @@ const theme = createTheme({
         }
 
         li {
+          font-size: 0.86em;
+
           a {
             border-bottom: none;
           }
