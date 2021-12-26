@@ -55,7 +55,7 @@ const Navbar = () => {
       >
         <Link href="/">
           <Logo
-            height={14}
+            height={12}
             style={{ fill: colors.common.white }}
           />
         </Link>
