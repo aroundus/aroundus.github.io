@@ -54,7 +54,39 @@
 </blockquote>
 <p><strong>Kubernetes</strong>(쿠버네티스)는 구글이 만든 컨테이너화된 애플리케이션을 자동으로 배포, 스케일링 및 관리하는 <strong>오픈 소스 컨테이너 관리 플랫폼</strong>입니다. 줄여서 K8s(케이츠, 케이에이츠) 또는 Kube(큐브)로 부릅니다. 구글이 설립한 <a href="https://www.cncf.io/">CNCF</a><small>(Cloud Native Computing Foundation, 클라우드 네이티브 컴퓨팅 재단)</small>의 졸업 단계 프로젝트에 속한다고 하네요.</p>
 <p>시작하기 전 <strong>Docker</strong>(도커)와 <strong>Container</strong>(컨테이너)에 대한 사전 학습이 필요합니다. 도커와 컨테이너를 잘 모른다면 <a href="/docker/introduction">여기</a>부터 시작하세요.</p>
-<p><img src="./kubernetes-introduction.jpg" alt="쿠버네티스 공식 사이트에서 소개한 정의"></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1320px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0806c967113912fe828a7fcd4ce39b75/9ef87/kubernetes-introduction.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.625%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="쿠버네티스 공식 사이트에서 소개한 정의"
+        title="쿠버네티스 공식 사이트에서 소개한 정의"
+        src="/static/0806c967113912fe828a7fcd4ce39b75/9ef87/kubernetes-introduction.jpg"
+        srcset="/static/0806c967113912fe828a7fcd4ce39b75/a3e66/kubernetes-introduction.jpg 480w,
+/static/0806c967113912fe828a7fcd4ce39b75/fb816/kubernetes-introduction.jpg 960w,
+/static/0806c967113912fe828a7fcd4ce39b75/9ef87/kubernetes-introduction.jpg 1320w"
+        sizes="(max-width: 1320px) 100vw, 1320px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>쿠버네티스 공식 사이트에서 소개한 정의</p></figcaption>
+  </figure></p>
 <p><strong>운영 수준의 컨테이너 오케스트레이션</strong> 제목부터 진입 장벽이 느껴지는 건 기분 탓이겠죠? 마치 쿠버네티스가 입구에서부터 ‘이 정의를 이해하는 분만 들어오세요.’ 경고하는 것처럼 보입니다. 하지만 당황하지 마세요! 쿠버네티스는 결국 <strong>컨테이너를 관리하기 위한 툴</strong>입니다. 다음 몇 가지 <strong>예시</strong>를 살펴보면 이해할 수 있습니다.</p>
 <h3 id="예시-1" style="position:relative;">예시 1<a href="#%EC%98%88%EC%8B%9C-1" aria-label="예시 1 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
 <blockquote>
