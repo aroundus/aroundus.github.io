@@ -1,7 +1,6 @@
 import { alpha, colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
-import '@fontsource/montserrat';
 
 const BASE_FONT_FAMILY = '"SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, sans-serif';
 const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';

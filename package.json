@@ -19,7 +19,6 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
-    "@fontsource/montserrat": "^4.5.1",
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.1.1",
     "@mui/styles": "^5.1.1",
@@ -38,7 +37,8 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",
