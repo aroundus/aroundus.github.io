@@ -1,7 +1,6 @@
-import { colors } from '@mui/material';
+import { alpha, colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
-import '@fontsource/montserrat';
 
 const BASE_FONT_FAMILY = '"SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, sans-serif';
 const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
@@ -61,6 +60,7 @@ const theme = createTheme({
           -webkit-font-smoothing: antialiased;
           font-size: 10px;
         }
+
         body {
           background-color: ${colors.common.white};
           color: ${colors.common.black};
@@ -70,12 +70,11 @@ const theme = createTheme({
           overflow-wrap: break-word;
           word-break: keep-all;
         }
-        code {
-          font-family: ${CODE_FONT_FAMILY};
-        }
+
         section {
           position: relative;
         }
+
         h1,
         h2,
         h3,
@@ -84,18 +83,205 @@ const theme = createTheme({
         h6 {
           font-family: ${HEADING_FONT_FAMILY};
           line-height: 1.3;
+
+          .icon-heading-link {
+            border-bottom: none;
+
+            svg {
+              visibility: visible;
+            }
+          }
         }
+
         h1 {
-          font-size: 1.8em;
+          font-size: 2em;
+          margin-top: 2.2em;
         }
+
         h2 {
-          font-size: 1.5em;
+          font-size: 1.8em;
+          margin-top: 2em;
         }
+
+        h3 {
+          font-size: 1.4em;
+          margin-top: 1.8em;
+        }
+
         p {
-          line-height: 1.5;
+          margin-top: 1.4em;
+          margin-bottom: 1.4em;
+          color: ${colors.grey[900]};
+          letter-spacing: 0.2px;
+          line-height: 1.6;
+
+          code {
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: ${colors.deepOrange[700]};
+            background-color: ${colors.grey[200]};
+            zoom: 0.8;
+          }
         }
+
+        strong {
+          color: ${colors.common.black};
+        }
+
+        a {
+          border-bottom: 2px solid ${colors.cyan[400]};
+          color: ${colors.common.black};
+          transition: 0.2s;
+          text-decoration: none;
+
+          &:hover {
+            color: ${colors.cyan[600]};
+          }
+        }
+
+        blockquote {
+          margin: 2em 0;
+          padding-left: 1em;
+          border-left: 4px solid ${colors.grey[300]};
+          font-size: 0.96em;
+          color: ${colors.grey[600]};
+        }
+
+        code {
+          font-family: ${CODE_FONT_FAMILY};
+          font-weight: 500;
+        }
+
         img {
           max-width: 100%;
+        }
+
+        li {
+          a {
+            border-bottom: none;
+          }
+
+          code {
+            margin-right: 2px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: ${colors.cyan[700]};
+            background-color: ${colors.grey[100]};
+            zoom: 0.86;
+          }
+        }
+
+        mark {
+          padding: 2px 4px;
+          background-color: ${alpha(colors.cyan[100], 0.6)};
+        }
+
+        table {
+          display: block;
+          border-collapse: collapse;
+          overflow-x: auto;
+          font-size: 16px;
+
+          th,
+          td {
+            padding: 4px 12px;
+            border: 1px solid ${colors.grey[300]};
+
+            code {
+              padding: 2px 8px;
+              border-radius: 4px;
+              background-color: ${colors.grey[100]};
+              zoom: 0.9;
+            }
+          }
+
+          th {
+            background-color: ${colors.grey[200]};
+          }
+        }
+
+        .gatsby-resp-image {
+          &-figure {
+            margin: 0;
+
+            a {
+              border-bottom: none;
+            }
+
+          }
+
+          &-image {
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]} !important;
+          }
+
+          &-figcaption {
+            margin-top: 4px;
+            font-size: 0.86em;
+            text-align: center;
+
+            p {
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+              color: ${colors.grey[500]};
+
+              a {
+                color: ${colors.grey[500]};
+
+                &:hover {
+                  color: ${colors.cyan[600]};
+                }
+              }
+            }
+          }
+        }
+
+        .gatsby-highlight {
+          code[class*="language-"],
+          pre[class*="language-"] {
+            font-family: ${CODE_FONT_FAMILY};
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          pre[class*="language-"] {
+            border-radius: 4px;
+
+            &::after,
+            &::before {
+              box-shadow: none;
+            }
+
+            &.line-numbers {
+              &.line-numbers code {
+                padding: 24px;
+                padding-left: 64px;
+                box-shadow: none;
+              }
+
+              .line-numbers-rows {
+                padding: 24px 0;
+                min-width: 48px;
+                border-left: 8px solid ${colors.cyan[300]};
+                background-image: linear-gradient(${colors.common.white} 50%, ${colors.grey[100]} 50%);
+                background-size: 3em 3em;
+                background-origin: content-box;
+                letter-spacing: 0;
+
+                > span {
+                  padding-left: 12px;
+                }
+              }
+            }
+
+            > code {
+              border-left: none;
+              background-image: linear-gradient(${colors.common.white} 50%, ${colors.grey[100]} 50%);
+            }
+          }
+
+          .command-line-prompt {
+            letter-spacing: 0;
+          }
         }
       `,
     },

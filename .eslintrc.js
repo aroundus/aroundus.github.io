@@ -80,6 +80,7 @@ module.exports = {
     'prefer-destructuring': 'off',
     'prefer-rest-params': 'off',
     'quotes': ['error', 'single'],
+    'react/destructuring-assignment': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',

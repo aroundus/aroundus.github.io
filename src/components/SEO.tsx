@@ -14,6 +14,7 @@ interface Data {
 interface SEOProps {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const SEO = (props: SEOProps) => {
@@ -55,12 +56,21 @@ const SEO = (props: SEOProps) => {
           content: description,
         },
         {
+          property: 'og:image',
+          content: props.image,
+        },
+        {
           property: 'og:type',
           content: 'website',
         },
       ]}
+      link={[
+        {
+          rel: 'stylesheet',
+          href: 'http://fonts.cdnfonts.com/css/sf-mono',
+        },
+      ]}
     />
-
   );
 };
 

@@ -63,10 +63,24 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              icon: '<svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>',
+              className: 'icon-heading-link',
+              maintainCase: true,
+              removeAccents: true,
+              isIconAfterHeader: true,
+              elements: ['h2', 'h3'],
+            },
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1920,
+              showCaptions: true,
+              markdownCaptions: true,
               quality: 100,
+              disableBgImage: true,
             },
           },
           {
@@ -75,7 +89,21 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              aliases: {
+              },
+              showLineNumbers: true,
+              noInlineHighlight: true,
+              prompt: {
+                user: 'sally',
+                host: 'localhost',
+                global: true,
+              },
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],

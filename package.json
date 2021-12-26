@@ -19,7 +19,6 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
-    "@fontsource/montserrat": "^4.5.1",
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.1.1",
     "@mui/styles": "^5.1.1",
@@ -28,6 +27,7 @@
     "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
     "gatsby": "^3.4.1",
+    "jss": "^10.8.2",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -37,7 +37,8 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",
@@ -63,6 +64,7 @@
     "gatsby-plugin-react-css-modules": "^4.2.0",
     "gatsby-plugin-sass": "^5.2.0",
     "gatsby-plugin-sharp": "^4.2.0",
+    "gatsby-remark-autolink-headers": "^5.4.0",
     "gatsby-remark-copy-linked-files": "^5.2.0",
     "gatsby-remark-images": "^6.2.0",
     "gatsby-remark-prismjs": "^6.2.0",

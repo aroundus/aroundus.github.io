@@ -10,9 +10,8 @@ const ArticleSection = ({
 }: ArticleSectionProps) => (
   <Container
     component="section"
-    sx={{
-      mx: 'auto', px: 8, py: 10, maxWidth: 800,
-    }}
+    maxWidth="md"
+    sx={{ mx: 'auto', px: 8, py: 10 }}
     dangerouslySetInnerHTML={{ __html: html }}
   />
 );
