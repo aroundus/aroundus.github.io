@@ -115,6 +115,17 @@ const theme = createTheme({
           letter-spacing: 0.2px;
           line-height: 1.6;
 
+          a {
+            border-bottom: 2px solid ${colors.cyan[400]};
+            color: ${colors.common.black};
+            transition: 0.2s;
+            text-decoration: none;
+
+            &:hover {
+              color: ${colors.cyan[600]};
+            }
+          }
+
           code {
             padding: 4px 12px;
             border-radius: 4px;
@@ -130,17 +141,6 @@ const theme = createTheme({
 
         strong {
           color: ${colors.common.black};
-        }
-
-        a {
-          border-bottom: 2px solid ${colors.cyan[400]};
-          color: ${colors.common.black};
-          transition: 0.2s;
-          text-decoration: none;
-
-          &:hover {
-            color: ${colors.cyan[600]};
-          }
         }
 
         blockquote {
