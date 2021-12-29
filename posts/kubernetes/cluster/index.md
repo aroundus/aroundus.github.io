@@ -30,7 +30,7 @@ date: 2021-12-27
 
 ![마스터 노드 구조](./master-node.jpg)
 
-노란색 영역이 컨트롤 플레인입니다. 중심 컴포넌트는 RESTful 인터페이스로 쿠버네티스 기능을 제공하는 **API 서버**입니다. 컨트롤 플레인에 대한 자세한 정보는 [Amazon EKS 워크샵 > 소개 > 쿠버네티스 아키텍처 > 컨트롤 플레인](https://awskrug.github.io/eks-workshop/introduction/architecture/architecture_control/) 내용을 참조하세요.
+노란색 영역이 컨트롤 플레인입니다. 중심 컴포넌트는 RESTful 인터페이스로 쿠버네티스 기능을 제공하는 **API 서버**입니다. 컨트롤 플레인에 대한 자세한 정보는 Amazon EKS 워크샵의 [쿠버네티스 아키텍처 - 컨트롤 플레인](https://awskrug.github.io/eks-workshop/introduction/architecture/architecture_control/) 내용을 참조하세요.
 
 클러스터를 구성할 때 어려움을 겪는 부분이 바로 마스터 노드를 구성하는 일입니다. AWS의 경우 이와 같은 문제를 인지하고 쿠버네티스를 쉽게 사용할 수 있도록 **Amazon EKS** 관리형 서비스를 만들어 자체 쿠버네티스 컨트롤 플레인을 제공하고 있습니다.
 
@@ -54,4 +54,4 @@ $ kubectl get nodes
 
 클러스터에 2개의 EC2 인스턴스 노드를 실행하고 있습니다. 노드의 이름은 `<private-IPv4-address>.<region>.compute.internal` 형식으로 구성합니다.
 
-데이터 플레인에 대한 자세한 정보는 [Amazon EKS 워크샵 > 소개 > 쿠버네티스 아키텍처 > 데이터 플레인](https://awskrug.github.io/eks-workshop/introduction/architecture/architecture_worker/) 내용을 참조하세요.
+데이터 플레인에 대한 자세한 정보는 Amazon EKS 워크샵의 [쿠버네티스 아키텍처 - 데이터 플레인](https://awskrug.github.io/eks-workshop/introduction/architecture/architecture_worker/) 내용을 참조하세요.
