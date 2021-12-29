@@ -66,7 +66,7 @@ const Navbar = () => {
           lineHeight="1.3"
           whiteSpace="nowrap"
         >
-          프론트엔드 블로그
+          개발 블로그
         </Typography>
       </Toolbar>
     </AppBar>
