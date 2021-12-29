@@ -1,7 +1,7 @@
 ---
 category: kubernetes
 index: 5
-title: Amazon EKS 인프라 구성하기 😻
+title: Amazon EKS 인프라 구성하기
 description: 모빌리티 스타트업에서 EKS 인프라를 구성하는 데브옵스 업무를 맡았습니다. 실전에서 인프라를 어떻게 구성했는지 살펴보세요.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/build-eks-infrastructure/cover.jpg?raw=true
 date: 2021-12-29
@@ -64,8 +64,8 @@ spec:
 
 오브젝트 `spec`에 대한 정확한 포맷은 모든 쿠버네티스 오브젝트마다 다르고, 그 오브젝트 특유의 중첩된 필드를 포함합니다. 다음 명령어를 입력하여 오브젝트를 생성합니다.
 
-```Shell
-$ kubectl apply -f deployment.yaml
+```bash
+kubectl apply -f deployment.yaml
 ```
 
 자세한 정보는 쿠버네티스 공식 문서의 [쿠버네티스 오브젝트 이해하기](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/) 내용을 참조하세요.
@@ -103,16 +103,16 @@ nodeGroups:
         autoScaler: true
 ```
 
-```Shell
-$ eksctl create cluster -f cluster.yaml
+```bash
+eksctl create cluster -f cluster.yaml
 ```
 
 ![GATSBY_EMPTY_ALT](./create-cluster.jpg)
 
 도커에서 쿠버네티스를 활성화하면 기본적으로 `current-context` 필드를 `docker-desktop` 클러스터로 지정합니다. `~/.kube/config` 파일에서 현재 생성한 클러스터로 변경이 잘 이루어졌는지 확인하세요.
 
-```Shell
-$ kubectl config get-contexts
+```bash
+kubectl config get-contexts
 ```
 
 ![GATSBY_EMPTY_ALT](./context-config.jpg)
@@ -197,9 +197,9 @@ parameters:
 
 `volumeBindingMode` 필드는 볼륨 바인딩과 동적 프로비저닝의 시작 시기를 제어합니다. `WaitForFirstConsumer` 모드로 지정하면 볼륨을 사용하는 파드가 생성될 때까지 볼륨의 바인딩과 프로비저닝을 지연시킵니다.
 
-```Shell
-$ kubectl apply -f storage-classes.yaml
-$ kubectl get storageclasses
+```bash
+kubectl apply -f storage-classes.yaml
+kubectl get storageclasses
 ```
 
 ![GATSBY_EMPTY_ALT](./apply-storageclasses.jpg)
@@ -214,8 +214,8 @@ $ kubectl get storageclasses
 
 EBS(Elastic Block Store, 고성능 블록 스토리지 서비스) **CSI**(Container Storage Interface)는 쿠버네티스를 위한 임의의 스토리지 시스템을 컨테이너 워크로드에 노출시키는 인터페이스입니다. EBS CSI 드라이버는 EKS 클러스터가 EBS 볼륨의 수명 주기를 관리할 수 있게 해 주는 CSI 인터페이스를 제공합니다.
 
-```Shell
-$ kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=master"
+```bash
+kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=master"
 ```
 
 * `-k`: kustomization directory
@@ -256,8 +256,8 @@ IAM - 역할 - `<your-cluster-name>` 항목을 검색하여 `NodeInstanceRole` �
 
 ![GATSBY_EMPTY_ALT](./add-iam-ebs-csi-policy-2.jpg)
 
-```Shell
-$ kubectl get pods --namespace=kube-system
+```bash
+kubectl get pods --namespace=kube-system
 ```
 
 ![GATSBY_EMPTY_ALT](./ebs-csi-driver-pods.jpg)
@@ -378,17 +378,17 @@ spec:
 
 `--aws-vpc-id` 필드에 대한 정보는 *- AWS > VPC 메뉴 또는 -* 다음 명령어를 입력해 확인할 수 있습니다. 자세한 정보는 AWS 공식 문서의 [describe-cluster](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-cluster.html) 내용을 참조하세요.
 
-```Shell
-$ aws eks describe-cluster --name=<your-cluster-name>
+```bash
+aws eks describe-cluster --name=<your-cluster-name>
 ```
 
 ![GATSBY_EMPTY_ALT](./describe-cluster.jpg)
 
 > 필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 하단의 `--cluster-name`, `--aws-region`, `--aws-vpc-id` 필드는 여러분이 설정한 값으로 입력하세요. 헬름 차트에 대한 자세한 정보는 [aws-alb-ingress-controller](https://github.com/helm/charts/tree/master/incubator/aws-alb-ingress-controller) 내용을 참조하세요.
 
-```Shell
-$ kubectl apply -f aws-alb-ingress-controller.yaml
-$ kubectl get all
+```bash
+kubectl apply -f aws-alb-ingress-controller.yaml
+kubectl get all
 ```
 
 ![GATSBY_EMPTY_ALT](./apply-aws-alb-ingress-controller.jpg)
@@ -413,8 +413,8 @@ RDS - 데이터베이스 - 데이터베이스 생성 버튼을 클릭하여 새 
 
 **Namespace**(네임스페이스)는 클러스터 내 논리적인 분리를 통한 가상 클러스터를 의미합니다. 같은 네임스페이스 내 오브젝트는 기본적으로 동일한 접근 제어 정책을 갖습니다.
 
-```Shell
-$ kubectl get namespace
+```bash
+kubectl get namespace
 ```
 
 쿠버네티스는 처음에 3개의 네임스페이스를 갖습니다.
@@ -425,29 +425,29 @@ $ kubectl get namespace
 
 다음 명령어를 입력하여 네임스페이스를 생성합니다.
 
-```Shell
-$ kubectl create namespace <insert-your-namespace-name>
+```bash
+kubectl create namespace <insert-your-namespace-name>
 ```
 
 ![GATSBY_EMPTY_ALT](./create-namespace.jpg)
 
 > 필자는 `fms` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성하세요. 네임스페이스를 삭제하고 싶다면 다음 명령어를 입력하세요.
 
-```Shell
-$ kubectl delete namespace <insert-your-namespace-name>
+```bash
+kubectl delete namespace <insert-your-namespace-name>
 ```
 
 모든 오브젝트가 네임스페이스에 속하지는 않습니다. 파드, 서비스 등의 쿠버네티스 리소스는 네임스페이스에 속하지만 네임스페이스 리소스 자체는 네임스페이스에 속하지 않습니다. 노드나 퍼시스턴트 볼륨 등의 저수준 리소스는 어느 네임스페이스에도 속하지 않습니다.
 
-```Shell
-$ kubectl api-resources --namespaced=true  // 네임스페이스에 속하는 리소스 조회
-$ kubectl api-resources --namespaced=false // 네임스페이스에 속하지 않는 리소스 조회
+```bash
+kubectl api-resources --namespaced=true  // 네임스페이스에 속하는 리소스 조회
+kubectl api-resources --namespaced=false // 네임스페이스에 속하지 않는 리소스 조회
 ```
 
 ### 네임스페이스에 속하는 리소스
 
-```Shell
-$ kubectl get <NAME|SHORTNAMES> --namespace=<your-namespace>
+```bash
+kubectl get <NAME|SHORTNAMES> --namespace=<your-namespace>
 ```
 
 | NAME                        | SHORTNAMES | KIND                     |
@@ -489,8 +489,8 @@ $ kubectl get <NAME|SHORTNAMES> --namespace=<your-namespace>
 
 ### 네임스페이스에 속하지 않는 리소스
 
-```Shell
-$ kubectl get <NAME|SHORTNAMES>
+```bash
+kubectl get <NAME|SHORTNAMES>
 ```
 
 | NAME                              | SHORTNAMES | KIND                           |
@@ -545,9 +545,9 @@ spec:
   externalName: <database-endpoint>
 ```
 
-```Shell
-$ kubectl apply -f external-name.yaml
-$ kubectl get services --namespace=<your-namespace>
+```bash
+kubectl apply -f external-name.yaml
+kubectl get services --namespace=<your-namespace>
 ```
 
 ![GATSBY_EMPTY_ALT](./apply-external-name-for-mariadb.jpg)
@@ -601,9 +601,9 @@ spec:
               memory: 64Mi
 ```
 
-```Shell
-$ kubectl apply -f mariadb-cli.yaml
-$ kubectl get pods --namespace=<your-namespace>
+```bash
+kubectl apply -f mariadb-cli.yaml
+kubectl get pods --namespace=<your-namespace>
 ```
 
 ![GATSBY_EMPTY_ALT](./apply-mariadb-cli.jpg)
@@ -612,8 +612,8 @@ $ kubectl get pods --namespace=<your-namespace>
 
 다음 명령어를 입력하면 *- 다소 복잡하긴 하지만 -* 파드를 조회하는 과정을 생략할 수 있습니다.
 
-```Shell
-$ kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "app=mariadb-cli") --namespace=<your-namespace> --timestamps
+```bash
+kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "app=mariadb-cli") --namespace=<your-namespace> --timestamps
 ```
 * `-l, --selector`: 레이블 셀렉터. 쿠버네티스 오브젝트를 식별합니다. 자세한 정보는 쿠버네티스 공식 문서의 [레이블과 셀렉터](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/labels/#레이블-셀렉터) 내용을 참조하세요.
 * `-o, --output`: 반환된 목록의 각 파드에서 이름을 가져오는 표현식을 지정합니다.
@@ -622,10 +622,10 @@ $ kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --n
 
 다음 명령어를 입력하여 `mariadb-cli` 내부로 접속합니다.
 
-```Shell
-$ kubectl exec -it <mariadb-cli-pod> --namespace=<your-namespace> bash
-$ mysql -h <mariadb-external-name> -u admin -p
-$ Enter Password: <mariadb-password>
+```bash
+kubectl exec -it <mariadb-cli-pod> --namespace=<your-namespace> bash
+mysql -h <mariadb-external-name> -u admin -p
+Enter Password: <mariadb-password>
 ```
 
 ![GATSBY_EMPTY_ALT](./connect-mariadb.jpg)
@@ -739,9 +739,9 @@ address=0.0.0.0
 
 Maxscale 구성으로 시크릿을 생성해 봅시다.
 
-```Shell
-$ kubectl create secret generic maxscale-config --from-file=my-maxscale.cnf=<repository-absolute-path>/my-maxscale.cnf --namespace=<your-namespace>
-$ kubectl get secrets --namespace=<your-namespace>
+```bash
+kubectl create secret generic maxscale-config --from-file=my-maxscale.cnf=<repository-absolute-path>/my-maxscale.cnf --namespace=<your-namespace>
+kubectl get secrets --namespace=<your-namespace>
 ```
 
 > `<repository-absolute-path>` 필드의 경우 `${PWD}` 변수를 사용하면 편리합니다.
@@ -822,17 +822,17 @@ spec:
           emptyDir: {}
 ```
 
-```Shell
-$ kubectl apply -f maxscale.yaml
-$ kubectl get services --namespace=<your-namespace>
+```bash
+kubectl apply -f maxscale.yaml
+kubectl get services --namespace=<your-namespace>
 ```
 
 ![GATSBY_EMPTY_ALT](./apply-maxscale.jpg)
 
 MaxScale 배포를 완료하였습니다. 이제 `kubectl port-forward` 명령어로 리소스 이름과 파드 이름과 사용하여 일치하는 파드를 선택해 포트 포워딩을 할 수 있습니다.
 
-```Shell
-$ kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>
+```bash
+kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>
 ```
 
 ![GATSBY_EMPTY_ALT](./port-forward-maxscale.jpg)
@@ -849,8 +849,8 @@ $ kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>
 
 도커 사용자 이름과 비밀번호를 `base64` 형태로 변환합니다.
 
-```Shell
-$ echo -n '<username>:<password>' | base64
+```bash
+echo -n '<username>:<password>' | base64
 ```
 
 **docker/config.json**
@@ -869,8 +869,8 @@ $ echo -n '<username>:<password>' | base64
 
 해당 파일을 `base64` 형태로 변환합니다.
 
-```Shell
-$ cat config.json | base64
+```bash
+cat config.json | base64
 ```
 
 **docker/dockerhub.yaml**
@@ -888,10 +888,10 @@ data:
   .dockerconfigjson: <base64-encoded-string>
 ```
 
-```Shell
-$ kubectl apply -f dockerhub.yaml
-$ kubectl get secrets --namespace=<your-namespace>
-$ kubectl describe secrets/dockerhub --namespace=<your-namespace>
+```bash
+kubectl apply -f dockerhub.yaml
+kubectl get secrets --namespace=<your-namespace>
+kubectl describe secrets/dockerhub --namespace=<your-namespace>
 ```
 
 ![GATSBY_EMPTY_ALT](./apply-secret-for-dockerhub.jpg)
@@ -905,6 +905,6 @@ spec:
     - name: dockerhub
 ```
 
-# 설마 다 보셨나요? 🙀
+# ㅗㅜㅑ 🤭<br />설마 여기까지 온 건가요?
 
-이 엄청난 스크롤을 극복한 당신은 최소 쿠버네티스 사랑꾼! 👍 아직 서비스를 구성하는 파드를 쿠버네티스 오브젝트로 만들고 배포하는 20%(?) 작업이 남았지만 간단하니까 걱정하지 마세요.
+이 엄청난 스크롤의 압박을 극복한 당신은 최소 쿠버네티스 사랑꾼! 👍 이제 서비스를 구성하는 파드를 쿠버네티스 오브젝트로 만들고 배포하는 단계가 남았습니다. 심호흡하고 [Amazon EKS 프로젝트 배포하기](/kubernetes/deploy-project) 글을 살펴보세요.
