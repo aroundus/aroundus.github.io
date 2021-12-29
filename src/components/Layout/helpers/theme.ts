@@ -135,7 +135,7 @@ const theme = createTheme({
           }
 
           img {
-            box-shadow: 0 4px 24px -16px ${colors.grey[600]}
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]};
           }
         }
 
@@ -169,6 +169,13 @@ const theme = createTheme({
 
           a {
             border-bottom: none;
+            color: ${colors.grey[800]};
+            font-family: ${HEADING_FONT_FAMILY};
+            text-decoration: none;
+
+            &:hover {
+              color: ${colors.common.black};
+            }
           }
 
           code {
