@@ -47,8 +47,8 @@ RDS - 데이터베이스 - 삭제 버튼을 클릭하여 데이터베이스를 �
 
 다음 명령어를 입력하세요. 약 10~20분 정도 소요됩니다.
 
-```Shell
-$ eksctl delete cluster <your-cluster-name>
+```bash
+eksctl delete cluster <your-cluster-name>
 ```
 
 ![GATSBY_EMPTY_ALT](./delete-cluster.jpg)
