@@ -47,6 +47,7 @@ const theme = createTheme({
     },
     subtitle1: {
       fontFamily: HEADING_FONT_FAMILY,
+      fontSize: '1em',
       lineHeight: 1.5,
     },
     body1: {
