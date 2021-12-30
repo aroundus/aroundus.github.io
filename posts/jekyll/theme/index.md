@@ -45,7 +45,7 @@ bundle exec jekyll serve
 
 ![GATSBY_EMPTY_ALT](./default-theme-structure.jpg)
 
-폴더 구조가 굉장히 간단하지요? 물론 제대로 된 [폴더 구조][https://jekyllrb-ko.github.io/docs/structure/]는 따로 있습니다. 그렇다면 이 소스는 왜 폴더가 몇 개 없이도 구동이 되는 걸까요? 바로 외부 테마를 의존성으로 사용하기 때문인데요, **Gemfile** 파일을 살펴보세요.
+폴더 구조가 굉장히 간단하지요? 물론 제대로 된 [폴더 구조](https://jekyllrb-ko.github.io/docs/structure/)는 따로 있습니다. 그렇다면 이 소스는 왜 폴더가 몇 개 없이도 구동이 되는 걸까요? 바로 외부 테마를 의존성으로 사용하기 때문인데요, **Gemfile** 파일을 살펴보세요.
 
 ![GATSBY_EMPTY_ALT](./default-theme-gemfile.jpg)
 
