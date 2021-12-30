@@ -47,6 +47,7 @@ const theme = createTheme({
     },
     subtitle1: {
       fontFamily: HEADING_FONT_FAMILY,
+      fontSize: '1em',
       lineHeight: 1.5,
     },
     body1: {
@@ -108,6 +109,15 @@ const theme = createTheme({
           margin-top: 1.8em;
         }
 
+        a {
+          color: ${colors.common.black};
+          transition: 0.2s;
+
+          &:hover {
+            color: ${colors.cyan[600]};
+          }
+        }
+
         p {
           margin-top: 1.4em;
           margin-bottom: 1.4em;
@@ -117,13 +127,7 @@ const theme = createTheme({
 
           a {
             border-bottom: 2px solid ${colors.cyan[400]};
-            color: ${colors.common.black};
-            transition: 0.2s;
             text-decoration: none;
-
-            &:hover {
-              color: ${colors.cyan[600]};
-            }
           }
 
           code {
@@ -299,6 +303,12 @@ const theme = createTheme({
           .command-line-prompt {
             letter-spacing: 0;
           }
+        }
+
+        .mermaid {
+          padding: 32px 0;
+          text-align: center;
+          letter-spacing: 0;
         }
       `,
     },

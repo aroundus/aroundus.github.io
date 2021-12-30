@@ -90,6 +90,20 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+              mermaidOptions: {
+                fontFamily: '"SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, sans-serif',
+                flowchart: {
+                  nodeSpacing: 100,
+                  rankSpacing: 80,
+                  padding: 50,
+                  useMaxWidth: false,
+                },
+              },
+            },
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
