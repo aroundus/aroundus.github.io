@@ -115,6 +115,17 @@ const theme = createTheme({
           letter-spacing: 0.2px;
           line-height: 1.6;
 
+          a {
+            border-bottom: 2px solid ${colors.cyan[400]};
+            color: ${colors.common.black};
+            transition: 0.2s;
+            text-decoration: none;
+
+            &:hover {
+              color: ${colors.cyan[600]};
+            }
+          }
+
           code {
             padding: 4px 12px;
             border-radius: 4px;
@@ -122,21 +133,14 @@ const theme = createTheme({
             background-color: ${colors.grey[200]};
             zoom: 0.8;
           }
+
+          img {
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]};
+          }
         }
 
         strong {
           color: ${colors.common.black};
-        }
-
-        a {
-          border-bottom: 2px solid ${colors.cyan[400]};
-          color: ${colors.common.black};
-          transition: 0.2s;
-          text-decoration: none;
-
-          &:hover {
-            color: ${colors.cyan[600]};
-          }
         }
 
         blockquote {
@@ -145,6 +149,10 @@ const theme = createTheme({
           border-left: 4px solid ${colors.grey[300]};
           font-size: 0.96em;
           color: ${colors.grey[600]};
+
+          p {
+            color: ${colors.grey[600]};
+          }
         }
 
         code {
@@ -157,8 +165,17 @@ const theme = createTheme({
         }
 
         li {
+          font-size: 0.86em;
+
           a {
             border-bottom: none;
+            color: ${colors.grey[800]};
+            font-family: ${HEADING_FONT_FAMILY};
+            text-decoration: none;
+
+            &:hover {
+              color: ${colors.common.black};
+            }
           }
 
           code {

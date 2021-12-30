@@ -55,7 +55,7 @@ const Navbar = () => {
       >
         <Link href="/">
           <Logo
-            height={14}
+            height={12}
             style={{ fill: colors.common.white }}
           />
         </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
           lineHeight="1.3"
           whiteSpace="nowrap"
         >
-          프론트엔드 블로그
+          개발 블로그
         </Typography>
       </Toolbar>
     </AppBar>

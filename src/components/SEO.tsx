@@ -67,7 +67,7 @@ const SEO = (props: SEOProps) => {
       link={[
         {
           rel: 'stylesheet',
-          href: 'http://fonts.cdnfonts.com/css/sf-mono',
+          href: 'https://fonts.cdnfonts.com/css/sf-mono',
         },
       ]}
     />

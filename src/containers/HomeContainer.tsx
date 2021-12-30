@@ -9,8 +9,11 @@ const HomeContainer = () => {
     graphql`
       query {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 10
+          sort: {
+            fields: [frontmatter___date, frontmatter___index, frontmatter___title],
+            order: [DESC, DESC, ASC]
+          }
+          limit: 100
         ) {
           nodes {
             id
