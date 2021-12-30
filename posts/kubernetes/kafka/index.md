@@ -389,7 +389,7 @@ spec:
 
 `PersistentVolumeClaim` 오브젝트로 정의하면 파드 이름을 불규칙적으로 지정하지만, `StatefulSet` 오브젝트는 `PersistentVolume` 리소스를 생성할 때 파드 이름을 규칙적으로 지정합니다.
 
-```bash
+```
 zookeeper-0
 zookeeper-1
 zookeeper-2
@@ -415,7 +415,7 @@ zookeeper-2
 <insert statefulset.yaml>
 ```
 
-```bash
+```shell{promptHost: localhost}
 kubectl apply -f kafka-zookeeper.yaml
 ```
 
@@ -613,7 +613,7 @@ spec:
 <insert statefulset.yaml>
 ```
 
-```bash
+```shell{promptHost: localhost}
 kubectl apply -f kafka.yaml
 ```
 
@@ -625,14 +625,14 @@ kubectl apply -f kafka.yaml
 
 주키퍼 파드에 접속하여 **zkCli**(주키퍼 클라이언트)를 실행해 봅시다. 파드 3개 중 아무 파드에 접속해도 무방합니다. 필자는 `kafka-zookeeper-0` 파드에 접속하였습니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl exec -it kafka-zookeeper-0 --namesapce=<your-namespace> bash
 zkCli.sh
 ```
 
 `kafka-manager` 노드를 생성합니다.
 
-```bash
+```shell{promptHost: localhost}
 [zk: localhost:2181(CONNECTED) 0] create /kafka-manager
 ```
 
@@ -691,7 +691,7 @@ spec:
 
 > `image` 필드의 경우 [Kafka Docker Builds](https://hub.docker.com/r/solsson/kafka-manager) 컨테이너 이미지를 사용하였습니다. Docker Hub 사이트에서 [Explore](https://hub.docker.com/search?q=kafka-manager&type=image) 검색을 통해 다른 이미지를 사용해도 무방합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl apply -f kafka-manager.yaml
 ```
 
@@ -699,7 +699,7 @@ kubectl apply -f kafka-manager.yaml
 
 쿠버네티스의 API 서버로 프록시하는 명령어를 입력해서 카프카 매니저 웹 서비스에 접속해 봅시다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl proxy
 ```
 
@@ -715,7 +715,7 @@ kubectl proxy
 
 오류 문구에 당황하지 마시고 주키퍼 클라이언트에서 해당 노드를 생성한 후 다음 명령어를 입력해 파드를 삭제하세요. 쿠버네티스의 `delete` 명령어로 파드를 삭제하면 새로운 파드를 다시 생성하기 때문에 `restart` 개념과 유사합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl delete pod/<kafka-manager-pod> --namespace=<your-namespace>
 ```
 
@@ -732,13 +732,13 @@ Kafka Manager - Cluster - Add Cluster 버튼을 클릭하여 새 클러스터를
 
 Kafka **Topic**(토픽)은 메시지를 저장하는 곳입니다. 카프카의 브로커는 토픽을 기준으로 메시지를 관리합니다. 카프카 파드에 접속해 봅시다. 실제 토픽은 주키퍼에 저장하고 카프카는 참조만 하기 때문에 파드 3개 중 아무 파드에 접속해도 무방합니다. 필자는 `kafka-0` 파드에 접속하였습니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl exec -it kafka-0 --namespace=<your-namespace> bash
 ```
 
 토픽을 생성합니다.
 
-```bash
+```shell{promptHost: localhost}
 kafka-topics --zookeeper kafka-zookeeper:2181 --create --topic <insert-your-topic-name> --partitions 3 --replication-factor 2
 ```
 
@@ -747,25 +747,25 @@ kafka-topics --zookeeper kafka-zookeeper:2181 --create --topic <insert-your-topi
 
 토픽을 여러 개 생성할 때는 명령문 마지막에 `;`(세미콜론)을 추가합니다. `\`(백슬래시)를 활용하면 줄 바꿈을 적용하여 즉시 실행을 방지합니다.
 
-```bash
+```shell{promptHost: localhost}
 kafka-topics --zookeeper kafka-zookeeper:2181 --create --topic <insert-your-topic-name> --partitions 3 --replication-factor 2; \
 kafka-topics --zookeeper kafka-zookeeper:2181 --create --topic <insert-your-topic-name> --partitions 3 --replication-factor 2;
 ```
 
 토픽을 확인합니다.
 
-```bash
+```shell{promptHost: localhost}
 kafka-topics --zookeeper kafka-zookeeper:2181 --list
 ```
 
 토픽을 삭제합니다.
 
-```bash
+```shell{promptHost: localhost}
 kafka-topics --zookeeper kafka-zookeeper:2181 --delete --topic <insert-your-topic-name>
 ```
 
 토픽에 저장된 메시지를 확인합니다.
 
-```bash
+```shell{promptHost: localhost}
 kafka-console-consumer --bootstrap-server kafka:9092 --topic <your-topic-name>
 ```
