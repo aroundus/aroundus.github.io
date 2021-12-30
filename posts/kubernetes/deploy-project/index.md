@@ -23,7 +23,7 @@ IAM - 역할 - `<your-cluster-name>` 항목을 검색해서 `NodeInstanceRole` �
 
 RDS 데이터베이스에 테이블을 생성하기 위해 `kubectl port-forward` 명령어로 maxscale 파드를 선택해 포트 포워딩을 한 다음 로컬에서 작업합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>
 ```
 
@@ -190,7 +190,7 @@ spec:
 
 오브젝트를 배포한 다음 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인하세요. `ADDRESS` 필드에 값이 있으면 정상적으로 연결된 것입니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl get ingresses --namespace=<your-namespace>
 ```
 
