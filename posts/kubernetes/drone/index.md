@@ -4,7 +4,7 @@ index: 8
 title: Drone CI
 description: 매번 코드를 커밋할 때마다 컨테이너 이미지를 만들고 배포해야 하는 일을 해야 할까요? 여기 커밋 이벤트를 감지해서 자동으로 컨테이너 이미지를 만드는 방법이 있어요.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/drone/cover.jpg?raw=true
-date: 2021-12-30
+date: 2020-05-25
 ---
 
 > 실습을 통해 GitHub 전용 [Drone(드론)](https://drone.io/) 서버를 Amazon EKS 서비스에 배포해 봅시다. 내용이 방대하여 사전 설치가 필요한 명령어 및 프로그램에 대한 설명이 생략될 수 있습니다. 🙏

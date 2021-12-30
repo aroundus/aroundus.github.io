@@ -4,7 +4,7 @@ index: 9
 title: Apache Kafka
 description: Apache Kafka(아파치 카프카)는 오픈 소스 대규모 메시지 플랫폼입니다. 모빌리티 스타트업에서 차량의 패킷을 실시간으로 수집하는 데 사용하였습니다.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/kafka/cover.jpg?raw=true
-date: 2021-12-30
+date: 2020-05-25
 ---
 
 > 대규모 메시지 플랫폼 Apache Kafka(카프카)를 Amazon EKS 서비스에 배포해 봅시다. 본 문서는 카프카에 대한 기본적인 내용은 다루지 않습니다. 🙏

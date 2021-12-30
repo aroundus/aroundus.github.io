@@ -4,7 +4,7 @@ index: 2
 title: IAM
 description: AWS 작업을 하려면 해당 리소스에 대한 권한이 있어야 합니다. AWS는 IAM 서비스를 통해 리소스 접근에 대한 권한을 안전하게 제어합니다.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/aws/cover.jpg?raw=true
-date: 2021-12-31
+date: 2020-05-25
 ---
 
 **[IAM](https://console.aws.amazon.com/iam/home)**(Identity and Access Management, 아이에이앰)은 AWS 서비스와 리소스에 대한 액세스를 안전하게 관리하는 기능입니다. AWS 계정에서 추가 비용 없이 제공합니다.
