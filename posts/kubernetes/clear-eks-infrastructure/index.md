@@ -4,7 +4,7 @@ index: 7
 title: Amazon EKS 인프라 제거하기
 description: 다양한 문제로 서비스를 중지하거나 초기화하는 경우가 발생합니다. 화장은 하는 것보다 지우는 것이 중요하듯 인프라를 제거하는 방법 또한 매우 중요한 부분입니다.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/build-eks-infrastructure/cover.jpg?raw=true
-date: 2021-12-30
+date: 2020-05-25
 ---
 
 ## 목차
@@ -47,7 +47,7 @@ RDS - 데이터베이스 - 삭제 버튼을 클릭하여 데이터베이스를 �
 
 다음 명령어를 입력하세요. 약 10~20분 정도 소요됩니다.
 
-```bash
+```shell{promptHost: localhost}
 eksctl delete cluster <your-cluster-name>
 ```
 

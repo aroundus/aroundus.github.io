@@ -4,7 +4,7 @@ index: 8
 title: Drone CI
 description: 매번 코드를 커밋할 때마다 컨테이너 이미지를 만들고 배포해야 하는 일을 해야 할까요? 여기 커밋 이벤트를 감지해서 자동으로 컨테이너 이미지를 만드는 방법이 있어요.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/drone/cover.jpg?raw=true
-date: 2021-12-30
+date: 2020-05-25
 ---
 
 > 실습을 통해 GitHub 전용 [Drone(드론)](https://drone.io/) 서버를 Amazon EKS 서비스에 배포해 봅시다. 내용이 방대하여 사전 설치가 필요한 명령어 및 프로그램에 대한 설명이 생략될 수 있습니다. 🙏
@@ -74,7 +74,7 @@ sourceControl:
 
 헬름 차트를 설치합니다. (해당 서비스는 템플릿 추출 후 삭제할 것입니다.)
 
-```bash
+```shell{promptHost: localhost}
 helm repo add stable https://kubernetes-charts.storage.googleapis.com
 helm install drone -f values.yaml stable/drone
 ```
@@ -83,7 +83,7 @@ helm install drone -f values.yaml stable/drone
 
 배포한 서비스를 확인합니다. 헬름은 네임스페이스를 지정하지 않으면 `default` 네임스페이스에 배포합니다.
 
-```bash
+```shell{promptHost: localhost}
 helm list
 ```
 
@@ -91,7 +91,7 @@ helm list
 
 `default` 네임스페이스의 파드를 조회하면 `drone-drone-server-***` 형태의 파드가 실행 중인 것을 확인할 수 있습니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl get pod --namespace=default
 ```
 
@@ -99,7 +99,7 @@ kubectl get pod --namespace=default
 
 템플릿을 추출합니다.
 
-```bash
+```shell{promptHost: localhost}
 helm template default stable/drone
 ```
 
@@ -129,7 +129,7 @@ helm template default stable/drone
 
 파드를 조회하여 `Annotations.checksum/secrets` 필드의 값을 복사한 후 별도로 보관합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl describe pod/<drone-server-pod>
 ```
 
@@ -137,7 +137,7 @@ kubectl describe pod/<drone-server-pod>
 
 헬름 차트를 삭제합니다.
 
-```bash
+```shell{promptHost: localhost}
 helm uninstall drone
 release "drone" uninstalled
 ```
@@ -148,7 +148,7 @@ release "drone" uninstalled
 
 쿠버네티스에 드론 서버를 설치하기 위해 가장 먼저 해야 할 일은 **네임스페이스**를 생성하는 것입니다. 다음 명령어를 입력합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl create namespace <insert-your-namespace-name>
 kubectl get namespaces
 ```
@@ -163,7 +163,7 @@ kubectl get namespaces
 
 이전 단계에서 추출한 `DRONE_RPC_SECRET` 값을 `base64` 형태로 변환합니다. 서버와 서버와의 RPC(Remote Procedure Call, 원격 프로시저 호출) 연결을 인증하는 데 사용합니다.
 
-```bash
+```shell{promptHost: localhost}
 echo -n '<drone-rpc-secret>' | base64
 ```
 
@@ -193,7 +193,7 @@ data:
 
 이전 단계에서 추출한 `<github-oauth-client-secret>` 값을 `base64` 형태로 변환합니다.
 
-```bash
+```shell{promptHost: localhost}
 echo -n '<your-github-oauth-client-secret>' | base64
 ```
 
@@ -567,7 +567,7 @@ spec:
 <deployment-server.yaml>
 ```
 
-```bash
+```shell{promptHost: localhost}
 kubectl apply -f drone.yaml
 ```
 
@@ -605,7 +605,7 @@ spec:
               servicePort: 80
 ```
 
-```bash
+```shell{promptHost: localhost}
 kubectl apply -f ingress-drone-external.yaml
 ```
 
@@ -619,7 +619,7 @@ Route 53 - 호스팅 영역 - `<your-domain>` - 레코드 세트 생성 - `<your
 
 레코드 생성 후 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl get ingresses --namespace=<your-namespace>
 ```
 
@@ -641,13 +641,13 @@ kubectl get ingresses --namespace=<your-namespace>
 
 다음 명령어를 입력하여 `drone-server` 내부로 접속합니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh
 ```
 
 다음 명령어를 입력하면 *- 다소 복잡하긴 하지만 -* 파드를 조회하는 과정을 생략할 수 있습니다.
 
-```bash
+```shell{promptHost: localhost}
 kubectl exec -it $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "component=server,app=drone") --namespace=<your-namespace> sh
 ```
 

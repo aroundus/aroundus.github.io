@@ -4,7 +4,7 @@ index: 1
 title: Kubernetes 소개
 description: Kubernetes(쿠버네티스)는 컨테이너를 관리하기 위한 툴입니다. 다음 몇 가지 예시를 살펴보면 이해할 수 있습니다.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/cover.jpg?raw=true
-date: 2021-12-26
+date: 2020-05-25
 ---
 
 # 시작하기
