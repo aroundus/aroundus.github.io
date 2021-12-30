@@ -163,7 +163,7 @@
     <span class="token key atrule">server</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com
 <span class="token punctuation">...</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>헬름 차트를 설치합니다. (해당 서비스는 템플릿 추출 후 삭제할 것입니다.)</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>helm repo <span class="token function">add</span> stable https://kubernetes-charts.storage.googleapis.com
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>helm repo <span class="token function">add</span> stable https://kubernetes-charts.storage.googleapis.com
 helm <span class="token function">install</span> drone -f values.yaml stable/drone</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -195,7 +195,7 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
   </a>
     </span></p>
 <p>배포한 서비스를 확인합니다. 헬름은 네임스페이스를 지정하지 않으면 <code>default</code> 네임스페이스에 배포합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>helm list</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>helm list</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 795px; "
@@ -226,7 +226,7 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
   </a>
     </span></p>
 <p><code>default</code> 네임스페이스의 파드를 조회하면 <code>drone-drone-server-***</code> 형태의 파드가 실행 중인 것을 확인할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl get pod --namespace<span class="token operator">=</span>default</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl get pod --namespace<span class="token operator">=</span>default</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 795px; "
@@ -257,7 +257,7 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
   </a>
     </span></p>
 <p>템플릿을 추출합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>helm template default stable/drone</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>helm template default stable/drone</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>내용을 전체 복사한 후 임시 <code>.yaml</code> 파일에 다음과 같이 정리합니다.</p>
 <div class="gatsby-highlight" data-language="yaml"><pre style="counter-reset: linenumber NaN" class="language-yaml line-numbers"><code class="language-yaml">&lt;drone/templates/secrets.yaml<span class="token punctuation">></span> <span class="token comment"># DRONE_RPC_SECRET</span>
 <span class="token punctuation">---</span>
@@ -279,7 +279,7 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <span class="token punctuation">---</span>
 &lt;drone/templates/service.yaml<span class="token punctuation">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>파드를 조회하여 <code>Annotations.checksum/secrets</code> 필드의 값을 복사한 후 별도로 보관합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl describe pod/<span class="token operator">&lt;</span>drone-server-pod<span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl describe pod/<span class="token operator">&lt;</span>drone-server-pod<span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 795px; "
@@ -310,12 +310,12 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
   </a>
     </span></p>
 <p>헬름 차트를 삭제합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>helm uninstall drone
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>helm uninstall drone
 release <span class="token string">"drone"</span> uninstalled</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
 <h2 id="오브젝트-배포" style="position:relative;">오브젝트 배포<a href="#%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%ED%8F%AC" aria-label="오브젝트 배포 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
 <h3 id="Namespace" style="position:relative;">Namespace<a href="#Namespace" aria-label="Namespace permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
 <p>쿠버네티스에 드론 서버를 설치하기 위해 가장 먼저 해야 할 일은 <strong>네임스페이스</strong>를 생성하는 것입니다. 다음 명령어를 입력합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>kubectl create namespace <span class="token operator">&lt;</span>insert-your-namespace-name<span class="token operator">></span>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>kubectl create namespace <span class="token operator">&lt;</span>insert-your-namespace-name<span class="token operator">></span>
 kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -352,7 +352,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 <h3 id="Secret" style="position:relative;">Secret<a href="#Secret" aria-label="Secret permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
 <p><strong>drone-rpc-secret.yaml</strong></p>
 <p>이전 단계에서 추출한 <code>DRONE_RPC_SECRET</code> 값을 <code>base64</code> 형태로 변환합니다. 서버와 서버와의 RPC(Remote Procedure Call, 원격 프로시저 호출) 연결을 인증하는 데 사용합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span><span class="token builtin class-name">echo</span> -n <span class="token string">'&lt;drone-rpc-secret>'</span> <span class="token operator">|</span> base64</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span><span class="token builtin class-name">echo</span> -n <span class="token string">'&lt;drone-rpc-secret>'</span> <span class="token operator">|</span> base64</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <ul>
 <li><code>-n</code>: 개행 문자 인코딩을 방지합니다. (자세한 정보는 <code>$ man echo</code> 내용을 참조하세요.)</li>
 </ul>
@@ -374,7 +374,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 </ul>
 <p><strong>drone-github-client-secret.yaml</strong></p>
 <p>이전 단계에서 추출한 <code>&#x3C;github-oauth-client-secret></code> 값을 <code>base64</code> 형태로 변환합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span><span class="token builtin class-name">echo</span> -n <span class="token string">'&lt;your-github-oauth-client-secret>'</span> <span class="token operator">|</span> base64</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span><span class="token builtin class-name">echo</span> -n <span class="token string">'&lt;your-github-oauth-client-secret>'</span> <span class="token operator">|</span> base64</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>변환한 정보를 <code>&#x3C;clientSecret></code> 필드에 삽입합니다.</p>
 <div class="gatsby-highlight" data-language="yaml"><pre style="counter-reset: linenumber NaN" class="language-yaml line-numbers"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
 <span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
@@ -684,7 +684,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 &lt;service.yaml<span class="token punctuation">></span>
 <span class="token punctuation">---</span>
 &lt;deployment<span class="token punctuation">-</span>server.yaml<span class="token punctuation">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl apply -f drone.yaml</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl apply -f drone.yaml</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 795px; "
@@ -740,7 +740,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
             <span class="token key atrule">backend</span><span class="token punctuation">:</span>
               <span class="token key atrule">serviceName</span><span class="token punctuation">:</span> drone
               <span class="token key atrule">servicePort</span><span class="token punctuation">:</span> <span class="token number">80</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl apply -f ingress-drone-external.yaml</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl apply -f ingress-drone-external.yaml</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 795px; "
@@ -807,7 +807,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
   </a>
     </span></p>
 <p>레코드 생성 후 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl get ingresses --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl get ingresses --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 795px; "
@@ -905,9 +905,9 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
   </a>
     </span></p>
 <p>다음 명령어를 입력하여 <code>drone-server</code> 내부로 접속합니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl <span class="token builtin class-name">exec</span> -it <span class="token operator">&lt;</span>drone-server-pod<span class="token operator">></span> --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span> <span class="token function">sh</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl <span class="token builtin class-name">exec</span> -it <span class="token operator">&lt;</span>drone-server-pod<span class="token operator">></span> --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span> <span class="token function">sh</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>다음 명령어를 입력하면 <em>- 다소 복잡하긴 하지만 -</em> 파드를 조회하는 과정을 생략할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl <span class="token builtin class-name">exec</span> -it <span class="token variable"><span class="token variable">$(</span>kubectl get pods -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">"{.items[0].metadata.name}"</span> --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span> -l <span class="token string">"component=server,app=drone"</span><span class="token variable">)</span></span> --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span> <span class="token function">sh</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>kubectl <span class="token builtin class-name">exec</span> -it <span class="token variable"><span class="token variable">$(</span>kubectl get pods -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">"{.items[0].metadata.name}"</span> --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span> -l <span class="token string">"component=server,app=drone"</span><span class="token variable">)</span></span> --namespace<span class="token operator">=</span><span class="token operator">&lt;</span>your-namespace<span class="token operator">></span> <span class="token function">sh</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p><code>export</code> 명령어로 환경 변수 <code>DRONE_GITHUB_CLIENT_SECRET</code> 값을 확인하세요. 혹시 개행 문자가 포함되어 줄 바꿈 처리가 된 것은 아닌지 확인하세요.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
