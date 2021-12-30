@@ -1,7 +1,7 @@
 ---
 category: aws
 index: 1
-title: AWS 커맨드 라인 인터페이스 (AWS CLI)
+title: AWS 커맨드 라인 인터페이스
 description: 보안 그룹 하나만 수정하면 되는데 AWS 웹 인터페이스 안에서 시간을 낭비한 경험이 있으신가요? 이제 터미널에서 AWS 웹과 동일한 기능을 구현하는 명령을 실행하세요.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/aws/cover.jpg?raw=true
 date: 2021-12-31
