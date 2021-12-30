@@ -307,6 +307,7 @@ const theme = createTheme({
 
         .mermaid {
           padding: 32px 0;
+          overflow-x: auto;
           text-align: center;
           letter-spacing: 0;
         }
