@@ -40,7 +40,7 @@ graph LR
 
 ![GATSBY_EMPTY_ALT](./running-jekyll-on-windows.jpg)
 
-Jekyll로 페이지를 만드는 것은 간단하지만 설치하는 것은 *- 특히 Windows에서 -* 간단하지 않을 수 있습니다. Jekyll은 리눅스 지원 언어인 [Ruby(루비)][ruby]를 기반으로 만들었기 때문에 MAC이 아닌 Windows 환경에서는 주의를 기울여야 합니다.
+Jekyll로 페이지를 만드는 것은 간단하지만 설치하는 것은 *- 특히 Windows에서 -* 간단하지 않을 수 있습니다. Jekyll은 리눅스 지원 언어인 [Ruby(루비)](https://www.ruby-lang.org/ko/)를 기반으로 만들었기 때문에 MAC이 아닌 Windows 환경에서는 주의를 기울여야 합니다.
 
 ## [Ruby Installer for Windows](https://rubyinstaller.org/downloads/)
 
