@@ -70,7 +70,7 @@ aws configure
 aws configure --profile <your-iam-user-name>
 ```
 
-사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 디렉터리에 파일로 저장됩니다.
+사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 폴더에 파일로 저장됩니다.
 
 ```shell{promptHost: localhost}
 AWS Access Key ID [None]: <AKI***>

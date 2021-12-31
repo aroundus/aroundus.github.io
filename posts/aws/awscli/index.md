@@ -33,7 +33,7 @@ Default region name [None]: ap-northeast-2
 Default output format [None]:
 ```
 
-사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 디렉터리에 파일로 저장됩니다.
+사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 폴더에 파일로 저장됩니다.
 
 ## Commands
 
