@@ -1,0 +1,687 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.2bf76fc3d53026abf17d.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:visible;padding:0;position:relative}pre[class*=language-]>code{background-attachment:local;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-origin:content-box;background-size:3em 3em;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;position:relative}code[class*=language-]{display:block;height:inherit;max-height:inherit;overflow:auto;padding:0 1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{border:1px solid rgba(0,0,0,.1);border-radius:.3em;color:#c92c2c;display:inline;padding:.2em;position:relative;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{bottom:.75em;box-shadow:0 13px 8px #979797;content:"";display:block;height:20%;left:.18em;max-height:13em;position:absolute;transform:rotate(-2deg);width:40%;z-index:-2}pre[class*=language-]:after{left:auto;right:.75em;transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{background:hsla(0,0%,100%,.5);color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{background:hsla(0,0%,100%,.5);color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-bottom:0;padding-left:0;padding-top:0}pre[data-line] code{padding-left:4em;position:relative}pre .line-highlight{margin-top:0}.command-line-prompt{border-right:1px solid #999;display:block;float:left;font-size:100%;letter-spacing:-1px;margin-right:1em;pointer-events:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.command-line-prompt>span:before{color:#999;content:" ";display:block;padding-right:.8em}.command-line-prompt>span[data-user]:before{content:"[" attr(data-user) "@" attr(data-host) "] $"}.command-line-prompt>span[data-user=root]:before{content:"[" attr(data-user) "@" attr(data-host) "] #"}.command-line-prompt>span[data-prompt]:before{content:attr(data-prompt)}pre[data-line]{padding:1em 0 1em 3em;position:relative}.line-highlight{background:hsla(24,20%,50%,.08);background:linear-gradient(90deg,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));left:0;line-height:inherit;margin-top:1em;padding-bottom:inherit;padding-left:0;padding-right:0;padding-top:inherit;pointer-events:none;position:absolute;right:0;white-space:pre}@media print{.line-highlight{-webkit-print-color-adjust:exact;color-adjust:exact}}.line-highlight:before,.line-highlight[data-end]:after{background-color:hsla(24,20%,50%,.4);border-radius:999px;box-shadow:0 1px #fff;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;text-shadow:none;top:.4em;vertical-align:.3em}.line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}.line-numbers .line-highlight:after,.line-numbers .line-highlight:before{content:none}pre[id].linkable-line-numbers span.line-numbers-rows{pointer-events:all}pre[id].linkable-line-numbers span.line-numbers-rows>span:before{cursor:pointer}pre[id].linkable-line-numbers span.line-numbers-rows>span:hover:before{background-color:hsla(0,0%,50%,.2)}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.14.6"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style type="text/css">
+    .icon-heading-link.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .icon-heading-link.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .icon-heading-link svg,
+    h2 .icon-heading-link svg,
+    h3 .icon-heading-link svg,
+    h4 .icon-heading-link svg,
+    h5 .icon-heading-link svg,
+    h6 .icon-heading-link svg {
+      visibility: hidden;
+    }
+    h1:hover .icon-heading-link svg,
+    h2:hover .icon-heading-link svg,
+    h3:hover .icon-heading-link svg,
+    h4:hover .icon-heading-link svg,
+    h5:hover .icon-heading-link svg,
+    h6:hover .icon-heading-link svg,
+    h1 .icon-heading-link:focus svg,
+    h2 .icon-heading-link:focus svg,
+    h3 .icon-heading-link:focus svg,
+    h4 .icon-heading-link:focus svg,
+    h5 .icon-heading-link:focus svg,
+    h6 .icon-heading-link:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link as="script" rel="preload" href="/webpack-runtime-15a7c561a0fa6e70c06e.js"/><link as="script" rel="preload" href="/framework-345c7b9eeb7bc9218cda.js"/><link as="script" rel="preload" href="/app-839a6453eb7b4c1466b5.js"/><link as="script" rel="preload" href="/133dbbf1d86d892ff1bf148d88afcf8c565d1168-7ba219e5c7cd516565c9.js"/><link as="script" rel="preload" href="/component---src-components-template-post-template-tsx-502e74bd64d0bb569262.js"/><link as="fetch" rel="preload" href="/page-data/post/jekyll/installation/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3000541721.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css-global kipta7">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);letter-spacing:0.2px;font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.8285714285714285rem;line-height:1.5;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}html{-webkit-font-smoothing:antialiased;font-size:10px;}body{background-color:#fff;color:#000;font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;line-height:1.4;overflow-wrap:break-word;word-break:keep-all;}section{position:relative;}h1,h2,h3,h4,h5,h6{font-family:Montserrat,"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;line-height:1.3;}h1 .icon-heading-link,h2 .icon-heading-link,h3 .icon-heading-link,h4 .icon-heading-link,h5 .icon-heading-link,h6 .icon-heading-link{border-bottom:none;}h1 .icon-heading-link svg,h2 .icon-heading-link svg,h3 .icon-heading-link svg,h4 .icon-heading-link svg,h5 .icon-heading-link svg,h6 .icon-heading-link svg{visibility:visible;}h1{font-size:2em;margin-top:2.2em;}h2{font-size:1.8em;margin-top:2em;}h3{font-size:1.4em;margin-top:1.8em;}a{color:#000;-webkit-transition:0.2s;transition:0.2s;}a:hover{color:#00acc1;}p{margin-top:1.4em;margin-bottom:1.4em;color:#212121;letter-spacing:0.2px;line-height:1.6;}p a{border-bottom:2px solid #26c6da;-webkit-text-decoration:none;text-decoration:none;}p code{padding:4px 12px;border-radius:4px;color:#e64a19;background-color:#eeeeee;zoom:0.8;}p img{box-shadow:0 4px 24px -16px #757575;}strong{color:#000;}blockquote{margin:2em 0;padding-left:1em;border-left:4px solid #e0e0e0;font-size:0.96em;color:#757575;}blockquote p{color:#757575;}code{font-family:"SF Mono","Roboto Mono",Consolas,monospace;font-weight:500;}img{max-width:100%;}li{font-size:0.86em;}li a{border-bottom:none;color:#424242;font-family:Montserrat,"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;-webkit-text-decoration:none;text-decoration:none;}li a:hover{color:#000;}li code{margin-right:2px;padding:2px 8px;border-radius:4px;color:#0097a7;background-color:#f5f5f5;zoom:0.86;}mark{padding:2px 4px;background-color:rgba(178, 235, 242, 0.6);}table{display:block;border-collapse:collapse;overflow-x:auto;font-size:16px;}table th,table td{padding:4px 12px;border:1px solid #e0e0e0;}table th code,table td code{padding:2px 8px;border-radius:4px;background-color:#f5f5f5;zoom:0.9;}table th{background-color:#eeeeee;}.gatsby-resp-image-figure{margin:0;}.gatsby-resp-image-figure a{border-bottom:none;}.gatsby-resp-image-image{box-shadow:0 4px 24px -16px #757575!important;}.gatsby-resp-image-figcaption{margin-top:4px;font-size:0.86em;text-align:center;}.gatsby-resp-image-figcaption p{margin-top:0.5em;margin-bottom:0.5em;color:#9e9e9e;}.gatsby-resp-image-figcaption p a{color:#9e9e9e;}.gatsby-resp-image-figcaption p a:hover{color:#00acc1;}.gatsby-highlight code[class*="language-"],.gatsby-highlight pre[class*="language-"]{font-family:"SF Mono","Roboto Mono",Consolas,monospace;font-size:14px;font-weight:500;}.gatsby-highlight pre[class*="language-"]{border-radius:4px;}.gatsby-highlight pre[class*="language-"]::after,.gatsby-highlight pre[class*="language-"]::before{box-shadow:none;}.gatsby-highlight pre[class*="language-"].line-numbers.line-numbers code{padding:24px;padding-left:64px;box-shadow:none;}.gatsby-highlight pre[class*="language-"].line-numbers .line-numbers-rows{padding:24px 0;min-width:48px;border-left:8px solid #4dd0e1;background-image:linear-gradient(#fff 50%, #f5f5f5 50%);-webkit-background-size:3em 3em;background-size:3em 3em;background-origin:content-box;letter-spacing:0;}.gatsby-highlight pre[class*="language-"].line-numbers .line-numbers-rows >span{padding-left:12px;}.gatsby-highlight pre[class*="language-"] >code{border-left:none;background-image:linear-gradient(#fff 50%, #f5f5f5 50%);}.gatsby-highlight .command-line-prompt{letter-spacing:0;}.mermaid{padding:32px 0;overflow-x:auto;text-align:center;letter-spacing:0;}</style><style data-emotion="css 1k5ifgb">.css-1k5ifgb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:absolute;z-index:1100;top:0;left:auto;right:0;background-color:transparent;color:inherit;}</style><style data-emotion="css 109nu0d">.css-109nu0d{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:absolute;z-index:1100;top:0;left:auto;right:0;background-color:transparent;color:inherit;}</style><nav class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionAbsolute css-109nu0d" style="padding:0 64px"><style data-emotion="css mjywep">.css-mjywep{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:48px;}</style><div class="MuiToolbar-root MuiToolbar-dense Navbar-toolbar-0-2-2 css-mjywep"><style data-emotion="css 1xy3f5b">.css-1xy3f5b{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(0, 172, 193, 0.4);}.css-1xy3f5b:hover{text-decoration-color:inherit;}</style><style data-emotion="css 1xovuf9">.css-1xovuf9{margin:0;color:#00acc1;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(0, 172, 193, 0.4);}.css-1xovuf9:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xovuf9" href="/"><svg viewBox="0 0 963.61 122.77" height="12" style="fill:#fff"><path d="M628.78,3.63,672,3.2A81.78,81.78,0,0,1,698.81,7a56.66,56.66,0,0,1,20,11.25,48.84,48.84,0,0,1,12.5,17.4,57.42,57.42,0,0,1,4.45,22.27v.32a57.71,57.71,0,0,1-4.1,22.53,50.56,50.56,0,0,1-12.31,18,57.74,57.74,0,0,1-20,12,80,80,0,0,1-26.92,4.51l-42.56.41Zm44.55,84.05q14-.15,22.41-7.58t8.3-21v-.32q-.13-13.44-8.72-20.79t-22.55-7.22l-12.68.12.55,57Z"></path><polygon points="32.64 122.45 0 122.77 46.57 9.61 76.49 9.32 125.28 121.74 92 122.07 61.66 46.42 32.64 122.45"></polygon><path d="M135.06,9.55,188,9q13-.13,22,3a37.57,37.57,0,0,1,14.65,8.82q10,9.51,10.18,26v.32q.12,13-6,21.5a39.35,39.35,0,0,1-16.67,13.12l27.1,38.78-35.84.35-22.89-33.7h-.32l-13.28.13.33,33.92-31,.3Zm52,53.25q8-.07,12.29-3.72a12,12,0,0,0,4.22-9.72V49q-.08-6.72-4.58-10t-12.35-3.16l-20.32.2L166.62,63Z"></path><path d="M307.53,122.1a62.14,62.14,0,0,1-24-4.32,59.11,59.11,0,0,1-19.16-12.22,57.28,57.28,0,0,1-12.74-18.27,56.33,56.33,0,0,1-4.78-22.52v-.32a57.11,57.11,0,0,1,16.87-41.36,60.2,60.2,0,0,1,19.08-12.67,65.51,65.51,0,0,1,48-.47,59.26,59.26,0,0,1,19.16,12.21,57.44,57.44,0,0,1,12.74,18.28A56.28,56.28,0,0,1,367.43,63v.32a57,57,0,0,1-16.87,41.37,60.37,60.37,0,0,1-19.08,12.67A62.18,62.18,0,0,1,307.53,122.1Zm0-28a28.07,28.07,0,0,0,11.69-2.51A27,27,0,0,0,328.1,85a30,30,0,0,0,5.68-9.58,31.73,31.73,0,0,0,2-11.54v-.32a31.77,31.77,0,0,0-2.2-11.49A29.14,29.14,0,0,0,318.32,36a29.2,29.2,0,0,0-23.35.15,27.9,27.9,0,0,0-14.6,16.15,33.26,33.26,0,0,0-1.9,11.53v.32a31.79,31.79,0,0,0,2.2,11.5,30,30,0,0,0,5.95,9.55,28.21,28.21,0,0,0,9.13,6.55A27.23,27.23,0,0,0,307.49,94.1Z"></path><path d="M434.56,120.7a71.48,71.48,0,0,1-21.63-2.83,41.81,41.81,0,0,1-16.41-9.2A41.31,41.31,0,0,1,386,92.77,65.27,65.27,0,0,1,382.22,70L381.6,7.13l31.68-.31.61,62.24Q414,81.22,419.62,87t15,5.7Q444,92.61,449.47,87t5.39-17.49l-.62-63,31.68-.31.61,62.08q.12,13.61-3.53,23.47a40.65,40.65,0,0,1-26.79,25.79A72.27,72.27,0,0,1,434.56,120.7Z"></path><path d="M504.32,5.93l29-.28,46.75,58.74L579.51,5.2l30.56-.3,1.1,112-27.26.27-48.54-61,.6,61.44-30.56.3Z"></path><path d="M803.82,117.09a71.8,71.8,0,0,1-21.63-2.83,41.81,41.81,0,0,1-16.41-9.2,41.31,41.31,0,0,1-10.48-15.9,65.31,65.31,0,0,1-3.82-22.76l-.62-62.88,31.68-.31.61,62.24q.12,12.15,5.73,17.94t15,5.69q9.38-.09,14.87-5.74t5.39-17.49l-.62-63,31.68-.31.61,62.08q.12,13.59-3.54,23.47a40.62,40.62,0,0,1-26.78,25.78A72.27,72.27,0,0,1,803.82,117.09Z"></path><path d="M918.69,115.8a86.72,86.72,0,0,1-28.61-4.39A69.09,69.09,0,0,1,866,97.64l17.08-20.85Q900,90.07,919.56,89.87c4.16,0,7.32-.73,9.5-2.09a6.29,6.29,0,0,0,3.22-5.7v-.32a6,6,0,0,0-.83-3.1,8.25,8.25,0,0,0-3-2.61,30.76,30.76,0,0,0-5.78-2.42,95.25,95.25,0,0,0-9.39-2.38q-9-2-16.68-4.39a50.9,50.9,0,0,1-13.42-6.26,28.92,28.92,0,0,1-9.06-9.66q-3.33-5.79-3.42-14.42v-.31a34.56,34.56,0,0,1,2.82-14.41,31.84,31.84,0,0,1,8.53-11.42,40.61,40.61,0,0,1,13.6-7.56A57.51,57.51,0,0,1,913.72,0a80.33,80.33,0,0,1,25.71,3.53,64.7,64.7,0,0,1,20.51,11l-15.3,22.13a63.13,63.13,0,0,0-15.84-8.08,47.69,47.69,0,0,0-15.63-2.65c-3.73,0-6.53.76-8.38,2.16A6.19,6.19,0,0,0,902,33.23v.32a6.3,6.3,0,0,0,.92,3.34A7.89,7.89,0,0,0,906,39.5a33.6,33.6,0,0,0,6,2.34c2.51.77,5.69,1.57,9.54,2.38a137.38,137.38,0,0,1,17.41,4.7,51.68,51.68,0,0,1,13.26,6.66,27.28,27.28,0,0,1,8.42,9.58,29.55,29.55,0,0,1,3,13.47V79a34.43,34.43,0,0,1-3.13,15.36,32.88,32.88,0,0,1-9.09,11.51,41.72,41.72,0,0,1-14.17,7.33A64.89,64.89,0,0,1,918.69,115.8Z"></path></svg></a><style data-emotion="css l3ik21">.css-l3ik21{margin:0;font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:500;font-size:1.5999999999999999rem;line-height:1.57;color:#fff;line-height:1.3;white-space:nowrap;margin-left:12px;}</style><h6 class="MuiTypography-root MuiTypography-subtitle2 css-l3ik21">개발 블로그</h6></div></nav><main><section class="KeyVisualSection-container-0-2-3" style="padding:256px 64px 64px"><div class="KeyVisualSection-content-0-2-4"><style data-emotion="css 9atw31">.css-9atw31{margin:0;font-family:Montserrat,"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:bold;font-size:2.2857142857142856rem;line-height:1.6;color:#eeeeee;position:relative;margin-bottom:8px;}</style><h6 class="MuiTypography-root MuiTypography-h6 css-9atw31">#<!-- -->jekyll<!-- --> Episode <!-- -->1</h6><style data-emotion="css 1vj70ft">.css-1vj70ft{margin:0;font-family:Montserrat,"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:bold;font-size:5.485714285714285rem;line-height:1.167;color:#fff;position:relative;}</style><h3 class="MuiTypography-root MuiTypography-h3 css-1vj70ft">Jekyll 블로그 만들기</h3><style data-emotion="css ha36pc">.css-ha36pc{margin:0;font-family:Montserrat,"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1em;line-height:1.5;font-weight:400;color:#fff;position:relative;margin-top:12px;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-ha36pc">2018-02-03</h6></div></section><style data-emotion="css 2utwsx">.css-2utwsx{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-top:40px;padding-bottom:40px;}@media (min-width:900px){.css-2utwsx{max-width:900px;}}</style><section class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-2utwsx"><h2 id="목차" style="position:relative;">목차<a href="#%EB%AA%A9%EC%B0%A8" aria-label="목차 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<ol>
+<li><a href="#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0">시작하기</a></li>
+<li><a href="#Ruby-Installer-for-Windows">Ruby Installer for Windows</a></li>
+<li><a href="#Gem">Gem</a></li>
+<li><a href="#Bundler">Bundler</a></li>
+<li><a href="#Jekyll-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0">Jekyll 사이트 만들기</a></li>
+</ol>
+<h2 id="시작하기" style="position:relative;">시작하기<a href="#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0" aria-label="시작하기 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<p><strong>Jekyll</strong>(지킬)은 정적 웹 페이지를 만들기 위한 툴입니다. 정적 웹 페이지는 DB 통신 없이 웹 서버 내 저장된 파일을 그대로 출력하는 페이지를 의미합니다. 많은 기능을 필요로 하지 않는 개인 블로그나 간단한 사이트의 경우 어려운 데이터베이스를 다루지 않고 Jekyll과 <a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">Markdown(마크다운)</a> 언어를 사용하여 간단하게 페이지를 만들 수 있습니다.</p>
+<p>Jekyll 템플릿을 만들고 규약에 따라 소스를 구성하면 Jekyll 엔진은 소스 파일들을 컴파일하여 HTML로 이루어진 정적 웹 페이지 파일들을 만들고 사용자가 정한 목적지 폴더(default: _site)에 저장합니다.</p>
+<div class="mermaid" data-processed="true"><svg id="mermaid-1640939989749" width="659.875" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="55" viewBox="0 0 659.875 55"><style>#mermaid-1640939989749 {font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,sans-serif;font-size:16px;fill:#333;}#mermaid-1640939989749 .error-icon{fill:#552222;}#mermaid-1640939989749 .error-text{fill:#552222;stroke:#552222;}#mermaid-1640939989749 .edge-thickness-normal{stroke-width:2px;}#mermaid-1640939989749 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1640939989749 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1640939989749 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1640939989749 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1640939989749 .marker{fill:#333333;stroke:#333333;}#mermaid-1640939989749 .marker.cross{stroke:#333333;}#mermaid-1640939989749 svg{font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,sans-serif;font-size:16px;}#mermaid-1640939989749 .label{font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,sans-serif;color:#333;}#mermaid-1640939989749 .cluster-label text{fill:#333;}#mermaid-1640939989749 .cluster-label span{color:#333;}#mermaid-1640939989749 .label text,#mermaid-1640939989749 span{fill:#333;color:#333;}#mermaid-1640939989749 .node rect,#mermaid-1640939989749 .node circle,#mermaid-1640939989749 .node ellipse,#mermaid-1640939989749 .node polygon,#mermaid-1640939989749 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-1640939989749 .node .label{text-align:center;}#mermaid-1640939989749 .node.clickable{cursor:pointer;}#mermaid-1640939989749 .arrowheadPath{fill:#333333;}#mermaid-1640939989749 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-1640939989749 .flowchart-link{stroke:#333333;fill:none;}#mermaid-1640939989749 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-1640939989749 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-1640939989749 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-1640939989749 .cluster text{fill:#333;}#mermaid-1640939989749 .cluster span{color:#333;}#mermaid-1640939989749 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-1640939989749 :root{--mermaid-font-family:"SF Pro KR","SF Pro Display","SF Pro Icons",-apple-system,sans-serif;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M136.671875,27.5L148.26041666666666,27.5C159.84895833333334,27.5,183.02604166666666,27.5,206.203125,27.5C229.38020833333334,27.5,252.55729166666666,27.5,264.1458333333333,27.5L275.734375,27.5" marker-end="url(#arrowhead14)" style="fill:none"></path><defs><marker id="arrowhead14" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-C" id="L-B-C" style="opacity: 1;"><path class="path" d="M388.46875,27.5L401.2096354166667,27.5C413.9505208333333,27.5,439.4322916666667,27.5,464.9140625,27.5C490.3958333333333,27.5,515.8776041666666,27.5,528.6184895833334,27.5L541.359375,27.5" marker-end="url(#arrowhead15)" style="fill:none"></path><defs><marker id="arrowhead15" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(206.203125,27.5)" style="opacity: 1;"><g transform="translate(-29.53125,-10)" class="label"><rect rx="0" ry="0" width="59.0625" height="20"></rect><foreignObject width="59.0625" height="20"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A' L-LE-B">소스 구성</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(464.9140625,27.5)" style="opacity: 1;"><g transform="translate(-36.4453125,-10)" class="label"><rect rx="0" ry="0" width="72.890625" height="20"></rect><foreignObject width="72.890625" height="20"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-C" class="edgeLabel L-LS-B' L-LE-C">소스 컴파일</span></div></foreignObject></g></g></g><g class="nodes"><g class="node common" id="flowchart-A-4" transform="translate(72.3359375,27.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-64.3359375" y="-19.5" width="128.671875" height="39" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-54.3359375,-9.5)"><foreignObject width="108.671875" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Jekyll Template</div></foreignObject></g></g></g><g class="node common" id="flowchart-B-5" transform="translate(332.1015625,27.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-56.3671875" y="-19.5" width="112.734375" height="39" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-46.3671875,-9.5)"><foreignObject width="92.734375" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Jekyll Engine</div></foreignObject></g></g></g><g class="node highlight" id="flowchart-C-7" transform="translate(596.6171875,27.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-55.2578125" y="-19.5" width="110.515625" height="39" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-45.2578125,-9.5)"><foreignObject width="90.515625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">HTML Pages</div></foreignObject></g></g></g></g></g></g></svg></div>
+<p><strong>왜 Jekyll을 사용하는 걸까요?</strong> HTML을 어느 정도 다룰 줄 안다면 <em>- CSS와 jQuery를 안다면 더 예쁘게 -</em> 지금 바로 정적인 웹 사이트를 만들 수 있습니다. 그리고 여러분이 어떤 페이지 하나를 소개 목적으로 만들고자 한다면 사실 Jekyll은 사용할 필요도 없습니다.</p>
+<p>하지만 여러분이 <strong>블로그</strong>를 만든다면 상황이 달라집니다. 블로그의 콘텐츠를 구성하는 페이지는 모두 동일한 HTML 템플릿에 내용만 다른 것입니다. 블로그에 콘텐츠를 추가할 때마다 매번 HTML 파일을 수작업해야 한다고 가정해 봅시다. 만약 콘텐츠가 100개 <em>- 또는 그 이상 -</em> 정도 된다면 여러분은 어떻게 하시겠습니까?</p>
+<p>내용만 쓰고 <strong>알아서 HTML 태그로 변환하여 페이지를 구성하는 툴</strong>이 있으면 좋겠다는 생각이 자연적으로 들 것입니다. <strong>Jekyll</strong>은 바로 그 툴을 의미합니다. 그리고 HTML 태그 없이 쉽게 내용을 작성할 수 있는 마크업 언어 Markdown을 사용합니다.</p>
+<p>이것이 Jekyll을 사용하는 가장 큰 이유입니다. Jekyll은 일련의 반복적인 작업을 최소화하여 페이지를 구성하고 웹 서버에 게시할 수 있도록 도와 줍니다. Jekyll을 설치하고 샘플 페이지를 만들어 본다면 더 이해가 빠를 것입니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 941px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/66a88b2b0f4bf9c1703ee837fc604a54/238fe/running-jekyll-on-windows.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 94.375%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/66a88b2b0f4bf9c1703ee837fc604a54/238fe/running-jekyll-on-windows.jpg"
+        srcset="/static/66a88b2b0f4bf9c1703ee837fc604a54/a3e66/running-jekyll-on-windows.jpg 480w,
+/static/66a88b2b0f4bf9c1703ee837fc604a54/238fe/running-jekyll-on-windows.jpg 941w"
+        sizes="(max-width: 941px) 100vw, 941px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Jekyll로 페이지를 만드는 것은 간단하지만 설치하는 것은 <em>- 특히 Windows에서 -</em> 간단하지 않을 수 있습니다. Jekyll은 리눅스 지원 언어인 <a href="https://www.ruby-lang.org/ko/">Ruby(루비)</a>를 기반으로 만들었기 때문에 MAC이 아닌 Windows 환경에서는 주의를 기울여야 합니다.</p>
+<h2 id="Ruby-Installer-for-Windows" style="position:relative;"><a href="https://rubyinstaller.org/downloads/">Ruby Installer for Windows</a><a href="#Ruby-Installer-for-Windows" aria-label="Ruby Installer for Windows permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1230px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b8042b9137ba744ac09ddc64867bcfbc/683da/ruby-installer-for-windows.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 76.25%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/b8042b9137ba744ac09ddc64867bcfbc/683da/ruby-installer-for-windows.jpg"
+        srcset="/static/b8042b9137ba744ac09ddc64867bcfbc/a3e66/ruby-installer-for-windows.jpg 480w,
+/static/b8042b9137ba744ac09ddc64867bcfbc/fb816/ruby-installer-for-windows.jpg 960w,
+/static/b8042b9137ba744ac09ddc64867bcfbc/683da/ruby-installer-for-windows.jpg 1230w"
+        sizes="(max-width: 1230px) 100vw, 1230px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>우측 빨간색 박스 안 내용에서 설치 시 Ruby 2.5.0 버전에 다소 문제가 있으니 <strong>2.4.X</strong> 버전을 추천하고 있습니다. 여러분의 Windows 환경을 확인한 후 맞는 버전(x32/x64)을 다운로드하여 설치합니다. (필자는 x64로 진행)</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 503px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/629de531f3223eac3714f01053268204/5a5fa/install-ruby-1.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.08333333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/629de531f3223eac3714f01053268204/5a5fa/install-ruby-1.jpg"
+        srcset="/static/629de531f3223eac3714f01053268204/a3e66/install-ruby-1.jpg 480w,
+/static/629de531f3223eac3714f01053268204/5a5fa/install-ruby-1.jpg 503w"
+        sizes="(max-width: 503px) 100vw, 503px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 503px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8ed3a1e5b597ab46ced25b1cf2390b26/5a5fa/install-ruby-2.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.08333333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/8ed3a1e5b597ab46ced25b1cf2390b26/5a5fa/install-ruby-2.jpg"
+        srcset="/static/8ed3a1e5b597ab46ced25b1cf2390b26/a3e66/install-ruby-2.jpg 480w,
+/static/8ed3a1e5b597ab46ced25b1cf2390b26/5a5fa/install-ruby-2.jpg 503w"
+        sizes="(max-width: 503px) 100vw, 503px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 503px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7430f6cc1f65cf2038310163902da619/5a5fa/install-ruby-3.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.08333333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/7430f6cc1f65cf2038310163902da619/5a5fa/install-ruby-3.jpg"
+        srcset="/static/7430f6cc1f65cf2038310163902da619/a3e66/install-ruby-3.jpg 480w,
+/static/7430f6cc1f65cf2038310163902da619/5a5fa/install-ruby-3.jpg 503w"
+        sizes="(max-width: 503px) 100vw, 503px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 597px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/14c84a7b59d43fd73a8d76314521d9ae/935fc/install-msys-1.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.95833333333334%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1 - Enter - MSYS2 기본 설치"
+        title="1 - Enter - MSYS2 기본 설치"
+        src="/static/14c84a7b59d43fd73a8d76314521d9ae/935fc/install-msys-1.jpg"
+        srcset="/static/14c84a7b59d43fd73a8d76314521d9ae/a3e66/install-msys-1.jpg 480w,
+/static/14c84a7b59d43fd73a8d76314521d9ae/935fc/install-msys-1.jpg 597w"
+        sizes="(max-width: 597px) 100vw, 597px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>1 - Enter - MSYS2 기본 설치</p></figcaption>
+  </figure></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 516px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4d61b922bad96d3fb4b4edaec3d3e2a6/9bf5b/install-msys-2.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.08333333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/4d61b922bad96d3fb4b4edaec3d3e2a6/9bf5b/install-msys-2.jpg"
+        srcset="/static/4d61b922bad96d3fb4b4edaec3d3e2a6/a3e66/install-msys-2.jpg 480w,
+/static/4d61b922bad96d3fb4b4edaec3d3e2a6/9bf5b/install-msys-2.jpg 516w"
+        sizes="(max-width: 516px) 100vw, 516px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 516px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a3273264eba8ded4f3286eb1c223d4f5/9bf5b/install-msys-3.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.08333333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/a3273264eba8ded4f3286eb1c223d4f5/9bf5b/install-msys-3.jpg"
+        srcset="/static/a3273264eba8ded4f3286eb1c223d4f5/a3e66/install-msys-3.jpg 480w,
+/static/a3273264eba8ded4f3286eb1c223d4f5/9bf5b/install-msys-3.jpg 516w"
+        sizes="(max-width: 516px) 100vw, 516px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 516px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fed0ebc468a631ceb1ecfd4b6ed439c2/9bf5b/install-msys-4.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.08333333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/fed0ebc468a631ceb1ecfd4b6ed439c2/9bf5b/install-msys-4.jpg"
+        srcset="/static/fed0ebc468a631ceb1ecfd4b6ed439c2/a3e66/install-msys-4.jpg 480w,
+/static/fed0ebc468a631ceb1ecfd4b6ed439c2/9bf5b/install-msys-4.jpg 516w"
+        sizes="(max-width: 516px) 100vw, 516px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 675px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5456f01897f88a70f711a35989f6fa8e/a7480/install-msys-5.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.083333333333336%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="MSYS2 창 확인 후 닫기"
+        title="MSYS2 창 확인 후 닫기"
+        src="/static/5456f01897f88a70f711a35989f6fa8e/a7480/install-msys-5.jpg"
+        srcset="/static/5456f01897f88a70f711a35989f6fa8e/a3e66/install-msys-5.jpg 480w,
+/static/5456f01897f88a70f711a35989f6fa8e/a7480/install-msys-5.jpg 675w"
+        sizes="(max-width: 675px) 100vw, 675px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>MSYS2 창 확인 후 닫기</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 597px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cefddbf9b2ea5d68f67476b121cb5be4/935fc/install-msys-6.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.95833333333334%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="2 - Enter - 꾸러미 업데이트"
+        title="2 - Enter - 꾸러미 업데이트"
+        src="/static/cefddbf9b2ea5d68f67476b121cb5be4/935fc/install-msys-6.jpg"
+        srcset="/static/cefddbf9b2ea5d68f67476b121cb5be4/a3e66/install-msys-6.jpg 480w,
+/static/cefddbf9b2ea5d68f67476b121cb5be4/935fc/install-msys-6.jpg 597w"
+        sizes="(max-width: 597px) 100vw, 597px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>2 - Enter - 꾸러미 업데이트</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 597px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b2c6ae6fb9a59b56902d58ad235ac1ce/935fc/install-msys-7.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.95833333333334%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3 - Enter - toolchain 설치"
+        title="3 - Enter - toolchain 설치"
+        src="/static/b2c6ae6fb9a59b56902d58ad235ac1ce/935fc/install-msys-7.jpg"
+        srcset="/static/b2c6ae6fb9a59b56902d58ad235ac1ce/a3e66/install-msys-7.jpg 480w,
+/static/b2c6ae6fb9a59b56902d58ad235ac1ce/935fc/install-msys-7.jpg 597w"
+        sizes="(max-width: 597px) 100vw, 597px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>3 - Enter - toolchain 설치</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 597px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6c2e93bdc7411bffc68ccdd31c570153/935fc/install-msys-8.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.95833333333334%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오류가 발생한 경우 재설치"
+        title="오류가 발생한 경우 재설치"
+        src="/static/6c2e93bdc7411bffc68ccdd31c570153/935fc/install-msys-8.jpg"
+        srcset="/static/6c2e93bdc7411bffc68ccdd31c570153/a3e66/install-msys-8.jpg 480w,
+/static/6c2e93bdc7411bffc68ccdd31c570153/935fc/install-msys-8.jpg 597w"
+        sizes="(max-width: 597px) 100vw, 597px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>오류가 발생한 경우 재설치</p></figcaption>
+  </figure></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 597px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c2bea85d56b0ff9bef6da66634094df0/935fc/install-msys-9.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.95833333333334%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="정상적으로 설치 완료 후 닫기"
+        title="정상적으로 설치 완료 후 닫기"
+        src="/static/c2bea85d56b0ff9bef6da66634094df0/935fc/install-msys-9.jpg"
+        srcset="/static/c2bea85d56b0ff9bef6da66634094df0/a3e66/install-msys-9.jpg 480w,
+/static/c2bea85d56b0ff9bef6da66634094df0/935fc/install-msys-9.jpg 597w"
+        sizes="(max-width: 597px) 100vw, 597px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption"><p>정상적으로 설치 완료 후 닫기</p></figcaption>
+  </figure></p>
+<h2 id="Gem" style="position:relative;">Gem<a href="#Gem" aria-label="Gem permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<p><strong>Gem</strong>(젬)은 루비 프로젝트에 필요한 기능을 제공하는 라이브러리입니다. <a href="https://rubygems.org/">RubyGems(루비젬)</a>에서 원하는 gem을 검색하고 사용할 수 있습니다. 다음 명령어를 실행하세요.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>gem</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>다음과 같은 내용이 나온다면 Ruby가 성공적으로 설치된 것입니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">RubyGems is a sophisticated package manager <span class="token keyword">for</span> Ruby.  This is a
+basic <span class="token builtin class-name">help</span> message containing pointers to <span class="token function">more</span> information.
+
+    Usage:
+        gem -h/--help
+        gem -v/--version
+        gem <span class="token builtin class-name">command</span> <span class="token punctuation">[</span>arguments<span class="token punctuation">..</span>.<span class="token punctuation">]</span> <span class="token punctuation">[</span>options<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+    Examples:
+        gem <span class="token function">install</span> rake
+        gem list --local
+        gem build package.gemspec
+        gem <span class="token builtin class-name">help</span> <span class="token function">install</span>
+
+    Further help:
+        gem <span class="token builtin class-name">help</span> commands            list all <span class="token string">'gem'</span> commands
+        gem <span class="token builtin class-name">help</span> examples            show some examples of usage
+        gem <span class="token builtin class-name">help</span> gem_dependencies    gem dependencies <span class="token function">file</span> guide
+        gem <span class="token builtin class-name">help</span> platforms           gem platforms guide
+        gem <span class="token builtin class-name">help</span> <span class="token operator">&lt;</span>COMMAND<span class="token operator">></span>           show <span class="token builtin class-name">help</span> on COMMAND
+                                                                     <span class="token punctuation">(</span>e.g. <span class="token string">'gem help install'</span><span class="token punctuation">)</span>
+        gem server                   present a web page at
+                                                                 http://localhost:8808/
+                                                                 with info about installed gems
+    Further information:
+        http://guides.rubygems.org</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>gem 명령어를 사용하여 Jekyll을 설치하세요.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>gem <span class="token function">install</span> jekyll</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 853px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d7afd14ba0e4ed9bd2f408752ea0a031/0eb87/install-jekyll.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.333333333333336%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/d7afd14ba0e4ed9bd2f408752ea0a031/0eb87/install-jekyll.jpg"
+        srcset="/static/d7afd14ba0e4ed9bd2f408752ea0a031/a3e66/install-jekyll.jpg 480w,
+/static/d7afd14ba0e4ed9bd2f408752ea0a031/0eb87/install-jekyll.jpg 853w"
+        sizes="(max-width: 853px) 100vw, 853px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Jekyll 설치를 마치면 다음 명령어를 실행하세요.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>jekyll</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>다음과 같은 내용이 나온다면 Jekyll이 성공적으로 설치된 것입니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">jekyll <span class="token number">3.7</span>.2 -- Jekyll is a blog-aware, static site generator <span class="token keyword">in</span> Ruby
+
+Usage:
+
+    jekyll <span class="token operator">&lt;</span>subcommand<span class="token operator">></span> <span class="token punctuation">[</span>options<span class="token punctuation">]</span>
+
+Options:
+                -s, --source <span class="token punctuation">[</span>DIR<span class="token punctuation">]</span>  Source directory <span class="token punctuation">(</span>defaults to ./<span class="token punctuation">)</span>
+                -d, --destination <span class="token punctuation">[</span>DIR<span class="token punctuation">]</span>  Destination directory <span class="token punctuation">(</span>defaults to ./_site<span class="token punctuation">)</span>
+                        --safe         Safe mode <span class="token punctuation">(</span>defaults to <span class="token boolean">false</span><span class="token punctuation">)</span>
+                -p, --plugins PLUGINS_DIR1<span class="token punctuation">[</span>,PLUGINS_DIR2<span class="token punctuation">[</span>,<span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span>  Plugins directory <span class="token punctuation">(</span>defaults to ./_plugins<span class="token punctuation">)</span>
+                        --layouts DIR  Layouts directory <span class="token punctuation">(</span>defaults to ./_layouts<span class="token punctuation">)</span>
+                        --profile      Generate a Liquid rendering profile
+                -h, --help         Show this message
+                -v, --version      Print the name and version
+                -t, --trace        Show the full backtrace when an error occurs
+
+Subcommands:
+    docs
+    <span class="token function">import</span>
+    build, b              Build your site
+    clean                 Clean the site <span class="token punctuation">(</span>removes site output and metadata <span class="token function">file</span><span class="token punctuation">)</span> without building.
+    doctor, hyde          Search site and print specific deprecation warnings
+    <span class="token builtin class-name">help</span>                  Show the <span class="token builtin class-name">help</span> message, optionally <span class="token keyword">for</span> a given subcommand.
+    new                   Creates a new Jekyll site scaffold <span class="token keyword">in</span> <span class="token environment constant">PATH</span>
+    new-theme             Creates a new Jekyll theme scaffold
+    serve, server, s      Serve your site locally</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2 id="Bundler" style="position:relative;">Bundler<a href="#Bundler" aria-label="Bundler permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<p><a href="http://ruby-korea.github.io/bundler-site/">Bundler(번들러)</a>는 정확한 gem 버전을 추적하고 설치하여 루비 프로젝트를 위한 일관된 환경을 제공합니다. 다음 명령어를 실행하세요.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>gem <span class="token function">install</span> bundler</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 853px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4aa7b9eef61040e495bde2b1f2b26391/0eb87/install-bundler.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.750000000000004%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/4aa7b9eef61040e495bde2b1f2b26391/0eb87/install-bundler.jpg"
+        srcset="/static/4aa7b9eef61040e495bde2b1f2b26391/a3e66/install-bundler.jpg 480w,
+/static/4aa7b9eef61040e495bde2b1f2b26391/0eb87/install-bundler.jpg 853w"
+        sizes="(max-width: 853px) 100vw, 853px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h2 id="Jekyll-사이트-만들기" style="position:relative;">Jekyll 사이트 만들기<a href="#Jekyll-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-label="Jekyll 사이트 만들기 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<p>새 Jekyll 사이트를 생성해 봅시다. 다음 명령어를 실행하세요. (여러분은 test 대신 마음에 드는 이름으로 수정해도 무방합니다.)</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>jekyll new <span class="token builtin class-name">test</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 853px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/93162a6c85895ee156d64cddbbfadded/0eb87/create-new-jekyll-site.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 110.41666666666667%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/93162a6c85895ee156d64cddbbfadded/0eb87/create-new-jekyll-site.jpg"
+        srcset="/static/93162a6c85895ee156d64cddbbfadded/a3e66/create-new-jekyll-site.jpg 480w,
+/static/93162a6c85895ee156d64cddbbfadded/0eb87/create-new-jekyll-site.jpg 853w"
+        sizes="(max-width: 853px) 100vw, 853px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>필요한 bundle까지 모두 설치를 완료하였습니다. 이제 test 폴더로 이동합니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span><span class="token builtin class-name">cd</span> <span class="token builtin class-name">test</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>Jekyll은 개발 서버를 내장하고 있어 로컬에서 브라우저로 접속하여 사이트가 어떻게 생성될지 미리 살펴볼 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>jekyll serve</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 933px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5045cb924a9b1ab5c7c3b18ca3863f3a/e8114/serve-new-jekyll-site.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.45833333333333%; position: relative; bottom: 0; left: 0; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt=""
+        title=""
+        src="/static/5045cb924a9b1ab5c7c3b18ca3863f3a/e8114/serve-new-jekyll-site.jpg"
+        srcset="/static/5045cb924a9b1ab5c7c3b18ca3863f3a/a3e66/serve-new-jekyll-site.jpg 480w,
+/static/5045cb924a9b1ab5c7c3b18ca3863f3a/e8114/serve-new-jekyll-site.jpg 933w"
+        sizes="(max-width: 933px) 100vw, 933px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>브라우저에서 <strong><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></strong> 접속 후 위와 같은 화면이 보인다면 샘플 블로그가 잘 구동된 것입니다. 포트 번호는 기본 4000이 주어지며 옵션을 추가하여 다른 포트 번호로 변경할 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span></span>jekyll serve --port <span class="token number">5000</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>gem 버전이 다른 경우 번들이 적용된 환경을 로드하기 위하여 다음 명령어가 필요할 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell"><span class="command-line-prompt"><span data-user=sally data-host=localhost></span><span data-user=sally data-host=localhost></span></span>bundle <span class="token builtin class-name">exec</span> jekyll serve
+bundle <span class="token builtin class-name">exec</span> jekyll serve --baseurl <span class="token string">''</span> // 소스가 최상위<span class="token punctuation">(</span>root<span class="token punctuation">)</span>에 있지 않은 경우</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></section></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/jekyll/installation/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-81b2a07c8816c04cff59.js"],"app":["/app-839a6453eb7b4c1466b5.js"],"component---src-components-template-post-template-tsx":["/component---src-components-template-post-template-tsx-502e74bd64d0bb569262.js"],"component---src-pages-404-js":["/component---src-pages-404-js-01f0b8e1c2ea13809f20.js"],"component---src-pages-app-tsx":["/component---src-pages-app-tsx-0993985d1f9b057a1576.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-cb7742f7823d19916fc4.js"]};/*]]>*/</script><script src="/polyfill-81b2a07c8816c04cff59.js" nomodule=""></script><script src="/component---src-components-template-post-template-tsx-502e74bd64d0bb569262.js" async=""></script><script src="/133dbbf1d86d892ff1bf148d88afcf8c565d1168-7ba219e5c7cd516565c9.js" async=""></script><script src="/app-839a6453eb7b4c1466b5.js" async=""></script><script src="/framework-345c7b9eeb7bc9218cda.js" async=""></script><script src="/webpack-runtime-15a7c561a0fa6e70c06e.js" async=""></script></body></html>
