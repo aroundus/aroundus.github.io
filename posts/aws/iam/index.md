@@ -4,7 +4,7 @@ index: 2
 title: IAM
 description: AWS 작업을 하려면 해당 리소스에 대한 권한이 있어야 합니다. AWS는 IAM 서비스를 통해 리소스 접근에 대한 권한을 안전하게 제어합니다.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/aws/cover.jpg?raw=true
-date: 2020-05-25
+date: 2020-05-18
 ---
 
 **[IAM](https://console.aws.amazon.com/iam/home)**(Identity and Access Management, 아이에이앰)은 AWS 서비스와 리소스에 대한 액세스를 안전하게 관리하는 기능입니다. AWS 계정에서 추가 비용 없이 제공합니다.
@@ -70,7 +70,7 @@ aws configure
 aws configure --profile <your-iam-user-name>
 ```
 
-사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 디렉터리에 파일로 저장됩니다.
+사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 폴더에 파일로 저장됩니다.
 
 ```shell{promptHost: localhost}
 AWS Access Key ID [None]: <AKI***>

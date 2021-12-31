@@ -13,6 +13,7 @@ const ArticleSection = ({
     maxWidth="md"
     sx={{ mx: 'auto', px: 8, py: 10 }}
     dangerouslySetInnerHTML={{ __html: html }}
+    disableGutters
   />
 );
 

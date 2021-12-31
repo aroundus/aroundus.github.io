@@ -4,7 +4,7 @@ index: 1
 title: AWS 커맨드 라인 인터페이스
 description: 보안 그룹 하나만 수정하면 되는데 AWS 웹 인터페이스 안에서 시간을 낭비한 경험이 있으신가요? 이제 터미널에서 AWS 웹과 동일한 기능을 구현하는 명령을 실행하세요.
 image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/aws/cover.jpg?raw=true
-date: 2020-05-25
+date: 2020-05-17
 ---
 
 **AWS 커맨드 라인 인터페이스**(AWS CLI, AWS Command Line Interface)는 AWS 서비스를 관리하는 통합 도구로 여러 AWS 서비스를 명령줄에서 제어합니다. 주로 자동화 처리 목적으로 사용합니다.
@@ -33,7 +33,7 @@ Default region name [None]: ap-northeast-2
 Default output format [None]:
 ```
 
-사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 디렉터리에 파일로 저장됩니다.
+사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 폴더에 파일로 저장됩니다.
 
 ## Commands
 
