@@ -7,7 +7,7 @@ image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/develope
 date: 2021-12-23
 ---
 
-# 🙋🏻🗓<br />한 주 동안 무엇을 개발했어요?
+# 💻🗓<br />한 주 동안 무엇을 개발했어요?
 
 정신없이 개발하느라 시간은 쏜살같이 지나간 것 같은데 갑자기 <mark>'한 주 동안 무엇을 개발했지?'</mark> 궁금해질 때가 있습니다. 프로젝트는 몇 개 작업했는지, 각 프로젝트마다 투자한 시간은 몇 분인지, 주로 작업한 파일은 무엇인지 등등...
 
