@@ -1,6 +1,5 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-
 import { List } from '@mui/material';
 
 import { Post } from '~types/global';

@@ -39,8 +39,8 @@ const PostPresentation = ({
       >
         <Grid sx={{ width: '100%', maxWidth: 640 }}>
           <Typography variant="h4">{post.title}</Typography>
-          <Typography variant="body1" sx={{ mt: 6, color: colors.grey[700] }}>{post.description}</Typography>
-          <Typography variant="subtitle1" sx={{ mt: 4, color: colors.grey[500], fontWeight: 300 }}>{post.date}</Typography>
+          <Typography variant="body1" color={colors.grey[700]} sx={{ mt: 6 }}>{post.description}</Typography>
+          <Typography variant="subtitle1" color={colors.grey[500]} sx={{ mt: 4, fontWeight: 300 }}>{post.date}</Typography>
         </Grid>
       </StyledContent>
     </ListItem>
