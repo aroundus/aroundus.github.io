@@ -8,6 +8,9 @@ const HEADING_FONT_FAMILY = 'Montserrat, "SF Pro KR", "SF Pro Display", "SF Pro 
 
 const theme = createTheme({
   spacing: 4,
+  shape: {
+    borderRadius: 4,
+  },
   palette: {
     primary: {
       main: colors.cyan[600],

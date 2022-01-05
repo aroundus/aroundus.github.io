@@ -27,6 +27,7 @@ const KeyVisualSection = ({
         background-attachment: scroll;
         background-color: ${colors.grey[600]};
         background-image: url(${post.image});
+        z-index: 2;
       `,
       '&::before': `
         position: absolute;
@@ -40,6 +41,7 @@ const KeyVisualSection = ({
       `,
     },
     content: `
+      margin: auto;
       max-width: 900px;
     `,
   }, {
@@ -67,14 +69,22 @@ const KeyVisualSection = ({
         <Typography
           variant={isMobile ? 'h4' : 'h3'}
           color={colors.common.white}
+          sx={{ mb: 3 }}
           position="relative"
         >
           {post.title}
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant={isMobile ? 'body2' : 'body1'}
           color={colors.common.white}
-          sx={{ mt: 3 }}
+          position="relative"
+        >
+          {post.description}
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          color={colors.grey[300]}
+          sx={{ mt: 6, fontWeight: 300 }}
           position="relative"
         >
           {post.date}
@@ -84,7 +94,7 @@ const KeyVisualSection = ({
             variant="contained"
             size="large"
             color="primary"
-            sx={{ mt: 3 }}
+            sx={{ mt: 6 }}
             href={post.path}
           >
             내용 보기

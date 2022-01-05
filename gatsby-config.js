@@ -3,6 +3,12 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: '.env' });
 
+// WHY: 한글 적용 불가
+const lunrKoreanPlugin = (lunr) => (builder) => {
+  builder.pipeline.remove(lunr.stemmer);
+  builder.searchPipeline.remove(lunr.stemmer);
+};
+
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -121,6 +127,33 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-lunr',
+      options: {
+        languages: [
+          {
+            name: 'ko',
+            plugins: [lunrKoreanPlugin],
+          },
+        ],
+        fields: [
+          { name: 'category', store: true },
+          { name: 'title', store: true, attributes: { boost: 10 } },
+          { name: 'description', store: true, attributes: { boost: 5 } },
+          { name: 'date', store: true },
+          { name: 'path', store: true },
+        ],
+        resolvers: {
+          MarkdownRemark: {
+            category: (node) => node.frontmatter.category,
+            title: (node) => node.frontmatter.title,
+            description: (node) => node.frontmatter.description,
+            date: (node) => node.frontmatter.date,
+            path: (node) => node.fields.slug,
+          },
+        },
       },
     },
     'gatsby-plugin-sass',

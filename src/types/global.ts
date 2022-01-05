@@ -2,13 +2,13 @@
 export type AnyObject = Record<string, any>;
 
 export interface Post {
-  id: string;
-  path: string;
+  id?: string;
+  path?: string;
   category?: string;
-  index: number;
+  index?: number;
   title: string;
-  description?: string;
-  image: string;
+  description: string;
+  image?: string;
   html?: string;
   date: string;
 }
