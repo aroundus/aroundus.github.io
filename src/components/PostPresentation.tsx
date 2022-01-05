@@ -27,7 +27,7 @@ const PostPresentation = ({
   }));
 
   const handleClick = () => {
-    window.location.pathname = post.path;
+    if (post.path) window.location.pathname = post.path;
   };
 
   return (
