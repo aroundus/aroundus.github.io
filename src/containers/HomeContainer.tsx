@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import isEmpty from 'lodash-es/isEmpty';
+import { Index } from 'lunr';
 
-import { KeyVisualSection, PostPresentationSection } from '~components/Section';
-import { AnyObject } from '~types/global';
+import { KeyVisualSection, PostPresentationSection, PostSearchSection } from '~components/Section';
+import { AnyObject, Post } from '~types/global';
+
+declare global {
+  interface Window {
+    __LUNR__: {
+      [key: string]: {
+        index: Index;
+        store: {
+          [ref: string]: AnyObject;
+        };
+      };
+    };
+  }
+}
 
 const HomeContainer = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -41,10 +56,35 @@ const HomeContainer = () => {
     ...node.frontmatter,
   }));
 
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchPosts, setSearchPosts] = useState<Array<AnyObject>>([]);
+
+  const getSearchResults = (query: string) => {
+    if (isEmpty(query) || isEmpty(window.__LUNR__)) return [];
+
+    const lunr = window.__LUNR__.ko;
+    const results = lunr.index.search(`${query}*`);
+
+    return results.map(({ ref }) => ({
+      ...lunr.store[ref],
+      id: ref,
+      date: lunr.store[ref].date.split('T')[0],
+    }));
+  };
+
+  useEffect(() => {
+    setSearchPosts(getSearchResults(searchQuery));
+  }, [searchQuery]);
+
   return (
     <>
       <KeyVisualSection post={posts[0]} />
-      <PostPresentationSection posts={posts.filter((_: AnyObject, index: number) => index)} />
+      <PostSearchSection onChange={(query) => setSearchQuery(query)} />
+      <PostPresentationSection
+        posts={isEmpty(searchQuery)
+          ? posts.filter((_: Post, index: number) => index)
+          : searchPosts}
+      />
     </>
   );
 };
