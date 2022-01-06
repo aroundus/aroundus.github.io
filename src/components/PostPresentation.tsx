@@ -41,9 +41,10 @@ const PostPresentation = ({
         onClick={handleClick}
       >
         <Grid sx={{ width: '100%', maxWidth: 640 }}>
+          <Typography variant="h6" color={colors.grey[500]} fontSize={16} sx={{ mb: 2 }}>#{post.category}</Typography>
           <Typography variant="h4">{post.title}</Typography>
           <Typography variant="body1" color={colors.grey[700]} sx={{ mt: 6 }}>{post.description}</Typography>
-          <Typography variant="subtitle1" color={colors.grey[500]} fontWeight={300} sx={{ mt: 4 }}>{post.date}</Typography>
+          <Typography variant="subtitle1" color={colors.grey[500]} sx={{ mt: 4 }}>{post.date}</Typography>
         </Grid>
       </StyledContent>
     </ListItem>
