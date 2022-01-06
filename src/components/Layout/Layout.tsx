@@ -8,6 +8,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './helpers/theme';
 
 import Content from './Content';
+import Footer from './Footer';
 import Navbar from './Navbar';
 
 interface LayoutProps {
@@ -26,6 +27,7 @@ const Layout = ({
       <Content>
         {children}
       </Content>
+      <Footer />
     </ThemeProvider>
   </JSSProvider>
 );
