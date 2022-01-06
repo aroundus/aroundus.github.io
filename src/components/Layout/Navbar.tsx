@@ -61,7 +61,7 @@ const Navbar = () => {
         </Link>
         <Typography
           variant="subtitle2"
-          sx={{ ml: theme.spacing(3) }}
+          sx={{ ml: 3 }}
           color={colors.common.white}
           lineHeight="1.3"
           whiteSpace="nowrap"

@@ -91,10 +91,10 @@ const KeyVisualSection = ({
         </Typography>
         {isButtonVisible && (
           <Button
-            variant="contained"
+            variant="outlined"
             size="large"
-            color="primary"
-            sx={{ mt: 6 }}
+            color="inherit"
+            sx={{ mt: 6, px: 10, color: colors.grey[200] }}
             href={post.path}
           >
             내용 보기

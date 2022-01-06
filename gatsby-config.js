@@ -14,8 +14,13 @@ module.exports = {
   siteMetadata: {
     title: 'AROUND US',
     author: {
-      name: 'Sally',
-      summary: '프론트엔드 개발자',
+      name: '백은주 sally',
+      summary: 'Frontend Developer @wadiz',
+      email: 'specialguest@live.co.kr',
+      url: {
+        github: 'https://github.com/aroundus',
+        instagram: 'https://www.instagram.com/__specialguest',
+      }
     },
     description: 'Coding everything AROUND US',
   },
