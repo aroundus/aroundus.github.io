@@ -8,13 +8,11 @@ import HomeContainer from '~containers/HomeContainer';
 
 import 'aos/dist/aos.css';
 
-// https://github.com/michalsnik/aos
-AOS.init();
-
 const App = () => {
   const [isMount, setMount] = useState(false);
 
   useEffect(() => {
+    AOS.init();
     setMount(true);
   }, []);
 
