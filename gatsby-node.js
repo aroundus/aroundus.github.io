@@ -64,14 +64,22 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
   createTypes(`
-    type SiteSiteMetadata {
+    type SiteMetadata {
+      title: String
       author: Author
-      siteUrl: String
+      description: String
     }
 
     type Author {
       name: String
       summary: String
+      email: String
+      url: URL
+    }
+
+    type URL {
+      github: String
+      instagram: String
     }
 
     type MarkdownRemark implements Node {
