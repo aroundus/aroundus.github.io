@@ -2,9 +2,9 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 
 import {
-  Button, colors, Typography, useMediaQuery,
+  Button, ButtonProps, colors, Typography, useMediaQuery,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 
 import { Post } from '~types/global';
 
@@ -19,6 +19,20 @@ const KeyVisualSection = ({
 }: KeyVisualSectionProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const StyledButton = styled(Button)<ButtonProps>(() => ({
+    '&': {
+      border: `1px solid ${colors.common.white}`,
+      color: colors.common.white,
+      opacity: 0.6,
+      transition: 'opacity 0.2s',
+    },
+    '&:hover': {
+      border: `1px solid ${colors.common.white}`,
+      color: colors.common.white,
+      opacity: 1,
+    },
+  }));
 
   const useStyles = createUseStyles({
     container: {
@@ -90,15 +104,13 @@ const KeyVisualSection = ({
           {post.date}
         </Typography>
         {isButtonVisible && (
-          <Button
-            variant="outlined"
+          <StyledButton
             size="large"
-            color="inherit"
-            sx={{ mt: 6, px: 10, color: colors.grey[200] }}
+            sx={{ mt: 6, px: 10 }}
             href={post.path}
           >
             내용 보기
-          </Button>
+          </StyledButton>
         )}
       </div>
     </section>
