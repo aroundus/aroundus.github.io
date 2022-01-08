@@ -7,6 +7,7 @@ import SEO from '~components/SEO';
 import HomeContainer from '~containers/HomeContainer';
 
 import 'aos/dist/aos.css';
+import './App.css';
 
 const App = () => {
   const [isMount, setMount] = useState(false);

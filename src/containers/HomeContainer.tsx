@@ -78,7 +78,11 @@ const HomeContainer = () => {
 
   return (
     <>
-      <KeyVisualSection post={posts[0]} />
+      <KeyVisualSection
+        post={posts[0]}
+        isButtonVisible
+        isGradientEnabled
+      />
       <PostSearchSection onChange={(query) => setSearchQuery(query)} />
       <PostPresentationSection
         posts={isEmpty(searchQuery)
