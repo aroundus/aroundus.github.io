@@ -37,8 +37,8 @@ const PostPresentation = ({
     <ListItem
       dense
       data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-delay="100"
+      data-aos-offset="100"
+      data-aos-delay="50"
       data-aos-once="true"
     >
       <StyledContent
