@@ -34,14 +34,20 @@ const PostPresentation = ({
   };
 
   return (
-    <ListItem dense>
+    <ListItem
+      dense
+      data-aos="fade-up"
+      data-aos-offset="100"
+      data-aos-delay="50"
+      data-aos-once="true"
+    >
       <StyledContent
         sx={{ px: 8, py: 10, justifyContent: 'center' }}
         divider
         onClick={handleClick}
       >
         <Grid sx={{ width: '100%', maxWidth: 640 }}>
-          <Typography variant="h6" color={colors.grey[500]} fontSize={16} sx={{ mb: 2 }}>#{post.category}</Typography>
+          <Typography variant="h6" color={colors.grey[500]} fontSize={16} sx={{ mb: 2 }}>#{post.category || 'empty'}</Typography>
           <Typography variant="h4">{post.title}</Typography>
           <Typography variant="body1" color={colors.grey[700]} sx={{ mt: 6 }}>{post.description}</Typography>
           <Typography variant="subtitle1" color={colors.grey[500]} sx={{ mt: 4 }}>{post.date}</Typography>

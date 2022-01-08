@@ -11,7 +11,7 @@ const PostContainer = ({
   post,
 }: PostContainerProps) => (
   <>
-    <KeyVisualSection post={post} isButtonVisible={false} />
+    <KeyVisualSection post={post} />
     {post.html && <ArticleSection html={post.html} />}
   </>
 );

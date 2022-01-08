@@ -6,15 +6,28 @@ import SEO from '~components/SEO';
 import PostContainer from '~containers/PostContainer';
 import { AnyObject } from '~types/global';
 
+interface PostNavigation {
+  fields: {
+    slug: string;
+  };
+  frontmatter: {
+    title: string;
+  };
+}
+
 interface PostTemplateProps {
   data: {
     markdownRemark: AnyObject;
+    prevPost: PostNavigation;
+    nextPost: PostNavigation;
   };
 }
 
 const PostTemplate = ({
   data: {
     markdownRemark,
+    prevPost,
+    nextPost,
   },
 }: PostTemplateProps) => {
   const post = {
@@ -40,7 +53,7 @@ const PostTemplate = ({
 export const query = graphql`
   query Post(
     $id: String!
-    $previousPostID: String
+    $prevPostID: String
     $nextPostID: String
   ) {
     site {
@@ -50,7 +63,6 @@ export const query = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
       html
       frontmatter {
         category
@@ -61,7 +73,7 @@ export const query = graphql`
         date(formatString: "YYYY-MM-DD")
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostID }) {
+    prevPost: markdownRemark(id: { eq: $prevPostID }) {
       fields {
         slug
       }
@@ -69,7 +81,7 @@ export const query = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostID }) {
+    nextPost: markdownRemark(id: { eq: $nextPostID }) {
       fields {
         slug
       }

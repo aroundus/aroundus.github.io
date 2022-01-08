@@ -2,23 +2,39 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 
 import {
-  Button, colors, Typography, useMediaQuery,
+  Button, ButtonProps, colors, Typography, useMediaQuery,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 
 import { Post } from '~types/global';
 
 interface KeyVisualSectionProps {
   post: Post;
   isButtonVisible?: boolean;
+  isGradientEnabled?: boolean;
 }
 
 const KeyVisualSection = ({
   post,
-  isButtonVisible = true,
+  isButtonVisible = false,
+  isGradientEnabled = false,
 }: KeyVisualSectionProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const StyledButton = styled(Button)<ButtonProps>(() => ({
+    '&': {
+      border: `1px solid ${colors.common.white}`,
+      color: colors.common.white,
+      opacity: 0.6,
+      transition: 'opacity 0.2s',
+    },
+    '&:hover': {
+      border: `1px solid ${colors.common.white}`,
+      color: colors.common.white,
+      opacity: 1,
+    },
+  }));
 
   const useStyles = createUseStyles({
     container: {
@@ -35,9 +51,15 @@ const KeyVisualSection = ({
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: ${colors.common.black};
         opacity: 0.5;
         content: '';
+        ${isGradientEnabled ? `
+          background-image: linear-gradient(-45deg, ${colors.common.black}, ${colors.pink[500]}, ${colors.blue[500]}, ${colors.green[500]});
+          background-size: 400% 400%;
+          animation: gradient 10s ease infinite;
+        ` : `
+          background-color: ${colors.common.black};
+        `}
       `,
     },
     content: `
@@ -90,15 +112,13 @@ const KeyVisualSection = ({
           {post.date}
         </Typography>
         {isButtonVisible && (
-          <Button
-            variant="outlined"
+          <StyledButton
             size="large"
-            color="inherit"
-            sx={{ mt: 6, px: 10, color: colors.grey[200] }}
+            sx={{ mt: 6, px: 10 }}
             href={post.path}
           >
             내용 보기
-          </Button>
+          </StyledButton>
         )}
       </div>
     </section>
