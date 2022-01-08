@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const PostTemplate = path.resolve('./src/components/Template/PostTemplate.tsx');
 
   posts.forEach((post, index) => {
-    const previousPostID = index === 0 ? null : posts[index - 1].id
+    const prevPostID = index === 0 ? null : posts[index - 1].id
     const nextPostID = index === posts.length - 1 ? null : posts[index + 1].id
 
     createPage({
@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: PostTemplate,
       context: {
         id: post.id,
-        previousPostID,
+        prevPostID,
         nextPostID,
       },
     });
