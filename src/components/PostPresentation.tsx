@@ -34,7 +34,13 @@ const PostPresentation = ({
   };
 
   return (
-    <ListItem dense>
+    <ListItem
+      dense
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-once="true"
+    >
       <StyledContent
         sx={{ px: 8, py: 10, justifyContent: 'center' }}
         divider
