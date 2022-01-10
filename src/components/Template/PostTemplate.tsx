@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '~components/Layout';
+import { CommentSection } from '~components/Section';
 import SEO from '~components/SEO';
 import PostContainer from '~containers/PostContainer';
 import { AnyObject } from '~types/global';
@@ -32,6 +33,7 @@ const PostTemplate = ({
 }: PostTemplateProps) => {
   const post = {
     id: markdownRemark.id,
+    path: markdownRemark.fields.slug,
     html: markdownRemark.html,
     ...markdownRemark.frontmatter,
   };
@@ -45,6 +47,12 @@ const PostTemplate = ({
       />
       <Layout>
         <PostContainer post={post} />
+        <CommentSection
+          options={{
+            id: post.id,
+            title: `${post.title} #${post.category}`,
+          }}
+        />
       </Layout>
     </>
   );
@@ -63,6 +71,9 @@ export const query = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       html
       frontmatter {
         category
