@@ -1,4 +1,5 @@
 const path = require('path');
+const { GitalkPluginHelper } = require('gatsby-plugin-gitalk');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -13,6 +14,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           fields {
             slug
+          }
+          frontmatter {
+            category
+            index
+            title
+            description
           }
         }
       }
@@ -44,6 +51,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     });
   });
+
+  const gitalkCreateIssueToken = process.env.GITALK_CREATE_ISSUE_TOKEN;
+
+  if (gitalkCreateIssueToken) {
+    for (let i = 0; i < posts.length; i++) {
+      const post = posts[i];
+
+      const issueOptions = {
+        clientID: process.env.GITHUB_CLIENT_ID,
+        clientSecret: process.env.GITHUB_CLIENT_SECRET,
+        repo: process.env.npm_package_name,
+        owner: process.env.GITHUB_USER_NAME,
+        id: post.id,
+        title: `${post.frontmatter.title} #${post.frontmatter.category}`,
+        description: post.frontmatter.description,
+        url: `https://${process.env.npm_package_name}${post.fields.slug}`,
+        personalToken: gitalkCreateIssueToken,
+      };
+
+      await GitalkPluginHelper.createIssue(issueOptions);
+      reporter.info(`issue - ${issueOptions.title}`);
+    }
+  }
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
