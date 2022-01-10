@@ -75,6 +75,11 @@ const theme = createTheme({
           word-break: keep-all;
         }
 
+        button,
+        textarea {
+          font-family: inherit;
+        }
+
         section {
           position: relative;
         }
@@ -313,6 +318,111 @@ const theme = createTheme({
           overflow-x: auto;
           text-align: center;
           letter-spacing: 0;
+        }
+
+        section {
+          .gt-container {
+            a {
+              color: ${colors.common.black};
+
+              &:hover {
+                color: ${colors.cyan[600]};
+                border-color: ${colors.cyan[400]};
+                text-decoration: none;
+              }
+            }
+
+            .gt {
+              &-avatar {
+                img {
+                  border-radius: 50%;
+                }
+              }
+
+              &-btn {
+                border-color: ${colors.cyan[400]};
+                background-color: ${colors.cyan[400]};
+                transition: 0.2s;
+                font-size: 0.85em;
+
+                &:hover {
+                  border-color: ${colors.cyan[600]};
+                  background-color: ${colors.cyan[600]};
+                }
+
+                &-preview {
+                  color: ${colors.cyan[400]};
+                  background-color: ${colors.common.white};
+
+                  &:hover {
+                    color: ${colors.cyan[600]};
+                    border-color: ${colors.cyan[600]};
+                    background-color: inherit;
+                  }
+                }
+
+                &-public {
+                  background-color: ${colors.cyan[400]};
+
+                  &:hover {
+                    border-color: ${colors.cyan[600]};
+                    background-color: ${colors.cyan[600]};
+                  }
+                }
+              }
+
+              &-header {
+                &-preview {
+                  border-radius: 4px;
+                  border-color: ${colors.grey[300]};
+                  background-color: ${colors.grey[100]};
+                }
+
+                &-controls-tip {
+                  color: ${colors.cyan[600]};
+                }
+              }
+
+              &-svg {
+                vertical-align: middle;
+
+                svg {
+                  fill: ${colors.cyan[600]};
+                }
+              }
+
+              &-ico-text {
+                vertical-align: middle;
+              }
+
+              &-comment {
+                &-admin {
+                  .gt-comment-content {
+                    background-color: ${alpha(colors.cyan[50], 0.2)};
+                  }
+                }
+
+                &-username {
+                  color: ${colors.cyan[600]};
+                }
+
+                &-content {
+                  border: 1px solid ${colors.cyan[200]};
+                  border-radius: 4px;
+                  background-color: ${colors.common.white};
+                }
+              }
+            }
+          }
+
+          .markdown-body {
+            font-family: inherit;
+            font-size: 0.9em;
+
+            code {
+              font-size: inherit;
+            }
+          }
         }
       `,
     },
