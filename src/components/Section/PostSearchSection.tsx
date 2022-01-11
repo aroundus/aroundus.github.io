@@ -36,11 +36,9 @@ const PostSearchSection = ({
         disableGutters
       >
         <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'flex-end',
-            gap: 3,
-          }}
+          display="flex"
+          alignItems="flex-end"
+          gap={3}
         >
           <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
           <TextField
