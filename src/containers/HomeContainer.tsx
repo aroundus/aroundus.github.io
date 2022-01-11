@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import isEmpty from 'lodash-es/isEmpty';
 import { Index } from 'lunr';
 
-import { KeyVisualSection, PostPresentationSection, PostSearchSection } from '~components/Section';
+import { KeyVisualSection, PostListSection, PostSearchSection } from '~components/Section';
 import { AnyObject, Post } from '~types/global';
 
 declare global {
@@ -28,7 +28,6 @@ const HomeContainer = () => {
             fields: [frontmatter___date, frontmatter___index, frontmatter___title],
             order: [DESC, DESC, ASC]
           }
-          limit: 100
         ) {
           nodes {
             id
@@ -84,7 +83,7 @@ const HomeContainer = () => {
         isGradientEnabled
       />
       <PostSearchSection onChange={(query) => setSearchQuery(query)} />
-      <PostPresentationSection
+      <PostListSection
         posts={isEmpty(searchQuery)
           ? posts.filter((_: Post, index: number) => index)
           : searchPosts}

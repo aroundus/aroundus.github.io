@@ -6,21 +6,21 @@ import dayjs from 'dayjs';
 
 import { Post } from '~types/global';
 
-import PostPresentation from '../PostPresentation';
+import PostListItem from '../PostListItem';
 
-interface PostPresentationSectionProps {
+interface PostListSectionProps {
   posts: Post[];
 }
 
-const PostPresentationSection = ({
+const PostListSection = ({
   posts,
-}: PostPresentationSectionProps) => {
+}: PostListSectionProps) => {
   const styles = createUseStyles({
     container: `
       position: relative;
     `,
   }, {
-    name: 'PostPresentationSection',
+    name: 'PostListSection',
   })();
 
   return (
@@ -28,7 +28,7 @@ const PostPresentationSection = ({
       <List sx={{ mx: 'auto', maxWidth: 800 }}>
         {isEmpty(posts)
           ? (
-            <PostPresentation
+            <PostListItem
               post={{
                 title: '뭐라도 하나는 있어야지 😉',
                 description: '아쉽지만 검색 결과가 나오지 않았어요. 당신이 원하는 글이 나올 수 있도록 노력해 볼게요. 이 글은 클릭해도 이동하지 않아요.',
@@ -36,11 +36,11 @@ const PostPresentationSection = ({
               }}
             />
           ) : posts.map((post) => (
-            <PostPresentation key={post.id} post={post} />
+            <PostListItem key={post.id} post={post} />
           ))}
       </List>
     </section>
   );
 };
 
-export default PostPresentationSection;
+export default PostListSection;
