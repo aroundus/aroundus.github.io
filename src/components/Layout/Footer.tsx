@@ -136,7 +136,11 @@ const Footer = () => {
               >
                 {meta.author.summary}
               </Typography>
-              <Box display="flex" sx={{ mt: 3, gap: 2 }}>
+              <Box
+                display="flex"
+                gap={2}
+                sx={{ mt: 3 }}
+              >
                 <Link
                   href={meta.author.url.github}
                   target="_blank"

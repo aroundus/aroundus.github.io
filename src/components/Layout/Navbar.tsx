@@ -22,7 +22,7 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const scrollTrigger = useScrollTrigger({ target: typeof window === 'undefined' ? undefined : window });
 
-  const useStyles = createUseStyles({
+  const styles = createUseStyles({
     isContainerFixed: `
       position: relative;
     `,
@@ -31,9 +31,7 @@ const Navbar = () => {
     `,
   }, {
     name: 'Navbar',
-  });
-
-  const styles = useStyles();
+  })();
 
   const [isContainerFixed, setContainerFixed] = useState(false);
 

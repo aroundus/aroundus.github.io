@@ -3,7 +3,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import isEmpty from 'lodash-es/isEmpty';
 import { Index } from 'lunr';
 
-import { KeyVisualSection, PostListSection, PostSearchSection } from '~components/Section';
+import {
+  KeyVisualSection, PaginationSection, PostListSection, PostSearchSection,
+} from '~components/Section';
 import { AnyObject, Post } from '~types/global';
 
 declare global {
@@ -49,16 +51,20 @@ const HomeContainer = () => {
     `,
   );
 
-  const posts = allMarkdownRemark.nodes.map((node: AnyObject) => ({
+  const posts: Post[] = allMarkdownRemark.nodes.map((node: AnyObject) => ({
     id: node.id,
     path: node.fields.slug,
     ...node.frontmatter,
   }));
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchPosts, setSearchPosts] = useState<Array<AnyObject>>([]);
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
+  const [pagedPosts, setPagedPosts] = useState<Post[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [numberOfPostsPerPage] = useState(5);
+  const [numberOfTotalPage, setNumberOfTotalPage] = useState(1);
 
-  const getSearchResults = (query: string) => {
+  const getSearchResults = (query: string): Post[] => {
     if (isEmpty(query) || isEmpty(window.__LUNR__)) return [];
 
     const lunr = window.__LUNR__.ko;
@@ -68,12 +74,22 @@ const HomeContainer = () => {
       ...lunr.store[ref],
       id: ref,
       date: lunr.store[ref].date.split('T')[0],
-    }));
+    } as Post));
   };
 
   useEffect(() => {
-    setSearchPosts(getSearchResults(searchQuery));
-  }, [searchQuery]);
+    setFilteredPosts(searchQuery
+      ? getSearchResults(searchQuery)
+      : posts.filter((_, index) => index));
+  }, [searchQuery, currentPage]);
+
+  useEffect(() => {
+    setNumberOfTotalPage(Math.ceil(filteredPosts.length / numberOfPostsPerPage));
+    setPagedPosts(filteredPosts.slice(
+      (currentPage - 1) * numberOfPostsPerPage,
+      currentPage * numberOfPostsPerPage,
+    ));
+  }, [filteredPosts]);
 
   return (
     <>
@@ -83,10 +99,11 @@ const HomeContainer = () => {
         isGradientEnabled
       />
       <PostSearchSection onChange={(query) => setSearchQuery(query)} />
-      <PostListSection
-        posts={isEmpty(searchQuery)
-          ? posts.filter((_: Post, index: number) => index)
-          : searchPosts}
+      <PostListSection posts={pagedPosts} />
+      <PaginationSection
+        currentPage={currentPage}
+        numberOfTotalPage={numberOfTotalPage}
+        onChange={(page: number) => setCurrentPage(page)}
       />
     </>
   );

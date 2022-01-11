@@ -13,7 +13,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: colors.cyan[600],
+      main: colors.cyan[400],
       contrastText: colors.common.white,
     },
   },
@@ -425,6 +425,14 @@ const theme = createTheme({
           }
         }
       `,
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          fontFamily: HEADING_FONT_FAMILY,
+          fontWeight: 300,
+        },
+      },
     },
   },
 }, koKR);
