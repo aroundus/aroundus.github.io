@@ -69,6 +69,10 @@ const SEO = (props: SEOProps) => {
           rel: 'stylesheet',
           href: 'https://fonts.cdnfonts.com/css/sf-mono',
         },
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css',
+        },
       ]}
     />
   );

@@ -161,5 +161,17 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-gitalk',
+      options: {
+        config: {
+          clientID: process.env.GITHUB_CLIENT_ID,
+          clientSecret: process.env.GITHUB_CLIENT_SECRET,
+          repo: process.env.npm_package_name,
+          owner: process.env.GITHUB_USER_NAME,
+          admin: [process.env.GITHUB_USER_NAME],
+        },
+      },
+    }
   ],
 };
