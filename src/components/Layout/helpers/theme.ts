@@ -430,7 +430,6 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: HEADING_FONT_FAMILY,
-          fontWeight: 300,
         },
       },
     },
