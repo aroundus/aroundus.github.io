@@ -7,13 +7,13 @@ import { styled } from '@mui/material/styles';
 
 import { Post } from '~types/global';
 
-interface PostPresentationProps {
+interface PostListItemProps {
   post: Post;
 }
 
-const PostPresentation = ({
+const PostListItem = ({
   post,
-}: PostPresentationProps) => {
+}: PostListItemProps) => {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       borderBottom: 'none',
@@ -57,4 +57,4 @@ const PostPresentation = ({
   );
 };
 
-export default PostPresentation;
+export default PostListItem;

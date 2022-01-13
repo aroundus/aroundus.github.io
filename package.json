@@ -9,12 +9,13 @@
     "graphql"
   ],
   "scripts": {
-    "start": "gatsby develop",
+    "start": "yarn lunr && gatsby develop",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build": "yarn clean && gatsby build --prefix-paths",
-    "deploy": "yarn build && gh-pages -d public"
+    "build": "yarn lunr && yarn clean && gatsby build --prefix-paths",
+    "deploy": "yarn build && gh-pages -d public",
+    "lunr": "node scripts/lunr.js"
   },
   "dependencies": {
     "@eastuni/lunr-languages-ko": "^1.4.0",
