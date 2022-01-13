@@ -1,4 +1,3 @@
-<hr />
 <div align="center">
   <img src="https://raw.githubusercontent.com/aroundus/aroundus/master/assets/images/logo.png" alt="aroundus" height="24" />
 </div>
@@ -10,7 +9,6 @@
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=MUI&logoColor=white" alt="MUI" />
 </div>
-<hr />
 
 # Coding everything AROUND US 👋
 
