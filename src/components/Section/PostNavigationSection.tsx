@@ -17,7 +17,9 @@ const PostNavigationSection = ({
   <Container
     component="section"
     maxWidth="md"
-    sx={{ mx: 'auto', px: 8, py: 10 }}
+    sx={{
+      mx: 'auto', px: 8, py: 5,
+    }}
     disableGutters
   >
     <Box
