@@ -7,7 +7,7 @@ import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
 import Layout from '~components/Layout';
 import {
-  CommentSection, PostNavigationSection, PostRecommendationSection,
+  CommentSection, PostNavigationSection, RelatedPostListSection,
 } from '~components/Section';
 import SEO from '~components/SEO';
 import PostContainer from '~containers/PostContainer';
@@ -77,7 +77,7 @@ const PostTemplate = ({
           nextPost={nextPost}
         />
         {!isEmpty(searchPosts) && (
-          <PostRecommendationSection
+          <RelatedPostListSection
             query={post.category as string}
             posts={searchPosts}
           />
