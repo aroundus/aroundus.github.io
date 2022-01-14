@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { Divider } from '@mui/material';
+import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
 import Layout from '~components/Layout';
 import { CommentSection, PostNavigationSection } from '~components/Section';
@@ -53,7 +54,9 @@ const PostTemplate = ({
       />
       <Layout>
         <PostContainer post={post} />
-        <Divider />
+        <Divider>
+          <InsertEmoticonIcon color="primary" />
+        </Divider>
         <PostNavigationSection
           prevPost={prevPost}
           nextPost={nextPost}
