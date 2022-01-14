@@ -1,25 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import isEmpty from 'lodash-es/isEmpty';
-import { Index } from 'lunr';
 
 import {
   KeyVisualSection, PaginationSection, PostListSection, PostSearchSection,
 } from '~components/Section';
+import { getSearchPosts } from '~helpers/search';
 import { AnyObject, Post } from '~types/global';
-
-declare global {
-  interface Window {
-    __LUNR__: {
-      [key: string]: {
-        index: Index;
-        store: {
-          [ref: string]: AnyObject;
-        };
-      };
-    };
-  }
-}
 
 const HomeContainer = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -64,22 +50,9 @@ const HomeContainer = () => {
   const [numberOfPostsPerPage] = useState(5);
   const [numberOfTotalPage, setNumberOfTotalPage] = useState(1);
 
-  const getSearchResults = (query: string): Post[] => {
-    if (isEmpty(query) || isEmpty(window.__LUNR__)) return [];
-
-    const lunr = window.__LUNR__.ko;
-    const results = lunr.index.search(`${query}*`);
-
-    return results.map(({ ref }) => ({
-      ...lunr.store[ref],
-      id: ref,
-      date: lunr.store[ref].date.split('T')[0],
-    } as Post));
-  };
-
   useEffect(() => {
     setFilteredPosts(searchQuery
-      ? getSearchResults(searchQuery)
+      ? getSearchPosts(searchQuery)
       : posts.filter((_, index) => index));
   }, [searchQuery, currentPage]);
 
