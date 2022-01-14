@@ -56,6 +56,9 @@ const theme = createTheme({
     body1: {
       letterSpacing: 0.2,
     },
+    caption: {
+      lineHeight: 1.2,
+    },
   },
   components: {
     MuiCssBaseline: {
@@ -429,6 +432,13 @@ const theme = createTheme({
     MuiPaginationItem: {
       styleOverrides: {
         root: {
+          fontFamily: HEADING_FONT_FAMILY,
+        },
+      },
+    },
+    MuiStepIcon: {
+      styleOverrides: {
+        text: {
           fontFamily: HEADING_FONT_FAMILY,
         },
       },

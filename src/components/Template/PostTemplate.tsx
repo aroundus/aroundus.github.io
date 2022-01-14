@@ -32,6 +32,7 @@ const PostTemplate = ({
     id: markdownRemark.id,
     path: markdownRemark.fields.slug,
     html: markdownRemark.html,
+    tableOfContents: markdownRemark.tableOfContents,
     ...markdownRemark.frontmatter,
   } as Post;
 
@@ -110,6 +111,9 @@ export const query = graphql`
         slug
       }
       html
+      tableOfContents(
+        maxDepth: 2
+      )
       frontmatter {
         category
         index

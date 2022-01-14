@@ -34,9 +34,28 @@ const PostNavigationSection = ({
           href={prevPost.path}
           sx={{ display: 'block', textAlign: 'left', textTransform: 'inherit' }}
         >
-          <Typography variant="caption" color={colors.grey[500]}><ArrowLeftIcon sx={{ ml: -1, height: 12 }} />이전 글</Typography>
-          <Typography variant="subtitle1" color={colors.grey[600]} fontSize={14} fontWeight={600} sx={{ mt: 3 }}>#{prevPost.category}</Typography>
-          <Typography variant="subtitle1" color={colors.grey[900]}>{prevPost.title}</Typography>
+          <Typography
+            variant="caption"
+            color={colors.grey[500]}
+          >
+            <ArrowLeftIcon sx={{ ml: -1, height: 12 }} />
+            이전 글
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color={colors.grey[600]}
+            fontSize={14}
+            fontWeight={600}
+            sx={{ mt: 3 }}
+          >
+            #{prevPost.category}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color={colors.grey[900]}
+          >
+            {prevPost.title}
+          </Typography>
         </Button>
       )}
       {nextPost && (
@@ -47,9 +66,28 @@ const PostNavigationSection = ({
           href={nextPost.path}
           sx={{ display: 'block', textAlign: 'right', textTransform: 'inherit' }}
         >
-          <Typography variant="caption" color={colors.grey[500]}>다음 글<ArrowRightIcon sx={{ mr: -2, height: 12 }} /></Typography>
-          <Typography variant="subtitle1" color={colors.grey[600]} fontSize={14} fontWeight={600} sx={{ mt: 3 }}>#{nextPost.category}</Typography>
-          <Typography variant="subtitle1" color={colors.grey[900]}>{nextPost.title}</Typography>
+          <Typography
+            variant="caption"
+            color={colors.grey[500]}
+          >
+            다음 글
+            <ArrowRightIcon sx={{ mr: -2, height: 12 }} />
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color={colors.grey[600]}
+            fontSize={14}
+            fontWeight={600}
+            sx={{ mt: 3 }}
+          >
+            #{nextPost.category}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color={colors.grey[900]}
+          >
+            {nextPost.title}
+          </Typography>
         </Button>
       )}
     </Box>

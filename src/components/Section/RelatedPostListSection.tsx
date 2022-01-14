@@ -39,7 +39,10 @@ const RelatedPostListSection = ({
       sx={{ mx: 'auto', px: 8, py: 5 }}
       disableGutters
     >
-      <Typography variant="caption" color={colors.grey[500]}>
+      <Typography
+        variant="caption"
+        color={colors.grey[500]}
+      >
         <RecommendIcon sx={{ mx: 1, height: 20, verticalAlign: 'middle' }} />
         <strong style={{ color: colors.cyan[600] }}>{query}</strong> 관련 글
       </Typography>

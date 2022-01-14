@@ -20,6 +20,8 @@ export const getSearchPosts = (query: string): Post[] => {
   if (isEmpty(query) || isEmpty(window.__LUNR__)) return [];
 
   const lunr = window.__LUNR__.ko;
+  if (isEmpty(lunr)) return [];
+
   const results = lunr.index.search(`${query}*`);
 
   return results.map(({ ref }) => ({
