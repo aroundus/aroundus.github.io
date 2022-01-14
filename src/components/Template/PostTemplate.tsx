@@ -7,7 +7,7 @@ import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
 import Layout from '~components/Layout';
 import {
-  CommentSection, PostNavigationSection, PostRecommendationSection,
+  CommentSection, PostNavigationSection, RelatedPostListSection,
 } from '~components/Section';
 import SEO from '~components/SEO';
 import PostContainer from '~containers/PostContainer';
@@ -32,6 +32,7 @@ const PostTemplate = ({
     id: markdownRemark.id,
     path: markdownRemark.fields.slug,
     html: markdownRemark.html,
+    tableOfContents: markdownRemark.tableOfContents,
     ...markdownRemark.frontmatter,
   } as Post;
 
@@ -77,7 +78,7 @@ const PostTemplate = ({
           nextPost={nextPost}
         />
         {!isEmpty(searchPosts) && (
-          <PostRecommendationSection
+          <RelatedPostListSection
             query={post.category as string}
             posts={searchPosts}
           />
@@ -110,6 +111,9 @@ export const query = graphql`
         slug
       }
       html
+      tableOfContents(
+        maxDepth: 2
+      )
       frontmatter {
         category
         index

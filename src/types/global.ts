@@ -8,6 +8,7 @@ export interface Post {
   index?: number;
   title: string;
   description: string;
+  tableOfContents?: string;
   image?: string;
   html?: string;
   date: string;

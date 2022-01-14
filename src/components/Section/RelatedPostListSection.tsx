@@ -8,15 +8,15 @@ import { styled } from '@mui/material/styles';
 
 import { Post } from '~types/global';
 
-interface PostRecommendationSectionProps {
+interface RelatedPostListSectionProps {
   query: string;
   posts: Post[];
 }
 
-const PostRecommendationSection = ({
+const RelatedPostListSection = ({
   query,
   posts,
-}: PostRecommendationSectionProps) => {
+}: RelatedPostListSectionProps) => {
   const StyledListItem = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       transition: 'color 0.2s linear',
@@ -39,9 +39,12 @@ const PostRecommendationSection = ({
       sx={{ mx: 'auto', px: 8, py: 5 }}
       disableGutters
     >
-      <Typography variant="caption" color={colors.grey[500]}>
+      <Typography
+        variant="caption"
+        color={colors.grey[500]}
+      >
         <RecommendIcon sx={{ mx: 1, height: 20, verticalAlign: 'middle' }} />
-        <strong style={{ color: colors.cyan[600] }}>{query}</strong> 추천 글
+        <strong style={{ color: colors.cyan[600] }}>{query}</strong> 관련 글
       </Typography>
       <List sx={{ mx: 3, mt: 2 }}>
         {posts.map((post) => (
@@ -75,4 +78,4 @@ const PostRecommendationSection = ({
   );
 };
 
-export default PostRecommendationSection;
+export default RelatedPostListSection;
