@@ -7,8 +7,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const queriedPosts = await graphql(`
     {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: ASC }
-        limit: 1000
+        filter: {
+          frontmatter: {
+            draft: {
+              ne: true
+            }
+          }
+        }
+        sort: {
+          fields: [frontmatter___date, frontmatter___index, frontmatter___title],
+          order: [DESC, DESC, ASC]
+        }
       ) {
         nodes {
           id
@@ -20,6 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             index
             title
             description
+            draft
           }
         }
       }
@@ -124,6 +134,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       image: String
       date: Date @dateformat
+      draft: Boolean
     }
 
     type Fields {

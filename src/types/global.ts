@@ -12,6 +12,7 @@ export interface Post {
   image?: string;
   html?: string;
   date: string;
+  draft?: boolean;
 }
 
 export interface PostNavigation {

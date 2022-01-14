@@ -12,6 +12,13 @@ const HomeContainer = () => {
     graphql`
       query {
         allMarkdownRemark(
+          filter: {
+            frontmatter: {
+              draft: {
+                ne: true
+              }
+            }
+          }
           sort: {
             fields: [frontmatter___date, frontmatter___index, frontmatter___title],
             order: [DESC, DESC, ASC]
@@ -30,6 +37,7 @@ const HomeContainer = () => {
               description
               image
               date(formatString: "YYYY-MM-DD")
+              draft
             }
           }
         }
