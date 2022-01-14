@@ -12,3 +12,9 @@ export interface Post {
   html?: string;
   date: string;
 }
+
+export interface PostNavigation {
+  path: string;
+  category: string;
+  title: string;
+}

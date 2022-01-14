@@ -6,7 +6,9 @@ const CommentSection = ({ options }: GitalkProps) => (
   <Container
     component="section"
     maxWidth="md"
-    sx={{ mx: 'auto', px: 8, py: 10 }}
+    sx={{
+      mx: 'auto', px: 8, pt: 4, pb: 10,
+    }}
     disableGutters
   >
     <Gitalk options={options} />
