@@ -6,20 +6,20 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-interface PostTableOfContentsProps {
+interface FloatingHeadingStepperProps {
   html: string;
   offset: number;
 }
 
-interface TableOfContent {
-  title: string;
+interface HeadingStep {
+  text: string;
   offset: number;
 }
 
-const PostTableOfContents = ({
+const FloatingHeadingStepper = ({
   html: htmlString,
   offset,
-}: PostTableOfContentsProps) => {
+}: FloatingHeadingStepperProps) => {
   const theme = useTheme();
 
   const styles = createUseStyles({
@@ -29,45 +29,19 @@ const PostTableOfContents = ({
       transform: translateX(-50%);
     `,
   }, {
-    name: 'PostTableOfContents',
+    name: 'FloatingHeadingStepper',
   })();
 
   const [activeStep, setActiveStep] = useState(0);
-  const [tableOfContents, setTableOfContents] = useState<TableOfContent[]>([]);
+  const [headingSteps, setHeadingSteps] = useState<HeadingStep[]>([]);
 
-  const handleStepClick = (top: number) => {
-    window.scroll({
-      top,
-      behavior: 'smooth',
-    });
-  };
-
-  useEffect(() => {
-    const listener = () => {
-      const { pageYOffset } = window;
-
-      tableOfContents.forEach((step, index) => {
-        if (step.offset < pageYOffset + 20) {
-          setActiveStep(index);
-        }
-      });
-    };
-
-    listener();
-    window.addEventListener('scroll', listener);
-
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
-  }, [tableOfContents]);
-
-  useEffect(() => {
+  const setHeadingStepsOffset = () => {
     const parser = new DOMParser();
     const html = parser.parseFromString(htmlString, 'text/html');
-    const steps: TableOfContent[] = [];
+    const steps: HeadingStep[] = [];
 
-    // h1 제목은 생략
-    // h2 제목만 작업
+    // h1 태그는 생략
+    // h2 태그만 작업
     html.querySelectorAll('ul > li').forEach((element) => {
       if (element.querySelector('ul') || element.querySelector('p')) return;
 
@@ -82,12 +56,42 @@ const PostTableOfContents = ({
       const { pageYOffset } = window;
 
       steps.push({
-        title: anchor.innerText,
+        text: anchor.innerText,
         offset: headingRect.top + pageYOffset - 60,
       });
     });
 
-    setTableOfContents(steps);
+    setHeadingSteps(steps);
+  };
+
+  const handleStepClick = (top: number) => {
+    window.scroll({
+      top,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    const listener = () => {
+      const { pageYOffset } = window;
+
+      headingSteps.forEach((step, index) => {
+        if (step.offset < pageYOffset + 20) {
+          setActiveStep(index);
+        }
+      });
+    };
+
+    listener();
+    window.addEventListener('scroll', listener);
+
+    return () => {
+      window.removeEventListener('scroll', listener);
+    };
+  }, [headingSteps]);
+
+  useEffect(() => {
+    setHeadingStepsOffset();
   }, []);
 
   return (
@@ -104,9 +108,9 @@ const PostTableOfContents = ({
           connector={null}
           nonLinear
         >
-          {tableOfContents.map((step) => (
+          {headingSteps.map((step) => (
             <Step
-              key={step.offset}
+              key={step.text}
               onClick={() => handleStepClick(step.offset)}
             >
               <StepLabel
@@ -124,7 +128,7 @@ const PostTableOfContents = ({
                   lineHeight={1.3}
                   fontSize={15}
                 >
-                  {step.title}
+                  {step.text}
                 </Typography>
               </StepLabel>
             </Step>
@@ -135,4 +139,4 @@ const PostTableOfContents = ({
   );
 };
 
-export default PostTableOfContents;
+export default FloatingHeadingStepper;
