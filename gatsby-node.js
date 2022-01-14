@@ -2,13 +2,25 @@ const path = require('path');
 const { GitalkPluginHelper } = require('gatsby-plugin-gitalk');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+const isProduction = process.env.NODE_ENV === 'production';
+const gitalkCreateIssueToken = process.env.GITALK_CREATE_ISSUE_TOKEN;
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const queriedPosts = await graphql(`
     {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: ASC }
-        limit: 1000
+        filter: {
+          frontmatter: {
+            draft: {
+              ne: true
+            }
+          }
+        }
+        sort: {
+          fields: [frontmatter___date, frontmatter___index, frontmatter___title],
+          order: [DESC, DESC, ASC]
+        }
       ) {
         nodes {
           id
@@ -20,6 +32,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             index
             title
             description
+            draft
           }
         }
       }
@@ -52,9 +65,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  const gitalkCreateIssueToken = process.env.GITALK_CREATE_ISSUE_TOKEN;
-
-  if (gitalkCreateIssueToken) {
+  if (isProduction && gitalkCreateIssueToken) {
     for (let i = 0; i < posts.length; i++) {
       const post = posts[i];
 
@@ -124,6 +135,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       image: String
       date: Date @dateformat
+      draft: Boolean
     }
 
     type Fields {

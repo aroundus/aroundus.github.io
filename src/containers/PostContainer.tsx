@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import PostTableOfContents from '~components/PostTableOfContents';
+import FloatingHeadingStepper from '~components/FloatingHeadingStepper';
 import { ArticleSection, KeyVisualSection } from '~components/Section';
 import { Post } from '~types/global';
 
@@ -20,7 +20,7 @@ const PostContainer = ({
   const keyVisualRef = useRef<HTMLElement>(null);
   const articleRef = useRef<HTMLElement>(null);
 
-  const [tableOfContentsOffset, setTableOfContentsOffset] = useState(0);
+  const [headingStepperOffset, setHeadingStepperOffset] = useState(0);
 
   useEffect(() => {
     const listener = () => {
@@ -33,9 +33,9 @@ const PostContainer = ({
         const { pageYOffset } = window;
 
         if (pageYOffset < keyVisualRect.height) {
-          setTableOfContentsOffset(keyVisualRect.height);
+          setHeadingStepperOffset(keyVisualRect.height);
         } else if (pageYOffset < articleRect.height) {
-          setTableOfContentsOffset(pageYOffset);
+          setHeadingStepperOffset(pageYOffset);
         }
       }
     };
@@ -61,9 +61,9 @@ const PostContainer = ({
         />
       )}
       {post.tableOfContents && !isTablet && (
-        <PostTableOfContents
+        <FloatingHeadingStepper
           html={post.tableOfContents}
-          offset={tableOfContentsOffset}
+          offset={headingStepperOffset}
         />
       )}
     </>
