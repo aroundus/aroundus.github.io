@@ -51,6 +51,7 @@ const FloatingTOC = ({
       const hash = anchor.innerHTML
         .replace(/\s/g, '-')
         .replace('<br>', 'br-')
+        .replace(/[!@#$%^&*()?.,]/g, '')
         .replace(/\p{Extended_Pictographic}/gu, '');
 
       const heading = document.getElementById(hash);
