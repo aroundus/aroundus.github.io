@@ -64,6 +64,7 @@ const PostTemplate = ({
   return (
     <>
       <SEO
+        path={post.path}
         title={post.title}
         description={post.description}
         image={post.image}

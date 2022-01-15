@@ -23,6 +23,8 @@ module.exports = {
       }
     },
     description: 'Coding everything AROUND US',
+    url: 'https://aroundus.github.io',
+    image: '/image.jpg',
   },
   plugins: [
     {
@@ -53,6 +55,7 @@ module.exports = {
         extensions: ['ts', 'tsx'],
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
@@ -172,6 +175,6 @@ module.exports = {
           admin: [process.env.GITHUB_USER_NAME],
         },
       },
-    }
+    },
   ],
 };
