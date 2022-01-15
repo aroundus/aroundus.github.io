@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Property } from 'csstype';
 import { createUseStyles } from 'react-jss';
 
 import {
@@ -6,39 +7,40 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-interface FloatingHeadingStepperProps {
+interface FloatingTOCProps {
   html: string;
-  offset: number;
+  target: HTMLElement | null;
 }
 
-interface HeadingStep {
+interface TOCStep {
   text: string;
-  offset: number;
+  yOffset: number;
 }
 
-const FloatingHeadingStepper = ({
+const FloatingTOC = ({
   html: htmlString,
-  offset,
-}: FloatingHeadingStepperProps) => {
+  target,
+}: FloatingTOCProps) => {
   const theme = useTheme();
 
   const styles = createUseStyles({
     container: `
-      position: absolute;
-      left: calc(58% + 450px);
-      transform: translateX(-50%);
+      transition: position 0.2s;
     `,
   }, {
-    name: 'FloatingHeadingStepper',
+    name: 'FloatingTOC',
   })();
 
   const [activeStep, setActiveStep] = useState(0);
-  const [headingSteps, setHeadingSteps] = useState<HeadingStep[]>([]);
+  const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
+  const [position, setPosition] = useState<Property.Position>('absolute');
+  const [xOffset, setXOffset] = useState(0);
+  const [yOffset, setYOffset] = useState(0);
 
-  const setHeadingStepsOffset = () => {
+  const setTOCStepsOffset = () => {
     const parser = new DOMParser();
     const html = parser.parseFromString(htmlString, 'text/html');
-    const steps: HeadingStep[] = [];
+    const steps: TOCStep[] = [];
 
     // h1 태그는 생략
     // h2 태그만 작업
@@ -57,11 +59,11 @@ const FloatingHeadingStepper = ({
 
       steps.push({
         text: anchor.innerText,
-        offset: headingRect.top + pageYOffset - 60,
+        yOffset: headingRect.top + pageYOffset - 60,
       });
     });
 
-    setHeadingSteps(steps);
+    setTOCSteps(steps);
   };
 
   const handleStepClick = (top: number) => {
@@ -75,8 +77,8 @@ const FloatingHeadingStepper = ({
     const listener = () => {
       const { pageYOffset } = window;
 
-      headingSteps.forEach((step, index) => {
-        if (step.offset < pageYOffset + 20) {
+      tocSteps.forEach((step, index) => {
+        if (step.yOffset < pageYOffset + 20) {
           setActiveStep(index);
         }
       });
@@ -88,17 +90,47 @@ const FloatingHeadingStepper = ({
     return () => {
       window.removeEventListener('scroll', listener);
     };
-  }, [headingSteps]);
+  }, [tocSteps]);
 
   useEffect(() => {
-    setHeadingStepsOffset();
-  }, []);
+    const listener = () => {
+      if (target === null) return;
+
+      const targetRect = target.getBoundingClientRect();
+      const { pageYOffset } = window;
+
+      setXOffset(targetRect.left + targetRect.width);
+
+      if (pageYOffset < target.offsetTop) {
+        setPosition('absolute');
+        setYOffset(target.offsetTop);
+      } else if (pageYOffset < targetRect.height) {
+        setPosition('fixed');
+        setYOffset(0);
+      } else {
+        setPosition('absolute');
+      }
+    };
+
+    listener();
+    window.addEventListener('resize', listener);
+    window.addEventListener('scroll', listener);
+
+    setTOCStepsOffset();
+
+    return () => {
+      window.removeEventListener('resize', listener);
+      window.removeEventListener('scroll', listener);
+    };
+  }, [target]);
 
   return (
     <aside
       className={styles.container}
       style={{
-        top: `calc(${offset}px + ${theme.spacing(10)})`,
+        position,
+        left: xOffset,
+        top: `calc(${yOffset}px + ${theme.spacing(10)})`,
       }}
     >
       <Box sx={{ minWidth: 160 }}>
@@ -108,10 +140,10 @@ const FloatingHeadingStepper = ({
           connector={null}
           nonLinear
         >
-          {headingSteps.map((step) => (
+          {tocSteps.map((step) => (
             <Step
               key={step.text}
-              onClick={() => handleStepClick(step.offset)}
+              onClick={() => handleStepClick(step.yOffset)}
             >
               <StepLabel
                 StepIconProps={{
@@ -139,4 +171,4 @@ const FloatingHeadingStepper = ({
   );
 };
 
-export default FloatingHeadingStepper;
+export default FloatingTOC;
