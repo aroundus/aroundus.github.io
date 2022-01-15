@@ -7,22 +7,22 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-interface FloatingHeadingStepperProps {
+interface FloatingTOCProps {
   html: string;
   position: Property.Position;
   offset: number;
 }
 
-interface HeadingStep {
+interface TOCStep {
   text: string;
   offset: number;
 }
 
-const FloatingHeadingStepper = ({
+const FloatingTOC = ({
   html: htmlString,
   position,
   offset,
-}: FloatingHeadingStepperProps) => {
+}: FloatingTOCProps) => {
   const theme = useTheme();
 
   const styles = createUseStyles({
@@ -33,16 +33,16 @@ const FloatingHeadingStepper = ({
       transition: position 0.2s;
     `,
   }, {
-    name: 'FloatingHeadingStepper',
+    name: 'FloatingTOC',
   })();
 
   const [activeStep, setActiveStep] = useState(0);
-  const [headingSteps, setHeadingSteps] = useState<HeadingStep[]>([]);
+  const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
 
-  const setHeadingStepsOffset = () => {
+  const setTOCStepsOffset = () => {
     const parser = new DOMParser();
     const html = parser.parseFromString(htmlString, 'text/html');
-    const steps: HeadingStep[] = [];
+    const steps: TOCStep[] = [];
 
     // h1 태그는 생략
     // h2 태그만 작업
@@ -65,7 +65,7 @@ const FloatingHeadingStepper = ({
       });
     });
 
-    setHeadingSteps(steps);
+    setTOCSteps(steps);
   };
 
   const handleStepClick = (top: number) => {
@@ -79,7 +79,7 @@ const FloatingHeadingStepper = ({
     const listener = () => {
       const { pageYOffset } = window;
 
-      headingSteps.forEach((step, index) => {
+      tocSteps.forEach((step, index) => {
         if (step.offset < pageYOffset + 20) {
           setActiveStep(index);
         }
@@ -92,10 +92,10 @@ const FloatingHeadingStepper = ({
     return () => {
       window.removeEventListener('scroll', listener);
     };
-  }, [headingSteps]);
+  }, [tocSteps]);
 
   useEffect(() => {
-    setHeadingStepsOffset();
+    setTOCStepsOffset();
   }, []);
 
   return (
@@ -113,7 +113,7 @@ const FloatingHeadingStepper = ({
           connector={null}
           nonLinear
         >
-          {headingSteps.map((step) => (
+          {tocSteps.map((step) => (
             <Step
               key={step.text}
               onClick={() => handleStepClick(step.offset)}
@@ -144,4 +144,4 @@ const FloatingHeadingStepper = ({
   );
 };
 
-export default FloatingHeadingStepper;
+export default FloatingTOC;

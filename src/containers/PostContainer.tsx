@@ -4,7 +4,7 @@ import { Property } from 'csstype';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import FloatingHeadingStepper from '~components/FloatingHeadingStepper';
+import FloatingTOC from '~components/FloatingTOC';
 import { ArticleSection, KeyVisualSection } from '~components/Section';
 import { Post } from '~types/global';
 
@@ -21,8 +21,8 @@ const PostContainer = ({
   const keyVisualRef = useRef<HTMLElement>(null);
   const articleRef = useRef<HTMLElement>(null);
 
-  const [headingStepperPosition, setHeadingStepperPosition] = useState<Property.Position>('absolute');
-  const [headingStepperOffset, setHeadingStepperOffset] = useState(0);
+  const [tocPosition, setTOCPosition] = useState<Property.Position>('absolute');
+  const [tocOffset, setTOCOffset] = useState(0);
 
   useEffect(() => {
     const listener = () => {
@@ -35,13 +35,13 @@ const PostContainer = ({
         const { pageYOffset } = window;
 
         if (pageYOffset < keyVisualRect.height) {
-          setHeadingStepperPosition('absolute');
-          setHeadingStepperOffset(keyVisualRect.height);
+          setTOCPosition('absolute');
+          setTOCOffset(keyVisualRect.height);
         } else if (pageYOffset < articleRect.height) {
-          setHeadingStepperPosition('fixed');
-          setHeadingStepperOffset(0);
+          setTOCPosition('fixed');
+          setTOCOffset(0);
         } else {
-          setHeadingStepperPosition('absolute');
+          setTOCPosition('absolute');
         }
       }
     };
@@ -67,10 +67,10 @@ const PostContainer = ({
         />
       )}
       {post.tableOfContents && !isTablet && (
-        <FloatingHeadingStepper
+        <FloatingTOC
           html={post.tableOfContents}
-          position={headingStepperPosition}
-          offset={headingStepperOffset}
+          position={tocPosition}
+          offset={tocOffset}
         />
       )}
     </>
