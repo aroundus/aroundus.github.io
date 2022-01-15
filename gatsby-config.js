@@ -24,7 +24,7 @@ module.exports = {
     },
     description: 'Coding everything AROUND US',
     url: 'https://aroundus.github.io',
-    image: '/image.jpg',
+    image: '/aroundus.jpg',
   },
   plugins: [
     {
