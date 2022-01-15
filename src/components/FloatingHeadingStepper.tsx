@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Property } from 'csstype';
 import { createUseStyles } from 'react-jss';
 
 import {
@@ -8,6 +9,7 @@ import { useTheme } from '@mui/material/styles';
 
 interface FloatingHeadingStepperProps {
   html: string;
+  position: Property.Position;
   offset: number;
 }
 
@@ -18,6 +20,7 @@ interface HeadingStep {
 
 const FloatingHeadingStepper = ({
   html: htmlString,
+  position,
   offset,
 }: FloatingHeadingStepperProps) => {
   const theme = useTheme();
@@ -27,6 +30,7 @@ const FloatingHeadingStepper = ({
       position: absolute;
       left: calc(58% + 450px);
       transform: translateX(-50%);
+      transition: position 0.2s;
     `,
   }, {
     name: 'FloatingHeadingStepper',
@@ -98,6 +102,7 @@ const FloatingHeadingStepper = ({
     <aside
       className={styles.container}
       style={{
+        position,
         top: `calc(${offset}px + ${theme.spacing(10)})`,
       }}
     >

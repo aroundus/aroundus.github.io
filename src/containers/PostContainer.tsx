@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Property } from 'csstype';
 
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -20,6 +21,7 @@ const PostContainer = ({
   const keyVisualRef = useRef<HTMLElement>(null);
   const articleRef = useRef<HTMLElement>(null);
 
+  const [headingStepperPosition, setHeadingStepperPosition] = useState<Property.Position>('absolute');
   const [headingStepperOffset, setHeadingStepperOffset] = useState(0);
 
   useEffect(() => {
@@ -33,9 +35,13 @@ const PostContainer = ({
         const { pageYOffset } = window;
 
         if (pageYOffset < keyVisualRect.height) {
+          setHeadingStepperPosition('absolute');
           setHeadingStepperOffset(keyVisualRect.height);
         } else if (pageYOffset < articleRect.height) {
-          setHeadingStepperOffset(pageYOffset);
+          setHeadingStepperPosition('fixed');
+          setHeadingStepperOffset(0);
+        } else {
+          setHeadingStepperPosition('absolute');
         }
       }
     };
@@ -63,6 +69,7 @@ const PostContainer = ({
       {post.tableOfContents && !isTablet && (
         <FloatingHeadingStepper
           html={post.tableOfContents}
+          position={headingStepperPosition}
           offset={headingStepperOffset}
         />
       )}
