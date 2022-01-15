@@ -7,11 +7,14 @@ interface Data {
     siteMetadata: {
       title: string;
       description: string;
+      url: string;
+      image: string;
     };
   };
 }
 
 interface SEOProps {
+  path?: string;
   title?: string;
   description?: string;
   image?: string;
@@ -25,6 +28,8 @@ const SEO = (props: SEOProps) => {
           siteMetadata {
             title
             description
+            url
+            image
           }
         }
       }
@@ -33,6 +38,8 @@ const SEO = (props: SEOProps) => {
 
   const title = props.title || site.siteMetadata.title;
   const description = props.description || site.siteMetadata.description;
+  const url = `${site.siteMetadata.url}${props.path || ''}`;
+  const image = props.image || site.siteMetadata.image;
 
   return (
     <Helmet
@@ -43,36 +50,24 @@ const SEO = (props: SEOProps) => {
       title={props.title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
-        {
-          name: 'description',
-          content: description,
-        },
-        {
-          property: 'og:title',
-          content: title,
-        },
-        {
-          property: 'og:description',
-          content: description,
-        },
-        {
-          property: 'og:image',
-          content: props.image,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
+        { name: 'description', content: description },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:url', content: url },
+        { property: 'og:image', content: image },
+        { property: 'og:image:type', content: 'image/jpeg' },
+        { property: 'og:type', content: 'website' },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:domain', content: site.siteMetadata.url },
+        { property: 'twitter:url', content: url },
+        { property: 'twitter:title', content: title },
+        { property: 'twitter:description', content: description },
+        { property: 'twitter:image', content: image },
       ]}
       link={[
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.cdnfonts.com/css/sf-mono',
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css',
-        },
+        { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/sf-mono' },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
       ]}
     />
   );

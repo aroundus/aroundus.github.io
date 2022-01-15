@@ -109,6 +109,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       author: Author
       description: String
+      url: String
+      image: String
     }
 
     type Author {
