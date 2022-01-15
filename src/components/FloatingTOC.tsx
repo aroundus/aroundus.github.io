@@ -125,7 +125,7 @@ const FloatingTOC = ({
       window.removeEventListener('resize', listener);
       window.removeEventListener('scroll', listener);
     };
-  }, [target]);
+  }, [htmlString, target]);
 
   return (
     <aside
