@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
 
 import {
@@ -14,11 +14,11 @@ interface KeyVisualSectionProps {
   isGradientEnabled?: boolean;
 }
 
-const KeyVisualSection = forwardRef<HTMLElement, KeyVisualSectionProps>(({
+const KeyVisualSection = ({
   post,
   isButtonVisible = false,
   isGradientEnabled = false,
-}, ref) => {
+}: KeyVisualSectionProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -74,7 +74,6 @@ const KeyVisualSection = forwardRef<HTMLElement, KeyVisualSectionProps>(({
 
   return (
     <section
-      ref={ref}
       className={styles.container}
       style={{
         padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 12 : 16)} ${theme.spacing(16)}`,
@@ -124,6 +123,6 @@ const KeyVisualSection = forwardRef<HTMLElement, KeyVisualSectionProps>(({
       </div>
     </section>
   );
-});
+};
 
 export default KeyVisualSection;

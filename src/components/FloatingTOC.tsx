@@ -9,9 +9,7 @@ import { useTheme } from '@mui/material/styles';
 
 interface FloatingTOCProps {
   html: string;
-  position: Property.Position;
-  xOffset: number;
-  yOffset: number;
+  target: HTMLElement | null;
 }
 
 interface TOCStep {
@@ -21,9 +19,7 @@ interface TOCStep {
 
 const FloatingTOC = ({
   html: htmlString,
-  position,
-  xOffset,
-  yOffset,
+  target,
 }: FloatingTOCProps) => {
   const theme = useTheme();
 
@@ -37,6 +33,9 @@ const FloatingTOC = ({
 
   const [activeStep, setActiveStep] = useState(0);
   const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
+  const [position, setPosition] = useState<Property.Position>('absolute');
+  const [xOffset, setXOffset] = useState(0);
+  const [yOffset, setYOffset] = useState(0);
 
   const setTOCStepsOffset = () => {
     const parser = new DOMParser();
@@ -94,8 +93,36 @@ const FloatingTOC = ({
   }, [tocSteps]);
 
   useEffect(() => {
+    const listener = () => {
+      if (target === null) return;
+
+      const targetRect = target.getBoundingClientRect();
+      const { pageYOffset } = window;
+
+      setXOffset(targetRect.left + targetRect.width);
+
+      if (pageYOffset < target.offsetTop) {
+        setPosition('absolute');
+        setYOffset(target.offsetTop);
+      } else if (pageYOffset < targetRect.height) {
+        setPosition('fixed');
+        setYOffset(0);
+      } else {
+        setPosition('absolute');
+      }
+    };
+
+    listener();
+    window.addEventListener('resize', listener);
+    window.addEventListener('scroll', listener);
+
     setTOCStepsOffset();
-  }, []);
+
+    return () => {
+      window.removeEventListener('resize', listener);
+      window.removeEventListener('scroll', listener);
+    };
+  }, [target]);
 
   return (
     <aside
