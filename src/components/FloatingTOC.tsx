@@ -10,26 +10,25 @@ import { useTheme } from '@mui/material/styles';
 interface FloatingTOCProps {
   html: string;
   position: Property.Position;
-  offset: number;
+  xOffset: number;
+  yOffset: number;
 }
 
 interface TOCStep {
   text: string;
-  offset: number;
+  yOffset: number;
 }
 
 const FloatingTOC = ({
   html: htmlString,
   position,
-  offset,
+  xOffset,
+  yOffset,
 }: FloatingTOCProps) => {
   const theme = useTheme();
 
   const styles = createUseStyles({
     container: `
-      position: absolute;
-      left: calc(58% + 450px);
-      transform: translateX(-50%);
       transition: position 0.2s;
     `,
   }, {
@@ -61,7 +60,7 @@ const FloatingTOC = ({
 
       steps.push({
         text: anchor.innerText,
-        offset: headingRect.top + pageYOffset - 60,
+        yOffset: headingRect.top + pageYOffset - 60,
       });
     });
 
@@ -80,7 +79,7 @@ const FloatingTOC = ({
       const { pageYOffset } = window;
 
       tocSteps.forEach((step, index) => {
-        if (step.offset < pageYOffset + 20) {
+        if (step.yOffset < pageYOffset + 20) {
           setActiveStep(index);
         }
       });
@@ -103,7 +102,8 @@ const FloatingTOC = ({
       className={styles.container}
       style={{
         position,
-        top: `calc(${offset}px + ${theme.spacing(10)})`,
+        left: xOffset,
+        top: `calc(${yOffset}px + ${theme.spacing(10)})`,
       }}
     >
       <Box sx={{ minWidth: 160 }}>
@@ -116,7 +116,7 @@ const FloatingTOC = ({
           {tocSteps.map((step) => (
             <Step
               key={step.text}
-              onClick={() => handleStepClick(step.offset)}
+              onClick={() => handleStepClick(step.yOffset)}
             >
               <StepLabel
                 StepIconProps={{
