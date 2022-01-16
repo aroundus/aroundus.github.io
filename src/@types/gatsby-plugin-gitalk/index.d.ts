@@ -28,6 +28,8 @@ declare module 'gatsby-plugin-gitalk' {
        */
       admin: string[];
 
+      personalToken: string;
+
       /**
        * The unique id of the page.
        * Length must less than 50.
@@ -64,6 +66,10 @@ declare module 'gatsby-plugin-gitalk' {
        * @default location.href + header.meta[description]
        */
       body?: string;
+
+      description?: string;
+
+      url?: string;
 
       /**
        * Localization language key.
@@ -147,5 +153,17 @@ declare module 'gatsby-plugin-gitalk' {
     export { createIssue };
   }
 
-  declare function createIssue(options: Gitalk.GitalkOptions, reporter?: Console): Promise<void>;
+  export type IssueOptions = Pick<Gitalk.GitalkOptions,
+    'clientID' |
+    'clientSecret' |
+    'repo' |
+    'owner' |
+    'id' |
+    'title' |
+    'description' |
+    'url' |
+    'personalToken'
+  >;
+
+  declare function createIssue(options: IssueOptions, reporter?: Console): Promise<void>;
 }

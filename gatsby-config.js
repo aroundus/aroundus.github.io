@@ -12,7 +12,7 @@ const lunrKoreanPlugin = (lunr) => (builder) => {
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: 'AROUND US',
+    title: 'AROUNDUS',
     author: {
       name: '백은주 sally',
       summary: 'Frontend Developer @wadiz',
@@ -170,7 +170,7 @@ module.exports = {
         config: {
           clientID: process.env.GITHUB_CLIENT_ID,
           clientSecret: process.env.GITHUB_CLIENT_SECRET,
-          repo: process.env.npm_package_name,
+          repo: process.env.GITHUB_REPO_NAME,
           owner: process.env.GITHUB_USER_NAME,
           admin: [process.env.GITHUB_USER_NAME],
         },
