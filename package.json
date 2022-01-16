@@ -1,12 +1,15 @@
 {
-  "name": "aroundus.github.io",
+  "name": "aroundus",
   "version": "1.0.0",
   "private": true,
-  "description": "블로그",
-  "author": "백은주 <specialguest@live.co.kr>",
+  "description": "Coding everything AROUND US",
+  "author": "Sally <specialguest@live.co.kr>",
+  "homepage": "https://aroundus.github.io",
   "keywords": [
     "gatsby",
-    "graphql"
+    "graphql",
+    "typescript",
+    "mui"
   ],
   "scripts": {
     "start": "yarn lunr && gatsby develop",
