@@ -79,12 +79,12 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
       const issueOptions = {
         clientID: process.env.GITHUB_CLIENT_ID as string,
         clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
-        repo: process.env.GITHUB_REPO_NAME as string,
+        repo: process.env.GATSBY_DOMAIN as string,
         owner: process.env.GITHUB_USER_NAME as string,
         id: post.id,
         title: `${post.frontmatter.title} #${post.frontmatter.category}`,
         description: post.frontmatter.description,
-        url: `https://${process.env.GITHUB_REPO_NAME}${post.fields.slug}`,
+        url: `https://${process.env.GATSBY_DOMAIN}${post.fields.slug}`,
         personalToken: gitalkCreateIssueToken,
       };
 

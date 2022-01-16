@@ -2,6 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const title = process.env.GATSBY_TITLE;
+const description = process.env.GATSBY_DESCRIPTION;
+const domain = process.env.GATSBY_DOMAIN;
+
 const HTML = (props) => {
   let isTitleEmpty = true;
   let isDescriptionEmpty = true;
@@ -28,20 +32,20 @@ const HTML = (props) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        {isTitleEmpty && <title>AROUNDUS</title>}
-        {isDescriptionEmpty && <meta name="description" content="Coding everything AROUND US" />}
+        {isTitleEmpty && <title>{title}</title>}
+        {isDescriptionEmpty && <meta name="description" content={description} />}
         {isOpenGraphEmpty && (
           <>
-            <meta property="og:url" content="https://aroundus.github.io" />
+            <meta property="og:url" content={`https://${domain}`} />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="AROUNDUS" />
-            <meta property="og:description" content="Coding everything AROUND US" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
             <meta property="og:image" content="/aroundus.jpg" />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta property="twitter:domain" content="aroundus.github.io" />
-            <meta property="twitter:url" content="https://aroundus.github.io" />
-            <meta name="twitter:title" content="AROUNDUS" />
-            <meta name="twitter:description" content="Coding everything AROUND US" />
+            <meta property="twitter:domain" content={domain} />
+            <meta property="twitter:url" content={`https://${domain}`} />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content="/aroundus.jpg" />
           </>
         )}

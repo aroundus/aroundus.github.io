@@ -12,18 +12,17 @@ const lunrKoreanPlugin = (lunr) => (builder) => {
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: 'AROUNDUS',
+    title: process.env.GATSBY_TITLE,
     author: {
       name: '백은주 sally',
       summary: 'Frontend Developer @wadiz',
       email: 'specialguest@live.co.kr',
       url: {
-        github: 'https://github.com/aroundus',
+        github: `https://github.com/${process.env.GITHUB_USER_NAME}`,
         instagram: 'https://www.instagram.com/__specialguest',
       }
     },
-    description: 'Coding everything AROUND US',
-    url: 'https://aroundus.github.io',
+    description: process.env.GATSBY_DESCRIPTION,
     image: '/aroundus.jpg',
   },
   plugins: [
@@ -170,7 +169,7 @@ module.exports = {
         config: {
           clientID: process.env.GITHUB_CLIENT_ID,
           clientSecret: process.env.GITHUB_CLIENT_SECRET,
-          repo: process.env.GITHUB_REPO_NAME,
+          repo: process.env.GATSBY_DOMAIN,
           owner: process.env.GITHUB_USER_NAME,
           admin: [process.env.GITHUB_USER_NAME],
         },

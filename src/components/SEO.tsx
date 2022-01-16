@@ -7,7 +7,6 @@ interface Data {
     siteMetadata: {
       title: string;
       description: string;
-      url: string;
       image: string;
     };
   };
@@ -28,7 +27,6 @@ const SEO = (props: SEOProps) => {
           siteMetadata {
             title
             description
-            url
             image
           }
         }
@@ -38,7 +36,8 @@ const SEO = (props: SEOProps) => {
 
   const title = props.title || site.siteMetadata.title;
   const description = props.description || site.siteMetadata.description;
-  const url = `${site.siteMetadata.url}${props.path || ''}`;
+  const domain = process.env.GATSBY_DOMAIN;
+  const url = `https://${domain}${props.path || ''}`;
 
   return (
     <Helmet
@@ -58,7 +57,7 @@ const SEO = (props: SEOProps) => {
         { property: 'og:image:type', content: 'image/jpeg' },
         { property: 'og:type', content: 'website' },
         { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:domain', content: site.siteMetadata.url },
+        { property: 'twitter:domain', content: domain },
         { property: 'twitter:url', content: url },
         { property: 'twitter:title', content: title },
         { property: 'twitter:description', content: description },
