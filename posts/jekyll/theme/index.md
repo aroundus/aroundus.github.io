@@ -3,7 +3,6 @@ category: jekyll
 index: 2
 title: 테마 적용하기
 description: Jekyll은 수많은 테마를 보유하고 있습니다. 여러분이 마음에 드는 테마를 골랐다면 설정하는 데 5분도 걸리지 않을 거예요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/jekyll/cover.jpg?raw=true
 date: 2018-02-04
 ---
 

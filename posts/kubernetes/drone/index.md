@@ -3,7 +3,7 @@ category: kubernetes
 index: 8
 title: Drone CI
 description: 매번 코드를 커밋할 때마다 컨테이너 이미지를 만들고 배포해야 하는 일을 해야 할까요? 여기 커밋 이벤트를 감지해서 자동으로 컨테이너 이미지를 만드는 방법이 있어요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/drone/cover.jpg?raw=true
+image: drone
 date: 2020-05-25
 ---
 

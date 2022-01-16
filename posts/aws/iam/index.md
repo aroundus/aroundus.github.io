@@ -3,7 +3,6 @@ category: aws
 index: 2
 title: IAM
 description: AWS 작업을 하려면 해당 리소스에 대한 권한이 있어야 합니다. AWS는 IAM 서비스를 통해 리소스 접근에 대한 권한을 안전하게 제어합니다.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/aws/cover.jpg?raw=true
 date: 2020-05-18
 ---
 

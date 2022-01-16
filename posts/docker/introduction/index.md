@@ -3,7 +3,6 @@ category: docker
 index: 1
 title: Docker 소개
 description: Docker(도커)는 컨테이너 기반의 가상화 플랫폼으로 Environment Disparity(환경 차이)를 해결합니다. 다음 몇 가지 예시를 살펴보면 이해할 수 있습니다.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/docker/cover.jpg?raw=true
 date: 2020-05-25
 ---
 

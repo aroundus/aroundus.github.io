@@ -3,7 +3,6 @@ category: kubernetes
 index: 2
 title: Cluster
 description: 회사 쿠버네티스를 설립하고 직원들을 수용할 사무실 클러스터를 매입하였습니다. 사무실은 임원진 구역인 마스터 노드와 직원 구역인 워커 노드로 나누어 관리하려고 합니다. 임원진은 컨설팅 업체 EKS에 자문을 구하면 1시간 안에 구성할 수 있어요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/cover.jpg?raw=true
 date: 2020-05-25
 ---
 

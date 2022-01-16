@@ -11,6 +11,7 @@ import {
 } from '~components/Section';
 import SEO from '~components/SEO';
 import PostContainer from '~containers/PostContainer';
+import { getPostCoverImageURL } from '~helpers/image';
 import { getSearchPosts } from '~helpers/search';
 import { AnyObject, Post } from '~types/global';
 
@@ -67,7 +68,7 @@ const PostTemplate = ({
         path={post.path}
         title={post.title}
         description={post.description}
-        image={post.image}
+        image={getPostCoverImageURL(post.image || post.category)}
       />
       <Layout>
         <PostContainer post={post} />

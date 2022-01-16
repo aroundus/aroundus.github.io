@@ -3,7 +3,7 @@ category: developer
 index: 1
 title: WakaTime vs CodeTime 🕖
 description: 이 플러그인은 애플 워치처럼 내 개발 활동을 스마트하게 측정합니다. 대시보드 형태로 한눈에 확인할 수 있어요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/developer/wakatime-vs-codetime/cover.jpg?raw=true
+image: wakatime-vs-codetime
 date: 2021-12-23
 ---
 
