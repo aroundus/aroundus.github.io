@@ -3,7 +3,6 @@ category: kubernetes
 index: 3
 title: Component
 description: 인체를 세포로 구성한다면, 쿠버네티스는 컴포넌트로 구성합니다. 쿠버네티스를 구성하는 컴포넌트의 종류는 매우 다양하게 있어요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/cover.jpg?raw=true
 date: 2020-05-25
 ---
 

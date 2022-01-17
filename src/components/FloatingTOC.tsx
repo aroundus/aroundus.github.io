@@ -48,8 +48,14 @@ const FloatingTOC = ({
       if (element.querySelector('ul') || element.querySelector('p')) return;
 
       const anchor = element.querySelector('a') as HTMLAnchorElement;
+      const hash = anchor.innerHTML
+        .replace(/\s/g, '-')
+        .replace(/<br>/g, 'br-')
+        .replace(/<\/?mark>/g, 'mark')
+        .replace(/<\/?u>/g, 'u')
+        .replace(/[!@#$%^&*()?.,]/g, '')
+        .replace(/\p{Extended_Pictographic}/gu, '');
 
-      const hash = anchor.innerText.replace(/\s/g, '-').replace(/\p{Emoji}/gu, '');
       const heading = document.getElementById(hash);
 
       if (heading === null) return;
@@ -58,7 +64,7 @@ const FloatingTOC = ({
       const { pageYOffset } = window;
 
       steps.push({
-        text: anchor.innerText,
+        text: anchor.innerHTML.replace(/<\/?(br|mark|u)>/g, ' '),
         yOffset: headingRect.top + pageYOffset - 60,
       });
     });
@@ -122,7 +128,7 @@ const FloatingTOC = ({
       window.removeEventListener('resize', listener);
       window.removeEventListener('scroll', listener);
     };
-  }, [target]);
+  }, [htmlString, target]);
 
   return (
     <aside

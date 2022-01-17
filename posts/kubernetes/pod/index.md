@@ -3,7 +3,6 @@ category: kubernetes
 index: 4
 title: Pod
 description: 도커는 컨테이너를 배포해서 서비스를 구성하고, 쿠버네티스는 파드를 배포해서 서비스를 구성합니다. 컨테이너와 파드는 비슷하지만 미묘한 차이가 있어요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/cover.jpg?raw=true
 date: 2020-05-25
 ---
 

@@ -3,7 +3,7 @@ category: kubernetes
 index: 9
 title: Apache Kafka
 description: Apache Kafka(아파치 카프카)는 오픈 소스 대규모 메시지 플랫폼입니다. 모빌리티 스타트업에서 차량의 패킷을 실시간으로 수집하는 데 사용하였습니다.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/kafka/cover.jpg?raw=true
+image: kafka
 date: 2020-05-25
 ---
 

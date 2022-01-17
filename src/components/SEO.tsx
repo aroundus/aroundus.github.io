@@ -7,7 +7,6 @@ interface Data {
     siteMetadata: {
       title: string;
       description: string;
-      url: string;
       image: string;
     };
   };
@@ -28,7 +27,6 @@ const SEO = (props: SEOProps) => {
           siteMetadata {
             title
             description
-            url
             image
           }
         }
@@ -38,8 +36,8 @@ const SEO = (props: SEOProps) => {
 
   const title = props.title || site.siteMetadata.title;
   const description = props.description || site.siteMetadata.description;
-  const url = `${site.siteMetadata.url}${props.path || ''}`;
-  const image = props.image || site.siteMetadata.image;
+  const domain = process.env.GATSBY_DOMAIN;
+  const url = `https://${domain}${props.path || ''}`;
 
   return (
     <Helmet
@@ -55,15 +53,15 @@ const SEO = (props: SEOProps) => {
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
         { property: 'og:url', content: url },
-        { property: 'og:image', content: image },
+        { property: 'og:image', content: props.image },
         { property: 'og:image:type', content: 'image/jpeg' },
         { property: 'og:type', content: 'website' },
         { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:domain', content: site.siteMetadata.url },
+        { property: 'twitter:domain', content: domain },
         { property: 'twitter:url', content: url },
         { property: 'twitter:title', content: title },
         { property: 'twitter:description', content: description },
-        { property: 'twitter:image', content: image },
+        { property: 'twitter:image', content: props.image },
       ]}
       link={[
         { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/sf-mono' },

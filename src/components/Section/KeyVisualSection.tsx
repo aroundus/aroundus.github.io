@@ -6,6 +6,7 @@ import {
 } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 
+import { getPostCoverImageURL } from '~helpers/image';
 import { Post } from '~types/global';
 
 interface KeyVisualSectionProps {
@@ -42,7 +43,7 @@ const KeyVisualSection = ({
         background: no-repeat center / cover;
         background-attachment: scroll;
         background-color: ${colors.grey[600]};
-        background-image: url(${post.image});
+        background-image: url(${getPostCoverImageURL(post.image || post.category)});
         z-index: 2;
       `,
       '&::before': `

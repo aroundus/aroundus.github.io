@@ -3,7 +3,6 @@ category: jekyll
 index: 1
 title: Jekyll 블로그 만들기
 description: 콘텐츠는 있는데 블로그가 없어서 고민이라면 지금 바로 도전하세요. Jekyll은 데이터베이스가 필요하지 않아요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/jekyll/cover.jpg?raw=true
 date: 2018-02-03
 ---
 

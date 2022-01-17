@@ -24,7 +24,7 @@ const PostNavigationSection = ({
   >
     <Box
       display="flex"
-      justifyContent={prevPost ? 'space-between' : 'end'}
+      justifyContent={prevPost ? 'space-between' : 'flex-end'}
     >
       {prevPost && (
         <Button

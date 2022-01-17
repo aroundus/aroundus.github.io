@@ -3,7 +3,7 @@ category: kubernetes
 index: 5
 title: Amazon EKS 인프라 구성하기
 description: 모빌리티 스타트업에서 EKS 인프라를 구성하는 데브옵스 업무를 맡았습니다. 실전에서 인프라를 어떻게 구성했는지 살펴보세요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/build-eks-infrastructure/cover.jpg?raw=true
+image: eks
 date: 2020-05-25
 ---
 

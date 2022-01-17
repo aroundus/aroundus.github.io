@@ -3,7 +3,7 @@ category: kubernetes
 index: 6
 title: Amazon EKS 프로젝트 배포하기
 description: 프로젝트를 배포하는 방식은 사용하는 기술에 따라 다르겠지만 전체적인 뼈대는 비슷합니다. 실전에서 어떻게 배포했는지 살펴보세요.
-image: https://github.com/aroundus/aroundus.github.io/blob/master/posts/kubernetes/build-eks-infrastructure/cover.jpg?raw=true
+image: eks
 date: 2020-05-25
 ---
 
