@@ -1,7 +1,7 @@
 ---
 category: monologue
 index: 1
-title: 2021년을 시작했을 때의 나의 역량과, 2022년을 시작하는 나의 역량은 어떻게 달라졌을까?
+title: 2022년을 시작하는 나의 역량은 어떻게 달라졌을까?
 description: 성장한 주요 역량을 정리한 2021년 자기 성장 보고서입니다. 뒤로 갈수록 내용이 부실한 건 비밀입니다.
 image: self-growth-report
 date: 2022-01-17
