@@ -50,7 +50,9 @@ const FloatingTOC = ({
       const anchor = element.querySelector('a') as HTMLAnchorElement;
       const hash = anchor.innerHTML
         .replace(/\s/g, '-')
-        .replace('<br>', 'br-')
+        .replace(/<br>/g, 'br-')
+        .replace(/<\/?mark>/g, 'mark')
+        .replace(/<\/?u>/g, 'u')
         .replace(/[!@#$%^&*()?.,]/g, '')
         .replace(/\p{Extended_Pictographic}/gu, '');
 
@@ -62,7 +64,7 @@ const FloatingTOC = ({
       const { pageYOffset } = window;
 
       steps.push({
-        text: anchor.innerHTML.replace('<br>', ' '),
+        text: anchor.innerHTML.replace(/<\/?(br|mark|u)>/g, ' '),
         yOffset: headingRect.top + pageYOffset - 60,
       });
     });

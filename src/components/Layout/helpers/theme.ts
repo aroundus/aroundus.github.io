@@ -103,6 +103,11 @@ const theme = createTheme({
               visibility: visible;
             }
           }
+
+          u {
+            border-bottom: 2px solid ${colors.cyan[400]};
+            text-decoration: none;
+          }
         }
 
         h1 {
@@ -136,7 +141,8 @@ const theme = createTheme({
           letter-spacing: 0.2px;
           line-height: 1.6;
 
-          a {
+          a,
+          u {
             border-bottom: 2px solid ${colors.cyan[400]};
             text-decoration: none;
           }
