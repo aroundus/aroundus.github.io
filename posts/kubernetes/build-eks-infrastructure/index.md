@@ -25,7 +25,7 @@ date: 2020-05-25
 
 ## IAM 사용자 추가
 
-AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/aws/iam) 내용을 참조하세요.
+AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/post/aws/iam) 내용을 참조하세요.
 
 ## Kubernetes API
 
