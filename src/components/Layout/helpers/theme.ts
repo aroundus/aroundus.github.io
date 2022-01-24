@@ -155,7 +155,6 @@ const theme = createTheme({
             zoom: 0.8;
           }
 
-          iframe,
           img {
             box-shadow: 0 4px 24px -16px ${colors.grey[600]};
           }
@@ -180,6 +179,10 @@ const theme = createTheme({
         code {
           font-family: ${CODE_FONT_FAMILY};
           font-weight: 500;
+        }
+
+        iframe {
+          box-shadow: 0 4px 24px -16px ${colors.grey[600]};
         }
 
         img {
