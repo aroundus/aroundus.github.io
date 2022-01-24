@@ -181,6 +181,10 @@ const theme = createTheme({
           font-weight: 500;
         }
 
+        iframe {
+          box-shadow: 0 4px 24px -16px ${colors.grey[600]};
+        }
+
         img {
           max-width: 100%;
         }

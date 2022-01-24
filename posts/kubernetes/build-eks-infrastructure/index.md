@@ -25,7 +25,7 @@ date: 2020-05-25
 
 ## IAM 사용자 추가
 
-AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/aws/iam) 내용을 참조하세요.
+AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/post/aws/iam) 내용을 참조하세요.
 
 ## Kubernetes API
 
@@ -907,4 +907,4 @@ spec:
 
 # ㅗㅜㅑ 🤭<br />설마 여기까지 온 건가요?
 
-이 엄청난 스크롤의 압박을 극복한 당신은 최소 쿠버네티스 사랑꾼! 👍 이제 서비스를 구성하는 파드를 쿠버네티스 오브젝트로 만들고 배포하는 단계가 남았습니다. 심호흡하고 [Amazon EKS 프로젝트 배포하기](/kubernetes/deploy-project) 글을 살펴보세요.
+이 엄청난 스크롤의 압박을 극복한 당신은 최소 쿠버네티스 사랑꾼! 👍 이제 서비스를 구성하는 파드를 쿠버네티스 오브젝트로 만들고 배포하는 단계가 남았습니다. 심호흡하고 [Amazon EKS 프로젝트 배포하기](/post/kubernetes/deploy-project) 글을 살펴보세요.

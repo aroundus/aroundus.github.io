@@ -143,6 +143,7 @@ module.exports = {
           {
             name: 'ko',
             plugins: [lunrKoreanPlugin],
+            filterNodes: (node) => node.frontmatter && !node.frontmatter.draft,
           },
         ],
         fields: [
@@ -158,6 +159,7 @@ module.exports = {
             title: (node) => node.frontmatter.title,
             description: (node) => node.frontmatter.description,
             date: (node) => node.frontmatter.date,
+            draft: (node) => node.frontmatter.draft,
             path: (node) => node.fields.slug,
           },
         },

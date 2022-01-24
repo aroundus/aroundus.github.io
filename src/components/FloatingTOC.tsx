@@ -119,14 +119,16 @@ const FloatingTOC = ({
     };
 
     listener();
-    window.addEventListener('resize', listener);
-    window.addEventListener('scroll', listener);
+    ['resize', 'orientationChange', 'scroll'].forEach((type) => {
+      window.addEventListener(type, listener);
+    });
 
     setTOCStepsOffset();
 
     return () => {
-      window.removeEventListener('resize', listener);
-      window.removeEventListener('scroll', listener);
+      ['resize', 'orientationChange', 'scroll'].forEach((type) => {
+        window.removeEventListener(type, listener);
+      });
     };
   }, [htmlString, target]);
 
