@@ -56,8 +56,8 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   const PostTemplate = path.resolve(__dirname, '../components/Template/PostTemplate.tsx');
 
   posts.forEach((post: AnyObject, index: number) => {
-    const prevPostID = index === 0 ? null : posts[index - 1].id;
-    const nextPostID = index === posts.length - 1 ? null : posts[index + 1].id;
+    const prevPostID = index === posts.length - 1 ? null : posts[index + 1].id;
+    const nextPostID = index === 0 ? null : posts[index - 1].id;
 
     createPage({
       path: post.fields.slug,
