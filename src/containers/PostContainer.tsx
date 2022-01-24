@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Property } from 'csstype';
+import React, { useRef } from 'react';
 
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

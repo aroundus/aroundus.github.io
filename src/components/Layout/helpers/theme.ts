@@ -155,6 +155,7 @@ const theme = createTheme({
             zoom: 0.8;
           }
 
+          iframe,
           img {
             box-shadow: 0 4px 24px -16px ${colors.grey[600]};
           }
