@@ -282,11 +282,11 @@ const theme = createTheme({
           pre[class*="language-"] {
             font-family: ${CODE_FONT_FAMILY};
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
           }
 
           pre[class*="language-"] {
-            border-radius: 4px;
+            padding: 1.4em;
 
             &::after,
             &::before {
@@ -294,17 +294,15 @@ const theme = createTheme({
             }
 
             &.line-numbers {
+              padding-left: 4.6em;
+
               &.line-numbers code {
-                padding: 24px;
-                padding-left: 64px;
                 box-shadow: none;
               }
 
               .line-numbers-rows {
-                padding: 24px 0;
+                padding: 1.4em 0;
                 min-width: 48px;
-                border-left: 8px solid ${colors.cyan[300]};
-                background-image: linear-gradient(${colors.common.white} 50%, ${colors.grey[100]} 50%);
                 background-size: 3em 3em;
                 background-origin: content-box;
                 letter-spacing: 0;
@@ -313,11 +311,6 @@ const theme = createTheme({
                   padding-left: 12px;
                 }
               }
-            }
-
-            > code {
-              border-left: none;
-              background-image: linear-gradient(${colors.common.white} 50%, ${colors.grey[100]} 50%);
             }
           }
 
