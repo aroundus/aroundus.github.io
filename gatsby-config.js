@@ -179,5 +179,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-KN2ZK3L',
+        // includeInDevelopment: true,
+      },
+    },
   ],
 };
