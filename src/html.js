@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const title = process.env.GATSBY_TITLE;
 const description = process.env.GATSBY_DESCRIPTION;
-const domain = process.env.GATSBY_DOMAIN;
+const domain = process.env.SITE_DOMAIN;
 
 const HTML = (props) => {
   let isTitleEmpty = true;
@@ -31,6 +31,7 @@ const HTML = (props) => {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="google-site-verification" content={process.env.GOOGLE_SITE_VERIFICATION} />
 
         {isTitleEmpty && <title>{title}</title>}
         {isDescriptionEmpty && <meta name="description" content={description} />}

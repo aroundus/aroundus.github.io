@@ -12,6 +12,7 @@ const lunrKoreanPlugin = (lunr) => (builder) => {
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
+    siteUrl: process.env.SITE_URL,
     title: process.env.GATSBY_TITLE,
     author: {
       name: '백은주 sally',
@@ -171,11 +172,12 @@ module.exports = {
         config: {
           clientID: process.env.GITHUB_CLIENT_ID,
           clientSecret: process.env.GITHUB_CLIENT_SECRET,
-          repo: process.env.GATSBY_DOMAIN,
+          repo: process.env.SITE_DOMAIN,
           owner: process.env.GITHUB_USER_NAME,
           admin: [process.env.GITHUB_USER_NAME],
         },
       },
     },
+    'gatsby-plugin-sitemap',
   ],
 };
