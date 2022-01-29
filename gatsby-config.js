@@ -55,6 +55,7 @@ module.exports = {
         extensions: ['ts', 'tsx'],
       },
     },
+    'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',

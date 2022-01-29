@@ -1,0 +1,84 @@
+@import "~assets/styles/base";
+
+.gatsby-resp-image {
+  &-figure {
+    margin: 0;
+
+    a {
+      border-bottom: none;
+    }
+  }
+
+  &-image {
+    box-shadow: 0 4px 24px -16px $color-grey-600 !important;
+  }
+
+  &-figcaption {
+    margin-top: 4px;
+    font-size: 0.86em;
+    text-align: center;
+
+    p {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      color: $color-grey-500;
+
+      a {
+        color: $color-grey-500;
+
+        &:hover {
+          color: $color-cyan-600;
+        }
+      }
+    }
+  }
+}
+
+.gatsby-highlight {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: $code-font-family;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  pre[class*="language-"] {
+    padding: 1.4em;
+
+    &::after,
+    &::before {
+      box-shadow: none;
+    }
+
+    &.line-numbers {
+      padding-left: 4.6em;
+
+      &.line-numbers code {
+        box-shadow: none;
+      }
+
+      .line-numbers-rows {
+        min-width: 48px;
+        padding: 1.4em 0;
+        background-origin: content-box;
+        background-size: 3em 3em;
+        letter-spacing: 0;
+
+        > span {
+          padding-left: 12px;
+        }
+      }
+    }
+  }
+
+  .command-line-prompt {
+    letter-spacing: 0;
+  }
+}
+
+.mermaid {
+  padding: 32px 0;
+  letter-spacing: 0;
+  overflow-x: auto;
+  text-align: center;
+}
