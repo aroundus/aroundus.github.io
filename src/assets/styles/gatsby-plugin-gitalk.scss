@@ -1,0 +1,112 @@
+@import "~assets/styles/base";
+
+%anchor {
+  a {
+    color: black;
+
+    &:hover {
+      border-color: $color-cyan-400;
+      color: $color-cyan-600;
+      text-decoration: none;
+    }
+  }
+}
+
+.gt-container {
+  @extend %anchor;
+
+  .gt-meta {
+    @extend %anchor;
+  }
+
+  .gt-header {
+    .gt-svg {
+      vertical-align: middle;
+
+      svg {
+        fill: $color-cyan-600;
+      }
+    }
+
+    .gt-header-controls {
+      &-tip {
+        color: $color-cyan-600;
+      }
+
+      .gt-btn {
+        border-color: $color-cyan-400;
+        background-color: $color-cyan-400;
+        font-size: 0.85em;
+        transition: 0.2s;
+
+        &:hover {
+          border-color: $color-cyan-600;
+          background-color: $color-cyan-600;
+        }
+
+        &-preview {
+          background-color: white;
+          color: $color-cyan-400;
+
+          &:hover {
+            border-color: $color-cyan-600;
+            background-color: inherit;
+            color: $color-cyan-600;
+          }
+        }
+
+        &-public {
+          background-color: $color-cyan-400;
+
+          &:hover {
+            border-color: $color-cyan-600;
+            background-color: $color-cyan-600;
+          }
+        }
+      }
+    }
+
+    .gt-header-preview {
+      border-color: $color-grey-300;
+      background-color: $color-grey-100;
+      border-radius: 4px;
+    }
+  }
+
+  .gt-comments {
+    .gt-comment-content {
+      border: 1px solid $color-cyan-200;
+      background-color: white;
+      border-radius: 4px;
+    }
+
+    .gt-comment-admin {
+      .gt-comment-content {
+        background-color: rgba($color-cyan-50, 0.2);
+      }
+    }
+
+    .gt-comment-username {
+      color: $color-cyan-600;
+    }
+  }
+
+  .gt-avatar {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .gt-ico-text {
+    vertical-align: middle;
+  }
+
+  .markdown-body {
+    font-family: inherit;
+    font-size: 0.9em;
+
+    code {
+      font-size: inherit;
+    }
+  }
+}

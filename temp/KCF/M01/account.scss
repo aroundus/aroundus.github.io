@@ -4,13 +4,13 @@
   --bs-grey-200: #e9ecef;
   --bs-grey-900: #212529;
   --bs-white: #fff;
-  --bs-font-sans-serif: 'Spoqa Han Sans Neo', sans-serif;
+  --bs-font-sans-serif: "Spoqa Han Sans Neo", sans-serif;
 }
 
 body {
   font-family: var(--bs-font-sans-serif);
-  word-break: keep-all;
   overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 button {
@@ -19,20 +19,20 @@ button {
 
 .copy-account-info-button {
   display: flex;
-  cursor: pointer;
   flex-direction: row-reverse;
   align-items: center;
+  cursor: pointer;
 }
 
 .navbar-button {
   display: flex;
   width: 36px;
   height: 36px;
-  border-radius: 8px;
-  color: var(--bs-cyan-600);
-  background-color: transparent;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  border-radius: 8px;
+  color: var(--bs-cyan-600);
   transition: 0.3s;
 
   &:hover {
@@ -40,32 +40,32 @@ button {
   }
 
   &-fill {
-    color: var(--bs-white);
     background-color: var(--bs-cyan-600);
+    color: var(--bs-white);
 
     &:hover {
-      color: var(--bs-white);
       background-color: var(--bs-cyan-700);
+      color: var(--bs-white);
     }
   }
 }
 
 #navigation {
-  padding: 12px;
-  border-radius: 32px;
-  background-color: var(--bs-grey-200);
   flex-wrap: nowrap;
+  padding: 12px;
+  background-color: var(--bs-grey-200);
+  border-radius: 32px;
 
   .nav-link {
     display: flex;
+    align-items: center;
     border-radius: 32px;
     color: var(--bs-grey-900);
-    align-items: center;
     gap: 4px;
 
     &.active {
-      color: var(--bs-white);
       background-color: var(--bs-cyan-600);
+      color: var(--bs-white);
 
       .nav-link-name {
         width: initial;
@@ -78,8 +78,8 @@ button {
       width: 0;
       height: 0;
       font-size: 13px;
-      white-space: nowrap;
       visibility: hidden;
+      white-space: nowrap;
     }
   }
 }

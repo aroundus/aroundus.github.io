@@ -1,0 +1,42 @@
+@import "~assets/styles/base";
+
+.gatsby-code-button-container {
+  top: 8px;
+
+  .gatsby-code-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    font-size: 13px;
+
+    svg {
+      position: relative;
+      top: -1px;
+      height: 24px;
+      align-self: center;
+      margin-left: 2px;
+      fill: white;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg {
+        fill: $color-cyan-300;
+      }
+    }
+  }
+}
+
+.gatsby-code-button-toaster {
+  &-text {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 24px -16px $color-grey-600;
+    color: black;
+    font-family: $base-font-family;
+    font-size: 0.86em;
+    letter-spacing: 0;
+  }
+}

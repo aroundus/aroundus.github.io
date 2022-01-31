@@ -55,6 +55,7 @@ module.exports = {
         extensions: ['ts', 'tsx'],
       },
     },
+    'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
@@ -115,6 +116,14 @@ module.exports = {
                   useMaxWidth: false,
                 },
               },
+            },
+          },
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              svgIcon: '<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>',
+              toasterDuration: 1000 * 10000,
+              toasterText: '코드 내용을 복사하였습니다.',
             },
           },
           {
