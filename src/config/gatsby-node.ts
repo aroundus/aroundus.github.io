@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import dotenv from 'dotenv';
 import path from 'path';
 import { GatsbyNode as GatsbyNodeType } from 'gatsby';
 import { GitalkPluginHelper } from 'gatsby-plugin-gitalk';
@@ -7,6 +8,8 @@ import { AnyObject } from '~types/global';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const gitalkCreateIssueToken = process.env.GITALK_CREATE_ISSUE_TOKEN;
+
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
 const GatsbyNode: GatsbyNodeType = {};
 
@@ -77,8 +80,8 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
       const post = posts[i];
 
       const issueOptions = {
-        clientID: process.env.GITHUB_CLIENT_ID as string,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+        clientID: process.env.GITALK_GITHUB_CLIENT_ID as string,
+        clientSecret: process.env.GITALK_GITHUB_CLIENT_SECRET as string,
         repo: process.env.SITE_DOMAIN as string,
         owner: process.env.GITHUB_USER_NAME as string,
         id: post.id,

@@ -1,7 +1,7 @@
-const path = require('path');
 const dotenv = require('dotenv');
+const path = require('path');
 
-dotenv.config({ path: '.env' });
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
 // WHY: 한글 적용 불가
 const lunrKoreanPlugin = (lunr) => (builder) => {
@@ -179,8 +179,8 @@ module.exports = {
       resolve: 'gatsby-plugin-gitalk',
       options: {
         config: {
-          clientID: process.env.GITHUB_CLIENT_ID,
-          clientSecret: process.env.GITHUB_CLIENT_SECRET,
+          clientID: process.env.GITALK_GITHUB_CLIENT_ID,
+          clientSecret: process.env.GITALK_GITHUB_CLIENT_SECRET,
           repo: process.env.SITE_DOMAIN,
           owner: process.env.GITHUB_USER_NAME,
           admin: [process.env.GITHUB_USER_NAME],
@@ -191,7 +191,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: 'GTM-KN2ZK3L',
+        id: process.env.GOOGLE_TAG_MANAGER_CONTAINER_ID,
         // includeInDevelopment: true,
       },
     },
