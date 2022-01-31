@@ -72,6 +72,7 @@ module.exports = {
     'indent': ['error', 2, { SwitchCase: 1 }],
     'max-len': 'off',
     'no-caller': 'off',
+    'no-console': ['warn', { allow: ['warn', 'error']}],
     'no-param-reassign': 'off',
     'no-restricted-properties': 'off',
     'no-shadow': 'off',
