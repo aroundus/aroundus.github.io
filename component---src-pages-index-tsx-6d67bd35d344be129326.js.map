@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-index-tsx-6d67bd35d344be129326.js","mappings":"8HACA,UAAeA,EAAf","sources":["webpack://aroundus/./src/pages/index.tsx"],"sourcesContent":["import App from './App';\nexport default App;\n"],"names":["App"],"sourceRoot":""}
