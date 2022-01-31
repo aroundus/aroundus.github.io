@@ -1,5 +1,6 @@
 node_modules
 public
 .cache
+.env.production
 yarn.lock
 package-lock.json
