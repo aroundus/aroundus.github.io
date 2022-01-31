@@ -16,6 +16,10 @@ const theme = createTheme({
       main: colors.cyan[400],
       contrastText: colors.common.white,
     },
+    secondary: {
+      main: colors.grey[500],
+      contrastText: colors.common.white,
+    },
   },
   typography: {
     fontFamily: BASE_FONT_FAMILY,
