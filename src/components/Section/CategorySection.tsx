@@ -39,12 +39,14 @@ const CategorySection = ({
             variant={selectedCategory === category ? 'contained' : 'outlined'}
             color={selectedCategory === category ? 'primary' : 'secondary'}
             size={isMobile ? 'small' : 'medium'}
+            sx={{ textTransform: 'unset' }}
             disableRipple
             onClick={() => handleClick(category)}
           >
             <Typography
               variant="subtitle1"
-              sx={{ letterSpacing: 0.2 }}
+              fontWeight={600}
+              letterSpacing={0.2}
             >
               {category}
             </Typography>

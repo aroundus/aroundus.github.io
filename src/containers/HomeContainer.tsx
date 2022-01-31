@@ -59,7 +59,7 @@ const HomeContainer = () => {
   const categories: string[] = uniq(fetchedPosts.map((post) => post.category || '')
     .sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0)));
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('전체');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [pagedPosts, setPagedPosts] = useState<Post[]>([]);
@@ -76,7 +76,7 @@ const HomeContainer = () => {
      * 대표 글 포함: 선택한 카테고리가 있거나 검색한 단어가 있는 경우
      * 대표 글 포함 안 함: 선택한 카테고리가 없고 검색한 단어가 없는 경우
      */
-    if (selectedCategory === 'all') {
+    if (selectedCategory === '전체') {
       if (searchQuery === '') {
         posts = posts.filter((_, index) => index);
       }
@@ -107,7 +107,7 @@ const HomeContainer = () => {
         isGradientEnabled
       />
       <CategorySection
-        categories={['all'].concat(categories)}
+        categories={['전체'].concat(categories)}
         selectedCategory={selectedCategory}
         onClick={(category: string) => setSelectedCategory(category)}
       />
