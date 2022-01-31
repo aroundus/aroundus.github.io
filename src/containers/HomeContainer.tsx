@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import uniq from 'lodash-es/uniq';
 
 import {
-  KeyVisualSection, PaginationSection, PostListSection, PostSearchSection,
+  CategorySection,
+  KeyVisualSection,
+  PaginationSection,
+  PostListSection,
+  PostSearchSection,
 } from '~components/Section';
 import { getSearchPosts } from '~helpers/search';
 import { AnyObject, Post } from '~types/global';
@@ -45,12 +50,16 @@ const HomeContainer = () => {
     `,
   );
 
-  const posts: Post[] = allMarkdownRemark.nodes.map((node: AnyObject) => ({
+  const fetchedPosts: Post[] = allMarkdownRemark.nodes.map((node: AnyObject) => ({
     id: node.id,
     path: node.fields.slug,
     ...node.frontmatter,
   }));
 
+  const categories: string[] = uniq(fetchedPosts.map((post) => post.category || '')
+    .sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0)));
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [pagedPosts, setPagedPosts] = useState<Post[]>([]);
@@ -59,10 +68,28 @@ const HomeContainer = () => {
   const [numberOfTotalPage, setNumberOfTotalPage] = useState(1);
 
   useEffect(() => {
-    setFilteredPosts(searchQuery
+    let posts = searchQuery
       ? getSearchPosts(searchQuery)
-      : posts.filter((_, index) => index));
-  }, [searchQuery, currentPage]);
+      : fetchedPosts;
+
+    /**
+     * 대표 글 포함: 선택한 카테고리가 있거나 검색한 단어가 있는 경우
+     * 대표 글 포함 안 함: 선택한 카테고리가 없고 검색한 단어가 없는 경우
+     */
+    if (selectedCategory === 'all') {
+      if (searchQuery === '') {
+        posts = posts.filter((_, index) => index);
+      }
+    } else {
+      posts = posts.filter((post) => post.category === selectedCategory);
+    }
+
+    setFilteredPosts(posts);
+  }, [selectedCategory, searchQuery, currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
 
   useEffect(() => {
     setNumberOfTotalPage(Math.ceil(filteredPosts.length / numberOfPostsPerPage));
@@ -75,9 +102,14 @@ const HomeContainer = () => {
   return (
     <>
       <KeyVisualSection
-        post={posts[0]}
+        post={fetchedPosts[0]}
         isButtonVisible
         isGradientEnabled
+      />
+      <CategorySection
+        categories={['all'].concat(categories)}
+        selectedCategory={selectedCategory}
+        onClick={(category: string) => setSelectedCategory(category)}
       />
       <PostSearchSection onChange={(query) => setSearchQuery(query)} />
       <PostListSection posts={pagedPosts} />
