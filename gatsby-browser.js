@@ -8,4 +8,5 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 import './src/assets/styles/animations.scss';
 import './src/assets/styles/gatsby-plugin-gitalk.scss';
+import './src/assets/styles/gatsby-remark-code-buttons.scss';
 import './src/assets/styles/gatsby-transformer-remark.scss';
