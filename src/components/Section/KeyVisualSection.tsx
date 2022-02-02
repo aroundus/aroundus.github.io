@@ -11,12 +11,16 @@ import { Post } from '~types/global';
 
 interface KeyVisualSectionProps {
   post: Post;
+  typewriter?: {
+    title?: React.ReactNode;
+  };
   isButtonVisible?: boolean;
   isGradientEnabled?: boolean;
 }
 
 const KeyVisualSection = ({
   post,
+  typewriter,
   isButtonVisible = false,
   isGradientEnabled = false,
 }: KeyVisualSectionProps) => {
@@ -95,7 +99,12 @@ const KeyVisualSection = ({
           sx={{ mb: 3 }}
           position="relative"
         >
-          {post.title}
+          {typewriter?.title ? (
+            <>
+              <div style={{ position: 'absolute' }}>{typewriter.title}</div>
+              <div style={{ opacity: 0 }}>{post.title}</div>
+            </>
+          ) : post.title}
         </Typography>
         <Typography
           variant={isMobile ? 'body2' : 'body1'}
