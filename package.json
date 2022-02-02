@@ -50,7 +50,8 @@
     "redux": "^4.1.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "typeface-montserrat": "^1.1.13"
+    "typeface-montserrat": "^1.1.13",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",

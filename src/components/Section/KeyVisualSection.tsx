@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
+import { Properties } from 'csstype';
 
 import {
   Button, ButtonProps, colors, Typography, useMediaQuery,
@@ -11,17 +12,23 @@ import { Post } from '~types/global';
 
 interface KeyVisualSectionProps {
   post: Post;
+  typewriter?: {
+    title?: React.ReactNode;
+  };
   isButtonVisible?: boolean;
   isGradientEnabled?: boolean;
 }
 
 const KeyVisualSection = ({
   post,
+  typewriter,
   isButtonVisible = false,
   isGradientEnabled = false,
 }: KeyVisualSectionProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const [backgroundStyle, setBackgroundStyle] = useState<Properties>({});
 
   const StyledButton = styled(Button)<ButtonProps>(() => ({
     '&': {
@@ -41,7 +48,6 @@ const KeyVisualSection = ({
     container: {
       '&': `
         background: no-repeat center / cover;
-        background-attachment: scroll;
         background-color: ${colors.grey[600]};
         background-image: url(${getPostCoverImageURL(post.image || post.category)});
         z-index: 2;
@@ -73,11 +79,31 @@ const KeyVisualSection = ({
 
   const styles = useStyles();
 
+  useEffect(() => {
+    const listener = () => {
+      const { outerHeight, pageYOffset } = window;
+      const ratio = pageYOffset / outerHeight;
+
+      if (outerHeight > pageYOffset) {
+        setBackgroundStyle({
+          backgroundPositionY: `${ratio * 240}px`,
+        });
+      }
+    };
+
+    window.addEventListener('scroll', listener);
+
+    return () => {
+      window.removeEventListener('scroll', listener);
+    };
+  }, []);
+
   return (
     <section
       className={styles.container}
       style={{
         padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 12 : 16)} ${theme.spacing(16)}`,
+        ...backgroundStyle,
       }}
     >
       <div className={styles.content}>
@@ -95,7 +121,12 @@ const KeyVisualSection = ({
           sx={{ mb: 3 }}
           position="relative"
         >
-          {post.title}
+          {typewriter?.title ? (
+            <>
+              <div style={{ position: 'absolute' }}>{typewriter.title}</div>
+              <div style={{ opacity: 0 }}>{post.title}</div>
+            </>
+          ) : post.title}
         </Typography>
         <Typography
           variant={isMobile ? 'body2' : 'body1'}
