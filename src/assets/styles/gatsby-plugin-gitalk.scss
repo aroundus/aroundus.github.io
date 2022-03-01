@@ -2,21 +2,39 @@
 
 %anchor {
   a {
-    color: black;
+    color: black !important;
+    transition: 0.2s;
 
     &:hover {
-      border-color: $color-cyan-400;
-      color: $color-cyan-600;
-      text-decoration: none;
+      border-color: $color-cyan-400 !important;
+      color: $color-cyan-600 !important;
+      text-decoration: none !important;
     }
+  }
+}
+
+%gt-btn {
+  border-color: $color-cyan-400;
+  background-color: $color-cyan-400;
+  font-size: 0.85em;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: $color-cyan-600;
+    background-color: $color-cyan-600;
   }
 }
 
 .gt-container {
   @extend %anchor;
 
-  .gt-meta {
+  .gt-meta,
+  .gt-no-init {
     @extend %anchor;
+  }
+
+  .gt-btn {
+    @extend %gt-btn;
   }
 
   .gt-header {
@@ -34,15 +52,7 @@
       }
 
       .gt-btn {
-        border-color: $color-cyan-400;
-        background-color: $color-cyan-400;
-        font-size: 0.85em;
-        transition: 0.2s;
-
-        &:hover {
-          border-color: $color-cyan-600;
-          background-color: $color-cyan-600;
-        }
+        @extend %gt-btn;
 
         &-preview {
           background-color: white;
@@ -74,6 +84,15 @@
   }
 
   .gt-comments {
+    .gt-comment-header {
+      .gt-comment-like,
+      .gt-comment-reply {
+        svg {
+          fill: $color-cyan-600;
+        }
+      }
+    }
+
     .gt-comment-content {
       border: 1px solid $color-cyan-200;
       background-color: white;
@@ -93,7 +112,7 @@
 
   .gt-avatar {
     img {
-      border-radius: 50%;
+      border-radius: 50% !important;
     }
   }
 

@@ -124,7 +124,7 @@ const KeyVisualSection = ({
           {typewriter?.title ? (
             <>
               <div style={{ position: 'absolute' }}>{typewriter.title}</div>
-              <div style={{ opacity: 0 }}>{post.title}</div>
+              <div style={{ opacity: 0 }}>{post.title} |</div>
             </>
           ) : post.title}
         </Typography>

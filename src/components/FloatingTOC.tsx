@@ -48,12 +48,14 @@ const FloatingTOC = ({
       if (element.querySelector('ul') || element.querySelector('p')) return;
 
       const anchor = element.querySelector('a') as HTMLAnchorElement;
+
       const hash = anchor.innerHTML
         .replace(/\s/g, '-')
         .replace(/<br>/g, 'br-')
         .replace(/<\/?mark>/g, 'mark')
         .replace(/<\/?u>/g, 'u')
         .replace(/[!@#$%^&*()?.,]/g, '')
+        .replace(/[‘’“”]/g, '') // 따옴표 특수 문자
         .replace(/\p{Extended_Pictographic}/gu, '');
 
       const heading = document.getElementById(hash);
