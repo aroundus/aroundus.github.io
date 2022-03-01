@@ -43,7 +43,20 @@ let plugins = [
   'gatsby-plugin-sass',
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-image',
+
+  /**
+   * gatsby-plugin-sharp
+   *
+   * Sharp 이미지 처리 라이브러리 Wrapper
+   * 웹 해상도별로 이미지 크기를 조절하여 웹 성능을 개선하고 회전, 감마 처리 등의 여러 가지 기능을 수행한다.
+   */
   'gatsby-plugin-sharp',
+
+  /**
+   * gatsby-source-filesystem
+   *
+   * 설정한 폴더의 파일 관리
+   */
   {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -58,6 +71,12 @@ let plugins = [
       path: `${__dirname}/src/assets/images`,
     },
   },
+
+  /**
+   * gatsby-transformer-remark
+   *
+   * 마크다운 파일 해석 및 HTML 변환
+   */
   {
     resolve: 'gatsby-transformer-remark',
     options: {
