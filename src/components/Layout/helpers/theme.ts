@@ -2,9 +2,9 @@ import { alpha, colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 
-const BASE_FONT_FAMILY = '"SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+const BASE_FONT_FAMILY = '"SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
-const HEADING_FONT_FAMILY = 'Montserrat, "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+const HEADING_FONT_FAMILY = 'Montserrat, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 
 const theme = createTheme({
   spacing: 4,
@@ -108,6 +108,7 @@ const theme = createTheme({
             }
           }
 
+          a,
           u {
             border-bottom: 2px solid ${colors.cyan[400]};
             text-decoration: none;
@@ -183,6 +184,27 @@ const theme = createTheme({
         code {
           font-family: ${CODE_FONT_FAMILY};
           font-weight: 500;
+        }
+
+        figure {
+          margin: 0;
+          text-align: center;
+
+          a {
+            border-bottom: none;
+          }
+
+          img {
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]};
+          }
+
+          figcaption {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            color: ${colors.grey[500]};
+            text-align: center;
+            font-size: 0.86em;
+          }
         }
 
         iframe {
