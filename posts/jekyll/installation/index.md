@@ -75,7 +75,7 @@ Jekyll로 페이지를 만드는 것은 간단하지만 설치하는 것은 *- �
 
 **Gem**(젬)은 루비 프로젝트에 필요한 기능을 제공하는 라이브러리입니다. [RubyGems(루비젬)](https://rubygems.org/)에서 원하는 gem을 검색하고 사용할 수 있습니다. 다음 명령어를 실행하세요.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 gem
 ```
 
@@ -112,7 +112,7 @@ basic help message containing pointers to more information.
 
 gem 명령어를 사용하여 Jekyll을 설치하세요.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 gem install jekyll
 ```
 
@@ -120,7 +120,7 @@ gem install jekyll
 
 Jekyll 설치를 마치면 다음 명령어를 실행하세요.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 jekyll
 ```
 
@@ -160,7 +160,7 @@ Subcommands:
 
 [Bundler(번들러)](http://ruby-korea.github.io/bundler-site/)는 정확한 gem 버전을 추적하고 설치하여 루비 프로젝트를 위한 일관된 환경을 제공합니다. 다음 명령어를 실행하세요.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 gem install bundler
 ```
 
@@ -170,7 +170,7 @@ gem install bundler
 
 새 Jekyll 사이트를 생성해 봅시다. 다음 명령어를 실행하세요. (여러분은 test 대신 마음에 드는 이름으로 수정해도 무방합니다.)
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 jekyll new test
 ```
 
@@ -178,13 +178,13 @@ jekyll new test
 
 필요한 bundle까지 모두 설치를 완료하였습니다. 이제 test 폴더로 이동합니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 cd test
 ```
 
 Jekyll은 개발 서버를 내장하고 있어 로컬에서 브라우저로 접속하여 사이트가 어떻게 생성될지 미리 살펴볼 수 있습니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 jekyll serve
 ```
 
@@ -192,13 +192,13 @@ jekyll serve
 
 브라우저에서 **http://127.0.0.1:4000** 접속 후 위와 같은 화면이 보인다면 샘플 블로그가 잘 구동된 것입니다. 포트 번호는 기본 4000이 주어지며 옵션을 추가하여 다른 포트 번호로 변경할 수 있습니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 jekyll serve --port 5000
 ```
 
 gem 버전이 다른 경우 번들이 적용된 환경을 로드하기 위하여 다음 명령어가 필요할 수 있습니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 bundle exec jekyll serve
 bundle exec jekyll serve --baseurl '' // 소스가 최상위(root)에 있지 않은 경우
 ```

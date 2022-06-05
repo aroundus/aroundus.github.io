@@ -59,19 +59,19 @@ IAM 태그에 이메일, 직책 등 사용자에 대한 부가 정보를 설정�
 
 다음 명령어를 입력합니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 aws configure
 ```
 
 여러 사용자로 관리가 필요한 경우 `--profile` 옵션으로 사용자 프로필을 설정합니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 aws configure --profile <your-iam-user-name>
 ```
 
 사용자 정보 입력 후 엔터를 계속 입력하여 설정을 완료합니다. 해당 설정은 `~/.aws/` 폴더에 파일로 저장됩니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 AWS Access Key ID [None]: <AKI***>
 AWS Secret Access Key [None]: <***>
 Default region name [None]: ap-northeast-2
@@ -80,7 +80,7 @@ Default output format [None]:
 
 설정을 확인합니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 aws configure list
 ```
 
@@ -88,7 +88,7 @@ aws configure list
 
 다음 명령어를 입력하면 사용자 프로필을 변경할 수 있습니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 export AWS_DEFAULT_PROFILE=<your-iam-user-name>
 aws configure list
 ```
