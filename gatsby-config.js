@@ -112,7 +112,7 @@ let plugins = [
           resolve: 'gatsby-remark-mermaid',
           options: {
             mermaidOptions: {
-              fontFamily: '"SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, sans-serif',
+              fontFamily: 'SUIT, "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, sans-serif',
               flowchart: {
                 nodeSpacing: 100,
                 rankSpacing: 80,
@@ -138,7 +138,7 @@ let plugins = [
             showLineNumbers: true,
             noInlineHighlight: true,
             prompt: {
-              user: 'sally',
+              user: 'user',
               host: 'localhost',
               global: false,
             },

@@ -2,9 +2,9 @@ import { alpha, colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 
-const BASE_FONT_FAMILY = '"SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+const BASE_FONT_FAMILY = 'SUIT, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
-const HEADING_FONT_FAMILY = 'Montserrat, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+const HEADING_FONT_FAMILY = 'Montserrat, SUIT, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 
 const theme = createTheme({
   spacing: 4,
@@ -56,9 +56,6 @@ const theme = createTheme({
       fontFamily: HEADING_FONT_FAMILY,
       fontSize: '1em',
       lineHeight: 1.5,
-    },
-    body1: {
-      letterSpacing: 0.2,
     },
     caption: {
       lineHeight: 1.2,
@@ -143,7 +140,6 @@ const theme = createTheme({
           margin-top: 1.4em;
           margin-bottom: 1.4em;
           color: ${colors.grey[900]};
-          letter-spacing: 0.2px;
           line-height: 1.6;
 
           a,

@@ -12,7 +12,7 @@ date: 2020-05-17
 
 `brew` 명령어로 설치하는 것을 권장합니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 brew install awscli // AWS CLI
 brew install jq     // JSON processor
 ```
@@ -21,11 +21,11 @@ brew install jq     // JSON processor
 
 AWS 서비스를 사용하기 위하여 [IAM](https://console.aws.amazon.com/iam/home)에 사용자 정보를 등록합니다. (개별 IAM 사용자 생성 - 사용자 관리 - 사용자 추가) 등록을 완료하면 credentials 정보가 나옵니다. 해당 정보는 한 번 확인하면 새로 고침 시 재확인이 불가하기 때문에 꼭 파일로 저장해 두어야 합니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 aws configure
 ```
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 AWS Access Key ID [None]: AKI***
 AWS Secret Access Key [None]: ***
 Default region name [None]: ap-northeast-2
@@ -40,7 +40,7 @@ Default output format [None]:
 
 ### ec2
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 aws ec2 describe-instances
 ```
 
