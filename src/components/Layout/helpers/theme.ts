@@ -215,9 +215,8 @@ const theme = createTheme({
           font-size: 0.86em;
 
           a {
-            border-bottom: none;
+            border-bottom: 2px solid ${colors.cyan[400]};
             color: ${colors.grey[800]};
-            font-family: ${HEADING_FONT_FAMILY};
             text-decoration: none;
 
             &:hover {
@@ -241,7 +240,7 @@ const theme = createTheme({
         }
 
         table {
-          display: block;
+          margin: auto;
           border-collapse: collapse;
           overflow-x: auto;
           font-size: 16px;
