@@ -20,7 +20,7 @@ date: 2018-02-04
 
 ## 프로젝트 실행
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 jekyll serve
 ```
 
@@ -28,7 +28,7 @@ jekyll serve
 
 gem 버전이 다른 경우 위와 같은 오류가 발생할 수 있습니다. 번들이 적용된 환경을 로드하기 위하여 jekyll serve 명령어 앞에 **bundle exec** 명령어를 붙이고 실행하세요.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 bundle exec jekyll serve
 ```
 
@@ -52,7 +52,7 @@ bundle exec jekyll serve
 
 **Gem**(젬)은 루비 프로젝트에 필요한 기능을 제공하는 라이브러리입니다. [이전 글](/jekyll/installation)을 보시면 Jekyll을 설치할 때 사용한 적이 있습니다. 하지만 상황에 따라 이렇게 Gemfile 안에 넣어 사용해도 됩니다.
 
-```shell{promptHost: localhost}
+```shell{promptUser: user}{promptHost: localhost}
 gem "minima", "~> 2.0"
 ```
 
