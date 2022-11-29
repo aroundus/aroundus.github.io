@@ -6,7 +6,7 @@ description: 인체를 세포로 구성한다면, 쿠버네티스는 컴포넌�
 date: 2020-05-25
 ---
 
-> 쿠버네티스 공식 문서의 [컴포넌트](https://kubernetes.io/ko/docs/concepts/overview/components/)와 서비큐라의 [쿠버네티스 기본 개념](https://subicura.com/2019/05/19/kubernetes-basic-1.html#쿠버네티스-기본-개념) 내용을 참조해서 작성한 글입니다. 자세한 내용은 해당 문서를 참조하세요. 😉
+> 쿠버네티스 공식 문서의 [컴포넌트](https://kubernetes.io/ko/docs/concepts/overview/components/)와 서비큐라의 [쿠버네티스 기본 개념](https://subicura.com/2019/05/19/kubernetes-basic-1.html#쿠버네티스-기본-개념) 내용을 참조해서 작성한 글입니다. 자세한 내용은 해당 문서를 참조해 주세요. 😉
 
 **Component**(컴포넌트)는 독립적인 소프트웨어 단위 모듈입니다. 독립적인 모듈은 의존성이 없기 때문에 재사용을 가능하게 합니다. 파란색 7각형 모양의 도형이 컴포넌트를 의미합니다.
 

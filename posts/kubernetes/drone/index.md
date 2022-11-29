@@ -34,13 +34,13 @@ date: 2020-05-25
 
 ## IAM 정책 연결
 
-IAM - 역할 - `<your-cluster-name>` 항목을 검색하여 `NodeInstanceRole` 단어를 포함하는 역할에 `ingressController-iam-policy` 정책을 연결하세요.
+IAM - 역할 - `<your-cluster-name>` 항목을 검색하여 `NodeInstanceRole` 단어를 포함하는 역할에 `ingressController-iam-policy` 정책을 연결해 주세요.
 
 ![GATSBY_EMPTY_ALT](./attach-policy-for-ingress-controller.jpg)
 
 ## GitHub OAuth 애플리케이션 등록
 
-Drone 공식 문서의 [GitHub](https://docs.drone.io/server/provider/github/) 내용 중 **Step 1: Preparation - Create an OAuth Application** 항목을 참조하세요.
+Drone 공식 문서의 [GitHub](https://docs.drone.io/server/provider/github/) 내용 중 **Step 1: Preparation - Create an OAuth Application** 항목을 참조해 주세요.
 
 ## 퍼블릭 보안 그룹 생성
 
@@ -48,13 +48,13 @@ Drone 공식 문서의 [GitHub](https://docs.drone.io/server/provider/github/) �
 
 ![GATSBY_EMPTY_ALT](./create-security-group-for-public.jpg)
 
-> 필자는 기존 퍼블릭 보안 그룹을 복사하여 생성하였습니다. 여러분은 새로운 보안 그룹을 생성할 때 위와 같이 설정하세요.
+> 필자는 기존 퍼블릭 보안 그룹을 복사하여 생성하였습니다. 여러분은 새로운 보안 그룹을 생성할 때 위와 같이 설정해 주세요.
 
 ## Drone 템플릿 추출
 
-필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Drone.io](https://github.com/helm/charts/tree/master/stable/drone) 내용을 참조하세요.
+필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Drone.io](https://github.com/helm/charts/tree/master/stable/drone) 내용을 참조해 주세요.
 
-[values.yaml](https://github.com/helm/charts/blob/master/stable/drone/values.yaml) 템플릿을 복사한 후 다음 필드를 수정하세요.
+[values.yaml](https://github.com/helm/charts/blob/master/stable/drone/values.yaml) 템플릿을 복사한 후 다음 필드를 수정해 주세요.
 
 ```yaml
 ...
@@ -155,7 +155,7 @@ kubectl get namespaces
 
 ![GATSBY_EMPTY_ALT](./create-namespace.jpg)
 
-> 필자는 `craft-box` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성하세요.
+> 필자는 `craft-box` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성해 주세요.
 
 ### Secret
 
@@ -167,7 +167,7 @@ kubectl get namespaces
 echo -n '<drone-rpc-secret>' | base64
 ```
 
-* `-n`: 개행 문자 인코딩을 방지합니다. (자세한 정보는 `$ man echo` 내용을 참조하세요.)
+* `-n`: 개행 문자 인코딩을 방지합니다. (자세한 정보는 `$ man echo` 내용을 참조해 주세요.)
 
 
 변환한 정보를 `<secret>` 필드에 삽입합니다.
@@ -625,7 +625,7 @@ kubectl get ingresses --namespace=<your-namespace>
 
 ![GATSBY_EMPTY_ALT](./create-route-53-record-set-2.jpg)
 
-> 로드 밸런서 전파에는 다소 시간이 소요됩니다. 따라서 *- 몇 시간이 지나도 -* `ADDRESS` 필드에 값이 없을 수 있습니다. 호스팅의 경우 쿠버네티스에서 관리하지 않는 AWS 서비스로 요청 시 바로 처리가 되지 않는 점에 유의하세요.
+> 로드 밸런서 전파에는 다소 시간이 소요됩니다. 따라서 *- 몇 시간이 지나도 -* `ADDRESS` 필드에 값이 없을 수 있습니다. 호스팅의 경우 쿠버네티스에서 관리하지 않는 AWS 서비스로 요청 시 바로 처리가 되지 않는 점에 유의해 주세요.
 >
 > (+) *- 필자의 경험에 의하면 -* `Unhealthy` 경고를 표시하더라도 `paths` 필드에 해당하는 오브젝트를 배포하면 주소를 찾으면서 엔드포인트 값이 들어오는 것으로 보입니다.
 
@@ -651,11 +651,11 @@ kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh
 kubectl exec -it $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "component=server,app=drone") --namespace=<your-namespace> sh
 ```
 
-`export` 명령어로 환경 변수 `DRONE_GITHUB_CLIENT_SECRET` 값을 확인하세요. 혹시 개행 문자가 포함되어 줄 바꿈 처리가 된 것은 아닌지 확인하세요.
+`export` 명령어로 환경 변수 `DRONE_GITHUB_CLIENT_SECRET` 값을 확인해 주세요. 혹시 개행 문자가 포함되어 줄 바꿈 처리가 된 것은 아닌지 확인해 주세요.
 
 ![GATSBY_EMPTY_ALT](./exec-drone-server.jpg)
 
-값은 일치하지만 줄 바꿈 처리가 된 경우 `<github-oauth-client-secret>` 값을 `base64` 형태로 변환하면서 개행 문자가 포함된 것으로 자격 증명 시 오류가 발생합니다. `echo` 명령어로 인코딩 시 `-n` 옵션을 꼭 사용하세요.
+값은 일치하지만 줄 바꿈 처리가 된 경우 `<github-oauth-client-secret>` 값을 `base64` 형태로 변환하면서 개행 문자가 포함된 것으로 자격 증명 시 오류가 발생합니다. `echo` 명령어로 인코딩 시 `-n` 옵션을 꼭 사용해 주세요.
 
 ## GitHub Webhook 설정
 
@@ -745,7 +745,7 @@ trigger:
     - develop
 ```
 
-> 프로젝트 성향에 맞게 작성하세요. 팀에서 **Slack**(슬랙) 메신저를 사용 중인 경우 별도의 웹훅 설정을 통해 특정 슬랙 채널에 메시지를 보낼 수 있습니다.
+> 프로젝트 성향에 맞게 작성해 주세요. 팀에서 **Slack**(슬랙) 메신저를 사용 중인 경우 별도의 웹훅 설정을 통해 특정 슬랙 채널에 메시지를 보낼 수 있습니다.
 
 작성한 파일을 프로젝트 최상단에 넣습니다.
 

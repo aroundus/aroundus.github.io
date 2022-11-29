@@ -24,7 +24,7 @@ Apache **ZooKeeper**(주키퍼)는 분산 애플리케이션을 위한 분산 �
 
 주키퍼는 메타 정보를 저장합니다. *- 실제 메시지는 카프카가 저장합니다. -* 현재 카프카 서버가 몇 대 작동 중인지, 카프카 컨슈머가 어디까지 메시지를 읽었는지 등의 스냅샷 정보를 저장합니다.
 
-필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [zookeeper](https://github.com/helm/charts/tree/master/incubator/zookeeper) 내용을 참조하세요.
+필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [zookeeper](https://github.com/helm/charts/tree/master/incubator/zookeeper) 내용을 참조해 주세요.
 
 > 헬름은 카프카를 설치할 때 주키퍼를 자동으로 설치하면서 이름을 `zookeeper`가 아닌 `kafka-zookeeper`로 정의합니다. 필자는 헬름 차트를 인용하기 때문에 헬름에서 정의한 이름을 그대로 사용하였습니다.
 
@@ -397,11 +397,11 @@ zookeeper-2
 
 파드를 생성할 때 동시에 모든 파드를 생성하지 않고 0부터 오름차순으로 하나씩 생성할 수 있는 순차 기동이 가능합니다. 반대로 삭제할 때는 내림차순으로 하나씩 삭제합니다.
 
-> 순차 기동에 의해 데이터를 유지하는 자세한 정보는 조대협의 [StatefulSet](https://bcho.tistory.com/1306) 내용을 참조하세요. 볼륨은 한 번 생성하면 삭제할 수 없기 때문에 `replicas` 필드 값을 늘릴 수는 있어도 줄일 수는 없습니다. 유의하세요.
+> 순차 기동에 의해 데이터를 유지하는 자세한 정보는 조대협의 [StatefulSet](https://bcho.tistory.com/1306) 내용을 참조해 주세요. 볼륨은 한 번 생성하면 삭제할 수 없기 때문에 `replicas` 필드 값을 늘릴 수는 있어도 줄일 수는 없습니다. 유의해 주세요.
 
 **kafka-zookeeper.yaml**
 
-배포해야 할 파일이 많은 경우 서비스를 배포하거나 추후 서비스를 삭제할 때 실수할 수 있기 때문에 하나의 파일에 모아서 `---` 구분선을 주는 방식으로 작업하세요.
+배포해야 할 파일이 많은 경우 서비스를 배포하거나 추후 서비스를 삭제할 때 실수할 수 있기 때문에 하나의 파일에 모아서 `---` 구분선을 주는 방식으로 작업해 주세요.
 
 ```yaml
 <insert poddisruptionbudget.yaml>
@@ -423,7 +423,7 @@ kubectl apply -f kafka-zookeeper.yaml
 
 ## Kafka
 
-필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Kafka](https://github.com/helm/charts/tree/master/incubator/kafka) 내용을 참조하세요.
+필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Kafka](https://github.com/helm/charts/tree/master/incubator/kafka) 내용을 참조해 주세요.
 
 ### Service
 
@@ -713,7 +713,7 @@ kubectl proxy
 
 ![GATSBY_EMPTY_ALT](./kafka-manager-failed.jpg)
 
-오류 문구에 당황하지 마시고 주키퍼 클라이언트에서 해당 노드를 생성한 후 다음 명령어를 입력해 파드를 삭제하세요. 쿠버네티스의 `delete` 명령어로 파드를 삭제하면 새로운 파드를 다시 생성하기 때문에 `restart` 개념과 유사합니다.
+오류 문구에 당황하지 마시고 주키퍼 클라이언트에서 해당 노드를 생성한 후 다음 명령어를 입력해 파드를 삭제해 주세요. 쿠버네티스의 `delete` 명령어로 파드를 삭제하면 새로운 파드를 다시 생성하기 때문에 `restart` 개념과 유사합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl delete pod/<kafka-manager-pod> --namespace=<your-namespace>

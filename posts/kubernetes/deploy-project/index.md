@@ -15,7 +15,7 @@ date: 2020-05-25
 
 ## IAM 정책 연결
 
-IAM - 역할 - `<your-cluster-name>` 항목을 검색해서 `NodeInstanceRole` 단어를 포함하는 역할에 `ingressController-iam-policy` 정책을 연결하세요.
+IAM - 역할 - `<your-cluster-name>` 항목을 검색해서 `NodeInstanceRole` 단어를 포함하는 역할에 `ingressController-iam-policy` 정책을 연결해 주세요.
 
 ![GATSBY_EMPTY_ALT](./attach-policy-for-ingress-controller.jpg)
 
@@ -39,9 +39,9 @@ kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>
 
 ### Deployment
 
-**Deployment**(디플로이먼트) 오브젝트는 파드와 레플리카셋에 대한 선언적 업데이트를 제공합니다. 자세한 정보는 쿠버네티스 공식 문서의 [디플로이먼트](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/) 내용을 참조하세요.
+**Deployment**(디플로이먼트) 오브젝트는 파드와 레플리카셋에 대한 선언적 업데이트를 제공합니다. 자세한 정보는 쿠버네티스 공식 문서의 [디플로이먼트](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/) 내용을 참조해 주세요.
 
-`containers` 필드에 컨테이너 이미지에 대한 정보를 입력합니다. 자세한 정보는 쿠버네티스 공식 문서의 [컨테이너 이미지](https://kubernetes.io/ko/docs/concepts/containers/#컨테이너-이미지) 내용을 참조하세요.
+`containers` 필드에 컨테이너 이미지에 대한 정보를 입력합니다. 자세한 정보는 쿠버네티스 공식 문서의 [컨테이너 이미지](https://kubernetes.io/ko/docs/concepts/containers/#컨테이너-이미지) 내용을 참조해 주세요.
 
 * `image`: 컨테이너가 항상 같은 버전의 이미지를 사용하도록 하기 위해 `<image>:<digest>` 형태의 **다이제스트** 정보를 명시하는 것이 좋습니다. 다이제스트는 특정 버전의 이미지를 고유하게 식별하며 다이제스트 값을 변경하지 않는 한 쿠버네티스에 의해 절대로 변경되지 않습니다.
 * `imagePullPolicy`: 이미지 Pull(풀) 정책을 설정합니다.
@@ -102,7 +102,7 @@ spec:
 
 ### Ingress
 
-**Ingress**(인그레스) 오브젝트는 서비스에 대한 로드 밸런서를 생성하고 웹 사이트에 대한 트래픽을 인스턴스 간에 분산할 수 있도록 합니다. 다음과 같이 오브젝트를 구성하고 배포하세요.
+**Ingress**(인그레스) 오브젝트는 서비스에 대한 로드 밸런서를 생성하고 웹 사이트에 대한 트래픽을 인스턴스 간에 분산할 수 있도록 합니다. 다음과 같이 오브젝트를 구성하고 배포해 주세요.
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -188,7 +188,7 @@ spec:
         - name: dockerhub
 ```
 
-오브젝트를 배포한 다음 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인하세요. `ADDRESS` 필드에 값이 있으면 정상적으로 연결된 것입니다.
+오브젝트를 배포한 다음 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인해 주세요. `ADDRESS` 필드에 값이 있으면 정상적으로 연결된 것입니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl get ingresses --namespace=<your-namespace>
@@ -196,10 +196,10 @@ kubectl get ingresses --namespace=<your-namespace>
 
 ![GATSBY_EMPTY_ALT](./get-ingresses.jpg)
 
-> 로드 밸런서 전파에는 다소 시간이 소요됩니다. 따라서 *- 필자는 5분 안에 값이 들어왔지만 몇 시간이 지나도 -* `ADDRESS` 필드에 엔드포인트 값이 없을 수 있습니다. 호스팅의 경우 쿠버네티스에서 관리하지 않는 AWS 서비스로 요청 시 바로 처리가 되지 않는 점에 유의하세요.
+> 로드 밸런서 전파에는 다소 시간이 소요됩니다. 따라서 *- 필자는 5분 안에 값이 들어왔지만 몇 시간이 지나도 -* `ADDRESS` 필드에 엔드포인트 값이 없을 수 있습니다. 호스팅의 경우 쿠버네티스에서 관리하지 않는 AWS 서비스로 요청 시 바로 처리가 되지 않는 점에 유의해 주세요.
 >
 > (+) *- 필자의 경험에 의하면 -* `Unhealthy` 경고를 표시하더라도 `paths` 필드에 해당하는 오브젝트를 배포하면 주소를 찾으면서 엔드포인트 값이 들어오는 것으로 보입니다.
 
 # 마치며
 
-지금까지 2020년 모빌리티 스타트업에서 근무할 때 적용한 Amazon EKS 구성에 대한 핵심적인 내용을 공유하였습니다. Amazon EKS 서비스는 버전 업데이트가 활발하고 버전 간에 **BREAKING CHANGE**가 빈번하게 발생하는 편이기 때문에 최신 버전에서 위 내용에 맞춰 구성할 경우 실패할 수 있습니다. 꼭 다양한 레퍼런스를 참조해서 구성하세요.
+지금까지 2020년 모빌리티 스타트업에서 근무할 때 적용한 Amazon EKS 구성에 대한 핵심적인 내용을 공유하였습니다. Amazon EKS 서비스는 버전 업데이트가 활발하고 버전 간에 **BREAKING CHANGE**가 빈번하게 발생하는 편이기 때문에 최신 버전에서 위 내용에 맞춰 구성할 경우 실패할 수 있습니다. 꼭 다양한 레퍼런스를 참조해서 구성해 주세요.
