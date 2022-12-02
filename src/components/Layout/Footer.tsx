@@ -160,7 +160,7 @@ const Footer = () => {
                   />
                 </Link>
                 <Link
-                  href={`mailto:${meta.author.email}?subject=[AROUNDUS] 제목을 작성하세요.`}
+                  href={`mailto:${meta.author.email}?subject=[AROUNDUS] 제목을 작성해 주세요.`}
                   target="_blank"
                 >
                   <MailIcon

@@ -43,10 +43,7 @@ const CategorySection = ({
             disableRipple
             onClick={() => handleClick(category)}
           >
-            <Typography
-              variant="subtitle1"
-              letterSpacing={0.2}
-            >
+            <Typography variant="subtitle1">
               {category}
             </Typography>
           </Button>

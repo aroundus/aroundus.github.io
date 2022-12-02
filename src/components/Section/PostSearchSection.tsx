@@ -42,7 +42,7 @@ const PostSearchSection = ({
         >
           <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
           <TextField
-            label="검색어를 입력하세요"
+            label="검색어를 입력해 주세요"
             variant="standard"
             fullWidth
             onChange={(event) => handleChange(event.target.value)}

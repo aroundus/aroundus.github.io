@@ -138,7 +138,7 @@ const KeyVisualSection = ({
         <Typography
           variant="subtitle1"
           color={colors.grey[300]}
-          sx={{ mt: 6, fontWeight: 300 }}
+          sx={{ mt: 6 }}
           position="relative"
         >
           {post.date}

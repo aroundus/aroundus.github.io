@@ -26,7 +26,7 @@ jekyll serve
 
 ![GATSBY_EMPTY_ALT](./serve-problem.jpg)
 
-gem 버전이 다른 경우 위와 같은 오류가 발생할 수 있습니다. 번들이 적용된 환경을 로드하기 위하여 jekyll serve 명령어 앞에 **bundle exec** 명령어를 붙이고 실행하세요.
+gem 버전이 다른 경우 위와 같은 오류가 발생할 수 있습니다. 번들이 적용된 환경을 로드하기 위하여 jekyll serve 명령어 앞에 **bundle exec** 명령어를 붙이고 실행해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 bundle exec jekyll serve
@@ -34,13 +34,13 @@ bundle exec jekyll serve
 
 ![GATSBY_EMPTY_ALT](./resolve-serve-problem.jpg)
 
-위에서 박스로 표시한 **http://127.0.0.1:4000** 주소를 복사하여 브라우저로 접속하세요. 다음과 같이 테스트 페이지가 구동된 것을 볼 수 있습니다.
+위에서 박스로 표시한 **http://127.0.0.1:4000** 주소를 복사하여 브라우저로 접속해 주세요. 다음과 같이 테스트 페이지가 구동된 것을 볼 수 있습니다.
 
 ![GATSBY_EMPTY_ALT](./default-theme.jpg)
 
 ## 프로젝트 구조
 
-이제 기본 테마의 폴더 구조를 살펴봅시다. 필자는 [Sublime Text 3(서브라임 텍스트)](https://www.sublimetext.com/)를 사용하도록 하겠습니다. 각자 사용 중인 편집기로 폴더를 로드하세요.
+이제 기본 테마의 폴더 구조를 살펴봅시다. 필자는 [Sublime Text 3(서브라임 텍스트)](https://www.sublimetext.com/)를 사용하도록 하겠습니다. 각자 사용 중인 편집기로 폴더를 로드해 주세요.
 
 ![GATSBY_EMPTY_ALT](./default-theme-structure.jpg)
 
@@ -65,7 +65,7 @@ gem "minima", "~> 2.0"
 
 ## 테마 설정
 
-Jekyll 테마는 어디에서 얻을 수 있을까요? 바로 gem들의 집합소인 [RubyGems(루비젬)](https://rubygems.org/)에서 얻을 수 있습니다. RubyGems 사이트에 접속 후 'jekyll-theme'를 검색하세요.
+Jekyll 테마는 어디에서 얻을 수 있을까요? 바로 gem들의 집합소인 [RubyGems(루비젬)](https://rubygems.org/)에서 얻을 수 있습니다. RubyGems 사이트에 접속 후 'jekyll-theme'를 검색해 주세요.
 
 ![GATSBY_EMPTY_ALT](./search-jekyll-theme-1.jpg)
 
@@ -83,19 +83,19 @@ Jekyll 테마는 어디에서 얻을 수 있을까요? 바로 gem들의 집합�
 
 ![GATSBY_EMPTY_ALT](./lens-theme-preview.jpg)
 
-RubyGems 페이지로 돌아와서 GEMFILE 바로 밑의 'Copy to clipboard' 버튼을 눌러 해당 명령어를 복사하세요.
+RubyGems 페이지로 돌아와서 GEMFILE 바로 밑의 'Copy to clipboard' 버튼을 눌러 해당 명령어를 복사해 주세요.
 
 ![GATSBY_EMPTY_ALT](./apply-lens-theme-1.jpg)
 
-**Gemfile** 파일을 엽니다. 기존 minima 테마는 삭제 또는 주석 처리하고 바로 밑에 복사한 명령어를 붙여넣기하세요.
+**Gemfile** 파일을 엽니다. 기존 minima 테마는 삭제 또는 주석 처리하고 바로 밑에 복사한 명령어를 붙여넣기해 주세요.
 
 ![GATSBY_EMPTY_ALT](./apply-lens-theme-2.jpg)
 
-**_config.yml** 파일을 열어서 박스로 표시한 부분을 새 테마명으로 변경하세요.
+**_config.yml** 파일을 열어서 박스로 표시한 부분을 새 테마명으로 변경해 주세요.
 
 ![GATSBY_EMPTY_ALT](./apply-lens-theme-3.jpg)
 
-테스트 페이지를 재구동하면 오류 메시지가 나옵니다. 해당 테마의 gem이 설치되지 않았기 때문인데요, `bundle install` 명령어를 실행해서 해당 테마의 gem을 설치하세요.
+테스트 페이지를 재구동하면 오류 메시지가 나옵니다. 해당 테마의 gem이 설치되지 않았기 때문인데요, `bundle install` 명령어를 실행해서 해당 테마의 gem을 설치해 주세요.
 
 ![GATSBY_EMPTY_ALT](./apply-lens-theme-4.jpg)
 
@@ -110,6 +110,6 @@ Jekyll 템플릿의 폴더들은 이름 앞에 \_(언더스코어)가 붙습니�
 * **\_posts**: 블로그의 포스트를 담는 폴더
 * **\_site**: Jekyll 엔진이 변환 작업을 마친 후 생성된 사이트를 저장하는 목적지 폴더. **결과물**
 
-목적지 폴더(default: \_site)는 빌드 시 자동으로 결과물을 저장하는 곳입니다. <mark>우리가 따로 작업할 필요는 없다</mark>는 점 명심하세요. 빌드가 어떻게 되었나 확인은 할 수 있어도 내용은 수정하지 마세요. 수정은 Jekyll 엔진이 컴파일하기 전 파일을 작업해야 합니다.
+목적지 폴더(default: \_site)는 빌드 시 자동으로 결과물을 저장하는 곳입니다. <mark>우리가 따로 작업할 필요는 없다</mark>는 점 명심해 주세요. 빌드가 어떻게 되었나 확인은 할 수 있어도 내용은 수정하지 마세요. 수정은 Jekyll 엔진이 컴파일하기 전 파일을 작업해야 합니다.
 
 ![GATSBY_EMPTY_ALT](./folder-rules.jpg)

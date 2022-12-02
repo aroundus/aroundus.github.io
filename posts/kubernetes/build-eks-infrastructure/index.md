@@ -25,7 +25,7 @@ date: 2020-05-25
 
 ## IAM 사용자 추가
 
-AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/post/aws/iam) 내용을 참조하세요.
+AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/post/aws/iam) 내용을 참조해 주세요.
 
 ## Kubernetes API
 
@@ -68,7 +68,7 @@ spec:
 kubectl apply -f deployment.yaml
 ```
 
-자세한 정보는 쿠버네티스 공식 문서의 [쿠버네티스 오브젝트 이해하기](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/) 내용을 참조하세요.
+자세한 정보는 쿠버네티스 공식 문서의 [쿠버네티스 오브젝트 이해하기](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/) 내용을 참조해 주세요.
 
 ## EKS 클러스터 생성
 
@@ -109,7 +109,7 @@ eksctl create cluster -f cluster.yaml
 
 ![GATSBY_EMPTY_ALT](./create-cluster.jpg)
 
-도커에서 쿠버네티스를 활성화하면 기본적으로 `current-context` 필드를 `docker-desktop` 클러스터로 지정합니다. `~/.kube/config` 파일에서 현재 생성한 클러스터로 변경이 잘 이루어졌는지 확인하세요.
+도커에서 쿠버네티스를 활성화하면 기본적으로 `current-context` 필드를 `docker-desktop` 클러스터로 지정합니다. `~/.kube/config` 파일에서 현재 생성한 클러스터로 변경이 잘 이루어졌는지 확인해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl config get-contexts
@@ -123,7 +123,7 @@ kubectl config get-contexts
 
 VPC는 AWS 클라우드에서 다른 가상 네트워크와 논리적으로 분리되어 있습니다. Amazon EC2 인스턴스와 같은 AWS 리소스를 VPC에서 실행할 수 있습니다.
 
-VPC를 만들 때 VPC의 IPv4 주소의 범위는 **CIDR**(Classless Inter-Domain Routing, 사이더) 블록 형태로 지정해야 합니다. (예: 172.31.0.0/16) 자세한 정보는 [CIDR 표기법](https://m.blog.naver.com/ncloud24/221208338209) 내용을 참조하세요.
+VPC를 만들 때 VPC의 IPv4 주소의 범위는 **CIDR**(Classless Inter-Domain Routing, 사이더) 블록 형태로 지정해야 합니다. (예: 172.31.0.0/16) 자세한 정보는 [CIDR 표기법](https://m.blog.naver.com/ncloud24/221208338209) 내용을 참조해 주세요.
 
 ### NAT Gateway
 
@@ -139,7 +139,7 @@ VPC를 만들 때 VPC의 IPv4 주소의 범위는 **CIDR**(Classless Inter-Domai
 
 ## 스토리지 클래스 배포
 
-볼륨은 쿠버네티스의 디스크 서비스입니다. 쿠버네티스는 많은 유형의 볼륨을 지원하고, 파드는 여러 볼륨을 동시에 사용할 수 있습니다. 볼륨 유형에 대한 전체 목록은 쿠버네티스 공식 문서의 [볼륨 유형들](https://kubernetes.io/ko/docs/concepts/storage/volumes/#볼륨-유형들) 내용을 참조하세요.
+볼륨은 쿠버네티스의 디스크 서비스입니다. 쿠버네티스는 많은 유형의 볼륨을 지원하고, 파드는 여러 볼륨을 동시에 사용할 수 있습니다. 볼륨 유형에 대한 전체 목록은 쿠버네티스 공식 문서의 [볼륨 유형들](https://kubernetes.io/ko/docs/concepts/storage/volumes/#볼륨-유형들) 내용을 참조해 주세요.
 
 **storage-classes.yaml**
 
@@ -222,7 +222,7 @@ kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernete
 
 ![GATSBY_EMPTY_ALT](./apply-aws-ebs-csi-driver.jpg)
 
-EBS CSI 드라이버를 사용하기 위하여 노드 그룹에 정책을 연결해 봅시다. IAM - 정책 - 정책 생성 버튼 클릭 후 다음과 같이 정책을 하나 생성하세요. 이름은 마음대로 하셔도 됩니다. (필자는 `Amazon_EBS_CSI_Driver` 이름으로 생성)
+EBS CSI 드라이버를 사용하기 위하여 노드 그룹에 정책을 연결해 봅시다. IAM - 정책 - 정책 생성 버튼 클릭 후 다음과 같이 정책을 하나 생성해 주세요. 이름은 마음대로 하셔도 됩니다. (필자는 `Amazon_EBS_CSI_Driver` 이름으로 생성)
 
 ```json
 {
@@ -252,7 +252,7 @@ EBS CSI 드라이버를 사용하기 위하여 노드 그룹에 정책을 연결
 
 ![GATSBY_EMPTY_ALT](./add-iam-ebs-csi-policy.jpg)
 
-IAM - 역할 - `<your-cluster-name>` 항목을 검색하여 `NodeInstanceRole` 단어를 포함하는 역할에 정책을 연결하세요.
+IAM - 역할 - `<your-cluster-name>` 항목을 검색하여 `NodeInstanceRole` 단어를 포함하는 역할에 정책을 연결해 주세요.
 
 ![GATSBY_EMPTY_ALT](./add-iam-ebs-csi-policy-2.jpg)
 
@@ -376,7 +376,7 @@ spec:
       terminationGracePeriodSeconds: 60
 ```
 
-`--aws-vpc-id` 필드에 대한 정보는 *- AWS > VPC 메뉴 또는 -* 다음 명령어를 입력해 확인할 수 있습니다. 자세한 정보는 AWS 공식 문서의 [describe-cluster](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-cluster.html) 내용을 참조하세요.
+`--aws-vpc-id` 필드에 대한 정보는 *- AWS > VPC 메뉴 또는 -* 다음 명령어를 입력해 확인할 수 있습니다. 자세한 정보는 AWS 공식 문서의 [describe-cluster](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-cluster.html) 내용을 참조해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 aws eks describe-cluster --name=<your-cluster-name>
@@ -384,7 +384,7 @@ aws eks describe-cluster --name=<your-cluster-name>
 
 ![GATSBY_EMPTY_ALT](./describe-cluster.jpg)
 
-> 필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 하단의 `--cluster-name`, `--aws-region`, `--aws-vpc-id` 필드는 여러분이 설정한 값으로 입력하세요. 헬름 차트에 대한 자세한 정보는 [aws-alb-ingress-controller](https://github.com/helm/charts/tree/master/incubator/aws-alb-ingress-controller) 내용을 참조하세요.
+> 필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 하단의 `--cluster-name`, `--aws-region`, `--aws-vpc-id` 필드는 여러분이 설정한 값으로 입력해 주세요. 헬름 차트에 대한 자세한 정보는 [aws-alb-ingress-controller](https://github.com/helm/charts/tree/master/incubator/aws-alb-ingress-controller) 내용을 참조해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl apply -f aws-alb-ingress-controller.yaml
@@ -399,11 +399,11 @@ ALB 수신 컨트롤러 생성을 완료하였습니다.
 
 **RDS**(Relational Database Service)는 AWS 클라우드에서 관계형 데이터베이스를 더 쉽게 설치, 운영 및 확장할 수 있는 웹 서비스입니다. RDS는 어렵거나 지루한 관계형 데이터베이스 관리 작업을 대다수 대신합니다.
 
-RDS - 데이터베이스 - 데이터베이스 생성 버튼을 클릭하여 새 데이터베이스 정보를 입력하세요. 데이터베이스 인스턴스 생성에 대한 자세한 정보는 AWS 공식 문서의 [RDS DB 인스턴스 만들기](https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) 내용을 참조하세요.
+RDS - 데이터베이스 - 데이터베이스 생성 버튼을 클릭하여 새 데이터베이스 정보를 입력해 주세요. 데이터베이스 인스턴스 생성에 대한 자세한 정보는 AWS 공식 문서의 [RDS DB 인스턴스 만들기](https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) 내용을 참조해 주세요.
 
 ![GATSBY_EMPTY_ALT](./create-rds-database.jpg)
 
-> 필자의 경우 최소 사양으로 구성하였습니다. 사양이 높을수록 월 청구 요금도 높아지기 때문에 하단의 월별 추정 요금을 확인하면서 설정하세요.
+> 필자의 경우 최소 사양으로 구성하였습니다. 사양이 높을수록 월 청구 요금도 높아지기 때문에 하단의 월별 추정 요금을 확인하면서 설정해 주세요.
 
 ![GATSBY_EMPTY_ALT](./create-rds-database-2.jpg)
 
@@ -431,7 +431,7 @@ kubectl create namespace <insert-your-namespace-name>
 
 ![GATSBY_EMPTY_ALT](./create-namespace.jpg)
 
-> 필자는 `fms` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성하세요. 네임스페이스를 삭제하고 싶다면 다음 명령어를 입력하세요.
+> 필자는 `fms` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성해 주세요. 네임스페이스를 삭제하고 싶다면 다음 명령어를 입력해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl delete namespace <insert-your-namespace-name>
@@ -530,7 +530,7 @@ kubectl get <NAME|SHORTNAMES>
 
 데이터베이스의 경우 쿠버네티스에서 관리하지 않는 AWS 서비스로 쿠버네티스 명령어로는 조회할 수 없지만 필자와 동일한 VPC 보안 그룹에 속해 있어 서비스를 사용할 수 있습니다.
 
-다만, 서비스에서 사용할 때 *- 가독성이 낮은 -* 엔드포인트 주소 전체를 입력해야 하는데 `ExternalName` 유형을 지정해서 `spec.externalName` 파라미터를 사용하면 쿠버네티스 안에서 별칭 형태로 서비스에 적용할 수 있습니다. 자세한 정보는 쿠버네티스 공식 문서의 [ExternalName 유형](https://kubernetes.io/ko/docs/concepts/services-networking/service/#externalname) 내용을 참조하세요.
+다만, 서비스에서 사용할 때 *- 가독성이 낮은 -* 엔드포인트 주소 전체를 입력해야 하는데 `ExternalName` 유형을 지정해서 `spec.externalName` 파라미터를 사용하면 쿠버네티스 안에서 별칭 형태로 서비스에 적용할 수 있습니다. 자세한 정보는 쿠버네티스 공식 문서의 [ExternalName 유형](https://kubernetes.io/ko/docs/concepts/services-networking/service/#externalname) 내용을 참조해 주세요.
 
 **external-name.yaml**
 
@@ -615,7 +615,7 @@ kubectl get pods --namespace=<your-namespace>
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "app=mariadb-cli") --namespace=<your-namespace> --timestamps
 ```
-* `-l, --selector`: 레이블 셀렉터. 쿠버네티스 오브젝트를 식별합니다. 자세한 정보는 쿠버네티스 공식 문서의 [레이블과 셀렉터](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/labels/#레이블-셀렉터) 내용을 참조하세요.
+* `-l, --selector`: 레이블 셀렉터. 쿠버네티스 오브젝트를 식별합니다. 자세한 정보는 쿠버네티스 공식 문서의 [레이블과 셀렉터](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/labels/#레이블-셀렉터) 내용을 참조해 주세요.
 * `-o, --output`: 반환된 목록의 각 파드에서 이름을 가져오는 표현식을 지정합니다.
 
 ![GATSBY_EMPTY_ALT](./apply-mariadb-cli-2.jpg)
@@ -634,7 +634,7 @@ Enter Password: <mariadb-password>
 
 ### [ERROR] Connection Failed.
 
-접속에 실패할 경우 로드 밸런서 및 보안 그룹 설정을 검토하세요.
+접속에 실패할 경우 로드 밸런서 및 보안 그룹 설정을 검토해 주세요.
 
 1. `aws-alb-ingress-controller` 설정에서 `cluster-name` 또는 `aws-vpc-id` 필드 값 확인
 2. 데이터베이스 보안 그룹 `ClusterSharedNodeSecurityGroup` 추가 확인 (`ControlPlaneSecurityGroup` 아님)
@@ -643,7 +643,7 @@ Enter Password: <mariadb-password>
 
 MariaDB **MaxScale**(맥스스케일)은 기본 데이터베이스 인프라에서 애플리케이션 개발을 분리하여 애플리케이션 개발을 단순화하는 데이터베이스 프록시입니다.
 
-MaxScale 서비스를 사용하기 위해 `maxscale` 계정을 생성하고 특정 테이블에 대한 권한을 부여해야 합니다. 자세한 정보는 MariaDB 공식 문서의 [Creating a user account for MaxScale](https://mariadb.com/kb/en/mariadb-maxscale-23-setting-up-mariadb-maxscale/#creating-a-user-account-for-maxscale) 내용을 참조하세요.
+MaxScale 서비스를 사용하기 위해 `maxscale` 계정을 생성하고 특정 테이블에 대한 권한을 부여해야 합니다. 자세한 정보는 MariaDB 공식 문서의 [Creating a user account for MaxScale](https://mariadb.com/kb/en/mariadb-maxscale-23-setting-up-mariadb-maxscale/#creating-a-user-account-for-maxscale) 내용을 참조해 주세요.
 
 ```sql
 CREATE USER 'maxscale'@'%' IDENTIFIED BY '<insert-your-maxscale-password>';

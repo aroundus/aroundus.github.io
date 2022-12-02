@@ -65,7 +65,7 @@ const SEO = (props: SEOProps) => {
       ]}
       link={[
         { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/sf-mono' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css' },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
       ]}
     />

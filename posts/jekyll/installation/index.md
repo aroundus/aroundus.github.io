@@ -2,7 +2,7 @@
 category: jekyll
 index: 1
 title: Jekyll 블로그 만들기
-description: 콘텐츠는 있는데 블로그가 없어서 고민이라면 지금 바로 도전하세요. Jekyll은 데이터베이스가 필요하지 않아요.
+description: 콘텐츠는 있는데 블로그가 없어서 고민이라면 지금 바로 도전해 보세요. Jekyll은 데이터베이스가 필요하지 않아요.
 date: 2018-02-03
 ---
 
@@ -73,7 +73,7 @@ Jekyll로 페이지를 만드는 것은 간단하지만 설치하는 것은 *- �
 
 ## Gem
 
-**Gem**(젬)은 루비 프로젝트에 필요한 기능을 제공하는 라이브러리입니다. [RubyGems(루비젬)](https://rubygems.org/)에서 원하는 gem을 검색하고 사용할 수 있습니다. 다음 명령어를 실행하세요.
+**Gem**(젬)은 루비 프로젝트에 필요한 기능을 제공하는 라이브러리입니다. [RubyGems(루비젬)](https://rubygems.org/)에서 원하는 gem을 검색하고 사용할 수 있습니다. 다음 명령어를 실행해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 gem
@@ -110,7 +110,7 @@ basic help message containing pointers to more information.
         http://guides.rubygems.org
 ```
 
-gem 명령어를 사용하여 Jekyll을 설치하세요.
+gem 명령어를 사용하여 Jekyll을 설치해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 gem install jekyll
@@ -118,7 +118,7 @@ gem install jekyll
 
 ![GATSBY_EMPTY_ALT](./install-jekyll.jpg)
 
-Jekyll 설치를 마치면 다음 명령어를 실행하세요.
+Jekyll 설치를 마치면 다음 명령어를 실행해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 jekyll
@@ -158,7 +158,7 @@ Subcommands:
 
 ## Bundler
 
-[Bundler(번들러)](http://ruby-korea.github.io/bundler-site/)는 정확한 gem 버전을 추적하고 설치하여 루비 프로젝트를 위한 일관된 환경을 제공합니다. 다음 명령어를 실행하세요.
+[Bundler(번들러)](http://ruby-korea.github.io/bundler-site/)는 정확한 gem 버전을 추적하고 설치하여 루비 프로젝트를 위한 일관된 환경을 제공합니다. 다음 명령어를 실행해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 gem install bundler
@@ -168,7 +168,7 @@ gem install bundler
 
 ## Jekyll 사이트 만들기
 
-새 Jekyll 사이트를 생성해 봅시다. 다음 명령어를 실행하세요. (여러분은 test 대신 마음에 드는 이름으로 수정해도 무방합니다.)
+새 Jekyll 사이트를 생성해 봅시다. 다음 명령어를 실행해 주세요. (여러분은 test 대신 마음에 드는 이름으로 수정해도 무방합니다.)
 
 ```shell{promptUser: user}{promptHost: localhost}
 jekyll new test
