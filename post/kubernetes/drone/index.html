@@ -151,7 +151,7 @@
 <p><a href="https://github.com/helm/charts/blob/master/stable/drone/values.yaml">values.yaml</a> 템플릿을 복사한 후 다음 필드를 수정해 주세요.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="72867397393276630000"
+              data-toaster-id="17272852271105710000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -168,7 +168,7 @@ sourceControl:
     clientSecretKey: clientSecret
     clientSecretValue: <your-github-oauth-client-secret>
     server: https://github.com
-...`, `72867397393276630000`)"
+...`, `17272852271105710000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -193,13 +193,13 @@ sourceControl:
 <p>헬름 차트를 설치합니다. (해당 서비스는 템플릿 추출 후 삭제할 것입니다.)</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="60815741019086380000"
+              data-toaster-id="37507557824829330000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`helm repo add stable https://kubernetes-charts.storage.googleapis.com
-helm install drone -f values.yaml stable/drone`, `60815741019086380000`)"
+helm install drone -f values.yaml stable/drone`, `37507557824829330000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -242,12 +242,12 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <p>배포한 서비스를 확인합니다. 헬름은 네임스페이스를 지정하지 않으면 <code>default</code> 네임스페이스에 배포합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="63083440077770890000"
+              data-toaster-id="62242338964297425000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`helm list`, `63083440077770890000`)"
+              onClick="copyToClipboard(`helm list`, `62242338964297425000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -289,12 +289,12 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <p><code>default</code> 네임스페이스의 파드를 조회하면 <code>drone-drone-server-***</code> 형태의 파드가 실행 중인 것을 확인할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="36919813058501010000"
+              data-toaster-id="54677968689508710000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get pod --namespace=default`, `36919813058501010000`)"
+              onClick="copyToClipboard(`kubectl get pod --namespace=default`, `54677968689508710000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -336,12 +336,12 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <p>템플릿을 추출합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="27497097551822460000"
+              data-toaster-id="65828570545181900000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`helm template default stable/drone`, `27497097551822460000`)"
+              onClick="copyToClipboard(`helm template default stable/drone`, `65828570545181900000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -354,7 +354,7 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <p>내용을 전체 복사한 후 임시 <code>.yaml</code> 파일에 다음과 같이 정리합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="78607414004284570000"
+              data-toaster-id="65412873217476200000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -377,7 +377,7 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 ---
 <drone/templates/role-binding-pipeline.yaml>
 ---
-<drone/templates/service.yaml>`, `78607414004284570000`)"
+<drone/templates/service.yaml>`, `65412873217476200000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -408,12 +408,12 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <p>파드를 조회하여 <code>Annotations.checksum/secrets</code> 필드의 값을 복사한 후 별도로 보관합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="11916358110032665000"
+              data-toaster-id="88382159811536440000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl describe pod/<drone-server-pod>`, `11916358110032665000`)"
+              onClick="copyToClipboard(`kubectl describe pod/<drone-server-pod>`, `88382159811536440000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -455,13 +455,13 @@ helm <span class="token function">install</span> drone -f values.yaml stable/dro
 <p>헬름 차트를 삭제합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="29261238748842100000"
+              data-toaster-id="78140777965870280000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`helm uninstall drone
-release &quot;drone&quot; uninstalled`, `29261238748842100000`)"
+release &quot;drone&quot; uninstalled`, `78140777965870280000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -477,13 +477,13 @@ release <span class="token string">"drone"</span> uninstalled</code><span aria-h
 <p>쿠버네티스에 드론 서버를 설치하기 위해 가장 먼저 해야 할 일은 <strong>네임스페이스</strong>를 생성하는 것입니다. 다음 명령어를 입력합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="98250409212128440000"
+              data-toaster-id="86613130194499080000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl create namespace <insert-your-namespace-name>
-kubectl get namespaces`, `98250409212128440000`)"
+kubectl get namespaces`, `86613130194499080000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -531,12 +531,12 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 <p>이전 단계에서 추출한 <code>DRONE_RPC_SECRET</code> 값을 <code>base64</code> 형태로 변환합니다. 서버와 서버와의 RPC(Remote Procedure Call, 원격 프로시저 호출) 연결을 인증하는 데 사용합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="84449081558899920000"
+              data-toaster-id="59743208310434420000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`echo -n '<drone-rpc-secret>' | base64`, `84449081558899920000`)"
+              onClick="copyToClipboard(`echo -n '<drone-rpc-secret>' | base64`, `59743208310434420000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -552,7 +552,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 <p>변환한 정보를 <code>&#x3C;secret></code> 필드에 삽입합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="26522879317774530000"
+              data-toaster-id="75853246794671820000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -568,7 +568,7 @@ metadata:
     heritage: &quot;Helm&quot;
 type: Opaque
 data:
-  secret: &quot;<base64-encoded-drone-rpc-secret>&quot;`, `26522879317774530000`)"
+  secret: &quot;<base64-encoded-drone-rpc-secret>&quot;`, `75853246794671820000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -596,12 +596,12 @@ data:
 <p>이전 단계에서 추출한 <code>&#x3C;github-oauth-client-secret></code> 값을 <code>base64</code> 형태로 변환합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="48793151368187585000"
+              data-toaster-id="30868018691381404000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`echo -n '<your-github-oauth-client-secret>' | base64`, `48793151368187585000`)"
+              onClick="copyToClipboard(`echo -n '<your-github-oauth-client-secret>' | base64`, `30868018691381404000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -614,7 +614,7 @@ data:
 <p>변환한 정보를 <code>&#x3C;clientSecret></code> 필드에 삽입합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="11027393471336434000"
+              data-toaster-id="53799796317070770000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -630,7 +630,7 @@ metadata:
     heritage: &quot;Helm&quot;
 type: Opaque
 data:
-  clientSecret: &quot;<base64-encoded-your-github-oauth-client-secret>&quot;`, `11027393471336434000`)"
+  clientSecret: &quot;<base64-encoded-your-github-oauth-client-secret>&quot;`, `53799796317070770000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -654,14 +654,14 @@ data:
 <p><strong>secrets.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="83588835093367900000"
+              data-toaster-id="17470156123232905000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`<drone-rpc-secret.yaml>
 ---
-<drone-github-client-secret.yaml>`, `83588835093367900000`)"
+<drone-github-client-secret.yaml>`, `17470156123232905000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -678,7 +678,7 @@ data:
 <p><strong>pvc.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="62333552089080890000"
+              data-toaster-id="71141184266211210000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -693,7 +693,7 @@ spec:
     - &quot;ReadWriteOnce&quot;
   resources:
     requests:
-      storage: &quot;1Gi&quot;`, `62333552089080890000`)"
+      storage: &quot;1Gi&quot;`, `71141184266211210000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -718,7 +718,7 @@ spec:
 <p><strong>service-account.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="44402375620395155000"
+              data-toaster-id="82800928194419110000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -731,7 +731,7 @@ metadata:
   labels:
     app: drone
     chart: &quot;drone-2.3.1&quot;
-    heritage: &quot;Helm&quot;`, `44402375620395155000`)"
+    heritage: &quot;Helm&quot;`, `82800928194419110000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -752,7 +752,7 @@ metadata:
 <p><strong>service-account-pipeline.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="79604257919781360000"
+              data-toaster-id="22367994330915607000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -765,7 +765,7 @@ metadata:
   labels:
     app: drone
     chart: &quot;drone-2.3.1&quot;
-    heritage: &quot;Helm&quot;`, `79604257919781360000`)"
+    heritage: &quot;Helm&quot;`, `22367994330915607000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -788,7 +788,7 @@ metadata:
 <p><strong>role.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="37706206501302490000"
+              data-toaster-id="32595261642319450000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -817,7 +817,7 @@ rules:
       - get
       - list
       - patch
-      - update`, `37706206501302490000`)"
+      - update`, `32595261642319450000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -855,7 +855,7 @@ rules:
 <p><strong>RoleBinding</strong> 오브젝트는 <em>- ServiceAccount 오브젝트에서 정의한 -</em> <code>drone</code> 사용자와 Role 권한을 연결합니다. 즉, 사용자에게 권한을 부여하지만 그 권한에 대한 정보는 Role이 지정합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="11136743044442565000"
+              data-toaster-id="58652829941312640000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -876,7 +876,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: drone
-    namespace: craft-box`, `11136743044442565000`)"
+    namespace: craft-box`, `58652829941312640000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -907,7 +907,7 @@ subjects:
 <p><strong>role-pipeline.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="713318485750935600"
+              data-toaster-id="57688514468062134000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -951,7 +951,7 @@ rules:
     resources:
       - pods/log
     verbs:
-      - get`, `713318485750935600`)"
+      - get`, `57688514468062134000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1004,7 +1004,7 @@ rules:
 <p><strong>ClusterRoleBinding</strong> 오브젝트는 <em>- ServiceAccount 오브젝트에서 정의한 -</em> <code>drone-pipeline</code> 사용자와 ClusterRole 권한을 연결합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="24814821912016404000"
+              data-toaster-id="34750835480785035000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1025,7 +1025,7 @@ subjects:
 roleRef:
   kind: ClusterRole
   name: drone-pipeline
-  apiGroup: rbac.authorization.k8s.io`, `24814821912016404000`)"
+  apiGroup: rbac.authorization.k8s.io`, `34750835480785035000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1056,7 +1056,7 @@ roleRef:
 <p><strong>service.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="47384289237383160000"
+              data-toaster-id="54141572199783040000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1078,7 +1078,7 @@ spec:
       targetPort: 80
   selector:
     app: drone
-    component: server`, `47384289237383160000`)"
+    component: server`, `54141572199783040000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1109,7 +1109,7 @@ spec:
 <p><strong>deployment-server.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="92793758738493800000"
+              data-toaster-id="39940234475059990000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1217,7 +1217,7 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: drone`, `92793758738493800000`)"
+            claimName: drone`, `39940234475059990000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1333,7 +1333,7 @@ spec:
 <p><strong>drone.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="81076065977479450000"
+              data-toaster-id="23877642374468166000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1356,7 +1356,7 @@ spec:
 ---
 <service.yaml>
 ---
-<deployment-server.yaml>`, `81076065977479450000`)"
+<deployment-server.yaml>`, `23877642374468166000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1386,12 +1386,12 @@ spec:
 &lt;deployment<span class="token punctuation">-</span>server.yaml<span class="token punctuation">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="76482354187506780000"
+              data-toaster-id="55246518107241280000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl apply -f drone.yaml`, `76482354187506780000`)"
+              onClick="copyToClipboard(`kubectl apply -f drone.yaml`, `55246518107241280000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1435,7 +1435,7 @@ spec:
 <p><strong>ingress-drone-external.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="85009274904371630000"
+              data-toaster-id="4854592501204591000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1462,7 +1462,7 @@ spec:
           - path: /*
             backend:
               serviceName: drone
-              servicePort: 80`, `85009274904371630000`)"
+              servicePort: 80`, `4854592501204591000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1496,12 +1496,12 @@ spec:
               <span class="token key atrule">servicePort</span><span class="token punctuation">:</span> <span class="token number">80</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="6914675790042235000"
+              data-toaster-id="72645476133659860000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl apply -f ingress-drone-external.yaml`, `6914675790042235000`)"
+              onClick="copyToClipboard(`kubectl apply -f ingress-drone-external.yaml`, `72645476133659860000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1579,12 +1579,12 @@ spec:
 <p>레코드 생성 후 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="67979960430792640000"
+              data-toaster-id="27093636281141207000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get ingresses --namespace=<your-namespace>`, `67979960430792640000`)"
+              onClick="copyToClipboard(`kubectl get ingresses --namespace=<your-namespace>`, `27093636281141207000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1693,12 +1693,12 @@ spec:
 <p>다음 명령어를 입력하여 <code>drone-server</code> 내부로 접속합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="92340783207494000000"
+              data-toaster-id="19306907699571440000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh`, `92340783207494000000`)"
+              onClick="copyToClipboard(`kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh`, `19306907699571440000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1711,12 +1711,12 @@ spec:
 <p>다음 명령어를 입력하면 <em>- 다소 복잡하긴 하지만 -</em> 파드를 조회하는 과정을 생략할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="88450963797404910000"
+              data-toaster-id="24544612080598660000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl exec -it \$(kubectl get pods -o jsonpath=&quot;{.items[0].metadata.name}&quot; --namespace=<your-namespace> -l &quot;component=server,app=drone&quot;) --namespace=<your-namespace> sh`, `88450963797404910000`)"
+              onClick="copyToClipboard(`kubectl exec -it \$(kubectl get pods -o jsonpath=&quot;{.items[0].metadata.name}&quot; --namespace=<your-namespace> -l &quot;component=server,app=drone&quot;) --namespace=<your-namespace> sh`, `24544612080598660000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1930,7 +1930,7 @@ spec:
 <p>자세한 정보는 Drone 공식 문서의 <a href="https://docs.drone.io/pipeline/kubernetes/overview/">Pipelines > Kubernetes</a> 내용을 참조합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="44496577972685800000"
+              data-toaster-id="48111038868134550000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1976,7 +1976,7 @@ trigger:
     - push
   branch:
     - master
-    - develop`, `44496577972685800000`)"
+    - develop`, `48111038868134550000`)"
             >
               <div
                 class="gatsby-code-button"

@@ -90,12 +90,12 @@
 <p>RDS 데이터베이스에 테이블을 생성하기 위해 <code>kubectl port-forward</code> 명령어로 maxscale 파드를 선택해 포트 포워딩을 한 다음 로컬에서 작업합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="9359237751412165000"
+              data-toaster-id="9084748831067490000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>`, `9359237751412165000`)"
+              onClick="copyToClipboard(`kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>`, `9084748831067490000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -184,7 +184,7 @@
 </blockquote>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="51551802388541070000"
+              data-toaster-id="88520777697303870000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -233,7 +233,7 @@ spec:
             - name: SPRING_DATASOURCE_MAXIMUM_POOL_SIZE
               value: &quot;30&quot;
       imagePullSecrets:
-        - name: dockerhub`, `51551802388541070000`)"
+        - name: dockerhub`, `88520777697303870000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -292,7 +292,7 @@ spec:
 <p><strong>Ingress</strong>(인그레스) 오브젝트는 서비스에 대한 로드 밸런서를 생성하고 웹 사이트에 대한 트래픽을 인스턴스 간에 분산할 수 있도록 합니다. 다음과 같이 오브젝트를 구성하고 배포해 주세요.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="73438002544077640000"
+              data-toaster-id="19150480854149964000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -324,7 +324,7 @@ spec:
           - path: /*
             backend:
               serviceName: web
-              servicePort: 80`, `73438002544077640000`)"
+              servicePort: 80`, `19150480854149964000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -396,7 +396,7 @@ spec:
 <p>네트워크 서비스로 노출이 필요한 클라이언트 프로젝트 파드는 Deployment 오브젝트 외에 추상적 개념인 <strong>Service</strong>(서비스) 오브젝트를 같이 구성해야 합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="83503853261506870000"
+              data-toaster-id="2407846864826935000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -442,7 +442,7 @@ spec:
       containers:
         ...
       imagePullSecrets:
-        - name: dockerhub`, `83503853261506870000`)"
+        - name: dockerhub`, `2407846864826935000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -496,12 +496,12 @@ spec:
 <p>오브젝트를 배포한 다음 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인해 주세요. <code>ADDRESS</code> 필드에 값이 있으면 정상적으로 연결된 것입니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="23805860672312893000"
+              data-toaster-id="95216509929281450000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get ingresses --namespace=<your-namespace>`, `23805860672312893000`)"
+              onClick="copyToClipboard(`kubectl get ingresses --namespace=<your-namespace>`, `95216509929281450000`)"
             >
               <div
                 class="gatsby-code-button"
