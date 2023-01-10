@@ -94,7 +94,6 @@ const theme = createTheme({
         h5,
         h6 {
           font-family: ${HEADING_FONT_FAMILY};
-          line-height: 1.3;
 
           .icon-heading-link {
             border-bottom: none;
@@ -112,16 +111,21 @@ const theme = createTheme({
         }
 
         h1 {
-          font-size: 2em;
+          font-size: 2.2em;
           margin-top: 2.2em;
         }
 
         h2 {
-          font-size: 1.8em;
+          font-size: 2em;
           margin-top: 2em;
         }
 
         h3 {
+          font-size: 1.6em;
+          margin-top: 1.8em;
+        }
+
+        h4 {
           font-size: 1.4em;
           margin-top: 1.8em;
         }
@@ -234,8 +238,9 @@ const theme = createTheme({
         }
 
         mark {
-          padding: 2px 4px;
-          background-color: ${alpha(colors.cyan[100], 0.6)};
+          background-color: transparent;
+          color: inherit;
+          background-image: linear-gradient(to top, ${colors.cyan[100]} 40%, transparent 10%, transparent 50%);
         }
 
         table {
