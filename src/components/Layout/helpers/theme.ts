@@ -1,4 +1,4 @@
-import { alpha, colors } from '@mui/material';
+import { colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 
