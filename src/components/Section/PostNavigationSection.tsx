@@ -3,7 +3,7 @@ import {
   Box, Button, colors, Container, Typography,
 } from '@mui/material';
 import { ArrowBackIos as ArrowLeftIcon, ArrowForwardIos as ArrowRightIcon } from '@mui/icons-material';
-import { PostNavigation } from '~types/global';
+import type { PostNavigation } from '~types/global';
 
 interface PostNavigationSectionProps {
   prevPost?: PostNavigation;

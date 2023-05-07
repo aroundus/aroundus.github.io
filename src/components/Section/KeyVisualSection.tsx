@@ -8,7 +8,7 @@ import {
 import { styled, useTheme } from '@mui/material/styles';
 
 import { getPostCoverImageURL } from '~helpers/image';
-import { Post } from '~types/global';
+import type { Post } from '~types/global';
 
 interface KeyVisualSectionProps {
   post: Post;
@@ -149,7 +149,7 @@ const KeyVisualSection = ({
             sx={{ mt: 6, px: 10 }}
             href={post.path}
           >
-            내용 보기
+            내용 읽기
           </StyledButton>
         )}
       </div>

@@ -6,7 +6,7 @@ import {
 import { Recommend as RecommendIcon } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
-import { Post } from '~types/global';
+import type { Post } from '~types/global';
 
 interface RelatedPostListSectionProps {
   query: string;

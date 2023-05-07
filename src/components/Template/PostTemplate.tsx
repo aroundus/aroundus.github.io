@@ -10,10 +10,10 @@ import {
   CommentSection, PostNavigationSection, RelatedPostListSection,
 } from '~components/Section';
 import SEO from '~components/SEO';
-import PostContainer from '~containers/PostContainer';
+import Post from '~components/Post';
 import { getPostCoverImageURL } from '~helpers/image';
 import { getSearchPosts } from '~helpers/search';
-import { AnyObject, Post } from '~types/global';
+import type { AnyObject, Post as PostType } from '~types/global';
 
 interface PostTemplateProps {
   data: {
@@ -35,7 +35,7 @@ const PostTemplate = ({
     html: markdownRemark.html,
     tableOfContents: markdownRemark.tableOfContents,
     ...markdownRemark.frontmatter,
-  } as Post;
+  } as PostType;
 
   const prevPost = data.prevPost
     ? {
@@ -51,7 +51,7 @@ const PostTemplate = ({
       title: data.nextPost.frontmatter.title,
     } : undefined;
 
-  const [searchPosts, setSearchPosts] = useState<Post[]>([]);
+  const [searchPosts, setSearchPosts] = useState<PostType[]>([]);
 
   useEffect(() => {
     if (post.category) {
@@ -71,7 +71,7 @@ const PostTemplate = ({
         image={getPostCoverImageURL(post.image || post.category)}
       />
       <Layout>
-        <PostContainer post={post} />
+        <Post post={post} />
         <Divider sx={{ mb: -4 }}>
           <InsertEmoticonIcon color="primary" />
         </Divider>
