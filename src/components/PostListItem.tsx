@@ -5,7 +5,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import { Post } from '~types/global';
+import type { Post } from '~types/global';
 
 interface PostListItemProps {
   post: Post;

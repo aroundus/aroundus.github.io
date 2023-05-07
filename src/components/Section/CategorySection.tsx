@@ -43,8 +43,8 @@ const CategorySection = ({
             disableRipple
             onClick={() => handleClick(category)}
           >
-            <Typography variant="subtitle1">
-              {category}
+            <Typography variant="caption">
+              #{category}
             </Typography>
           </Button>
         ))}

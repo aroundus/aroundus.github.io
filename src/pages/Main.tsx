@@ -11,11 +11,11 @@ import {
   PostSearchSection,
 } from '~components/Section';
 import { getSearchPosts } from '~helpers/search';
-import { AnyObject, Post } from '~types/global';
+import type { AnyObject, Post } from '~types/global';
 
 const CATEGORY_ALL = '전체';
 
-const HomeContainer = () => {
+const Main = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
@@ -139,4 +139,4 @@ const HomeContainer = () => {
   );
 };
 
-export default HomeContainer;
+export default Main;

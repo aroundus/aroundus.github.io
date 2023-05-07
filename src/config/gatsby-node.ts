@@ -4,7 +4,7 @@ import path from 'path';
 import { GatsbyNode as GatsbyNodeType } from 'gatsby';
 import { GitalkPluginHelper } from 'gatsby-plugin-gitalk';
 import { createFilePath } from 'gatsby-source-filesystem';
-import { AnyObject } from '~types/global';
+import type { AnyObject } from '~types/global';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const gitalkCreateIssueToken = process.env.GITALK_CREATE_ISSUE_TOKEN;

@@ -5,6 +5,7 @@ module.exports = {
   ],
   plugins: [
     'stylelint-scss',
+    'stylelint-order',
   ],
   rules: {
     'alpha-value-notation': 'number',

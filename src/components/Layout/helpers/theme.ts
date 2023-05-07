@@ -2,9 +2,9 @@ import { colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 
-const BASE_FONT_FAMILY = 'Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
-const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
-const HEADING_FONT_FAMILY = 'Montserrat, Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+export const BASE_FONT_FAMILY = 'Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+export const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
+export const HEADING_FONT_FAMILY = 'Montserrat, Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 
 const theme = createTheme({
   spacing: 4,

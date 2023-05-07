@@ -4,23 +4,23 @@ import AOS from 'aos';
 import Layout from '~components/Layout';
 import SEO from '~components/SEO';
 
-import HomeContainer from '~containers/HomeContainer';
+import Main from '~pages/Main';
 
 const App = () => {
-  const [isMount, setMount] = useState(false);
+  const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
     AOS.init();
-    setMount(true);
+    setMounted(true);
   }, []);
 
   return (
     <>
-      {isMount && (
+      {isMounted && (
         <>
           <SEO />
           <Layout>
-            <HomeContainer />
+            <Main />
           </Layout>
         </>
       )}

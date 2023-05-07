@@ -5,15 +5,15 @@ import { useTheme } from '@mui/material/styles';
 
 import FloatingTOC from '~components/FloatingTOC';
 import { ArticleSection, KeyVisualSection } from '~components/Section';
-import { Post } from '~types/global';
+import type { Post as PostType } from '~types/global';
 
-interface PostContainerProps {
-  post: Post;
+interface PostProps {
+  post: PostType;
 }
 
-const PostContainer = ({
+const Post = ({
   post,
-}: PostContainerProps) => {
+}: PostProps) => {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -38,4 +38,4 @@ const PostContainer = ({
   );
 };
 
-export default PostContainer;
+export default Post;

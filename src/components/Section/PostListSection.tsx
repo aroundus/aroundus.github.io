@@ -4,7 +4,7 @@ import { List } from '@mui/material';
 import isEmpty from 'lodash-es/isEmpty';
 import dayjs from 'dayjs';
 
-import { Post } from '~types/global';
+import type { Post } from '~types/global';
 
 import PostListItem from '../PostListItem';
 

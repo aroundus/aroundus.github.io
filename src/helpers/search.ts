@@ -1,7 +1,7 @@
 import { Index } from 'lunr';
 import isEmpty from 'lodash-es/isEmpty';
 
-import { AnyObject, Post } from '~types/global';
+import type { AnyObject, Post } from '~types/global';
 
 declare global {
   interface Window {
