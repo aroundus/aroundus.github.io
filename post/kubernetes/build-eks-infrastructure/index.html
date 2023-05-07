@@ -72,7 +72,7 @@
 <p><strong>deployment.yaml</strong> (예시)</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="29768280954299486000"
+              data-toaster-id="54668510198233890000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -95,7 +95,7 @@ spec:
         - name: nginx
           image: nginx:1.14.2
           ports:
-            - containerPort: 80`, `29768280954299486000`)"
+            - containerPort: 80`, `54668510198233890000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -133,12 +133,12 @@ spec:
 <p>오브젝트 <code>spec</code>에 대한 정확한 포맷은 모든 쿠버네티스 오브젝트마다 다르고, 그 오브젝트 특유의 중첩된 필드를 포함합니다. 다음 명령어를 입력하여 오브젝트를 생성합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="26724324916319130000"
+              data-toaster-id="28284625920923513000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl apply -f deployment.yaml`, `26724324916319130000`)"
+              onClick="copyToClipboard(`kubectl apply -f deployment.yaml`, `28284625920923513000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -154,7 +154,7 @@ spec:
 <p><strong>cluster.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="21138992824739390000"
+              data-toaster-id="64625017667246580000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -182,7 +182,7 @@ nodeGroups:
       withAddonPolicies:
         ebs: true
         efs: true
-        autoScaler: true`, `21138992824739390000`)"
+        autoScaler: true`, `64625017667246580000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -217,12 +217,12 @@ nodeGroups:
         <span class="token key atrule">autoScaler</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="12342923038269848000"
+              data-toaster-id="90356600763396010000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`eksctl create cluster -f cluster.yaml`, `12342923038269848000`)"
+              onClick="copyToClipboard(`eksctl create cluster -f cluster.yaml`, `90356600763396010000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -264,12 +264,12 @@ nodeGroups:
 <p>도커에서 쿠버네티스를 활성화하면 기본적으로 <code>current-context</code> 필드를 <code>docker-desktop</code> 클러스터로 지정합니다. <code>~/.kube/config</code> 파일에서 현재 생성한 클러스터로 변경이 잘 이루어졌는지 확인해 주세요.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="14459646330393006000"
+              data-toaster-id="69727145909743670000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl config get-contexts`, `14459646330393006000`)"
+              onClick="copyToClipboard(`kubectl config get-contexts`, `69727145909743670000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -352,7 +352,7 @@ nodeGroups:
 <p><strong>storage-classes.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="6865086176241997000"
+              data-toaster-id="66427969926447464000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -398,7 +398,7 @@ provisioner: ebs.csi.aws.com
 volumeBindingMode: WaitForFirstConsumer
 parameters:
   type: io1
-  iopsPerGB: &quot;10&quot;`, `6865086176241997000`)"
+  iopsPerGB: &quot;10&quot;`, `66427969926447464000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -458,13 +458,13 @@ parameters:
 <p><code>volumeBindingMode</code> 필드는 볼륨 바인딩과 동적 프로비저닝의 시작 시기를 제어합니다. <code>WaitForFirstConsumer</code> 모드로 지정하면 볼륨을 사용하는 파드가 생성될 때까지 볼륨의 바인딩과 프로비저닝을 지연시킵니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="36979012668205380000"
+              data-toaster-id="60865181841436880000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl apply -f storage-classes.yaml
-kubectl get storageclasses`, `36979012668205380000`)"
+kubectl get storageclasses`, `60865181841436880000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -515,12 +515,12 @@ kubectl get storageclasses</code><span aria-hidden="true" class="line-numbers-ro
 <p>EBS(Elastic Block Store, 고성능 블록 스토리지 서비스) <strong>CSI</strong>(Container Storage Interface)는 쿠버네티스를 위한 임의의 스토리지 시스템을 컨테이너 워크로드에 노출시키는 인터페이스입니다. EBS CSI 드라이버는 EKS 클러스터가 EBS 볼륨의 수명 주기를 관리할 수 있게 해 주는 CSI 인터페이스를 제공합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39972903273344220000"
+              data-toaster-id="31752400127874790000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl apply -k &quot;github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=master&quot;`, `39972903273344220000`)"
+              onClick="copyToClipboard(`kubectl apply -k &quot;github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=master&quot;`, `31752400127874790000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -565,7 +565,7 @@ kubectl get storageclasses</code><span aria-hidden="true" class="line-numbers-ro
 <p>EBS CSI 드라이버를 사용하기 위하여 노드 그룹에 정책을 연결해 봅시다. IAM - 정책 - 정책 생성 버튼 클릭 후 다음과 같이 정책을 하나 생성해 주세요. 이름은 마음대로 하셔도 됩니다. (필자는 <code>Amazon_EBS_CSI_Driver</code> 이름으로 생성)</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="80638289012349440000"
+              data-toaster-id="65962247656121310000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -592,7 +592,7 @@ kubectl get storageclasses</code><span aria-hidden="true" class="line-numbers-ro
             &quot;Resource&quot;: &quot;*&quot;
         }
     ]
-}`, `80638289012349440000`)"
+}`, `65962247656121310000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -689,12 +689,12 @@ kubectl get storageclasses</code><span aria-hidden="true" class="line-numbers-ro
     </span></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="77948515849082360000"
+              data-toaster-id="13923476365899966000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get pods --namespace=kube-system`, `77948515849082360000`)"
+              onClick="copyToClipboard(`kubectl get pods --namespace=kube-system`, `13923476365899966000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -740,7 +740,7 @@ kubectl get storageclasses</code><span aria-hidden="true" class="line-numbers-ro
 <p><strong>aws-alb-ingress-controller.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="99101554803286330000"
+              data-toaster-id="80264178197885120000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -845,7 +845,7 @@ spec:
               protocol: TCP
           resources: {}
       serviceAccountName: aws-alb-ingress-controller
-      terminationGracePeriodSeconds: 60`, `99101554803286330000`)"
+      terminationGracePeriodSeconds: 60`, `80264178197885120000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -958,12 +958,12 @@ spec:
 <p><code>--aws-vpc-id</code> 필드에 대한 정보는 <em>- AWS > VPC 메뉴 또는 -</em> 다음 명령어를 입력해 확인할 수 있습니다. 자세한 정보는 AWS 공식 문서의 <a href="https://docs.aws.amazon.com/cli/latest/reference/eks/describe-cluster.html">describe-cluster</a> 내용을 참조해 주세요.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="40176944290060600000"
+              data-toaster-id="3147183676619858000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`aws eks describe-cluster --name=<your-cluster-name>`, `40176944290060600000`)"
+              onClick="copyToClipboard(`aws eks describe-cluster --name=<your-cluster-name>`, `3147183676619858000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1007,13 +1007,13 @@ spec:
 </blockquote>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="98983829005585860000"
+              data-toaster-id="31641514062278600000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl apply -f aws-alb-ingress-controller.yaml
-kubectl get all`, `98983829005585860000`)"
+kubectl get all`, `31641514062278600000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1124,12 +1124,12 @@ kubectl get all</code><span aria-hidden="true" class="line-numbers-rows" style="
 <p><strong>Namespace</strong>(네임스페이스)는 클러스터 내 논리적인 분리를 통한 가상 클러스터를 의미합니다. 같은 네임스페이스 내 오브젝트는 기본적으로 동일한 접근 제어 정책을 갖습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="13459703036807635000"
+              data-toaster-id="30819488685651450000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get namespace`, `13459703036807635000`)"
+              onClick="copyToClipboard(`kubectl get namespace`, `30819488685651450000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1148,12 +1148,12 @@ kubectl get all</code><span aria-hidden="true" class="line-numbers-rows" style="
 <p>다음 명령어를 입력하여 네임스페이스를 생성합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="34207564988323580000"
+              data-toaster-id="18289139177931090000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl create namespace <insert-your-namespace-name>`, `34207564988323580000`)"
+              onClick="copyToClipboard(`kubectl create namespace <insert-your-namespace-name>`, `18289139177931090000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1197,12 +1197,12 @@ kubectl get all</code><span aria-hidden="true" class="line-numbers-rows" style="
 </blockquote>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="1806061783476575700"
+              data-toaster-id="15152255026301598000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl delete namespace <insert-your-namespace-name>`, `1806061783476575700`)"
+              onClick="copyToClipboard(`kubectl delete namespace <insert-your-namespace-name>`, `15152255026301598000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1215,13 +1215,13 @@ kubectl get all</code><span aria-hidden="true" class="line-numbers-rows" style="
 <p>모든 오브젝트가 네임스페이스에 속하지는 않습니다. 파드, 서비스 등의 쿠버네티스 리소스는 네임스페이스에 속하지만 네임스페이스 리소스 자체는 네임스페이스에 속하지 않습니다. 노드나 퍼시스턴트 볼륨 등의 저수준 리소스는 어느 네임스페이스에도 속하지 않습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="64971720677237660000"
+              data-toaster-id="77401981420913600000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl api-resources --namespaced=true  // 네임스페이스에 속하는 리소스 조회
-kubectl api-resources --namespaced=false // 네임스페이스에 속하지 않는 리소스 조회`, `64971720677237660000`)"
+kubectl api-resources --namespaced=false // 네임스페이스에 속하지 않는 리소스 조회`, `77401981420913600000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1235,12 +1235,12 @@ kubectl api-resources <span class="token parameter variable">--namespaced</span>
 <h3 id="네임스페이스에-속하는-리소스" style="position:relative;">네임스페이스에 속하는 리소스<a href="#%EB%84%A4%EC%9E%84%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%97%90-%EC%86%8D%ED%95%98%EB%8A%94-%EB%A6%AC%EC%86%8C%EC%8A%A4" aria-label="네임스페이스에 속하는 리소스 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="35087620984830670000"
+              data-toaster-id="77981032771243330000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get <NAME|SHORTNAMES> --namespace=<your-namespace>`, `35087620984830670000`)"
+              onClick="copyToClipboard(`kubectl get <NAME|SHORTNAMES> --namespace=<your-namespace>`, `77981032771243330000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1434,12 +1434,12 @@ kubectl api-resources <span class="token parameter variable">--namespaced</span>
 <h3 id="네임스페이스에-속하지-않는-리소스" style="position:relative;">네임스페이스에 속하지 않는 리소스<a href="#%EB%84%A4%EC%9E%84%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%97%90-%EC%86%8D%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EB%A6%AC%EC%86%8C%EC%8A%A4" aria-label="네임스페이스에 속하지 않는 리소스 permalink" class="icon-heading-link after"><svg viewBox="0 0 24 24" height="24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="2595603146922243000"
+              data-toaster-id="85720596972958100000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get <NAME|SHORTNAMES>`, `2595603146922243000`)"
+              onClick="copyToClipboard(`kubectl get <NAME|SHORTNAMES>`, `85720596972958100000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1618,7 +1618,7 @@ kubectl api-resources <span class="token parameter variable">--namespaced</span>
 <p><strong>external-name.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="25891615322043650000"
+              data-toaster-id="13263919816533475000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1630,7 +1630,7 @@ metadata:
   namespace: <your-namespace>
 spec:
   type: ExternalName
-  externalName: <database-endpoint>`, `25891615322043650000`)"
+  externalName: <database-endpoint>`, `13263919816533475000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1649,13 +1649,13 @@ spec:
   <span class="token key atrule">externalName</span><span class="token punctuation">:</span> &lt;database<span class="token punctuation">-</span>endpoint<span class="token punctuation">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="80233782974295820000"
+              data-toaster-id="58009062652625460000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl apply -f external-name.yaml
-kubectl get services --namespace=<your-namespace>`, `80233782974295820000`)"
+kubectl get services --namespace=<your-namespace>`, `58009062652625460000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1701,7 +1701,7 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
 <p><strong>mariadb-cli.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="76230577194729720000"
+              data-toaster-id="90033835329830730000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1743,7 +1743,7 @@ spec:
               memory: 64Mi
             limits:
               cpu: 100m
-              memory: 64Mi`, `76230577194729720000`)"
+              memory: 64Mi`, `90033835329830730000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1792,13 +1792,13 @@ spec:
               <span class="token key atrule">memory</span><span class="token punctuation">:</span> 64Mi</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="87532078397175370000"
+              data-toaster-id="13688639642810575000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl apply -f mariadb-cli.yaml
-kubectl get pods --namespace=<your-namespace>`, `87532078397175370000`)"
+kubectl get pods --namespace=<your-namespace>`, `13688639642810575000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1844,12 +1844,12 @@ kubectl get pods <span class="token parameter variable">--namespace</span><span 
 <p>다음 명령어를 입력하면 <em>- 다소 복잡하긴 하지만 -</em> 파드를 조회하는 과정을 생략할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="1720263405156186000"
+              data-toaster-id="16796158977657272000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl logs -f \$(kubectl get pods -o jsonpath=&quot;{.items[0].metadata.name}&quot; --namespace=<your-namespace> -l &quot;app=mariadb-cli&quot;) --namespace=<your-namespace> --timestamps`, `1720263405156186000`)"
+              onClick="copyToClipboard(`kubectl logs -f \$(kubectl get pods -o jsonpath=&quot;{.items[0].metadata.name}&quot; --namespace=<your-namespace> -l &quot;app=mariadb-cli&quot;) --namespace=<your-namespace> --timestamps`, `16796158977657272000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1895,14 +1895,14 @@ kubectl get pods <span class="token parameter variable">--namespace</span><span 
 <p>다음 명령어를 입력하여 <code>mariadb-cli</code> 내부로 접속합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="75660921901584200000"
+              data-toaster-id="90168201137906800000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl exec -it <mariadb-cli-pod> --namespace=<your-namespace> bash
 mysql -h <mariadb-external-name> -u admin -p
-Enter Password: <mariadb-password>`, `75660921901584200000`)"
+Enter Password: <mariadb-password>`, `90168201137906800000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1957,7 +1957,7 @@ Enter Password: <span class="token operator">&lt;</span>mariadb-password<span cl
 <p>MaxScale 서비스를 사용하기 위해 <code>maxscale</code> 계정을 생성하고 특정 테이블에 대한 권한을 부여해야 합니다. 자세한 정보는 MariaDB 공식 문서의 <a href="https://mariadb.com/kb/en/mariadb-maxscale-23-setting-up-mariadb-maxscale/#creating-a-user-account-for-maxscale">Creating a user account for MaxScale</a> 내용을 참조해 주세요.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="50473109114713784000"
+              data-toaster-id="13471292627181652000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1969,7 +1969,7 @@ GRANT SELECT ON mysql.tables_priv TO 'maxscale'@'%';
 GRANT SELECT ON mysql.roles_mapping TO 'maxscale'@'%';
 GRANT SHOW DATABASES ON *.* TO 'maxscale'@'%';
 
-SELECT Host, User FROM mysql.user;`, `50473109114713784000`)"
+SELECT Host, User FROM mysql.user;`, `13471292627181652000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2018,7 +2018,7 @@ SELECT Host, User FROM mysql.user;`, `50473109114713784000`)"
 <p><strong>my-maxscale.cnf</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="60091371075191320000"
+              data-toaster-id="30087441656783143000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -2096,7 +2096,7 @@ type=listener
 service=Read-Write-Service
 protocol=MySQLClient
 port=4006
-address=0.0.0.0`, `60091371075191320000`)"
+address=0.0.0.0`, `30087441656783143000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2182,13 +2182,13 @@ address=0.0.0.0`, `60091371075191320000`)"
 <p>Maxscale 구성으로 시크릿을 생성해 봅시다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="10884499363841905000"
+              data-toaster-id="5053548681692366000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl create secret generic maxscale-config --from-file=my-maxscale.cnf=<repository-absolute-path>/my-maxscale.cnf --namespace=<your-namespace>
-kubectl get secrets --namespace=<your-namespace>`, `10884499363841905000`)"
+kubectl get secrets --namespace=<your-namespace>`, `5053548681692366000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2234,7 +2234,7 @@ kubectl get secrets <span class="token parameter variable">--namespace</span><sp
 <p><strong>maxscale.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="69112935052114820000"
+              data-toaster-id="61675236934869270000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -2307,7 +2307,7 @@ spec:
               - key: my-maxscale.cnf
                 path: my-maxscale.cnf
         - name: conf-d
-          emptyDir: {}`, `69112935052114820000`)"
+          emptyDir: {}`, `61675236934869270000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2387,13 +2387,13 @@ spec:
           <span class="token key atrule">emptyDir</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="53984142887157140000"
+              data-toaster-id="62003184096601950000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl apply -f maxscale.yaml
-kubectl get services --namespace=<your-namespace>`, `53984142887157140000`)"
+kubectl get services --namespace=<your-namespace>`, `62003184096601950000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2436,12 +2436,12 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
 <p>MaxScale 배포를 완료하였습니다. 이제 <code>kubectl port-forward</code> 명령어로 리소스 이름과 파드 이름과 사용하여 일치하는 파드를 선택해 포트 포워딩을 할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="97900506877130700000"
+              data-toaster-id="69549652251064690000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>`, `97900506877130700000`)"
+              onClick="copyToClipboard(`kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>`, `69549652251064690000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2517,12 +2517,12 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
 <p>도커 사용자 이름과 비밀번호를 <code>base64</code> 형태로 변환합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="41754628460233430000"
+              data-toaster-id="34327417395003556000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`echo -n '<username>:<password>' | base64`, `41754628460233430000`)"
+              onClick="copyToClipboard(`echo -n '<username>:<password>' | base64`, `34327417395003556000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2536,7 +2536,7 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
 <p>변환한 정보를 <code>auth</code> 필드에 삽입합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="45835958657521480000"
+              data-toaster-id="99020899486455430000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -2547,7 +2547,7 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
       &quot;auth&quot;: &quot;<base64-encoded-string>&quot;
     }
   }
-}`, `45835958657521480000`)"
+}`, `99020899486455430000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2566,12 +2566,12 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
 <p>해당 파일을 <code>base64</code> 형태로 변환합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="48193054130501120000"
+              data-toaster-id="72122848883143975000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`cat config.json | base64`, `48193054130501120000`)"
+              onClick="copyToClipboard(`cat config.json | base64`, `72122848883143975000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2585,7 +2585,7 @@ kubectl get services <span class="token parameter variable">--namespace</span><s
 <p>변환한 정보를 <code>.dockerconfigjson</code> 필드에 삽입합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="74211319720035000000"
+              data-toaster-id="3389576703465224700"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -2597,7 +2597,7 @@ metadata:
   namespace: <your-namespace>
 type: kubernetes.io/dockerconfigjson
 data:
-  .dockerconfigjson: <base64-encoded-string>`, `74211319720035000000`)"
+  .dockerconfigjson: <base64-encoded-string>`, `3389576703465224700`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2616,14 +2616,14 @@ data:
   <span class="token key atrule">.dockerconfigjson</span><span class="token punctuation">:</span> &lt;base64<span class="token punctuation">-</span>encoded<span class="token punctuation">-</span>string<span class="token punctuation">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="12139366274488860000"
+              data-toaster-id="16094703657382703000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl apply -f dockerhub.yaml
 kubectl get secrets --namespace=<your-namespace>
-kubectl describe secrets/dockerhub --namespace=<your-namespace>`, `12139366274488860000`)"
+kubectl describe secrets/dockerhub --namespace=<your-namespace>`, `16094703657382703000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2667,7 +2667,7 @@ kubectl describe secrets/dockerhub <span class="token parameter variable">--name
 <p>시크릿 배포를 완료하였습니다. 이제 애플리케이션 오브젝트 내 <code>imagePullSecrets</code> 필드에 다음과 같이 도커 자격 증명을 지정할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="88273647570863370000"
+              data-toaster-id="96706352665181860000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -2675,7 +2675,7 @@ kubectl describe secrets/dockerhub <span class="token parameter variable">--name
               onClick="copyToClipboard(`...
 spec:
   imagePullSecrets:
-    - name: dockerhub`, `88273647570863370000`)"
+    - name: dockerhub`, `96706352665181860000`)"
             >
               <div
                 class="gatsby-code-button"
