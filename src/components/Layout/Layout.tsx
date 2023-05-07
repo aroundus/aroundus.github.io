@@ -20,7 +20,7 @@ const sheetsRegistry = new SheetsRegistry();
 const Layout = ({
   children,
 }: LayoutProps) => (
-  <JSSProvider registry={sheetsRegistry}>
+  <JSSProvider registry={sheetsRegistry} isSSR>
     <ThemeProvider theme={theme}>
       <CSSBaseline />
       <Navbar />

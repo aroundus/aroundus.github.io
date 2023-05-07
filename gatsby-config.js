@@ -212,10 +212,10 @@ module.exports = {
     author: {
       name: '백은주 sally',
       summary: 'Frontend Developer @wadiz',
-      email: 'specialguest@live.co.kr',
+      email: 'specialguest@kakao.com',
       url: {
         github: `https://github.com/${process.env.GITHUB_USER_NAME}`,
-        instagram: 'https://www.instagram.com/__specialguest',
+        instagram: 'https://www.instagram.com/everything.is.meaningful',
       }
     },
     description: process.env.GATSBY_DESCRIPTION,

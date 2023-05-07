@@ -64,7 +64,7 @@ const SEO = (props: SEOProps) => {
         { property: 'twitter:image', content: props.image },
       ]}
       link={[
-        { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/sf-mono' },
+        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
       ]}
