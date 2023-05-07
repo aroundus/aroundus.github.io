@@ -151,7 +151,7 @@
 <p><a href="https://github.com/helm/charts/blob/master/stable/drone/values.yaml">values.yaml</a> 템플릿을 복사한 후 다음 필드를 수정해 주세요.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="15021855529912486000"
+              data-toaster-id="33169587015928914000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -168,7 +168,7 @@ sourceControl:
     clientSecretKey: clientSecret
     clientSecretValue: <your-github-oauth-client-secret>
     server: https://github.com
-...`, `15021855529912486000`)"
+...`, `33169587015928914000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -193,13 +193,13 @@ sourceControl:
 <p>헬름 차트를 설치합니다. (해당 서비스는 템플릿 추출 후 삭제할 것입니다.)</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="68262335370009650000"
+              data-toaster-id="92549570111314920000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`helm repo add stable https://kubernetes-charts.storage.googleapis.com
-helm install drone -f values.yaml stable/drone`, `68262335370009650000`)"
+helm install drone -f values.yaml stable/drone`, `92549570111314920000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -242,12 +242,12 @@ helm <span class="token function">install</span> drone <span class="token parame
 <p>배포한 서비스를 확인합니다. 헬름은 네임스페이스를 지정하지 않으면 <code>default</code> 네임스페이스에 배포합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="17798669875642337000"
+              data-toaster-id="22953492532153910000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`helm list`, `17798669875642337000`)"
+              onClick="copyToClipboard(`helm list`, `22953492532153910000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -289,12 +289,12 @@ helm <span class="token function">install</span> drone <span class="token parame
 <p><code>default</code> 네임스페이스의 파드를 조회하면 <code>drone-drone-server-***</code> 형태의 파드가 실행 중인 것을 확인할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="6468302936945291000"
+              data-toaster-id="29108352804107375000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get pod --namespace=default`, `6468302936945291000`)"
+              onClick="copyToClipboard(`kubectl get pod --namespace=default`, `29108352804107375000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -336,12 +336,12 @@ helm <span class="token function">install</span> drone <span class="token parame
 <p>템플릿을 추출합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="46501830689696840000"
+              data-toaster-id="31067720046494028000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`helm template default stable/drone`, `46501830689696840000`)"
+              onClick="copyToClipboard(`helm template default stable/drone`, `31067720046494028000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -354,7 +354,7 @@ helm <span class="token function">install</span> drone <span class="token parame
 <p>내용을 전체 복사한 후 임시 <code>.yaml</code> 파일에 다음과 같이 정리합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="69131753942654760000"
+              data-toaster-id="18044747935566008000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -377,7 +377,7 @@ helm <span class="token function">install</span> drone <span class="token parame
 ---
 <drone/templates/role-binding-pipeline.yaml>
 ---
-<drone/templates/service.yaml>`, `69131753942654760000`)"
+<drone/templates/service.yaml>`, `18044747935566008000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -408,12 +408,12 @@ helm <span class="token function">install</span> drone <span class="token parame
 <p>파드를 조회하여 <code>Annotations.checksum/secrets</code> 필드의 값을 복사한 후 별도로 보관합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="36240441874490050000"
+              data-toaster-id="85350104969711200000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl describe pod/<drone-server-pod>`, `36240441874490050000`)"
+              onClick="copyToClipboard(`kubectl describe pod/<drone-server-pod>`, `85350104969711200000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -455,13 +455,13 @@ helm <span class="token function">install</span> drone <span class="token parame
 <p>헬름 차트를 삭제합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="1461683935711222000"
+              data-toaster-id="85860969848618680000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`helm uninstall drone
-release &quot;drone&quot; uninstalled`, `1461683935711222000`)"
+release &quot;drone&quot; uninstalled`, `85860969848618680000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -477,13 +477,13 @@ release <span class="token string">"drone"</span> uninstalled</code><span aria-h
 <p>쿠버네티스에 드론 서버를 설치하기 위해 가장 먼저 해야 할 일은 <strong>네임스페이스</strong>를 생성하는 것입니다. 다음 명령어를 입력합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="90249511247861940000"
+              data-toaster-id="96447765424604020000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`kubectl create namespace <insert-your-namespace-name>
-kubectl get namespaces`, `90249511247861940000`)"
+kubectl get namespaces`, `96447765424604020000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -531,12 +531,12 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 <p>이전 단계에서 추출한 <code>DRONE_RPC_SECRET</code> 값을 <code>base64</code> 형태로 변환합니다. 서버와 서버와의 RPC(Remote Procedure Call, 원격 프로시저 호출) 연결을 인증하는 데 사용합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="1300286123355221000"
+              data-toaster-id="75854479476801910000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`echo -n '<drone-rpc-secret>' | base64`, `1300286123355221000`)"
+              onClick="copyToClipboard(`echo -n '<drone-rpc-secret>' | base64`, `75854479476801910000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -552,7 +552,7 @@ kubectl get namespaces</code><span aria-hidden="true" class="line-numbers-rows" 
 <p>변환한 정보를 <code>&#x3C;secret></code> 필드에 삽입합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39959985114105880000"
+              data-toaster-id="84088336094970100000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -568,7 +568,7 @@ metadata:
     heritage: &quot;Helm&quot;
 type: Opaque
 data:
-  secret: &quot;<base64-encoded-drone-rpc-secret>&quot;`, `39959985114105880000`)"
+  secret: &quot;<base64-encoded-drone-rpc-secret>&quot;`, `84088336094970100000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -596,12 +596,12 @@ data:
 <p>이전 단계에서 추출한 <code>&#x3C;github-oauth-client-secret></code> 값을 <code>base64</code> 형태로 변환합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="11159389910121330000"
+              data-toaster-id="82288369897894900000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`echo -n '<your-github-oauth-client-secret>' | base64`, `11159389910121330000`)"
+              onClick="copyToClipboard(`echo -n '<your-github-oauth-client-secret>' | base64`, `82288369897894900000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -614,7 +614,7 @@ data:
 <p>변환한 정보를 <code>&#x3C;clientSecret></code> 필드에 삽입합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="82647236124975460000"
+              data-toaster-id="21205175399483990000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -630,7 +630,7 @@ metadata:
     heritage: &quot;Helm&quot;
 type: Opaque
 data:
-  clientSecret: &quot;<base64-encoded-your-github-oauth-client-secret>&quot;`, `82647236124975460000`)"
+  clientSecret: &quot;<base64-encoded-your-github-oauth-client-secret>&quot;`, `21205175399483990000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -654,14 +654,14 @@ data:
 <p><strong>secrets.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="89914836416603980000"
+              data-toaster-id="10641971853819587000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
               onClick="copyToClipboard(`<drone-rpc-secret.yaml>
 ---
-<drone-github-client-secret.yaml>`, `89914836416603980000`)"
+<drone-github-client-secret.yaml>`, `10641971853819587000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -678,7 +678,7 @@ data:
 <p><strong>pvc.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="61056848333654080000"
+              data-toaster-id="87623939530473400000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -693,7 +693,7 @@ spec:
     - &quot;ReadWriteOnce&quot;
   resources:
     requests:
-      storage: &quot;1Gi&quot;`, `61056848333654080000`)"
+      storage: &quot;1Gi&quot;`, `87623939530473400000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -718,7 +718,7 @@ spec:
 <p><strong>service-account.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="14951488401924240000"
+              data-toaster-id="25573512636911722000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -731,7 +731,7 @@ metadata:
   labels:
     app: drone
     chart: &quot;drone-2.3.1&quot;
-    heritage: &quot;Helm&quot;`, `14951488401924240000`)"
+    heritage: &quot;Helm&quot;`, `25573512636911722000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -752,7 +752,7 @@ metadata:
 <p><strong>service-account-pipeline.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="59401047202639280000"
+              data-toaster-id="65123200769010040000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -765,7 +765,7 @@ metadata:
   labels:
     app: drone
     chart: &quot;drone-2.3.1&quot;
-    heritage: &quot;Helm&quot;`, `59401047202639280000`)"
+    heritage: &quot;Helm&quot;`, `65123200769010040000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -788,7 +788,7 @@ metadata:
 <p><strong>role.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="85012679172767290000"
+              data-toaster-id="42901796571927960000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -817,7 +817,7 @@ rules:
       - get
       - list
       - patch
-      - update`, `85012679172767290000`)"
+      - update`, `42901796571927960000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -855,7 +855,7 @@ rules:
 <p><strong>RoleBinding</strong> 오브젝트는 <em>- ServiceAccount 오브젝트에서 정의한 -</em> <code>drone</code> 사용자와 Role 권한을 연결합니다. 즉, 사용자에게 권한을 부여하지만 그 권한에 대한 정보는 Role이 지정합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="70499348165078990000"
+              data-toaster-id="72861033021293270000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -876,7 +876,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: drone
-    namespace: craft-box`, `70499348165078990000`)"
+    namespace: craft-box`, `72861033021293270000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -907,7 +907,7 @@ subjects:
 <p><strong>role-pipeline.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="95211107954333470000"
+              data-toaster-id="34158915287141724000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -951,7 +951,7 @@ rules:
     resources:
       - pods/log
     verbs:
-      - get`, `95211107954333470000`)"
+      - get`, `34158915287141724000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1004,7 +1004,7 @@ rules:
 <p><strong>ClusterRoleBinding</strong> 오브젝트는 <em>- ServiceAccount 오브젝트에서 정의한 -</em> <code>drone-pipeline</code> 사용자와 ClusterRole 권한을 연결합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="42705752448177730000"
+              data-toaster-id="25828023996023087000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1025,7 +1025,7 @@ subjects:
 roleRef:
   kind: ClusterRole
   name: drone-pipeline
-  apiGroup: rbac.authorization.k8s.io`, `42705752448177730000`)"
+  apiGroup: rbac.authorization.k8s.io`, `25828023996023087000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1056,7 +1056,7 @@ roleRef:
 <p><strong>service.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="67017808067371060000"
+              data-toaster-id="63769921202867550000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1078,7 +1078,7 @@ spec:
       targetPort: 80
   selector:
     app: drone
-    component: server`, `67017808067371060000`)"
+    component: server`, `63769921202867550000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1109,7 +1109,7 @@ spec:
 <p><strong>deployment-server.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="83526779110082790000"
+              data-toaster-id="79742779465355020000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1217,7 +1217,7 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: drone`, `83526779110082790000`)"
+            claimName: drone`, `79742779465355020000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1333,7 +1333,7 @@ spec:
 <p><strong>drone.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="95859915536522260000"
+              data-toaster-id="86156495843131470000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1356,7 +1356,7 @@ spec:
 ---
 <service.yaml>
 ---
-<deployment-server.yaml>`, `95859915536522260000`)"
+<deployment-server.yaml>`, `86156495843131470000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1386,12 +1386,12 @@ spec:
 &lt;deployment<span class="token punctuation">-</span>server.yaml<span class="token punctuation">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="62046775146919340000"
+              data-toaster-id="55152065940594050000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl apply -f drone.yaml`, `62046775146919340000`)"
+              onClick="copyToClipboard(`kubectl apply -f drone.yaml`, `55152065940594050000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1435,7 +1435,7 @@ spec:
 <p><strong>ingress-drone-external.yaml</strong></p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="63890716817586225000"
+              data-toaster-id="50188002817763070000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1462,7 +1462,7 @@ spec:
           - path: /*
             backend:
               serviceName: drone
-              servicePort: 80`, `63890716817586225000`)"
+              servicePort: 80`, `50188002817763070000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1496,12 +1496,12 @@ spec:
               <span class="token key atrule">servicePort</span><span class="token punctuation">:</span> <span class="token number">80</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="70533615806452210000"
+              data-toaster-id="28936437114417800000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl apply -f ingress-drone-external.yaml`, `70533615806452210000`)"
+              onClick="copyToClipboard(`kubectl apply -f ingress-drone-external.yaml`, `28936437114417800000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1579,12 +1579,12 @@ spec:
 <p>레코드 생성 후 호스트와 로드 밸런서의 엔드포인트 주소의 연결 상태를 확인합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="53157611146677715000"
+              data-toaster-id="94238284004785880000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl get ingresses --namespace=<your-namespace>`, `53157611146677715000`)"
+              onClick="copyToClipboard(`kubectl get ingresses --namespace=<your-namespace>`, `94238284004785880000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1693,12 +1693,12 @@ spec:
 <p>다음 명령어를 입력하여 <code>drone-server</code> 내부로 접속합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="94142744574636920000"
+              data-toaster-id="82350688125516820000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh`, `94142744574636920000`)"
+              onClick="copyToClipboard(`kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh`, `82350688125516820000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1711,12 +1711,12 @@ spec:
 <p>다음 명령어를 입력하면 <em>- 다소 복잡하긴 하지만 -</em> 파드를 조회하는 과정을 생략할 수 있습니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="77399763427221590000"
+              data-toaster-id="79452716231645950000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
               data-toaster-duration="3500"
-              onClick="copyToClipboard(`kubectl exec -it \$(kubectl get pods -o jsonpath=&quot;{.items[0].metadata.name}&quot; --namespace=<your-namespace> -l &quot;component=server,app=drone&quot;) --namespace=<your-namespace> sh`, `77399763427221590000`)"
+              onClick="copyToClipboard(`kubectl exec -it \$(kubectl get pods -o jsonpath=&quot;{.items[0].metadata.name}&quot; --namespace=<your-namespace> -l &quot;component=server,app=drone&quot;) --namespace=<your-namespace> sh`, `79452716231645950000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1930,7 +1930,7 @@ spec:
 <p>자세한 정보는 Drone 공식 문서의 <a href="https://docs.drone.io/pipeline/kubernetes/overview/">Pipelines > Kubernetes</a> 내용을 참조합니다.</p>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="36962061083381710000"
+              data-toaster-id="10549438126119459000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="코드 내용을 복사하였습니다."
@@ -1976,7 +1976,7 @@ trigger:
     - push
   branch:
     - master
-    - develop`, `36962061083381710000`)"
+    - develop`, `10549438126119459000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -2153,4 +2153,4 @@ trigger:
       />
   </a>
     </span></p>
-<p>지금까지 GitHub 전용 드론 서버 배포를 마쳤습니다. 본 문서는 파드에서 도커 이미지를 적용하는 절차는 다루지 않습니다.</p></section><aside class="FloatingTOC-container-0-1-5" style="position:absolute;left:0;top:calc(0px + 40px)"><style data-emotion="css z7s4me">.css-z7s4me{min-width:160px;}</style><div class="MuiBox-root css-z7s4me"><style data-emotion="css j7qwjs">.css-j7qwjs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}</style><div class="MuiStepper-root MuiStepper-vertical css-j7qwjs"></div></div></aside><style data-emotion="css 1q892v2">.css-1q892v2{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:thin;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;white-space:nowrap;text-align:center;border:0;margin-bottom:-16px;}.css-1q892v2::before,.css-1q892v2::after{position:relative;width:100%;border-top:thin solid rgba(0, 0, 0, 0.12);top:50%;content:"";-webkit-transform:translateY(50%);-moz-transform:translateY(50%);-ms-transform:translateY(50%);transform:translateY(50%);}</style><div class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1q892v2" role="separator"><style data-emotion="css db9ble">.css-db9ble{display:inline-block;padding-left:calc(4px * 1.2);padding-right:calc(4px * 1.2);}</style><span class="MuiDivider-wrapper css-db9ble"><style data-emotion="css 1oxxg0t">.css-1oxxg0t{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.7428571428571424rem;color:#26c6da;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1oxxg0t" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="InsertEmoticonIcon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path></svg></span></div><style data-emotion="css 1plqs1h">.css-1plqs1h{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-top:20px;padding-bottom:20px;}@media (min-width:900px){.css-1plqs1h{max-width:900px;}}</style><section class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-1plqs1h"><style data-emotion="css gg4vpm">.css-gg4vpm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}</style><div class="MuiBox-root css-gg4vpm"><style data-emotion="css 1prm0id">.css-1prm0id{font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:left;text-transform:inherit;}.css-1prm0id:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1prm0id:hover{background-color:transparent;}}.css-1prm0id.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css 7pltjz">.css-7pltjz{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:left;text-transform:inherit;}.css-7pltjz::-moz-focus-inner{border-style:none;}.css-7pltjz.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-7pltjz{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-7pltjz:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-7pltjz:hover{background-color:transparent;}}.css-7pltjz.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit css-7pltjz" tabindex="0" href="/post/kubernetes/clear-eks-infrastructure/"><style data-emotion="css 1tauggj">.css-1tauggj{margin:0;line-height:1.2;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.3714285714285712rem;color:#9e9e9e;}</style><span class="MuiTypography-root MuiTypography-caption css-1tauggj"><style data-emotion="css 175z521">.css-175z521{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.7428571428571424rem;margin-left:-4px;height:12px;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-175z521" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowBackIosIcon"><path d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"></path></svg>이전 글</span><style data-emotion="css 7rq628">.css-7rq628{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;color:#757575;font-size:14px;font-weight:600;margin-top:12px;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-7rq628">#<!-- -->kubernetes</h6><style data-emotion="css 16ffd8u">.css-16ffd8u{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;color:#212121;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-16ffd8u">Amazon EKS 인프라 제거하기</h6></a><style data-emotion="css msb60h">.css-msb60h{font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:right;text-transform:inherit;}.css-msb60h:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-msb60h:hover{background-color:transparent;}}.css-msb60h.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css c34tgh">.css-c34tgh{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:right;text-transform:inherit;}.css-c34tgh::-moz-focus-inner{border-style:none;}.css-c34tgh.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-c34tgh{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-c34tgh:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-c34tgh:hover{background-color:transparent;}}.css-c34tgh.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit css-c34tgh" tabindex="0" href="/post/kubernetes/kafka/"><span class="MuiTypography-root MuiTypography-caption css-1tauggj">다음 글<style data-emotion="css 1muxgj6">.css-1muxgj6{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.7428571428571424rem;margin-right:-8px;height:12px;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1muxgj6" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowForwardIosIcon"><path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path></svg></span><h6 class="MuiTypography-root MuiTypography-subtitle1 css-7rq628">#<!-- -->kubernetes</h6><h6 class="MuiTypography-root MuiTypography-subtitle1 css-16ffd8u">Apache Kafka</h6></a></div></section><style data-emotion="css 11yjrp1">.css-11yjrp1{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-top:16px;padding-bottom:40px;}@media (min-width:900px){.css-11yjrp1{max-width:900px;}}</style><section class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-11yjrp1"></section></main><footer class="container-0-1-6"><style data-emotion="css 1eitabp">.css-1eitabp{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:0px;padding-right:0px;padding-top:80px;padding-bottom:80px;}@media (min-width:900px){.css-1eitabp{max-width:900px;}}</style><div class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-1eitabp"><div class="MuiBox-root css-0"><style data-emotion="css 1brd4uq">.css-1brd4uq{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-48px;width:calc(100% + 48px);margin-left:-48px;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}.css-1brd4uq>.MuiGrid-item{padding-top:48px;}.css-1brd4uq>.MuiGrid-item{padding-left:48px;}</style><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-12 css-1brd4uq"><style data-emotion="css th9r2i">.css-th9r2i{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;max-width:260px;}</style><div class="MuiGrid-root MuiGrid-item css-th9r2i"><svg viewBox="0 0 963.61 122.77" height="14" style="fill:#000"><path d="M628.78,3.63,672,3.2A81.78,81.78,0,0,1,698.81,7a56.66,56.66,0,0,1,20,11.25,48.84,48.84,0,0,1,12.5,17.4,57.42,57.42,0,0,1,4.45,22.27v.32a57.71,57.71,0,0,1-4.1,22.53,50.56,50.56,0,0,1-12.31,18,57.74,57.74,0,0,1-20,12,80,80,0,0,1-26.92,4.51l-42.56.41Zm44.55,84.05q14-.15,22.41-7.58t8.3-21v-.32q-.13-13.44-8.72-20.79t-22.55-7.22l-12.68.12.55,57Z"></path><polygon points="32.64 122.45 0 122.77 46.57 9.61 76.49 9.32 125.28 121.74 92 122.07 61.66 46.42 32.64 122.45"></polygon><path d="M135.06,9.55,188,9q13-.13,22,3a37.57,37.57,0,0,1,14.65,8.82q10,9.51,10.18,26v.32q.12,13-6,21.5a39.35,39.35,0,0,1-16.67,13.12l27.1,38.78-35.84.35-22.89-33.7h-.32l-13.28.13.33,33.92-31,.3Zm52,53.25q8-.07,12.29-3.72a12,12,0,0,0,4.22-9.72V49q-.08-6.72-4.58-10t-12.35-3.16l-20.32.2L166.62,63Z"></path><path d="M307.53,122.1a62.14,62.14,0,0,1-24-4.32,59.11,59.11,0,0,1-19.16-12.22,57.28,57.28,0,0,1-12.74-18.27,56.33,56.33,0,0,1-4.78-22.52v-.32a57.11,57.11,0,0,1,16.87-41.36,60.2,60.2,0,0,1,19.08-12.67,65.51,65.51,0,0,1,48-.47,59.26,59.26,0,0,1,19.16,12.21,57.44,57.44,0,0,1,12.74,18.28A56.28,56.28,0,0,1,367.43,63v.32a57,57,0,0,1-16.87,41.37,60.37,60.37,0,0,1-19.08,12.67A62.18,62.18,0,0,1,307.53,122.1Zm0-28a28.07,28.07,0,0,0,11.69-2.51A27,27,0,0,0,328.1,85a30,30,0,0,0,5.68-9.58,31.73,31.73,0,0,0,2-11.54v-.32a31.77,31.77,0,0,0-2.2-11.49A29.14,29.14,0,0,0,318.32,36a29.2,29.2,0,0,0-23.35.15,27.9,27.9,0,0,0-14.6,16.15,33.26,33.26,0,0,0-1.9,11.53v.32a31.79,31.79,0,0,0,2.2,11.5,30,30,0,0,0,5.95,9.55,28.21,28.21,0,0,0,9.13,6.55A27.23,27.23,0,0,0,307.49,94.1Z"></path><path d="M434.56,120.7a71.48,71.48,0,0,1-21.63-2.83,41.81,41.81,0,0,1-16.41-9.2A41.31,41.31,0,0,1,386,92.77,65.27,65.27,0,0,1,382.22,70L381.6,7.13l31.68-.31.61,62.24Q414,81.22,419.62,87t15,5.7Q444,92.61,449.47,87t5.39-17.49l-.62-63,31.68-.31.61,62.08q.12,13.61-3.53,23.47a40.65,40.65,0,0,1-26.79,25.79A72.27,72.27,0,0,1,434.56,120.7Z"></path><path d="M504.32,5.93l29-.28,46.75,58.74L579.51,5.2l30.56-.3,1.1,112-27.26.27-48.54-61,.6,61.44-30.56.3Z"></path><path d="M803.82,117.09a71.8,71.8,0,0,1-21.63-2.83,41.81,41.81,0,0,1-16.41-9.2,41.31,41.31,0,0,1-10.48-15.9,65.31,65.31,0,0,1-3.82-22.76l-.62-62.88,31.68-.31.61,62.24q.12,12.15,5.73,17.94t15,5.69q9.38-.09,14.87-5.74t5.39-17.49l-.62-63,31.68-.31.61,62.08q.12,13.59-3.54,23.47a40.62,40.62,0,0,1-26.78,25.78A72.27,72.27,0,0,1,803.82,117.09Z"></path><path d="M918.69,115.8a86.72,86.72,0,0,1-28.61-4.39A69.09,69.09,0,0,1,866,97.64l17.08-20.85Q900,90.07,919.56,89.87c4.16,0,7.32-.73,9.5-2.09a6.29,6.29,0,0,0,3.22-5.7v-.32a6,6,0,0,0-.83-3.1,8.25,8.25,0,0,0-3-2.61,30.76,30.76,0,0,0-5.78-2.42,95.25,95.25,0,0,0-9.39-2.38q-9-2-16.68-4.39a50.9,50.9,0,0,1-13.42-6.26,28.92,28.92,0,0,1-9.06-9.66q-3.33-5.79-3.42-14.42v-.31a34.56,34.56,0,0,1,2.82-14.41,31.84,31.84,0,0,1,8.53-11.42,40.61,40.61,0,0,1,13.6-7.56A57.51,57.51,0,0,1,913.72,0a80.33,80.33,0,0,1,25.71,3.53,64.7,64.7,0,0,1,20.51,11l-15.3,22.13a63.13,63.13,0,0,0-15.84-8.08,47.69,47.69,0,0,0-15.63-2.65c-3.73,0-6.53.76-8.38,2.16A6.19,6.19,0,0,0,902,33.23v.32a6.3,6.3,0,0,0,.92,3.34A7.89,7.89,0,0,0,906,39.5a33.6,33.6,0,0,0,6,2.34c2.51.77,5.69,1.57,9.54,2.38a137.38,137.38,0,0,1,17.41,4.7,51.68,51.68,0,0,1,13.26,6.66,27.28,27.28,0,0,1,8.42,9.58,29.55,29.55,0,0,1,3,13.47V79a34.43,34.43,0,0,1-3.13,15.36,32.88,32.88,0,0,1-9.09,11.51,41.72,41.72,0,0,1-14.17,7.33A64.89,64.89,0,0,1,918.69,115.8Z"></path></svg><style data-emotion="css 9gyzuw">.css-9gyzuw{margin:0;line-height:1.2;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.3714285714285712rem;margin-left:8px;vertical-align:text-bottom;}</style><span class="MuiTypography-root MuiTypography-caption css-9gyzuw">어라운드어스</span><style data-emotion="css 1hyk0z0">.css-1hyk0z0{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:12px;color:#616161;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1hyk0z0">Coding everything around us</h6><style data-emotion="css 17wqxq1">.css-17wqxq1{margin:0;line-height:1.2;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.3714285714285712rem;color:#616161;margin-top:12px;}</style><p class="MuiTypography-root MuiTypography-caption css-17wqxq1">이 블로그는<!-- --> <style data-emotion="css mr86mw">.css-mr86mw{-webkit-text-decoration:none;text-decoration:none;}</style><style data-emotion="css 1wmi6nq">.css-1wmi6nq{margin:0;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;color:#26c6da;-webkit-text-decoration:none;text-decoration:none;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1wmi6nq" href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>로 만들었습니다.</p></div><style data-emotion="css 1wxaqej">.css-1wxaqej{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}</style><div class="MuiGrid-root MuiGrid-item css-1wxaqej"><style data-emotion="css 1apcg4b">.css-1apcg4b{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:15px;font-weight:600;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1apcg4b">백은주 sally</h6><style data-emotion="css ndm53h">.css-ndm53h{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:12px;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-ndm53h">Frontend Developer @wadiz</h6><style data-emotion="css 1focd4y">.css-1focd4y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:8px;margin-top:12px;}</style><div class="MuiBox-root css-1focd4y"><style data-emotion="css b2361g">.css-b2361g{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(38, 198, 218, 0.4);}.css-b2361g:hover{text-decoration-color:inherit;}</style><style data-emotion="css 4v5v76">.css-4v5v76{margin:0;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;color:#26c6da;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(38, 198, 218, 0.4);}.css-4v5v76:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-4v5v76" href="https://github.com/aroundus" target="_blank"><style data-emotion="css 1g3l5j8">.css-1g3l5j8{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.2857142857142856rem;color:rgba(0, 0, 0, 0.54);}</style><svg class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-1g3l5j8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="GitHubIcon"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path></svg></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-4v5v76" href="https://www.instagram.com/everything.is.meaningful" target="_blank"><svg class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-1g3l5j8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="InstagramIcon"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-4v5v76" href="mailto:specialguest@kakao.com?subject=[AROUNDUS] 제목을 작성해 주세요." target="_blank"><svg class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-1g3l5j8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MailIcon"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg></a></div></div></div></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/kubernetes/drone/";window.___webpackCompilationHash="22c6fac3b10325262971";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3ec1e76ab7c263a7f097.js"],"app":["/app-f0d89c8f4c5947409aad.js"],"component---src-components-template-post-template-tsx":["/component---src-components-template-post-template-tsx-f4d5e91c88b280c22d9b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a665f5dc89a1ad082de7.js"],"component---src-pages-app-tsx":[],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-459c9648ff40d3b642f2.js"],"component---src-pages-main-tsx":[]};/*]]>*/</script><script src="/polyfill-3ec1e76ab7c263a7f097.js" nomodule=""></script><script src="/app-f0d89c8f4c5947409aad.js" async=""></script><script src="/framework-00a7734e666acdb9d58f.js" async=""></script><script src="/webpack-runtime-cabc1536dcb56b9c1765.js" async=""></script></body></html>
+<p>지금까지 GitHub 전용 드론 서버 배포를 마쳤습니다. 본 문서는 파드에서 도커 이미지를 적용하는 절차는 다루지 않습니다.</p></section><aside class="FloatingTOC-container-0-1-5" style="position:absolute;left:0;top:calc(0px + 40px)"><style data-emotion="css z7s4me">.css-z7s4me{min-width:160px;}</style><div class="MuiBox-root css-z7s4me"><style data-emotion="css j7qwjs">.css-j7qwjs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}</style><div class="MuiStepper-root MuiStepper-vertical css-j7qwjs"></div></div></aside><style data-emotion="css 1q892v2">.css-1q892v2{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:thin;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;white-space:nowrap;text-align:center;border:0;margin-bottom:-16px;}.css-1q892v2::before,.css-1q892v2::after{position:relative;width:100%;border-top:thin solid rgba(0, 0, 0, 0.12);top:50%;content:"";-webkit-transform:translateY(50%);-moz-transform:translateY(50%);-ms-transform:translateY(50%);transform:translateY(50%);}</style><div class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1q892v2" role="separator"><style data-emotion="css db9ble">.css-db9ble{display:inline-block;padding-left:calc(4px * 1.2);padding-right:calc(4px * 1.2);}</style><span class="MuiDivider-wrapper css-db9ble"><style data-emotion="css 1oxxg0t">.css-1oxxg0t{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.7428571428571424rem;color:#26c6da;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1oxxg0t" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="InsertEmoticonIcon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path></svg></span></div><style data-emotion="css 1plqs1h">.css-1plqs1h{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-top:20px;padding-bottom:20px;}@media (min-width:900px){.css-1plqs1h{max-width:900px;}}</style><section class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-1plqs1h"><style data-emotion="css gg4vpm">.css-gg4vpm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}</style><div class="MuiBox-root css-gg4vpm"><style data-emotion="css 1prm0id">.css-1prm0id{font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:left;text-transform:inherit;}.css-1prm0id:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1prm0id:hover{background-color:transparent;}}.css-1prm0id.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css 7pltjz">.css-7pltjz{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:left;text-transform:inherit;}.css-7pltjz::-moz-focus-inner{border-style:none;}.css-7pltjz.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-7pltjz{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-7pltjz:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-7pltjz:hover{background-color:transparent;}}.css-7pltjz.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit css-7pltjz" tabindex="0" href="/post/kubernetes/clear-eks-infrastructure/"><style data-emotion="css 1tauggj">.css-1tauggj{margin:0;line-height:1.2;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.3714285714285712rem;color:#9e9e9e;}</style><span class="MuiTypography-root MuiTypography-caption css-1tauggj"><style data-emotion="css 175z521">.css-175z521{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.7428571428571424rem;margin-left:-4px;height:12px;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-175z521" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowBackIosIcon"><path d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"></path></svg>이전 글</span><style data-emotion="css 7rq628">.css-7rq628{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;color:#757575;font-size:14px;font-weight:600;margin-top:12px;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-7rq628">#<!-- -->kubernetes</h6><style data-emotion="css 16ffd8u">.css-16ffd8u{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;color:#212121;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-16ffd8u">Amazon EKS 인프라 제거하기</h6></a><style data-emotion="css msb60h">.css-msb60h{font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:right;text-transform:inherit;}.css-msb60h:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-msb60h:hover{background-color:transparent;}}.css-msb60h.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css c34tgh">.css-c34tgh{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-weight:normal;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:1.7142857142857142rem;line-height:1.75;text-transform:uppercase;min-width:64px;padding:8px 11px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:inherit;border-color:currentColor;display:block;text-align:right;text-transform:inherit;}.css-c34tgh::-moz-focus-inner{border-style:none;}.css-c34tgh.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-c34tgh{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-c34tgh:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-c34tgh:hover{background-color:transparent;}}.css-c34tgh.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit css-c34tgh" tabindex="0" href="/post/kubernetes/kafka/"><span class="MuiTypography-root MuiTypography-caption css-1tauggj">다음 글<style data-emotion="css 1muxgj6">.css-1muxgj6{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.7428571428571424rem;margin-right:-8px;height:12px;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1muxgj6" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowForwardIosIcon"><path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path></svg></span><h6 class="MuiTypography-root MuiTypography-subtitle1 css-7rq628">#<!-- -->kubernetes</h6><h6 class="MuiTypography-root MuiTypography-subtitle1 css-16ffd8u">Apache Kafka</h6></a></div></section><style data-emotion="css 11yjrp1">.css-11yjrp1{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-top:16px;padding-bottom:40px;}@media (min-width:900px){.css-11yjrp1{max-width:900px;}}</style><section class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-11yjrp1"></section></main><footer class="container-0-1-6"><style data-emotion="css 1eitabp">.css-1eitabp{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;margin-left:auto;margin-right:auto;padding-left:0px;padding-right:0px;padding-top:80px;padding-bottom:80px;}@media (min-width:900px){.css-1eitabp{max-width:900px;}}</style><div class="MuiContainer-root MuiContainer-maxWidthMd MuiContainer-disableGutters css-1eitabp"><div class="MuiBox-root css-0"><style data-emotion="css 1brd4uq">.css-1brd4uq{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-48px;width:calc(100% + 48px);margin-left:-48px;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}.css-1brd4uq>.MuiGrid-item{padding-top:48px;}.css-1brd4uq>.MuiGrid-item{padding-left:48px;}</style><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-12 css-1brd4uq"><style data-emotion="css th9r2i">.css-th9r2i{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;max-width:260px;}</style><div class="MuiGrid-root MuiGrid-item css-th9r2i"><svg viewBox="0 0 963.61 122.77" height="14" style="fill:#000"><path d="M628.78,3.63,672,3.2A81.78,81.78,0,0,1,698.81,7a56.66,56.66,0,0,1,20,11.25,48.84,48.84,0,0,1,12.5,17.4,57.42,57.42,0,0,1,4.45,22.27v.32a57.71,57.71,0,0,1-4.1,22.53,50.56,50.56,0,0,1-12.31,18,57.74,57.74,0,0,1-20,12,80,80,0,0,1-26.92,4.51l-42.56.41Zm44.55,84.05q14-.15,22.41-7.58t8.3-21v-.32q-.13-13.44-8.72-20.79t-22.55-7.22l-12.68.12.55,57Z"></path><polygon points="32.64 122.45 0 122.77 46.57 9.61 76.49 9.32 125.28 121.74 92 122.07 61.66 46.42 32.64 122.45"></polygon><path d="M135.06,9.55,188,9q13-.13,22,3a37.57,37.57,0,0,1,14.65,8.82q10,9.51,10.18,26v.32q.12,13-6,21.5a39.35,39.35,0,0,1-16.67,13.12l27.1,38.78-35.84.35-22.89-33.7h-.32l-13.28.13.33,33.92-31,.3Zm52,53.25q8-.07,12.29-3.72a12,12,0,0,0,4.22-9.72V49q-.08-6.72-4.58-10t-12.35-3.16l-20.32.2L166.62,63Z"></path><path d="M307.53,122.1a62.14,62.14,0,0,1-24-4.32,59.11,59.11,0,0,1-19.16-12.22,57.28,57.28,0,0,1-12.74-18.27,56.33,56.33,0,0,1-4.78-22.52v-.32a57.11,57.11,0,0,1,16.87-41.36,60.2,60.2,0,0,1,19.08-12.67,65.51,65.51,0,0,1,48-.47,59.26,59.26,0,0,1,19.16,12.21,57.44,57.44,0,0,1,12.74,18.28A56.28,56.28,0,0,1,367.43,63v.32a57,57,0,0,1-16.87,41.37,60.37,60.37,0,0,1-19.08,12.67A62.18,62.18,0,0,1,307.53,122.1Zm0-28a28.07,28.07,0,0,0,11.69-2.51A27,27,0,0,0,328.1,85a30,30,0,0,0,5.68-9.58,31.73,31.73,0,0,0,2-11.54v-.32a31.77,31.77,0,0,0-2.2-11.49A29.14,29.14,0,0,0,318.32,36a29.2,29.2,0,0,0-23.35.15,27.9,27.9,0,0,0-14.6,16.15,33.26,33.26,0,0,0-1.9,11.53v.32a31.79,31.79,0,0,0,2.2,11.5,30,30,0,0,0,5.95,9.55,28.21,28.21,0,0,0,9.13,6.55A27.23,27.23,0,0,0,307.49,94.1Z"></path><path d="M434.56,120.7a71.48,71.48,0,0,1-21.63-2.83,41.81,41.81,0,0,1-16.41-9.2A41.31,41.31,0,0,1,386,92.77,65.27,65.27,0,0,1,382.22,70L381.6,7.13l31.68-.31.61,62.24Q414,81.22,419.62,87t15,5.7Q444,92.61,449.47,87t5.39-17.49l-.62-63,31.68-.31.61,62.08q.12,13.61-3.53,23.47a40.65,40.65,0,0,1-26.79,25.79A72.27,72.27,0,0,1,434.56,120.7Z"></path><path d="M504.32,5.93l29-.28,46.75,58.74L579.51,5.2l30.56-.3,1.1,112-27.26.27-48.54-61,.6,61.44-30.56.3Z"></path><path d="M803.82,117.09a71.8,71.8,0,0,1-21.63-2.83,41.81,41.81,0,0,1-16.41-9.2,41.31,41.31,0,0,1-10.48-15.9,65.31,65.31,0,0,1-3.82-22.76l-.62-62.88,31.68-.31.61,62.24q.12,12.15,5.73,17.94t15,5.69q9.38-.09,14.87-5.74t5.39-17.49l-.62-63,31.68-.31.61,62.08q.12,13.59-3.54,23.47a40.62,40.62,0,0,1-26.78,25.78A72.27,72.27,0,0,1,803.82,117.09Z"></path><path d="M918.69,115.8a86.72,86.72,0,0,1-28.61-4.39A69.09,69.09,0,0,1,866,97.64l17.08-20.85Q900,90.07,919.56,89.87c4.16,0,7.32-.73,9.5-2.09a6.29,6.29,0,0,0,3.22-5.7v-.32a6,6,0,0,0-.83-3.1,8.25,8.25,0,0,0-3-2.61,30.76,30.76,0,0,0-5.78-2.42,95.25,95.25,0,0,0-9.39-2.38q-9-2-16.68-4.39a50.9,50.9,0,0,1-13.42-6.26,28.92,28.92,0,0,1-9.06-9.66q-3.33-5.79-3.42-14.42v-.31a34.56,34.56,0,0,1,2.82-14.41,31.84,31.84,0,0,1,8.53-11.42,40.61,40.61,0,0,1,13.6-7.56A57.51,57.51,0,0,1,913.72,0a80.33,80.33,0,0,1,25.71,3.53,64.7,64.7,0,0,1,20.51,11l-15.3,22.13a63.13,63.13,0,0,0-15.84-8.08,47.69,47.69,0,0,0-15.63-2.65c-3.73,0-6.53.76-8.38,2.16A6.19,6.19,0,0,0,902,33.23v.32a6.3,6.3,0,0,0,.92,3.34A7.89,7.89,0,0,0,906,39.5a33.6,33.6,0,0,0,6,2.34c2.51.77,5.69,1.57,9.54,2.38a137.38,137.38,0,0,1,17.41,4.7,51.68,51.68,0,0,1,13.26,6.66,27.28,27.28,0,0,1,8.42,9.58,29.55,29.55,0,0,1,3,13.47V79a34.43,34.43,0,0,1-3.13,15.36,32.88,32.88,0,0,1-9.09,11.51,41.72,41.72,0,0,1-14.17,7.33A64.89,64.89,0,0,1,918.69,115.8Z"></path></svg><style data-emotion="css 9gyzuw">.css-9gyzuw{margin:0;line-height:1.2;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.3714285714285712rem;margin-left:8px;vertical-align:text-bottom;}</style><span class="MuiTypography-root MuiTypography-caption css-9gyzuw">어라운드어스</span><style data-emotion="css 1hyk0z0">.css-1hyk0z0{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:12px;color:#616161;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1hyk0z0">Coding everything around us</h6><style data-emotion="css 17wqxq1">.css-17wqxq1{margin:0;line-height:1.2;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:1.3714285714285712rem;color:#616161;margin-top:12px;}</style><p class="MuiTypography-root MuiTypography-caption css-17wqxq1">이 블로그는<!-- --> <style data-emotion="css mr86mw">.css-mr86mw{-webkit-text-decoration:none;text-decoration:none;}</style><style data-emotion="css 1wmi6nq">.css-1wmi6nq{margin:0;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;color:#26c6da;-webkit-text-decoration:none;text-decoration:none;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1wmi6nq" href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>로 만들었습니다.</p></div><style data-emotion="css 1wxaqej">.css-1wxaqej{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}</style><div class="MuiGrid-root MuiGrid-item css-1wxaqej"><style data-emotion="css 1apcg4b">.css-1apcg4b{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:15px;font-weight:600;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-1apcg4b">백은주 sally</h6><style data-emotion="css ndm53h">.css-ndm53h{margin:0;font-size:1em;line-height:1.5;font-family:Pretendard,"SF Pro KR","SF Pro Text","SF Pro Display","SF Pro Icons","Apple Gothic",-apple-system,"Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-weight:400;font-size:12px;}</style><h6 class="MuiTypography-root MuiTypography-subtitle1 css-ndm53h">Frontend Developer @wadiz</h6><style data-emotion="css 1focd4y">.css-1focd4y{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:8px;margin-top:12px;}</style><div class="MuiBox-root css-1focd4y"><style data-emotion="css b2361g">.css-b2361g{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(38, 198, 218, 0.4);}.css-b2361g:hover{text-decoration-color:inherit;}</style><style data-emotion="css 4v5v76">.css-4v5v76{margin:0;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;color:#26c6da;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(38, 198, 218, 0.4);}.css-4v5v76:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-4v5v76" href="https://github.com/aroundus" target="_blank"><style data-emotion="css 1g3l5j8">.css-1g3l5j8{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.2857142857142856rem;color:rgba(0, 0, 0, 0.54);}</style><svg class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-1g3l5j8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="GitHubIcon"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path></svg></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-4v5v76" href="https://www.instagram.com/everything.is.meaningful" target="_blank"><svg class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-1g3l5j8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="InstagramIcon"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-4v5v76" href="mailto:specialguest@kakao.com?subject=[AROUNDUS] 제목을 작성해 주세요." target="_blank"><svg class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall css-1g3l5j8" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MailIcon"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg></a></div></div></div></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/kubernetes/drone/";window.___webpackCompilationHash="67d160e850231635e6e5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3ec1e76ab7c263a7f097.js"],"app":["/app-f0d89c8f4c5947409aad.js"],"component---src-components-template-post-template-tsx":["/component---src-components-template-post-template-tsx-f4d5e91c88b280c22d9b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a665f5dc89a1ad082de7.js"],"component---src-pages-app-tsx":[],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-459c9648ff40d3b642f2.js"],"component---src-pages-main-tsx":[]};/*]]>*/</script><script src="/polyfill-3ec1e76ab7c263a7f097.js" nomodule=""></script><script src="/app-f0d89c8f4c5947409aad.js" async=""></script><script src="/framework-00a7734e666acdb9d58f.js" async=""></script><script src="/webpack-runtime-434b668cf883eb0a4738.js" async=""></script></body></html>
