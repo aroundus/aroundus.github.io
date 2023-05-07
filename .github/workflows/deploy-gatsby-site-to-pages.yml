@@ -20,8 +20,6 @@ defaults:
   run:
     shell: bash
 
-env-file: .env
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -53,11 +51,13 @@ jobs:
         env:
           GOOGLE_TAG_MANAGER_CONTAINER_ID: GTM-KN2ZK3L
         run: |
-          echo "GITALK_GITHUB_CLIENT_ID=${{ secrets.GITALK_GITHUB_CLIENT_ID }}" >> .env
-          echo "GITALK_GITHUB_CLIENT_SECRET=${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}" >> .env
-          echo "GITALK_CREATE_ISSUE_TOKEN=${{ secrets.GITALK_CREATE_ISSUE_TOKEN }}" >> .env
-          echo "GOOGLE_SITE_VERIFICATION=${{ secrets.GOOGLE_SITE_VERIFICATION }}" >> .env
-          echo "GOOGLE_TAG_MANAGER_CONTAINER_ID=$GOOGLE_TAG_MANAGER_CONTAINER_ID" >> .env
+          cat ${{ env.ENV_FILE }} >> $GITHUB_ENV
+
+          echo "GITALK_GITHUB_CLIENT_ID=${{ secrets.GITALK_GITHUB_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "GITALK_GITHUB_CLIENT_SECRET=${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}" >> $GITHUB_ENV
+          echo "GITALK_CREATE_ISSUE_TOKEN=${{ secrets.GITALK_CREATE_ISSUE_TOKEN }}" >> $GITHUB_ENV
+          echo "GOOGLE_SITE_VERIFICATION=${{ secrets.GOOGLE_SITE_VERIFICATION }}" >> $GITHUB_ENV
+          echo "GOOGLE_TAG_MANAGER_CONTAINER_ID=$GOOGLE_TAG_MANAGER_CONTAINER_ID" >> $GITHUB_ENV
 
           yarn build
       - name: Upload artifact
