@@ -190,7 +190,12 @@ let plugins = [
       },
     },
   },
-  'gatsby-plugin-sitemap',
+  {
+    resolve: 'gatsby-plugin-sitemap',
+    options: {
+      resolveSiteUrl: () => `https://${process.env.SITE_DOMAIN}`,
+    },
+  },
 ];
 
 if (isProduction) {
@@ -207,7 +212,7 @@ if (isProduction) {
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    siteUrl: process.env.SITE_URL,
+    siteUrl: `https://${process.env.SITE_DOMAIN}`,
     title: `${process.env.GATSBY_TITLE} | ${process.env.GATSBY_DESCRIPTION}`,
     author: {
       name: '백은주 sally',

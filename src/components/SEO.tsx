@@ -37,7 +37,7 @@ const SEO = (props: SEOProps) => {
   const title = props.title || site.siteMetadata.title;
   const description = props.description || site.siteMetadata.description;
   const domain = process.env.SITE_DOMAIN;
-  const url = `${process.env.SITE_URL}${props.path || ''}`;
+  const url = `https://${domain}${props.path || ''}`;
 
   return (
     <Helmet
