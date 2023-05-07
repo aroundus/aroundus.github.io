@@ -42,8 +42,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            public
             .cache
+            node_modules
+            public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
