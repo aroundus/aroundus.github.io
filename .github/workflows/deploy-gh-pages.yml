@@ -1,0 +1,37 @@
+name: Deploy Github Pages
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install
+        run: |
+          node -v
+          yarn install
+
+      - name: Build
+        env:
+          GOOGLE_TAG_MANAGER_CONTAINER_ID: GTM-KN2ZK3L
+        run: |
+          echo "GITALK_GITHUB_CLIENT_ID=${{ secrets.GITALK_GITHUB_CLIENT_ID }}" >> .env
+          echo "GITALK_GITHUB_CLIENT_SECRET=${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}" >> .env
+          echo "GITALK_CREATE_ISSUE_TOKEN=${{ secrets.GITALK_CREATE_ISSUE_TOKEN }}" >> .env
+          echo "GOOGLE_SITE_VERIFICATION=${{ secrets.GOOGLE_SITE_VERIFICATION }}" >> .env
+          echo "GOOGLE_TAG_MANAGER_CONTAINER_ID=$GOOGLE_TAG_MANAGER_CONTAINER_ID" >> .env
+          yarn build
+
+      - name: Deploy
+        run: |
+          yarn Deploy
