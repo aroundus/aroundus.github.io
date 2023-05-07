@@ -13,12 +13,14 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 defaults:
   run:
     shell: bash
+
+env-file: .env
 
 jobs:
   build:
@@ -56,6 +58,7 @@ jobs:
           echo "GITALK_CREATE_ISSUE_TOKEN=${{ secrets.GITALK_CREATE_ISSUE_TOKEN }}" >> .env
           echo "GOOGLE_SITE_VERIFICATION=${{ secrets.GOOGLE_SITE_VERIFICATION }}" >> .env
           echo "GOOGLE_TAG_MANAGER_CONTAINER_ID=$GOOGLE_TAG_MANAGER_CONTAINER_ID" >> .env
+
           yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
