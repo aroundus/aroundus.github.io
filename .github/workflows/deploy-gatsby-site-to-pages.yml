@@ -1,0 +1,74 @@
+name: Deploy Gatsby site to Pages
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+        with:
+          static_site_generator: gatsby
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+      - name: Install dependencies
+        run: |
+          yarn install
+      - name: Build with Gatsby
+        env:
+          GOOGLE_TAG_MANAGER_CONTAINER_ID: GTM-KN2ZK3L
+        run: |
+          echo "GITALK_GITHUB_CLIENT_ID=${{ secrets.GITALK_GITHUB_CLIENT_ID }}" >> .env
+          echo "GITALK_GITHUB_CLIENT_SECRET=${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}" >> .env
+          echo "GITALK_CREATE_ISSUE_TOKEN=${{ secrets.GITALK_CREATE_ISSUE_TOKEN }}" >> .env
+          echo "GOOGLE_SITE_VERIFICATION=${{ secrets.GOOGLE_SITE_VERIFICATION }}" >> .env
+          echo "GOOGLE_TAG_MANAGER_CONTAINER_ID=$GOOGLE_TAG_MANAGER_CONTAINER_ID" >> .env
+          yarn build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
