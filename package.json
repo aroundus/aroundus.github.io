@@ -16,7 +16,7 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build": "yarn lunr && yarn clean && gatsby build --prefix-paths",
+    "build": "yarn lunr && gatsby build --prefix-paths",
     "deploy": "gh-pages -d public",
     "test": "jest",
     "lunr": "node scripts/lunr.js",
