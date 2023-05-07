@@ -87,7 +87,7 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
         id: post.id,
         title: `${post.frontmatter.title} #${post.frontmatter.category}`,
         description: post.frontmatter.description,
-        url: `${process.env.SITE_URL}${post.fields.slug}`,
+        url: `https://${process.env.SITE_DOMAIN}${post.fields.slug}`,
         personalToken: gitalkCreateIssueToken,
       };
 
