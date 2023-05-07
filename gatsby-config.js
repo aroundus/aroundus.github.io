@@ -208,7 +208,7 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     siteUrl: process.env.SITE_URL,
-    title: process.env.GATSBY_TITLE,
+    title: `${process.env.GATSBY_TITLE} | ${process.env.GATSBY_DESCRIPTION}`,
     author: {
       name: '백은주 sally',
       summary: 'Frontend Developer @wadiz',
