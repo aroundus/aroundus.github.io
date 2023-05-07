@@ -51,7 +51,7 @@ jobs:
         env:
           GOOGLE_TAG_MANAGER_CONTAINER_ID: GTM-KN2ZK3L
         run: |
-          cat ${{ env.ENV_FILE }} >> $GITHUB_ENV
+          cat .env >> $GITHUB_ENV
 
           echo "GITALK_GITHUB_CLIENT_ID=${{ secrets.GITALK_GITHUB_CLIENT_ID }}" >> $GITHUB_ENV
           echo "GITALK_GITHUB_CLIENT_SECRET=${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}" >> $GITHUB_ENV
