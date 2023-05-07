@@ -79,25 +79,6 @@ const KeyVisualSection = ({
 
   const styles = useStyles();
 
-  useEffect(() => {
-    const listener = () => {
-      const { outerHeight, pageYOffset } = window;
-      const ratio = pageYOffset / outerHeight;
-
-      if (outerHeight > pageYOffset) {
-        setBackgroundStyle({
-          backgroundPositionY: `${ratio * 240}px`,
-        });
-      }
-    };
-
-    window.addEventListener('scroll', listener);
-
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
-  }, []);
-
   return (
     <section
       className={styles.container}
