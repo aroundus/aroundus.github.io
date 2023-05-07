@@ -17,7 +17,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "build": "yarn lunr && yarn clean && gatsby build --prefix-paths",
-    "deploy": "yarn build && gh-pages -d public",
+    "deploy": "gh-pages -d public",
     "test": "jest",
     "lunr": "node scripts/lunr.js",
     "stylelint": "stylelint --fix"
