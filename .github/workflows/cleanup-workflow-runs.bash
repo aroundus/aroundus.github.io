@@ -8,12 +8,13 @@ CUTOFF_TIMESTAMP=$(date -u -d "$RETENTION_DAYS days ago" +%s)
 
 # OSX
 # GITHUB_REPOSITORY=
-# CUTOFF_DATE=`date -v-9H +%Y-%m-%dT%H:%M:%SZ`
-# CUTOFF_TIMESTAMP=`date -v-9H +%s`
+# CUTOFF_DATE=`date -v-30d +%Y-%m-%dT%H:%M:%SZ`
+# CUTOFF_TIMESTAMP=`date -v-30d +%s`
 
 RUN_IDS=($(gh api \
   repos/$GITHUB_REPOSITORY/actions/runs --paginate | \
-  jq '.workflow_runs[] | select((.status | contains("completed"))) | select(.created_at | fromdateiso8601 | . < "$CUTOFF_TIMESTAMP") | .id'))
+  jq --arg CUTOFF_TIMESTAMP $CUTOFF_TIMESTAMP \
+  '.workflow_runs[] | select((.status | contains("completed"))) | select((.created_at | fromdateiso8601) | . < ($CUTOFF_TIMESTAMP | tonumber)) | .id'))
 
 for RUN_ID in "${RUN_IDS[@]}"
 do
