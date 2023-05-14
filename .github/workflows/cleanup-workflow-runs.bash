@@ -3,15 +3,15 @@
 set -x
 
 # Linux
-DATE=`date +%Y-%m-%dT%H:%M:%SZ -d "-${RETENTION_DAYS} days"`
+CUTOFF_DATE=$(date -u -d "$RETENTION_DAYS days ago" +%Y-%m-%dT%H:%M:%SZ)
 
 # OSX
 # GITHUB_REPOSITORY=
-# DATE=`date -v-30d +%Y-%m-%dT%H:%M:%SZ`
+# CUTOFF_DATE=`date -v-30d +%Y-%m-%dT%H:%M:%SZ`
 
 RUN_IDS=($(gh api \
   repos/$GITHUB_REPOSITORY/actions/runs --paginate | jq \
-  '.workflow_runs[] | select(.created_at <= "$DATE") | select((.status | contains("completed"))) | .id'))
+  '.workflow_runs[] | select((.status | contains("completed"))) | select(.created_at < "$CUTOFF_DATE") | .id'))
 
 for RUN_ID in "${RUN_IDS[@]}"
 do
