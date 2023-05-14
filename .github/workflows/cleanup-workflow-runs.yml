@@ -1,0 +1,28 @@
+name: Cleanup workflow runs
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      retention_days:
+        description: '워크플로 실행 이력 유지 기간'
+        required: true
+        default: 30
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RETENTION_DAYS: ${{ github.event.inputs.retention_days }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Delete workflow runs
+        run: .github/workflows/cleanup-workflow-runs.bash
