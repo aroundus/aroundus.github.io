@@ -18,7 +18,8 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
       RETENTION_DAYS: ${{ github.event.inputs.retention_days }}
     steps:
       - name: Checkout
