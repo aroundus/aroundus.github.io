@@ -25,5 +25,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Delete workflow runs
+      - name: Cleanup workflow runs
         run: .github/workflows/cleanup-workflow-runs.bash
