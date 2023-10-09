@@ -2,7 +2,7 @@
 category: typescript
 index: 3
 title: 객체 타입 키 이름에 접두사를 붙이는 Utility Type 만들기
-date: 2023-10-10
+date: 2023-10-07
 ---
 
 다음과 같이 A 객체 타입 키 이름에 `$` 접두사를 붙인 새로운 B 객체 타입을 정의하려고 합니다.
