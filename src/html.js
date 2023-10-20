@@ -32,6 +32,7 @@ const HTML = (props) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="google-site-verification" content={process.env.GOOGLE_SITE_VERIFICATION} />
+        <meta name="naver-site-verification" content={process.env.NAVER_SITE_VERIFICATION} />
 
         {isTitleEmpty && <title>{title}</title>}
         {isDescriptionEmpty && <meta name="description" content={description} />}
