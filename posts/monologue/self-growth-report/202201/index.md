@@ -5,6 +5,7 @@ title: 2021년 자기 성장 보고서
 description: 2021년을 시작했을 때 나의 역량과 2022년을 시작하는 나의 역량이 어떻게 달라졌는지 작성해 봤습니다. 뒤로 갈수록 내용이 부실합니다.
 image: self-growth-report
 date: 2022-01-17
+draft: true
 ---
 
 # 📈<br />자기 성장 보고서
