@@ -6,7 +6,7 @@ import { Box, colors, Container, Grid, Link, Typography, useMediaQuery } from '@
 import { useTheme } from '@mui/material/styles';
 import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
 
-import Logo from '@/components/Logo';
+import { LogoIcon } from '@/components/Icon';
 
 interface Data {
   site: {
@@ -72,42 +72,42 @@ const Footer = () => {
       >
         <Box>
           <Grid
-            spacing={isMobile ? 6 : 12}
-            justifyContent="space-between"
             container
+            justifyContent="space-between"
+            spacing={isMobile ? 6 : 12}
           >
             <Grid
-              sx={{ maxWidth: 260 }}
               item
+              sx={{ maxWidth: 260 }}
             >
-              <Logo
+              <LogoIcon
                 height={14}
                 style={{ fill: colors.common.black }}
               />
               <Typography
-                variant="caption"
                 sx={{ ml: 2, verticalAlign: 'text-bottom' }}
+                variant="caption"
               >
                 어라운드어스
               </Typography>
               <Typography
-                variant="subtitle1"
-                fontSize={12}
                 color={colors.grey[700]}
+                fontSize={12}
+                variant="subtitle1"
               >
                 {meta.description}
               </Typography>
               <Typography
-                variant="caption"
-                component="p"
                 color={colors.grey[700]}
+                component="p"
                 sx={{ mt: 3 }}
+                variant="caption"
               >
                 이 블로그는{' '}
                 <Link
                   href="https://www.gatsbyjs.com/"
-                  underline="none"
                   target="_blank"
+                  underline="none"
                 >
                   Gatsby
                 </Link>
@@ -116,15 +116,15 @@ const Footer = () => {
             </Grid>
             <Grid item>
               <Typography
-                variant="subtitle1"
                 fontSize={15}
                 fontWeight={600}
+                variant="subtitle1"
               >
                 {meta.author.name}
               </Typography>
               <Typography
-                variant="subtitle1"
                 fontSize={12}
+                variant="subtitle1"
               >
                 {meta.author.summary}
               </Typography>
@@ -138,8 +138,8 @@ const Footer = () => {
                   target="_blank"
                 >
                   <GitHubIcon
-                    fontSize="small"
                     color="action"
+                    fontSize="small"
                   />
                 </Link>
                 <Link
@@ -147,8 +147,8 @@ const Footer = () => {
                   target="_blank"
                 >
                   <InstagramIcon
-                    fontSize="small"
                     color="action"
+                    fontSize="small"
                   />
                 </Link>
                 <Link
@@ -156,8 +156,8 @@ const Footer = () => {
                   target="_blank"
                 >
                   <MailIcon
-                    fontSize="small"
                     color="action"
+                    fontSize="small"
                   />
                 </Link>
               </Box>

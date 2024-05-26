@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import classNames from 'classnames';
 
-import { Menu as MenuIcon } from '@mui/icons-material';
-import { AppBar, colors, IconButton, Link, Toolbar, Typography, useMediaQuery, useScrollTrigger } from '@mui/material';
+import { AppBar, colors, Link, Toolbar, Typography, useMediaQuery, useScrollTrigger } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import Logo from '@/components/Logo';
+import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
 
 const Navbar = () => {
   const theme = useTheme();
@@ -32,30 +31,36 @@ const Navbar = () => {
   return (
     <AppBar
       className={classNames({ [styles.isContainerFixed]: isContainerFixed })}
-      component="nav"
-      position="absolute"
       color="transparent"
+      component="nav"
       elevation={0}
-      style={{
-        padding: `0 ${isMobile ? theme.spacing(4) : theme.spacing(16)}`,
-      }}
+      position="absolute"
+      style={{ padding: `0 ${isMobile ? theme.spacing(4) : theme.spacing(16)}` }}
     >
       <Toolbar
         className={styles.toolbar}
-        variant="dense"
         disableGutters
+        variant="dense"
       >
-        <Link href="/">
-          <Logo
+        <Link
+          href="/"
+          display="flex"
+          gap={1}
+        >
+          <SymbolmarkIcon
+            height={12}
+            style={{ fill: colors.common.white }}
+          />
+          <LogoIcon
             height={12}
             style={{ fill: colors.common.white }}
           />
         </Link>
         <Typography
-          variant="subtitle2"
-          sx={{ ml: 3 }}
           color={colors.common.white}
           lineHeight="1.3"
+          sx={{ ml: 3 }}
+          variant="subtitle2"
           whiteSpace="nowrap"
         >
           개발 블로그
