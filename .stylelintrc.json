@@ -1,12 +1,10 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-styled-components-order"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-styled-components-order"],
   "rules": {
     "function-name-case": null,
     "no-duplicate-selectors": null,
     "property-no-unknown": null,
+    "selector-class-pattern": null,
     "selector-type-no-unknown": null,
     "value-keyword-case": null
   }

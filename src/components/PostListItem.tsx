@@ -14,11 +14,14 @@ const PostListItem = ({ post }: PostListItemProps) => {
     '&': {
       borderBottom: 'none',
     },
+
     '&:hover': {
       backgroundColor: 'transparent',
     },
+
     '& .MuiTypography-h4': {
       transition: 'color 0.2s linear',
+
       '&:hover': {
         color: colors.cyan[600],
       },

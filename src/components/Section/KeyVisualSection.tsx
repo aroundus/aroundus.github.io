@@ -31,13 +31,18 @@ const KeyVisualSection = ({
   const StyledButton = styled(Button)<ButtonProps>(() => ({
     '&': {
       border: `1px solid ${colors.common.white}`,
+
       color: colors.common.white,
+
       opacity: 0.6,
       transition: 'opacity 0.2s',
     },
+
     '&:hover': {
       border: `1px solid ${colors.common.white}`,
+
       color: colors.common.white,
+
       opacity: 1,
     },
   }));
@@ -46,36 +51,36 @@ const KeyVisualSection = ({
     {
       container: {
         '&': `
-        background: no-repeat center / cover;
-        background-color: ${colors.grey[600]};
-        background-image: url(${getPostCoverImageURL(post.image || post.category)});
-        z-index: 2;
-      `,
+          background-color: ${colors.grey[600]};
+          background-image: url(${getPostCoverImageURL(post.image || post.category)});
+          background: no-repeat center / cover;
+          z-index: 2;
+        `,
         '&::before': `
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.5;
-        content: '';
-        ${
-          isGradientEnabled
-            ? `
-          background-image: linear-gradient(-45deg, ${colors.common.black}, ${colors.pink[500]}, ${colors.blue[500]}, ${colors.green[500]});
-          background-size: 400% 400%;
-          animation: gradient 10s ease infinite;
-        `
-            : `
-          background-color: ${colors.common.black};
-        `
-        }
-      `,
+          bottom: 0;
+          content: '';
+          left: 0;
+          opacity: 0.5;
+          position: absolute;
+          right: 0;
+          top: 0;
+          ${
+            isGradientEnabled
+              ? `
+                animation: gradient 10s ease infinite;
+                background-image: linear-gradient(-45deg, ${colors.common.black}, ${colors.pink[500]}, ${colors.blue[500]}, ${colors.green[500]});
+                background-size: 400% 400%;
+              `
+              : `
+                background-color: ${colors.common.black};
+              `
+          }
+        `,
       },
       content: `
-      margin: auto;
-      max-width: 900px;
-    `,
+        margin: auto;
+        max-width: 900px;
+      `,
     },
     {
       name: 'KeyVisualSection',
@@ -94,18 +99,18 @@ const KeyVisualSection = ({
     >
       <div className={styles.content}>
         <Typography
-          variant="h6"
           color={colors.grey[200]}
-          sx={{ mb: 2 }}
           position="relative"
+          sx={{ mb: 2 }}
+          variant="h6"
         >
           #{post.category} Episode {post.index}
         </Typography>
         <Typography
-          variant={isMobile ? 'h4' : 'h3'}
           color={colors.common.white}
-          sx={{ mb: 3 }}
           position="relative"
+          sx={{ mb: 3 }}
+          variant={isMobile ? 'h4' : 'h3'}
         >
           {typewriter?.title ? (
             <>
@@ -117,25 +122,25 @@ const KeyVisualSection = ({
           )}
         </Typography>
         <Typography
-          variant={isMobile ? 'body2' : 'body1'}
           color={colors.common.white}
           position="relative"
+          variant={isMobile ? 'body2' : 'body1'}
         >
           {post.description}
         </Typography>
         <Typography
-          variant="subtitle1"
           color={colors.grey[300]}
-          sx={{ mt: 6 }}
           position="relative"
+          sx={{ mt: 6 }}
+          variant="subtitle1"
         >
           {post.date}
         </Typography>
         {isButtonVisible && (
           <StyledButton
+            href={post.path}
             size="large"
             sx={{ mt: 6, px: 10 }}
-            href={post.path}
           >
             내용 읽기
           </StyledButton>
