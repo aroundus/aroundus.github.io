@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import dotenv from 'dotenv';
 import path from 'path';
 import { GatsbyNode as GatsbyNodeType } from 'gatsby';

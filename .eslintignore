@@ -1,7 +1,0 @@
-.eslintrc.js
-@types
-babel.config.js
-build
-gatsby-*.js
-node_modules
-stylelint.config.js

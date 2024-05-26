@@ -1,14 +1,20 @@
-const { fixupConfigRules } = require('@eslint/compat');
 const js = require('@eslint/js');
-const pluginReactConfig = require('eslint-plugin-react/configs/recommended.js');
 const globals = require('globals');
 const ts = require('typescript-eslint');
 
 module.exports = [
   js.configs.recommended,
   ...ts.configs.recommended,
-  ...fixupConfigRules(pluginReactConfig),
   {
+    ignores: [
+      '.eslintrc.js',
+      '@types',
+      'babel.config.js',
+      'build',
+      'gatsby-*.js',
+      'node_modules',
+      'stylelint.config.js',
+    ],
     languageOptions: {
       globals: {
         ...globals.browser,
