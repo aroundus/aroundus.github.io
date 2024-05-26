@@ -7,11 +7,11 @@ import SEO from '@/components/SEO';
 import Main from '@/pages/Main';
 
 const App = () => {
-  const [isMounted, setMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     AOS.init();
-    setMounted(true);
+    setIsMounted(true);
   }, []);
 
   return (

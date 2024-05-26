@@ -27,7 +27,7 @@ const Navbar = () => {
     },
   )();
 
-  const [isContainerFixed, setContainerFixed] = useState(false);
+  const [isContainerFixed, setIsContainerFixed] = useState(false);
 
   return (
     <AppBar
