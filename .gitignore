@@ -3,4 +3,3 @@ public
 .cache
 .env.production
 yarn-error.log
-package-lock.json
