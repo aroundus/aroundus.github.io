@@ -17,16 +17,15 @@ interface LayoutProps {
 
 const sheetsRegistry = new SheetsRegistry();
 
-const Layout = ({
-  children,
-}: LayoutProps) => (
-  <JSSProvider registry={sheetsRegistry} isSSR>
+const Layout = ({ children }: LayoutProps) => (
+  <JSSProvider
+    registry={sheetsRegistry}
+    isSSR
+  >
     <ThemeProvider theme={theme}>
       <CSSBaseline />
       <Navbar />
-      <Content>
-        {children}
-      </Content>
+      <Content>{children}</Content>
       <Footer />
     </ThemeProvider>
   </JSSProvider>

@@ -2,67 +2,70 @@ import { colors } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 
-export const BASE_FONT_FAMILY = 'Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+export const BASE_FONT_FAMILY =
+  'Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 export const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
-export const HEADING_FONT_FAMILY = 'Montserrat, Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+export const HEADING_FONT_FAMILY =
+  'Montserrat, Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 
-const theme = createTheme({
-  spacing: 4,
-  shape: {
-    borderRadius: 4,
-  },
-  palette: {
-    primary: {
-      main: colors.cyan[400],
-      contrastText: colors.common.white,
+const theme = createTheme(
+  {
+    spacing: 4,
+    shape: {
+      borderRadius: 4,
     },
-    secondary: {
-      main: colors.grey[500],
-      contrastText: colors.common.white,
+    palette: {
+      primary: {
+        main: colors.cyan[400],
+        contrastText: colors.common.white,
+      },
+      secondary: {
+        main: colors.grey[500],
+        contrastText: colors.common.white,
+      },
     },
-  },
-  typography: {
-    fontFamily: BASE_FONT_FAMILY,
-    fontSize: 16,
-    htmlFontSize: 10,
-    button: {
-      fontWeight: 'normal',
+    typography: {
+      fontFamily: BASE_FONT_FAMILY,
+      fontSize: 16,
+      htmlFontSize: 10,
+      button: {
+        fontWeight: 'normal',
+      },
+      h1: {
+        fontFamily: HEADING_FONT_FAMILY,
+        fontWeight: 'bold',
+      },
+      h2: {
+        fontFamily: HEADING_FONT_FAMILY,
+        fontWeight: 'bold',
+      },
+      h3: {
+        fontFamily: HEADING_FONT_FAMILY,
+        fontWeight: 'bold',
+      },
+      h4: {
+        fontFamily: HEADING_FONT_FAMILY,
+        fontWeight: 'bold',
+      },
+      h5: {
+        fontFamily: HEADING_FONT_FAMILY,
+        fontWeight: 'bold',
+      },
+      h6: {
+        fontFamily: HEADING_FONT_FAMILY,
+        fontWeight: 'bold',
+      },
+      subtitle1: {
+        fontSize: '1em',
+        lineHeight: 1.5,
+      },
+      caption: {
+        lineHeight: 1.2,
+      },
     },
-    h1: {
-      fontFamily: HEADING_FONT_FAMILY,
-      fontWeight: 'bold',
-    },
-    h2: {
-      fontFamily: HEADING_FONT_FAMILY,
-      fontWeight: 'bold',
-    },
-    h3: {
-      fontFamily: HEADING_FONT_FAMILY,
-      fontWeight: 'bold',
-    },
-    h4: {
-      fontFamily: HEADING_FONT_FAMILY,
-      fontWeight: 'bold',
-    },
-    h5: {
-      fontFamily: HEADING_FONT_FAMILY,
-      fontWeight: 'bold',
-    },
-    h6: {
-      fontFamily: HEADING_FONT_FAMILY,
-      fontWeight: 'bold',
-    },
-    subtitle1: {
-      fontSize: '1em',
-      lineHeight: 1.5,
-    },
-    caption: {
-      lineHeight: 1.2,
-    },
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: `
         html {
           -webkit-font-smoothing: antialiased;
           font-size: 10px;
@@ -267,22 +270,24 @@ const theme = createTheme({
           }
         }
       `,
-    },
-    MuiPaginationItem: {
-      styleOverrides: {
-        root: {
-          fontFamily: HEADING_FONT_FAMILY,
+      },
+      MuiPaginationItem: {
+        styleOverrides: {
+          root: {
+            fontFamily: HEADING_FONT_FAMILY,
+          },
         },
       },
-    },
-    MuiStepIcon: {
-      styleOverrides: {
-        text: {
-          fontFamily: HEADING_FONT_FAMILY,
+      MuiStepIcon: {
+        styleOverrides: {
+          text: {
+            fontFamily: HEADING_FONT_FAMILY,
+          },
         },
       },
     },
   },
-}, koKR);
+  koKR,
+);
 
 export default theme;

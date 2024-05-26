@@ -20,19 +20,17 @@ interface SEOProps {
 }
 
 const SEO = (props: SEOProps) => {
-  const { site }: Data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            image
-          }
+  const { site }: Data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          image
         }
       }
-    `,
-  );
+    }
+  `);
 
   const title = props.title || site.siteMetadata.title;
   const description = props.description || site.siteMetadata.description;
@@ -64,9 +62,12 @@ const SEO = (props: SEOProps) => {
         { property: 'twitter:image', content: props.image },
       ]}
       link={[
-        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css' },
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
+        },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
+        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
       ]}
     />
   );

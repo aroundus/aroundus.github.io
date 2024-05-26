@@ -7,8 +7,8 @@ import { styled } from '@mui/material/styles';
 import type { Post } from '@/types/global';
 
 interface RelatedPostListSectionProps {
-  query: string;
   posts: Post[];
+  query: string;
 }
 
 const RelatedPostListSection = ({ query, posts }: RelatedPostListSectionProps) => {
@@ -48,8 +48,8 @@ const RelatedPostListSection = ({ query, posts }: RelatedPostListSectionProps) =
             disableGutters
             divider
             key={post.id}
-            onClick={() => handleClick(post.path as string)}
             sx={{ py: 1 }}
+            onClick={() => handleClick(post.path as string)}
           >
             <Typography
               flex="1 0 0"

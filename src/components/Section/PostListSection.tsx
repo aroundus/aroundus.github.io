@@ -16,8 +16,8 @@ const PostListSection = ({ posts }: PostListSectionProps) => {
   const styles = createUseStyles(
     {
       container: `
-      position: relative;
-    `,
+        position: relative;
+      `,
     },
     {
       name: 'PostListSection',
@@ -30,10 +30,10 @@ const PostListSection = ({ posts }: PostListSectionProps) => {
         {isEmpty(posts) ? (
           <PostListItem
             post={{
-              title: '뭐라도 하나는 있어야지 😉',
+              date: dayjs().format('YYYY-MM-DD'),
               description:
                 '아쉽지만 검색 결과가 나오지 않았어요. 당신이 원하는 글이 나올 수 있도록 노력해 볼게요. 이 글은 클릭해도 이동하지 않아요.',
-              date: dayjs().format('YYYY-MM-DD'),
+              title: '뭐라도 하나는 있어야지 😉',
             }}
           />
         ) : (

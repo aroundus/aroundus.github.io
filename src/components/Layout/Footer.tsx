@@ -55,8 +55,8 @@ const Footer = () => {
   const useStyles = createUseStyles({
     container: {
       '&': `
-        margin-top: ${theme.spacing(12)};
         border-top: 2px solid ${colors.cyan[100]};
+        margin-top: ${theme.spacing(12)};
       `,
     },
   });

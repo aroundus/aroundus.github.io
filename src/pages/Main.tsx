@@ -57,8 +57,8 @@ const Main = () => {
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [pagedPosts, setPagedPosts] = useState<Post[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [numberOfPostsPerPage] = useState(5);
-  const [numberOfTotalPage, setNumberOfTotalPage] = useState(1);
+  const [postCountPerPage] = useState(5);
+  const [totalPageCount, setTotalPageCount] = useState(1);
 
   useEffect(() => {
     let posts = searchQuery ? getSearchPosts(searchQuery) : fetchedPosts;
@@ -83,8 +83,8 @@ const Main = () => {
   }, [selectedCategory, searchQuery]);
 
   useEffect(() => {
-    setNumberOfTotalPage(Math.ceil(filteredPosts.length / numberOfPostsPerPage));
-    setPagedPosts(filteredPosts.slice((currentPage - 1) * numberOfPostsPerPage, currentPage * numberOfPostsPerPage));
+    setTotalPageCount(Math.ceil(filteredPosts.length / postCountPerPage));
+    setPagedPosts(filteredPosts.slice((currentPage - 1) * postCountPerPage, currentPage * postCountPerPage));
   }, [filteredPosts]);
 
   return (
@@ -115,7 +115,7 @@ const Main = () => {
       <PostListSection posts={pagedPosts} />
       <PaginationSection
         currentPage={currentPage}
-        numberOfTotalPage={numberOfTotalPage}
+        totalPageCount={totalPageCount}
         onChange={(page: number) => setCurrentPage(page)}
       />
     </>

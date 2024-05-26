@@ -4,20 +4,16 @@ import { ArrowBackIos as ArrowLeftIcon, ArrowForwardIos as ArrowRightIcon } from
 import type { PostNavigation } from '@/types/global';
 
 interface PostNavigationSectionProps {
-  prevPost?: PostNavigation;
   nextPost?: PostNavigation;
+  prevPost?: PostNavigation;
 }
 
-const PostNavigationSection = ({ prevPost, nextPost }: PostNavigationSectionProps) => (
+const PostNavigationSection = ({ nextPost, prevPost }: PostNavigationSectionProps) => (
   <Container
     component="section"
-    maxWidth="md"
-    sx={{
-      mx: 'auto',
-      px: 8,
-      py: 5,
-    }}
     disableGutters
+    maxWidth="md"
+    sx={{ mx: 'auto', px: 8, py: 5 }}
   >
     <Box
       display="flex"
@@ -25,31 +21,31 @@ const PostNavigationSection = ({ prevPost, nextPost }: PostNavigationSectionProp
     >
       {prevPost && (
         <Button
-          variant="text"
           color="inherit"
-          size="large"
           href={prevPost.path}
+          size="large"
           sx={{ display: 'block', textAlign: 'left', textTransform: 'inherit' }}
+          variant="text"
         >
           <Typography
-            variant="caption"
             color={colors.grey[500]}
+            variant="caption"
           >
             <ArrowLeftIcon sx={{ ml: -1, height: 12 }} />
             이전 글
           </Typography>
           <Typography
-            variant="subtitle1"
             color={colors.grey[600]}
             fontSize={14}
             fontWeight={600}
             sx={{ mt: 3 }}
+            variant="subtitle1"
           >
             #{prevPost.category}
           </Typography>
           <Typography
-            variant="subtitle1"
             color={colors.grey[900]}
+            variant="subtitle1"
           >
             {prevPost.title}
           </Typography>
@@ -57,31 +53,31 @@ const PostNavigationSection = ({ prevPost, nextPost }: PostNavigationSectionProp
       )}
       {nextPost && (
         <Button
-          variant="text"
           color="inherit"
-          size="large"
           href={nextPost.path}
+          size="large"
           sx={{ display: 'block', textAlign: 'right', textTransform: 'inherit' }}
+          variant="text"
         >
           <Typography
-            variant="caption"
             color={colors.grey[500]}
+            variant="caption"
           >
             다음 글
             <ArrowRightIcon sx={{ mr: -2, height: 12 }} />
           </Typography>
           <Typography
-            variant="subtitle1"
             color={colors.grey[600]}
             fontSize={14}
             fontWeight={600}
             sx={{ mt: 3 }}
+            variant="subtitle1"
           >
             #{nextPost.category}
           </Typography>
           <Typography
-            variant="subtitle1"
             color={colors.grey[900]}
+            variant="subtitle1"
           >
             {nextPost.title}
           </Typography>

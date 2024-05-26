@@ -22,8 +22,8 @@ const Post = ({ post }: PostProps) => {
       <KeyVisualSection post={post} />
       {post.html && (
         <ArticleSection
-          ref={articleRef}
           html={post.html}
+          ref={articleRef}
         />
       )}
       {post.tableOfContents && !isTablet && (

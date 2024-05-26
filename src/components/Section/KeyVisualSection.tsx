@@ -9,19 +9,17 @@ import { getPostCoverImageURL } from '@/helpers/image';
 import type { Post } from '@/types/global';
 
 interface KeyVisualSectionProps {
-  post: Post;
-  typewriter?: {
-    title?: React.ReactNode;
-  };
   isButtonVisible?: boolean;
   isGradientEnabled?: boolean;
+  post: Post;
+  typewriter?: { title?: React.ReactNode };
 }
 
 const KeyVisualSection = ({
-  post,
-  typewriter,
   isButtonVisible = false,
   isGradientEnabled = false,
+  post,
+  typewriter,
 }: KeyVisualSectionProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));

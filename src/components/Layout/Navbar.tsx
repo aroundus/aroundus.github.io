@@ -16,11 +16,11 @@ const Navbar = () => {
   const styles = createUseStyles(
     {
       isContainerFixed: `
-      position: relative;
-    `,
+        position: relative;
+      `,
       toolbar: `
-      height: 60px;
-    `,
+        height: 60px;
+      `,
     },
     {
       name: 'Navbar',

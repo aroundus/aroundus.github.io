@@ -5,11 +5,9 @@ import { Container } from '@mui/material';
 const CommentSection = ({ options }: GitalkProps) => (
   <Container
     component="section"
-    maxWidth="md"
-    sx={{
-      mx: 'auto', px: 8, pt: 4, pb: 10,
-    }}
     disableGutters
+    maxWidth="md"
+    sx={{ mx: 'auto', px: 8, pt: 4, pb: 10 }}
   >
     <Gitalk options={options} />
   </Container>

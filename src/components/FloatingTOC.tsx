@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Property } from 'csstype';
 import { createUseStyles } from 'react-jss';
 
-import {
-  Box, Step, StepLabel, Stepper, Typography,
-} from '@mui/material';
+import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 interface FloatingTOCProps {
@@ -17,19 +15,19 @@ interface TOCStep {
   yOffset: number;
 }
 
-const FloatingTOC = ({
-  html: htmlString,
-  target,
-}: FloatingTOCProps) => {
+const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
   const theme = useTheme();
 
-  const styles = createUseStyles({
-    container: `
+  const styles = createUseStyles(
+    {
+      container: `
       transition: position 0.2s;
     `,
-  }, {
-    name: 'FloatingTOC',
-  })();
+    },
+    {
+      name: 'FloatingTOC',
+    },
+  )();
 
   const [activeStep, setActiveStep] = useState(0);
   const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
