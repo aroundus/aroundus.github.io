@@ -3,26 +3,26 @@
   "version": "1.0.0",
   "private": true,
   "description": "Coding everything AROUND US",
-  "author": "Sally <specialguest@kakao.com>",
-  "homepage": "https://aroundus.github.io",
   "keywords": [
     "gatsby",
     "graphql",
     "typescript",
     "mui"
   ],
+  "homepage": "https://aroundus.github.io",
+  "author": "Sally <specialguest@kakao.com>",
   "scripts": {
-    "start": "yarn lunr && gatsby develop",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
     "build": "yarn lunr && gatsby build --prefix-paths",
+    "clean": "gatsby clean",
     "deploy": "gh-pages -d public",
-    "test": "jest",
-    "lunr": "node scripts/lunr.js",
+    "develop": "gatsby develop",
     "format": "npx prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "lint": "npx eslint --fix src/**/*.{js,jsx,ts,tsx} --no-warn-ignored",
-    "lint:style": "npx stylelint --fix --ignore-path .gitignore '**/*.(js|jsx|ts|tsx)'"
+    "lint:style": "npx stylelint --fix --ignore-path .gitignore '**/*.(js|jsx|ts|tsx)'",
+    "lunr": "node scripts/lunr.js",
+    "serve": "gatsby serve",
+    "start": "yarn lunr && gatsby develop",
+    "test": "jest"
   },
   "dependencies": {
     "@eastuni/lunr-languages-ko": "^1.4.0",
