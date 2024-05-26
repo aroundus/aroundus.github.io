@@ -2,17 +2,11 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import {
-  Box, colors, Container, Grid, Link, Typography, useMediaQuery,
-} from '@mui/material';
+import { Box, colors, Container, Grid, Link, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import {
-  GitHub as GitHubIcon,
-  Instagram as InstagramIcon,
-  Mail as MailIcon,
-} from '@mui/icons-material';
+import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
 
-import Logo from '~components/Logo';
+import Logo from '@/components/Logo';
 
 interface Data {
   site: {
@@ -36,27 +30,25 @@ const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const { site }: Data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            author {
-              name
-              summary
-              email
-              url {
-                github
-                instagram
-              }
+  const { site }: Data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          author {
+            name
+            summary
+            email
+            url {
+              github
+              instagram
             }
-            description
           }
+          description
         }
       }
-    `,
-  );
+    }
+  `);
 
   const meta = site.siteMetadata;
 

@@ -3,35 +3,29 @@ import { createUseStyles } from 'react-jss';
 import classNames from 'classnames';
 
 import { Menu as MenuIcon } from '@mui/icons-material';
-import {
-  AppBar,
-  colors,
-  IconButton,
-  Link,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useScrollTrigger,
-} from '@mui/material';
+import { AppBar, colors, IconButton, Link, Toolbar, Typography, useMediaQuery, useScrollTrigger } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import Logo from '~components/Logo';
+import Logo from '@/components/Logo';
 
 const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const scrollTrigger = useScrollTrigger({ target: typeof window === 'undefined' ? undefined : window });
 
-  const styles = createUseStyles({
-    isContainerFixed: `
+  const styles = createUseStyles(
+    {
+      isContainerFixed: `
       position: relative;
     `,
-    toolbar: `
+      toolbar: `
       height: 60px;
     `,
-  }, {
-    name: 'Navbar',
-  })();
+    },
+    {
+      name: 'Navbar',
+    },
+  )();
 
   const [isContainerFixed, setContainerFixed] = useState(false);
 

@@ -1,24 +1,21 @@
 import React from 'react';
-import {
-  Box, Button, colors, Container, Typography,
-} from '@mui/material';
+import { Box, Button, colors, Container, Typography } from '@mui/material';
 import { ArrowBackIos as ArrowLeftIcon, ArrowForwardIos as ArrowRightIcon } from '@mui/icons-material';
-import type { PostNavigation } from '~types/global';
+import type { PostNavigation } from '@/types/global';
 
 interface PostNavigationSectionProps {
   prevPost?: PostNavigation;
   nextPost?: PostNavigation;
 }
 
-const PostNavigationSection = ({
-  prevPost,
-  nextPost,
-}: PostNavigationSectionProps) => (
+const PostNavigationSection = ({ prevPost, nextPost }: PostNavigationSectionProps) => (
   <Container
     component="section"
     maxWidth="md"
     sx={{
-      mx: 'auto', px: 8, py: 5,
+      mx: 'auto',
+      px: 8,
+      py: 5,
     }}
     disableGutters
   >

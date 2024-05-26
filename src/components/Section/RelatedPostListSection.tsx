@@ -1,22 +1,17 @@
 import React from 'react';
 
-import {
-  colors, Container, List, ListItemButton, ListItemButtonProps, Typography,
-} from '@mui/material';
+import { colors, Container, List, ListItemButton, ListItemButtonProps, Typography } from '@mui/material';
 import { Recommend as RecommendIcon } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '~types/global';
+import type { Post } from '@/types/global';
 
 interface RelatedPostListSectionProps {
   query: string;
   posts: Post[];
 }
 
-const RelatedPostListSection = ({
-  query,
-  posts,
-}: RelatedPostListSectionProps) => {
+const RelatedPostListSection = ({ query, posts }: RelatedPostListSectionProps) => {
   const StyledListItem = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       transition: 'color 0.2s linear',

@@ -122,9 +122,9 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 import invert from 'lodash-es/invert';
 import shuffle from 'lodash-es/shuffle';
 
-import { SOURCE_TYPE } from '~constants/message';
-import credentials from '~config/wadiz-good-wave.json';
-import type { Message } from '~types/message';
+import { SOURCE_TYPE } from '@/constants/message';
+import credentials from '@/config/wadiz-good-wave.json';
+import type { Message } from '@/types/message';
 
 const SPREADSHEET_ID = process.env.REACT_APP_GOOGLE_SPREADSHEET_ID || '';
 const COMMUNITY_SHEET_ID = process.env.REACT_APP_GOOGLE_COMMUNITY_SHEET_ID || '';

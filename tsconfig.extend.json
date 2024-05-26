@@ -8,10 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "isolatedModules": true,
-    "lib": [
-      "dom",
-      "es2020"
-    ],
+    "lib": ["dom", "es2020"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -19,18 +16,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "paths": {
-      "~assets/*": ["./src/assets/*"],
-      "~components/*": ["./src/components/*"],
-      "~constants/*": ["./src/constants/*"],
-      "~containers/*": ["./src/containers/*"],
-      "~helpers/*": ["./src/helpers/*"],
-      "~pages/*": ["./src/pages/*"],
-      "~services/*": ["./src/services/*"],
-      "~shared/*": ["./src/shared/*"],
-      "~states/*": ["./src/states/*"],
-      "~types/*": ["./src/types/*"],
-      "~validations/*": ["./src/validations/*"],
-      "~views/*": ["./src/views/*"]
+      "@/*": ["./src/*"]
     },
     "removeComments": true,
     "resolveJsonModule": true,
@@ -38,5 +24,5 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "es5"
-  },
+  }
 }

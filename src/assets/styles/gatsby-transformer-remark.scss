@@ -1,4 +1,4 @@
-@import "~assets/styles/base";
+@import './base';
 
 .gatsby-resp-image {
   &-figure {
@@ -39,14 +39,14 @@
 }
 
 .gatsby-highlight {
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*='language-'],
+  pre[class*='language-'] {
     font-family: $code-font-family;
     font-size: 14px;
     font-weight: 600;
   }
 
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     padding: 1.4em;
 
     &::after,

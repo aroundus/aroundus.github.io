@@ -9,49 +9,38 @@ import {
   PaginationSection,
   PostListSection,
   PostSearchSection,
-} from '~components/Section';
-import { getSearchPosts } from '~helpers/search';
-import type { AnyObject, Post } from '~types/global';
+} from '@/components/Section';
+import { getSearchPosts } from '@/helpers/search';
+import type { AnyObject, Post } from '@/types/global';
 
 const CATEGORY_ALL = '전체';
 
 const Main = () => {
-  const { allMarkdownRemark } = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(
-          filter: {
-            frontmatter: {
-              draft: {
-                ne: true
-              }
-            }
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        filter: { frontmatter: { draft: { ne: true } } }
+        sort: { fields: [frontmatter___date, frontmatter___index, frontmatter___title], order: [DESC, DESC, ASC] }
+      ) {
+        nodes {
+          id
+          fields {
+            slug
           }
-          sort: {
-            fields: [frontmatter___date, frontmatter___index, frontmatter___title],
-            order: [DESC, DESC, ASC]
-          }
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-            html
-            frontmatter {
-              category
-              index
-              title
-              description
-              image
-              date(formatString: "YYYY-MM-DD")
-              draft
-            }
+          html
+          frontmatter {
+            category
+            index
+            title
+            description
+            image
+            date(formatString: "YYYY-MM-DD")
+            draft
           }
         }
       }
-    `,
-  );
+    }
+  `);
 
   const fetchedPosts: Post[] = allMarkdownRemark.nodes.map((node: AnyObject) => ({
     id: node.id,
@@ -59,8 +48,9 @@ const Main = () => {
     ...node.frontmatter,
   }));
 
-  const categories: string[] = uniq(fetchedPosts.map((post) => post.category || '')
-    .sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0)));
+  const categories: string[] = uniq(
+    fetchedPosts.map((post) => post.category || '').sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0)),
+  );
 
   const [selectedCategory, setSelectedCategory] = useState(CATEGORY_ALL);
   const [searchQuery, setSearchQuery] = useState('');
@@ -71,9 +61,7 @@ const Main = () => {
   const [numberOfTotalPage, setNumberOfTotalPage] = useState(1);
 
   useEffect(() => {
-    let posts = searchQuery
-      ? getSearchPosts(searchQuery)
-      : fetchedPosts;
+    let posts = searchQuery ? getSearchPosts(searchQuery) : fetchedPosts;
 
     /**
      * 대표 글 포함: 선택한 카테고리가 있거나 검색한 단어가 있는 경우
@@ -96,10 +84,7 @@ const Main = () => {
 
   useEffect(() => {
     setNumberOfTotalPage(Math.ceil(filteredPosts.length / numberOfPostsPerPage));
-    setPagedPosts(filteredPosts.slice(
-      (currentPage - 1) * numberOfPostsPerPage,
-      currentPage * numberOfPostsPerPage,
-    ));
+    setPagedPosts(filteredPosts.slice((currentPage - 1) * numberOfPostsPerPage, currentPage * numberOfPostsPerPage));
   }, [filteredPosts]);
 
   return (
@@ -113,9 +98,7 @@ const Main = () => {
                 delay: 100,
               }}
               onInit={(typewriter) => {
-                typewriter
-                  .typeString(fetchedPosts[0].title)
-                  .start();
+                typewriter.typeString(fetchedPosts[0].title).start();
               }}
             />
           ),

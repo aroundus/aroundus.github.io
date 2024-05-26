@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Properties } from 'csstype';
 
-import {
-  Button, ButtonProps, colors, Typography, useMediaQuery,
-} from '@mui/material';
+import { Button, ButtonProps, colors, Typography, useMediaQuery } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 
-import { getPostCoverImageURL } from '~helpers/image';
-import type { Post } from '~types/global';
+import { getPostCoverImageURL } from '@/helpers/image';
+import type { Post } from '@/types/global';
 
 interface KeyVisualSectionProps {
   post: Post;
@@ -44,15 +42,16 @@ const KeyVisualSection = ({
     },
   }));
 
-  const useStyles = createUseStyles({
-    container: {
-      '&': `
+  const useStyles = createUseStyles(
+    {
+      container: {
+        '&': `
         background: no-repeat center / cover;
         background-color: ${colors.grey[600]};
         background-image: url(${getPostCoverImageURL(post.image || post.category)});
         z-index: 2;
       `,
-      '&::before': `
+        '&::before': `
         position: absolute;
         top: 0;
         left: 0;
@@ -60,22 +59,28 @@ const KeyVisualSection = ({
         bottom: 0;
         opacity: 0.5;
         content: '';
-        ${isGradientEnabled ? `
+        ${
+          isGradientEnabled
+            ? `
           background-image: linear-gradient(-45deg, ${colors.common.black}, ${colors.pink[500]}, ${colors.blue[500]}, ${colors.green[500]});
           background-size: 400% 400%;
           animation: gradient 10s ease infinite;
-        ` : `
+        `
+            : `
           background-color: ${colors.common.black};
-        `}
+        `
+        }
       `,
-    },
-    content: `
+      },
+      content: `
       margin: auto;
       max-width: 900px;
     `,
-  }, {
-    name: 'KeyVisualSection',
-  });
+    },
+    {
+      name: 'KeyVisualSection',
+    },
+  );
 
   const styles = useStyles();
 
@@ -107,7 +112,9 @@ const KeyVisualSection = ({
               <div style={{ position: 'absolute' }}>{typewriter.title}</div>
               <div style={{ opacity: 0 }}>{post.title} |</div>
             </>
-          ) : post.title}
+          ) : (
+            post.title
+          )}
         </Typography>
         <Typography
           variant={isMobile ? 'body2' : 'body1'}

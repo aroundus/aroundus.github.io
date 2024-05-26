@@ -1,19 +1,15 @@
 import React from 'react';
 
-import {
-  colors, Grid, ListItem, ListItemButton, ListItemButtonProps, Typography,
-} from '@mui/material';
+import { colors, Grid, ListItem, ListItemButton, ListItemButtonProps, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '~types/global';
+import type { Post } from '@/types/global';
 
 interface PostListItemProps {
   post: Post;
 }
 
-const PostListItem = ({
-  post,
-}: PostListItemProps) => {
+const PostListItem = ({ post }: PostListItemProps) => {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       borderBottom: 'none',
@@ -55,9 +51,7 @@ const PostListItem = ({
           >
             #{post.category || 'empty'}
           </Typography>
-          <Typography variant="h4">
-            {post.title}
-          </Typography>
+          <Typography variant="h4">{post.title}</Typography>
           <Typography
             variant="body1"
             color={colors.grey[700]}
