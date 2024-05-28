@@ -14,12 +14,19 @@ const Navbar = () => {
 
   const styles = createUseStyles(
     {
-      isContainerFixed: `
-        position: relative;
-      `,
-      toolbar: `
-        height: 60px;
-      `,
+      isContainerFixed: {
+        position: 'relative',
+      },
+      toolbar: {
+        height: 60,
+      },
+      link: {
+        opacity: 0.9,
+
+        '&:hover': {
+          opacity: 1,
+        },
+      },
     },
     {
       name: 'Navbar',
@@ -43,9 +50,10 @@ const Navbar = () => {
         variant="dense"
       >
         <Link
-          href="/"
+          className={styles.link}
           display="flex"
           gap={1}
+          href="/"
         >
           <SymbolmarkIcon
             height={12}

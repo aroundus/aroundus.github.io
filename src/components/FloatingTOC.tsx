@@ -21,8 +21,8 @@ const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
   const styles = createUseStyles(
     {
       container: `
-      transition: position 0.2s;
-    `,
+        transition: position 0.2s;
+      `,
     },
     {
       name: 'FloatingTOC',
