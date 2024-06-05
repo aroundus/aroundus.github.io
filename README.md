@@ -20,7 +20,7 @@ You can now view aroundus.github.io in the browser.
 
   http://localhost:8000/
 
-View GraphiQL, an in-browser IDE, to explore your site's data and schema
+View GraphQL, an in-browser IDE, to explore your site's data and schema
 
   http://localhost:8000/___graphql
 ```

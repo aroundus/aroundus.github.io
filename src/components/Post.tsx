@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import FloatingTOC from '@/components/FloatingTOC';
+import { FloatingTOC } from '@/components/FloatingTOC';
 import { ArticleSection, KeyVisualSection } from '@/components/Section';
 import type { Post as PostType } from '@/types/global';
 
@@ -11,7 +11,7 @@ interface PostProps {
   post: PostType;
 }
 
-const Post = ({ post }: PostProps) => {
+export function Post({ post }: PostProps) {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -34,6 +34,4 @@ const Post = ({ post }: PostProps) => {
       )}
     </>
   );
-};
-
-export default Post;
+}

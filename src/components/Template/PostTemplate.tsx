@@ -5,10 +5,10 @@ import isEmpty from 'lodash-es/isEmpty';
 import { Divider } from '@mui/material';
 import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
-import Layout from '@/components/Layout';
+import { Layout } from '@/components/Layout';
 import { CommentSection, PostNavigationSection, RelatedPostListSection } from '@/components/Section';
-import SEO from '@/components/SEO';
-import Post from '@/components/Post';
+import { SEO } from '@/components/SEO';
+import { Post } from '@/components/Post';
 import { getPostCoverImageURL } from '@/helpers/image';
 import { getSearchPosts } from '@/helpers/search';
 import type { AnyObject, Post as PostType } from '@/types/global';
@@ -21,7 +21,7 @@ interface PostTemplateProps {
   };
 }
 
-const PostTemplate = ({ data, data: { markdownRemark } }: PostTemplateProps) => {
+export default function PostTemplate({ data, data: { markdownRemark } }: PostTemplateProps) {
   const post = {
     id: markdownRemark.id,
     path: markdownRemark.fields.slug,
@@ -91,7 +91,7 @@ const PostTemplate = ({ data, data: { markdownRemark } }: PostTemplateProps) => 
       </Layout>
     </>
   );
-};
+}
 
 export const query = graphql`
   query Post($id: String!, $prevPostID: String, $nextPostID: String) {
@@ -136,5 +136,3 @@ export const query = graphql`
     }
   }
 `;
-
-export default PostTemplate;

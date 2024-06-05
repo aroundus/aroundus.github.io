@@ -1,18 +1,14 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import { Box, colors, Container, TextField, useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, colors, Container, TextField } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 
 interface PostSearchSectionProps {
   onChange: (value: string) => void;
 }
 
-const PostSearchSection = ({ onChange: handleChange }: PostSearchSectionProps) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
+export function PostSearchSection({ onChange: handleChange }: PostSearchSectionProps) {
   const styles = createUseStyles(
     {
       container: `
@@ -50,6 +46,4 @@ const PostSearchSection = ({ onChange: handleChange }: PostSearchSectionProps) =
       </Container>
     </section>
   );
-};
-
-export default PostSearchSection;
+}

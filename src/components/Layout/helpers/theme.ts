@@ -8,7 +8,7 @@ export const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
 export const HEADING_FONT_FAMILY =
   'Montserrat, Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 
-const theme = createTheme(
+export const theme = createTheme(
   {
     spacing: 4,
     shape: {
@@ -289,5 +289,3 @@ const theme = createTheme(
   },
   koKR,
 );
-
-export default theme;

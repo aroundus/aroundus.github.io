@@ -11,7 +11,7 @@ interface RelatedPostListSectionProps {
   query: string;
 }
 
-const RelatedPostListSection = ({ query, posts }: RelatedPostListSectionProps) => {
+export function RelatedPostListSection({ query, posts }: RelatedPostListSectionProps) {
   const StyledListItem = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       justifyContent: 'space-between',
@@ -72,6 +72,4 @@ const RelatedPostListSection = ({ query, posts }: RelatedPostListSectionProps) =
       </List>
     </Container>
   );
-};
-
-export default RelatedPostListSection;
+}

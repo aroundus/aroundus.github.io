@@ -1,9 +1,9 @@
-export { default as ArticleSection } from './ArticleSection';
-export { default as CategorySection } from './CategorySection';
-export { default as CommentSection } from './CommentSection';
-export { default as KeyVisualSection } from './KeyVisualSection';
-export { default as PaginationSection } from './PaginationSection';
-export { default as PostListSection } from './PostListSection';
-export { default as PostNavigationSection } from './PostNavigationSection';
-export { default as PostSearchSection } from './PostSearchSection';
-export { default as RelatedPostListSection } from './RelatedPostListSection';
+export { ArticleSection } from './ArticleSection';
+export { CategorySection } from './CategorySection';
+export { CommentSection } from './CommentSection';
+export { KeyVisualSection } from './KeyVisualSection';
+export { PaginationSection } from './PaginationSection';
+export { PostListSection } from './PostListSection';
+export { PostNavigationSection } from './PostNavigationSection';
+export { PostSearchSection } from './PostSearchSection';
+export { RelatedPostListSection } from './RelatedPostListSection';

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-import Layout from '@/components/Layout';
-import SEO from '@/components/SEO';
+import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 
 import Main from '@/pages/Main';
 
-const App = () => {
+export default function App() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -26,6 +26,4 @@ const App = () => {
       )}
     </>
   );
-};
-
-export default App;
+}

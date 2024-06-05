@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
-import classNames from 'classnames';
 
-import { AppBar, colors, Link, Toolbar, Typography, useMediaQuery, useScrollTrigger } from '@mui/material';
+import { AppBar, colors, Link, Toolbar, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
 
-const Navbar = () => {
+export function Navbar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const scrollTrigger = useScrollTrigger({ target: typeof window === 'undefined' ? undefined : window });
 
   const styles = createUseStyles(
     {
@@ -33,11 +31,8 @@ const Navbar = () => {
     },
   )();
 
-  const [isContainerFixed, setIsContainerFixed] = useState(false);
-
   return (
     <AppBar
-      className={classNames({ [styles.isContainerFixed]: isContainerFixed })}
       color="transparent"
       component="nav"
       elevation={0}
@@ -76,6 +71,4 @@ const Navbar = () => {
       </Toolbar>
     </AppBar>
   );
-};
-
-export default Navbar;
+}

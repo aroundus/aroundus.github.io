@@ -15,7 +15,7 @@ import type { AnyObject, Post } from '@/types/global';
 
 const CATEGORY_ALL = '전체';
 
-const Main = () => {
+export default function Main() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -120,6 +120,4 @@ const Main = () => {
       />
     </>
   );
-};
-
-export default Main;
+}

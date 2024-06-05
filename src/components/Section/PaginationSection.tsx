@@ -9,7 +9,7 @@ interface PaginationSectionProps {
   onChange: (page: number) => void;
 }
 
-const PaginationSection = ({ currentPage, totalPageCount, onChange }: PaginationSectionProps) => {
+export function PaginationSection({ currentPage, totalPageCount, onChange }: PaginationSectionProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -52,6 +52,4 @@ const PaginationSection = ({ currentPage, totalPageCount, onChange }: Pagination
       </Container>
     </section>
   );
-};
-
-export default PaginationSection;
+}

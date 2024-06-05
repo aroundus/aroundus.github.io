@@ -9,7 +9,7 @@ interface PostListItemProps {
   post: Post;
 }
 
-const PostListItem = ({ post }: PostListItemProps) => {
+export function PostListItem({ post }: PostListItemProps) {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       borderBottom: 'none',
@@ -73,6 +73,4 @@ const PostListItem = ({ post }: PostListItemProps) => {
       </StyledContent>
     </ListItem>
   );
-};
-
-export default PostListItem;
+}

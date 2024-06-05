@@ -26,7 +26,7 @@ interface Data {
   };
 }
 
-const Footer = () => {
+export function Footer() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -167,6 +167,4 @@ const Footer = () => {
       </Container>
     </footer>
   );
-};
-
-export default Footer;
+}

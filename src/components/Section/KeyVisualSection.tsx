@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Properties } from 'csstype';
 
 import { Button, ButtonProps, colors, Typography, useMediaQuery } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
@@ -15,16 +14,14 @@ interface KeyVisualSectionProps {
   typewriter?: { title?: React.ReactNode };
 }
 
-const KeyVisualSection = ({
+export function KeyVisualSection({
   isButtonVisible = false,
   isGradientEnabled = false,
   post,
   typewriter,
-}: KeyVisualSectionProps) => {
+}: KeyVisualSectionProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-  const [backgroundStyle, setBackgroundStyle] = useState<Properties>({});
 
   const StyledButton = styled(Button)<ButtonProps>(() => ({
     '&': {
@@ -92,7 +89,6 @@ const KeyVisualSection = ({
       className={styles.container}
       style={{
         padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 12 : 16)} ${theme.spacing(16)}`,
-        ...backgroundStyle,
       }}
     >
       <div className={styles.content}>
@@ -146,6 +142,4 @@ const KeyVisualSection = ({
       </div>
     </section>
   );
-};
-
-export default KeyVisualSection;
+}

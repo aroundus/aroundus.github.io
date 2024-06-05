@@ -6,13 +6,13 @@ import dayjs from 'dayjs';
 
 import type { Post } from '@/types/global';
 
-import PostListItem from '../PostListItem';
+import { PostListItem } from '../PostListItem';
 
 interface PostListSectionProps {
   posts: Post[];
 }
 
-const PostListSection = ({ posts }: PostListSectionProps) => {
+export function PostListSection({ posts }: PostListSectionProps) {
   const styles = createUseStyles(
     {
       container: `
@@ -47,6 +47,4 @@ const PostListSection = ({ posts }: PostListSectionProps) => {
       </List>
     </section>
   );
-};
-
-export default PostListSection;
+}

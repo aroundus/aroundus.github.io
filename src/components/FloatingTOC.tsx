@@ -15,7 +15,7 @@ interface TOCStep {
   yOffset: number;
 }
 
-const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
+export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
   const theme = useTheme();
 
   const styles = createUseStyles(
@@ -35,7 +35,7 @@ const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
   const [xOffset, setXOffset] = useState(0);
   const [yOffset, setYOffset] = useState(0);
 
-  const setTOCStepsOffset = () => {
+  function setTOCStepsOffset() {
     const parser = new DOMParser();
     const html = parser.parseFromString(htmlString, 'text/html');
     const steps: TOCStep[] = [];
@@ -70,17 +70,17 @@ const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
     });
 
     setTOCSteps(steps);
-  };
+  }
 
-  const handleStepClick = (top: number) => {
+  function handleStepClick(top: number) {
     window.scroll({
       top,
       behavior: 'smooth',
     });
-  };
+  }
 
   useEffect(() => {
-    const listener = () => {
+    function listener() {
       const { pageYOffset } = window;
 
       tocSteps.forEach((step, index) => {
@@ -88,7 +88,7 @@ const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
           setActiveStep(index);
         }
       });
-    };
+    }
 
     listener();
     window.addEventListener('scroll', listener);
@@ -177,6 +177,4 @@ const FloatingTOC = ({ html: htmlString, target }: FloatingTOCProps) => {
       </Box>
     </aside>
   );
-};
-
-export default FloatingTOC;
+}

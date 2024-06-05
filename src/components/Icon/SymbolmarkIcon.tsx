@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SymbolmarkIcon(props: React.SVGAttributes<HTMLOrSVGElement>) {
+export function SymbolmarkIcon(props: React.SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
       viewBox="0 0 114.35 159.27"

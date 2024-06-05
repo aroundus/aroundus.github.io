@@ -19,7 +19,7 @@ interface SEOProps {
   image?: string;
 }
 
-const SEO = (props: SEOProps) => {
+export function SEO(props: SEOProps) {
   const { site }: Data = useStaticQuery(graphql`
     query {
       site {
@@ -71,6 +71,4 @@ const SEO = (props: SEOProps) => {
       ]}
     />
   );
-};
-
-export default SEO;
+}

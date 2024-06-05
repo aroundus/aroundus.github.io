@@ -8,7 +8,7 @@ interface CategorySectionProps {
   onClick: (category: string) => void;
 }
 
-const CategorySection = ({ categories, selectedCategory, onClick: handleClick }: CategorySectionProps) => {
+export function CategorySection({ categories, selectedCategory, onClick: handleClick }: CategorySectionProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -41,6 +41,4 @@ const CategorySection = ({ categories, selectedCategory, onClick: handleClick }:
       </Box>
     </Container>
   );
-};
-
-export default CategorySection;
+}
