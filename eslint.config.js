@@ -6,15 +6,7 @@ module.exports = [
   js.configs.recommended,
   ...ts.configs.recommended,
   {
-    ignores: [
-      '.eslintrc.js',
-      '@types',
-      'babel.config.js',
-      'build',
-      'gatsby-*.js',
-      'node_modules',
-      'stylelint.config.js',
-    ],
+    ignores: ['@types', 'babel.config.js', 'build', 'gatsby-*.js', 'node_modules'],
     languageOptions: {
       globals: {
         ...globals.browser,
