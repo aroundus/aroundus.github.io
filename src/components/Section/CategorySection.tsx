@@ -27,11 +27,17 @@ export function CategorySection({ categories, selectedCategory, onClick: handleC
       >
         {categories.map((category) => (
           <Button
-            color={selectedCategory === category ? 'primary' : 'secondary'}
+            color={selectedCategory === category ? 'primary' : 'info'}
             disableRipple
             key={category}
             size={isMobile ? 'small' : 'medium'}
-            sx={{ borderRadius: 5, textTransform: 'unset' }}
+            sx={{
+              borderRadius: 5,
+              textTransform: 'unset',
+              '& .MuiTypography-root': {
+                fontFamily: 'Montserrat',
+              },
+            }}
             variant={selectedCategory === category ? 'contained' : 'outlined'}
             onClick={() => handleClick(category)}
           >
