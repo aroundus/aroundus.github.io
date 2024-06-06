@@ -11,7 +11,8 @@ import {
   PostSearchSection,
 } from '@/components/Section';
 import { getSearchPosts } from '@/helpers/search';
-import type { AnyObject, Post } from '@/types/global';
+import type { AnyObject } from '@/types/global';
+import type { Post } from '@/types/post';
 
 const CATEGORY_ALL = '전체';
 

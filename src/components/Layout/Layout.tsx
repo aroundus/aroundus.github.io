@@ -20,8 +20,8 @@ const sheetsRegistry = new SheetsRegistry();
 export function Layout({ children }: LayoutProps) {
   return (
     <JSSProvider
-      registry={sheetsRegistry}
       isSSR
+      registry={sheetsRegistry}
     >
       <ThemeProvider theme={theme}>
         <CSSBaseline />

@@ -4,7 +4,7 @@ import { colors, Container, List, ListItemButton, ListItemButtonProps, Typograph
 import { Recommend as RecommendIcon } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '@/types/global';
+import type { Post } from '@/types/post';
 
 interface RelatedPostListSectionProps {
   posts: Post[];

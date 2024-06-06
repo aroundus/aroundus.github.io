@@ -11,7 +11,8 @@ import { SEO } from '@/components/SEO';
 import { Post } from '@/components/Post';
 import { getPostCoverImageURL } from '@/helpers/image';
 import { getSearchPosts } from '@/helpers/search';
-import type { AnyObject, Post as PostType } from '@/types/global';
+import type { AnyObject } from '@/types/global';
+import type { Post as PostType } from '@/types/post';
 
 interface PostTemplateProps {
   data: {

@@ -3,7 +3,7 @@ import React from 'react';
 import { colors, Grid, ListItem, ListItemButton, ListItemButtonProps, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '@/types/global';
+import type { Post } from '@/types/post';
 
 interface PostListItemProps {
   post: Post;

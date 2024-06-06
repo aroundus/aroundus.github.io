@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { FloatingTOC } from '@/components/FloatingTOC';
 import { ArticleSection, KeyVisualSection } from '@/components/Section';
-import type { Post as PostType } from '@/types/global';
+import type { Post as PostType } from '@/types/post';
 
 interface PostProps {
   post: PostType;

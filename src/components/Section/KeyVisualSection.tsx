@@ -5,7 +5,7 @@ import { Button, ButtonProps, colors, Typography, useMediaQuery } from '@mui/mat
 import { styled, useTheme } from '@mui/material/styles';
 
 import { getPostCoverImageURL } from '@/helpers/image';
-import type { Post } from '@/types/global';
+import type { Post } from '@/types/post';
 
 interface KeyVisualSectionProps {
   isButtonVisible?: boolean;

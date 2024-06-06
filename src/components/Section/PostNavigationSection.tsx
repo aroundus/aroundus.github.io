@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Button, colors, Container, Typography } from '@mui/material';
 import { ArrowBackIos as ArrowLeftIcon, ArrowForwardIos as ArrowRightIcon } from '@mui/icons-material';
-import type { PostNavigation } from '@/types/global';
+
+import type { PostNavigation } from '@/types/post';
 
 interface PostNavigationSectionProps {
   nextPost?: PostNavigation;
