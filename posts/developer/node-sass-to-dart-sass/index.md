@@ -15,7 +15,7 @@ date: 2023-05-10
 
 ## package.json
 
-```Diff
+```diff
 - "node-sass": "^5.0.0",
 + "sass": "^1.57.1",
 ```
@@ -24,7 +24,7 @@ date: 2023-05-10
 
 sass-loader 옵션에서 implementation node-sass 기본값을 sass로 변경합니다. 자세한 정보는 [Use Dart Sass](https://craco.js.org/recipes/use-dart-sass/) 내용을 참조해 주세요.
 
-```Diff
+```diff
 style: {
     ...
     sass: {
@@ -40,7 +40,7 @@ style: {
 
 Dart Sass의 경우 기존 /deep/ 결합자의 구문을 분석할 수 없어 컴파일 가능한 결합자로 수정해야 합니다. *.scoped.scss 파일 내 Deep 결합자를 다음과 같이 변경합니다.
 
-```Diff
+```diff
 - /deep/ .element {
 + ::v-deep .element {
 }
@@ -50,7 +50,7 @@ Dart Sass의 경우 기존 /deep/ 결합자의 구문을 분석할 수 없어 �
 
 Deep 결합자를 변경한 후 Stylelint에서 알 수 없는 의사 요소(pseudo-element)로 간주하여 오류가 발생하지 않도록 다음과 같이 설정합니다.
 
-```Diff
+```diff
 module.exports = {
   ...
 +  rules: {
