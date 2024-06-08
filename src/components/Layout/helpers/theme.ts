@@ -249,6 +249,7 @@ export const theme = createTheme(
         table {
           margin: auto;
           border-collapse: collapse;
+          display: block;
           overflow-x: auto;
           font-size: 16px;
 
