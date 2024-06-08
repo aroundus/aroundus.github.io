@@ -6,11 +6,11 @@ import { Divider } from '@mui/material';
 import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
 import { Layout } from '@/components/Layout';
+import { Post } from '@/components/Post';
 import { CommentSection, PostNavigationSection, RelatedPostListSection } from '@/components/Section';
 import { SEO } from '@/components/SEO';
 import { getPostCoverImageURL } from '@/helpers/image';
 import { getSearchPosts } from '@/helpers/search';
-import { Post } from '@/pages/Post';
 import type { AnyObject } from '@/types/global';
 import type { Post as PostType } from '@/types/post';
 
