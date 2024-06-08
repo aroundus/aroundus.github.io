@@ -11,7 +11,7 @@ interface PostProps {
   post: PostType;
 }
 
-export function Post({ post }: PostProps) {
+export default function Post({ post }: PostProps) {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
