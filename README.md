@@ -31,8 +31,8 @@ yarn install
 yarn start
 ```
 
-* http://localhost:8000/
-* http://localhost:8000/___graphql (GraphQL 브라우저 IDE)
+- http://localhost:8000/
+- http://localhost:8000/\_\_\_graphql (GraphQL 브라우저 IDE)
 
 GraphQL은 특별한 설치 없이 Gatsby에서 사용할 수 있습니다. `yarn start` 명령어를 실행하면 스키마를 자동으로 추론하여 생성합니다. 자세한 정보는 [GraphQL API](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/graphql-api/) 내용을 참조해 주세요.
 
@@ -48,24 +48,24 @@ yarn build
 yarn serve
 ```
 
-* http://localhost:9000/
+- http://localhost:9000/
 
 ## 기술 스택
 
 ### 프론트엔드
 
-* **프로그래밍 언어**: TypeScript
-* **프레임워크**: [Gatsby(개츠비)](https://www.gatsbyjs.com)
-* **라이브러리**: MUI
+- **프로그래밍 언어**: TypeScript
+- **프레임워크**: [Gatsby(개츠비)](https://www.gatsbyjs.com)
+- **라이브러리**: MUI
 
 ### 백엔드
 
-* **데이터베이스**: GraphQL (in Gatsby)
+- **데이터베이스**: GraphQL (in Gatsby)
 
 ### 데브옵스
 
-* **CI/CD**: GitHub Actions
-* **호스팅**: [GitHub Pages](https://pages.github.com)
+- **CI/CD**: GitHub Actions
+- **호스팅**: [GitHub Pages](https://pages.github.com)
 
 ## 기능
 
@@ -96,8 +96,8 @@ yarn serve
     ㄴ types
 ```
 
-* **posts**: 블로그의 게시물을 담는 폴더
-* **src/pages**: 블로그의 화면을 관리하는 폴더
+- **posts**: 블로그의 게시물을 담는 폴더
+- **src/pages**: 블로그의 페이지를 관리하는 폴더
 
 ### posts
 
@@ -136,8 +136,8 @@ Lunr의 한글 적용이 불가한 문제를 해결하기 위하여 [@eastuni/lu
 
 작업 내용을 main 브랜치에 병합하면 [Deploy Gatsby site to Pages](.github/workflows/deploy-gatsby-site-to-pages.yml) 워크플로를 트리거하여 CI/CD를 진행합니다.
 
-* `CI`: 자동화 프로세스의 지속적인 통합(Continuous Integration)
-* `CD`: 지속적인 서비스 제공(Continuous Delivery) 또는 지속적인 배포(Continuous Deployment)
+- `CI`: 자동화 프로세스의 지속적인 통합(Continuous Integration)
+- `CD`: 지속적인 서비스 제공(Continuous Delivery) 또는 지속적인 배포(Continuous Deployment)
 
 ![GitHub Actions](https://github.com/aroundus/aroundus.github.io/assets/16731356/6f23c5b2-545d-4a7c-b4b1-72151a5f6934)
 
@@ -152,10 +152,10 @@ yarn deploy // CD
 
 ## 팀원
 
-||이름|역할|
-|:---:|---|---|
-|<img alt="백은주" height="40" src="https://avatars.githubusercontent.com/u/16731356" />|[백은주](https://github.com/aroundus)|프론트엔드 개발|
-|<img alt="진국이" height="40" src="src/assets/images/zingugi.png" />|진국이|프론트엔드 개발|
-|<img alt="지니" height="40" src="src/assets/images/jini.png" />|지니|백엔드 개발|
-|<img alt="조이" height="40" src="src/assets/images/joy.png" />|조이|백엔드 개발|
-|<img alt="스토" height="40" src="src/assets/images/sto.png" />|스토|데브옵스 개발|
+|                                                                                         | 이름                                  | 역할            |
+| :-------------------------------------------------------------------------------------: | ------------------------------------- | --------------- |
+| <img alt="백은주" height="40" src="https://avatars.githubusercontent.com/u/16731356" /> | [백은주](https://github.com/aroundus) | 프론트엔드 개발 |
+|          <img alt="진국이" height="40" src="src/assets/images/zingugi.png" />           | 진국이                                | 프론트엔드 개발 |
+|             <img alt="지니" height="40" src="src/assets/images/jini.png" />             | 지니                                  | 백엔드 개발     |
+|             <img alt="조이" height="40" src="src/assets/images/joy.png" />              | 조이                                  | 백엔드 개발     |
+|             <img alt="스토" height="40" src="src/assets/images/sto.png" />              | 스토                                  | 데브옵스 개발   |
