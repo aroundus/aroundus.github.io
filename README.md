@@ -1,12 +1,12 @@
 # aroundus.github.io
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Faroundus%2Faroundus.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
-![Node.js](https://img.shields.io/badge/20.13.1-black?&label=Node.js&labelColor=2C682C&logo=Node.js&logoColor=white)
 ![Gatsby](https://img.shields.io/badge/5.13.5-black?&label=Gatsby&labelColor=663399&logo=Gatsby&logoColor=white)
-![React](https://img.shields.io/badge/18.3.1-black?&label=React&labelColor=087EBF&logo=React&logoColor=61DAFB)
 ![GraphQL](https://img.shields.io/badge/16.7.1-black?&label=GraphQL&labelColor=E10098&logo=GraphQL&logoColor=white)
-![TypeScript](https://img.shields.io/badge/5.4.5-black?&label=TypeScript&labelColor=007ACC&logo=TypeScript&logoColor=white)
 ![MUI](https://img.shields.io/badge/5.15.18-black?&label=MUI&labelColor=007FFF&logo=MUI&logoColor=white)
+![Node.js](https://img.shields.io/badge/20.13.1-black?&label=Node.js&labelColor=2C682C&logo=Node.js&logoColor=white)
+![React](https://img.shields.io/badge/18.3.1-black?&label=React&labelColor=087EBF&logo=React&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/5.4.5-black?&label=TypeScript&labelColor=007ACC&logo=TypeScript&logoColor=white)
 
 ![대표 이미지](https://github.com/aroundus/aroundus.github.io/assets/16731356/97ee5c88-be54-4176-a0de-c8b823bc9b1b)
 
