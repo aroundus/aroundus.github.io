@@ -1,7 +1,7 @@
 ---
 category: typescript
 index: 1
-title: CamelCase Type 만들기
+title: CamelCase Utility Type 만들기
 description: UPPER_SNAKE_CASE, camelCase 방식으로 정의한 이름을 하나의 타입으로 정의해서 실전에 적용한 방법을 공유합니다.
 date: 2022-01-06
 ---
