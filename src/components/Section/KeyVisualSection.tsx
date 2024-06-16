@@ -74,6 +74,8 @@ export function KeyVisualSection({
       },
       content: `
         margin: auto;
+        width: 80%;
+        min-width: 320px;
         max-width: 900px;
       `,
     },
@@ -88,7 +90,7 @@ export function KeyVisualSection({
     <section
       className={styles.container}
       style={{
-        padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 6 : 12)} ${theme.spacing(24)}`,
+        padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 6 : 12)} ${theme.spacing(16)}`,
       }}
     >
       <div className={styles.content}>
