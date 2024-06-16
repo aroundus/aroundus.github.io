@@ -39,7 +39,7 @@ export function Navbar() {
       component="nav"
       elevation={0}
       position="absolute"
-      style={{ padding: `0 ${isMobile ? theme.spacing(4) : theme.spacing(16)}` }}
+      style={{ padding: `0 ${isMobile ? theme.spacing(6) : theme.spacing(16)}` }}
     >
       <Toolbar
         className={styles.toolbar}
