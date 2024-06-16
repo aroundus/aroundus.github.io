@@ -26,6 +26,7 @@ export const theme = createTheme(
     },
     typography: {
       fontFamily: BASE_FONT_FAMILY,
+      htmlFontSize: 10,
       button: {
         fontWeight: 'normal',
       },
@@ -53,222 +54,216 @@ export const theme = createTheme(
         fontFamily: HEADING_FONT_FAMILY,
         fontWeight: 'bold',
       },
-      subtitle1: {
-        fontSize: '1em',
-        lineHeight: 1.5,
-      },
-      caption: {
-        lineHeight: 1.2,
-      },
     },
     components: {
       MuiCssBaseline: {
         styleOverrides: `
-        html {
-          -webkit-font-smoothing: antialiased;
-        }
+          html {
+            -webkit-font-smoothing: auto;
+            font-feature-settings: 'case' 1, 'ss03' 1;
+            font-size: 10px;
+          }
 
-        body {
-          background-color: ${colors.common.white};
-          color: ${colors.common.black};
-          font-family: ${BASE_FONT_FAMILY};
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.5;
-          overflow-wrap: break-word;
-          word-break: keep-all;
-        }
+          body {
+            background-color: ${colors.common.white};
+            color: ${colors.common.black};
+            font-family: ${BASE_FONT_FAMILY};
+            font-weight: 400;
+            line-height: 1.5;
+            overflow-wrap: break-word;
+            word-break: keep-all;
+          }
 
-        button,
-        textarea {
-          font-family: inherit;
-        }
+          button,
+          textarea {
+            font-family: inherit;
+          }
 
-        section {
-          position: relative;
-        }
+          section {
+            position: relative;
+          }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          font-family: ${HEADING_FONT_FAMILY};
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-family: ${HEADING_FONT_FAMILY};
 
-          .icon-heading-link {
-            border-bottom: none;
+            .icon-heading-link {
+              border-bottom: none;
 
-            svg {
-              visibility: visible;
+              svg {
+                visibility: visible;
+              }
+            }
+
+            a,
+            u {
+              border-bottom: 2px solid ${colors.cyan[400]};
+              text-decoration: none;
             }
           }
 
-          a,
-          u {
-            border-bottom: 2px solid ${colors.cyan[400]};
-            text-decoration: none;
-          }
-        }
-
-        h1 {
-          font-size: 2.2em;
-          margin-top: 2.2em;
-        }
-
-        h2 {
-          font-size: 2em;
-          margin-top: 2em;
-        }
-
-        h3 {
-          font-size: 1.6em;
-          margin-top: 1.8em;
-        }
-
-        h4 {
-          font-size: 1.4em;
-          margin-top: 1.8em;
-        }
-
-        a {
-          color: ${colors.common.black};
-          transition: 0.2s;
-
-          &:hover {
-            color: ${colors.cyan[600]};
-          }
-        }
-
-        p {
-          margin-top: 1.4em;
-          margin-bottom: 1.4em;
-          color: ${colors.grey[900]};
-          line-height: 1.6;
-
-          a,
-          u {
-            border-bottom: 2px solid ${colors.cyan[400]};
-            text-decoration: none;
+          h1 {
+            font-size: 2.2em;
+            margin-top: 2.2em;
           }
 
-          code {
-            padding: 4px 12px;
-            border-radius: 4px;
-            color: ${colors.deepOrange[700]};
-            background-color: ${colors.grey[200]};
-            zoom: 0.8;
+          h2 {
+            font-size: 2em;
+            margin-top: 2em;
           }
 
-          img {
-            box-shadow: 0 4px 24px -16px ${colors.grey[600]};
+          h3 {
+            font-size: 1.6em;
+            margin-top: 1.8em;
           }
-        }
 
-        strong {
-          color: ${colors.common.black};
-        }
-
-        blockquote {
-          margin: 2em 0;
-          padding-left: 1em;
-          border-left: 4px solid ${colors.grey[300]};
-          font-size: 0.96em;
-          color: ${colors.grey[600]};
-
-          p {
-            color: ${colors.grey[600]};
+          h4 {
+            font-size: 1.4em;
+            margin-top: 1.8em;
           }
-        }
-
-        code {
-          font-family: ${CODE_FONT_FAMILY};
-          font-weight: 500;
-        }
-
-        figure {
-          margin: 0;
-          text-align: center;
 
           a {
-            border-bottom: none;
-          }
-
-          img {
-            box-shadow: 0 4px 24px -16px ${colors.grey[600]};
-          }
-
-          figcaption {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            color: ${colors.grey[500]};
-            text-align: center;
-            font-size: 0.86em;
-          }
-        }
-
-        iframe {
-          box-shadow: 0 4px 24px -16px ${colors.grey[600]};
-        }
-
-        img {
-          max-width: 100%;
-        }
-
-        li {
-          font-size: 0.86em;
-
-          a {
-            border-bottom: 2px solid ${colors.cyan[400]};
-            color: ${colors.grey[800]};
-            text-decoration: none;
+            color: ${colors.common.black};
+            transition: 0.2s;
 
             &:hover {
-              color: ${colors.common.black};
+              color: ${colors.cyan[600]};
+            }
+          }
+
+          p {
+            margin-top: 1.4em;
+            margin-bottom: 1.4em;
+            color: ${colors.grey[900]};
+            line-height: 1.6;
+
+            a,
+            u {
+              border-bottom: 2px solid ${colors.cyan[400]};
+              text-decoration: none;
+            }
+
+            code {
+              padding: 4px 12px;
+              border-radius: 4px;
+              color: ${colors.deepOrange[700]};
+              background-color: ${colors.grey[200]};
+              zoom: 0.8;
+            }
+
+            img {
+              box-shadow: 0 4px 24px -16px ${colors.grey[600]};
+            }
+          }
+
+          strong {
+            color: ${colors.common.black};
+          }
+
+          blockquote {
+            margin: 2em 0;
+            padding-left: 1em;
+            border-left: 4px solid ${colors.grey[300]};
+            font-size: 0.96em;
+            color: ${colors.grey[600]};
+
+            p {
+              color: ${colors.grey[600]};
             }
           }
 
           code {
-            margin-right: 2px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            color: ${colors.cyan[700]};
-            background-color: ${colors.grey[100]};
-            zoom: 0.86;
+            font-family: ${CODE_FONT_FAMILY};
+            font-weight: 500;
           }
-        }
 
-        mark {
-          background-color: transparent;
-          color: inherit;
-          background-image: linear-gradient(to top, ${colors.cyan[100]} 40%, transparent 10%, transparent 50%);
-        }
+          figure {
+            margin: 0;
+            text-align: center;
 
-        table {
-          margin: auto;
-          border-collapse: collapse;
-          display: block;
-          overflow-x: auto;
-          font-size: 16px;
+            a {
+              border-bottom: none;
+            }
 
-          th,
-          td {
-            padding: 4px 12px;
-            border: 1px solid ${colors.grey[300]};
+            img {
+              box-shadow: 0 4px 24px -16px ${colors.grey[600]};
+            }
 
-            code {
-              padding: 2px 8px;
-              border-radius: 4px;
-              background-color: ${colors.grey[100]};
-              zoom: 0.9;
+            figcaption {
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+              color: ${colors.grey[500]};
+              text-align: center;
+              font-size: 0.86em;
             }
           }
 
-          th {
-            background-color: ${colors.grey[200]};
+          iframe {
+            box-shadow: 0 4px 24px -16px ${colors.grey[600]};
           }
-        }
-      `,
+
+          img {
+            max-width: 100%;
+          }
+
+          li {
+            font-size: 0.86em;
+
+            a {
+              border-bottom: 2px solid ${colors.cyan[400]};
+              color: ${colors.grey[800]};
+              text-decoration: none;
+
+              &:hover {
+                color: ${colors.common.black};
+              }
+            }
+
+            code {
+              margin-right: 2px;
+              padding: 2px 8px;
+              border-radius: 4px;
+              color: ${colors.cyan[700]};
+              background-color: ${colors.grey[100]};
+              zoom: 0.86;
+            }
+          }
+
+          mark {
+            background-color: transparent;
+            color: inherit;
+            background-image: linear-gradient(to top, ${colors.cyan[100]} 40%, transparent 10%, transparent 50%);
+          }
+
+          table {
+            margin: auto;
+            border-collapse: collapse;
+            display: block;
+            overflow-x: auto;
+            font-size: 16px;
+
+            th,
+            td {
+              padding: 4px 12px;
+              border: 1px solid ${colors.grey[300]};
+
+              code {
+                padding: 2px 8px;
+                border-radius: 4px;
+                background-color: ${colors.grey[100]};
+                zoom: 0.9;
+              }
+            }
+
+            th {
+              background-color: ${colors.grey[200]};
+            }
+          }
+        `,
       },
       MuiPaginationItem: {
         styleOverrides: {

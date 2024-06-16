@@ -15,9 +15,11 @@ export function Navbar() {
       isContainerFixed: {
         position: 'relative',
       },
+
       toolbar: {
         height: 60,
       },
+
       link: {
         opacity: 0.9,
 

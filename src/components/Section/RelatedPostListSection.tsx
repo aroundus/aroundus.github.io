@@ -52,17 +52,15 @@ export function RelatedPostListSection({ query, posts }: RelatedPostListSectionP
           >
             <Typography
               flex="1 0 0"
-              fontSize="0.8em"
               noWrap
               sx={{ mr: 4 }}
-              variant="subtitle1"
+              variant="body2"
             >
               {post.title}
             </Typography>
             <Typography
               color={colors.grey[500]}
-              fontSize={13}
-              variant="subtitle1"
+              variant="body2"
             >
               {post.date}
             </Typography>

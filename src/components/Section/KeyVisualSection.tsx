@@ -118,7 +118,7 @@ export function KeyVisualSection({
         <Typography
           color={colors.common.white}
           position="relative"
-          variant={isMobile ? 'body2' : 'body1'}
+          variant="body1"
         >
           {post.description}
         </Typography>

@@ -14,6 +14,7 @@ export function PostListItem({ post }: PostListItemProps) {
     '&:hover': {
       backgroundColor: 'transparent',
     },
+
     '& .MuiTypography-h4': {
       transition: 'color 0.2s linear',
 
