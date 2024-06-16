@@ -6,7 +6,7 @@ import { Box, colors, Container, Grid, Link, Typography, useMediaQuery } from '@
 import { useTheme } from '@mui/material/styles';
 import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
 
-import { LogoIcon } from '@/components/Icon';
+import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
 
 interface Data {
   site: {
@@ -80,27 +80,25 @@ export function Footer() {
               item
               sx={{ maxWidth: 260 }}
             >
-              <LogoIcon
-                height={14}
-                style={{ fill: colors.common.black }}
-              />
-              <Typography
-                sx={{ ml: 2, verticalAlign: 'text-bottom' }}
-                variant="caption"
+              <Box
+                alignItems="baseline"
+                display="flex"
+                gap={1}
               >
-                어라운드어스
-              </Typography>
+                <SymbolmarkIcon height={13} />
+                <LogoIcon height={13} />
+                <Typography variant="caption">어라운드어스</Typography>
+              </Box>
               <Typography
-                color={colors.grey[700]}
-                fontSize={12}
-                variant="subtitle1"
+                color={colors.grey[600]}
+                sx={{ mb: 3, mt: 1 }}
+                variant="body2"
               >
                 {meta.description}
               </Typography>
               <Typography
                 color={colors.grey[700]}
                 component="p"
-                sx={{ mt: 3 }}
                 variant="caption"
               >
                 이 블로그는{' '}

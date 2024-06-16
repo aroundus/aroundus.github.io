@@ -193,8 +193,6 @@ if (isProduction) {
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    siteUrl: `https://${process.env.SITE_DOMAIN}`,
-    title: `${process.env.GATSBY_TITLE} | ${process.env.GATSBY_DESCRIPTION}`,
     author: {
       email: 'specialguest@kakao.com',
       name: '백은주 sally',
@@ -206,6 +204,8 @@ module.exports = {
     },
     description: process.env.GATSBY_DESCRIPTION,
     image: '/aroundus.jpg',
+    siteUrl: `https://${process.env.SITE_DOMAIN}`,
+    title: `${process.env.GATSBY_TITLE}`,
   },
   plugins,
 };

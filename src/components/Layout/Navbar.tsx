@@ -47,10 +47,12 @@ export function Navbar() {
         variant="dense"
       >
         <Link
+          alignItems="baseline"
           className={styles.link}
           display="flex"
           gap={1}
           href="/"
+          sx={{ textDecoration: 'none' }}
         >
           <SymbolmarkIcon
             height={12}
@@ -63,7 +65,6 @@ export function Navbar() {
         </Link>
         <Typography
           color={colors.common.white}
-          lineHeight="1.3"
           sx={{ ml: 3 }}
           variant="subtitle2"
           whiteSpace="nowrap"
