@@ -39,12 +39,18 @@ export function SEO(props: SEOProps) {
 
   return (
     <Helmet
+      defaultTitle={site.siteMetadata.title}
       htmlAttributes={{
         lang: 'ko',
       }}
-      defaultTitle={site.siteMetadata.title}
-      title={props.title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
+        },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
+        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
+      ]}
       meta={[
         { name: 'description', content: description },
         { property: 'og:type', content: 'website' },
@@ -61,14 +67,8 @@ export function SEO(props: SEOProps) {
         { property: 'twitter:description', content: description },
         { property: 'twitter:image', content: props.image },
       ]}
-      link={[
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
-        },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
-        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
-      ]}
+      title={props.title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
     />
   );
 }
