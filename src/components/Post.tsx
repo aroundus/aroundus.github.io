@@ -13,7 +13,7 @@ interface PostProps {
 
 export function Post({ post }: PostProps) {
   const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('xl'));
 
   const articleRef = useRef<HTMLElement>(null);
 
@@ -26,7 +26,7 @@ export function Post({ post }: PostProps) {
           ref={articleRef}
         />
       )}
-      {post.tableOfContents && !isTablet && (
+      {post.tableOfContents && isDesktop && (
         <FloatingTOC
           html={post.tableOfContents}
           target={articleRef.current}
