@@ -136,10 +136,9 @@ export const theme = createTheme(
           }
 
           p {
+            color: ${colors.grey[900]};
             margin-top: 1.4em;
             margin-bottom: 1.4em;
-            color: ${colors.grey[900]};
-            line-height: 1.6;
 
             a,
             u {
@@ -148,10 +147,10 @@ export const theme = createTheme(
             }
 
             code {
-              padding: 4px 12px;
+              background-color: ${colors.grey[200]};
               border-radius: 4px;
               color: ${colors.deepOrange[700]};
-              background-color: ${colors.grey[200]};
+              padding: 0 8px;
               zoom: 0.8;
             }
 
@@ -225,7 +224,7 @@ export const theme = createTheme(
 
             code {
               margin-right: 2px;
-              padding: 2px 8px;
+              padding: 0 8px;
               border-radius: 4px;
               color: ${colors.cyan[700]};
               background-color: ${colors.grey[100]};
@@ -252,7 +251,7 @@ export const theme = createTheme(
               border: 1px solid ${colors.grey[300]};
 
               code {
-                padding: 2px 8px;
+                padding: 0 8px;
                 border-radius: 4px;
                 background-color: ${colors.grey[100]};
                 zoom: 0.9;

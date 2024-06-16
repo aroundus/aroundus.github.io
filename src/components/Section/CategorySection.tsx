@@ -36,7 +36,7 @@ export function CategorySection({ categories, selectedCategory, onClick: handleC
               textTransform: 'unset',
               '& .MuiTypography-root': {
                 fontFamily: 'Montserrat',
-                fontWeight: 700,
+                fontWeight: 600,
               },
             }}
             variant={selectedCategory === category ? 'contained' : 'outlined'}

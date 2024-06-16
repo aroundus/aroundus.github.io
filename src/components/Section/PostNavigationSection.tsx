@@ -33,7 +33,7 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
               color={colors.grey[500]}
               variant="caption"
             >
-              <ArrowLeftIcon sx={{ ml: -1, height: 12 }} />
+              <ArrowLeftIcon sx={{ ml: -2, height: 10 }} />
               이전 글
             </Typography>
             <Typography
@@ -66,7 +66,7 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
               variant="caption"
             >
               다음 글
-              <ArrowRightIcon sx={{ mr: -2, height: 12 }} />
+              <ArrowRightIcon sx={{ mr: -2, height: 10 }} />
             </Typography>
             <Typography
               color={colors.grey[600]}

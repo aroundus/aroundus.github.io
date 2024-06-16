@@ -629,13 +629,13 @@ kubectl get ingresses --namespace=<your-namespace>
 >
 > (+) *- 필자의 경험에 의하면 -* `Unhealthy` 경고를 표시하더라도 `paths` 필드에 해당하는 오브젝트를 배포하면 주소를 찾으면서 엔드포인트 값이 들어오는 것으로 보입니다.
 
-브라우저에서 [`<your-drone-server-host>`]() 접속 후 다음과 같은 화면이 보인다면 드론 서버가 잘 구동된 것입니다.
+브라우저에서 `<your-drone-server-host>` 접속 후 다음과 같은 화면이 보인다면 드론 서버가 잘 구동된 것입니다.
 
 ![GATSBY_EMPTY_ALT](./drone-ci-repositories.jpg)
 
 ### [ERROR] Login Failed. Bad credentials
 
-[`<your-drone-server-host>`/login/error?message=Bad%20credentials]() 주소로 이동하면서 다음과 같은 문구를 화면에 표시하면 `DRONE_GITHUB_CLIENT_SECRET` 값을 검토할 필요가 있습니다.
+`<your-drone-server-host>`/login/error?message=Bad%20credentials 주소로 이동하면서 다음과 같은 문구를 화면에 표시하면 `DRONE_GITHUB_CLIENT_SECRET` 값을 검토할 필요가 있습니다.
 
 ![GATSBY_EMPTY_ALT](./drone-ci-login-failed-bad-credentials.jpg)
 
