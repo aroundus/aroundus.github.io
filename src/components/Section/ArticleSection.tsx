@@ -13,7 +13,7 @@ export const ArticleSection = forwardRef<HTMLElement, ArticleSectionProps>(funct
       disableGutters
       maxWidth="md"
       ref={ref}
-      sx={{ mx: 'auto', px: 8, py: 10 }}
+      sx={{ mx: 'auto', px: 6, py: 10 }}
     />
   );
 });

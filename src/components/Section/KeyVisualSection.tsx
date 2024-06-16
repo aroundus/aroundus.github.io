@@ -88,7 +88,7 @@ export function KeyVisualSection({
     <section
       className={styles.container}
       style={{
-        padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 12 : 16)} ${theme.spacing(16)}`,
+        padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 8 : 16)} ${theme.spacing(24)}`,
       }}
     >
       <div className={styles.content}>

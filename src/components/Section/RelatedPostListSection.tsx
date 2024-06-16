@@ -33,19 +33,18 @@ export function RelatedPostListSection({ query, posts }: RelatedPostListSectionP
       component="section"
       disableGutters
       maxWidth="md"
-      sx={{ mx: 'auto', px: 8, py: 5 }}
+      sx={{ mx: 'auto', p: 6 }}
     >
       <Typography
         color={colors.grey[500]}
         variant="caption"
       >
-        <RecommendIcon sx={{ mx: 1, height: 20, verticalAlign: 'middle' }} />
+        <RecommendIcon sx={{ height: 20, verticalAlign: 'middle' }} />
         <strong style={{ color: colors.cyan[600] }}>{query}</strong> 관련 글
       </Typography>
-      <List sx={{ mx: 3, mt: 2 }}>
+      <List sx={{ mt: 2 }}>
         {posts.map((post) => (
           <StyledListItem
-            disableGutters
             divider
             key={post.id}
             sx={{ py: 1 }}

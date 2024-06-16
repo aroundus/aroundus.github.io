@@ -28,7 +28,7 @@ export function PostSearchSection({ onChange: handleChange }: PostSearchSectionP
       <Container
         disableGutters
         maxWidth="md"
-        sx={{ mx: 'auto', p: 6 }}
+        sx={{ mx: 'auto', pt: 2, pb: 4, px: 6 }}
       >
         <Box
           alignItems="flex-end"

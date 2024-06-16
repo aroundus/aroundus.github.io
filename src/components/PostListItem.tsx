@@ -11,14 +11,9 @@ interface PostListItemProps {
 
 export function PostListItem({ post }: PostListItemProps) {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
-    '&': {
-      borderBottom: 'none',
-    },
-
     '&:hover': {
       backgroundColor: 'transparent',
     },
-
     '& .MuiTypography-h4': {
       transition: 'color 0.2s linear',
 
@@ -42,7 +37,7 @@ export function PostListItem({ post }: PostListItemProps) {
     >
       <StyledContent
         divider
-        sx={{ px: 8, py: 10, justifyContent: 'center' }}
+        sx={{ px: 4, py: 8, justifyContent: 'center' }}
         onClick={handleClick}
       >
         <Grid sx={{ width: '100%', maxWidth: 640 }}>

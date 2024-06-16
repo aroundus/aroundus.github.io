@@ -26,8 +26,6 @@ export const theme = createTheme(
     },
     typography: {
       fontFamily: BASE_FONT_FAMILY,
-      fontSize: 16,
-      htmlFontSize: 10,
       button: {
         fontWeight: 'normal',
       },
@@ -68,15 +66,15 @@ export const theme = createTheme(
         styleOverrides: `
         html {
           -webkit-font-smoothing: antialiased;
-          font-size: 10px;
         }
 
         body {
           background-color: ${colors.common.white};
           color: ${colors.common.black};
           font-family: ${BASE_FONT_FAMILY};
+          font-size: 16px;
           font-weight: 400;
-          line-height: 1.4;
+          line-height: 1.5;
           overflow-wrap: break-word;
           word-break: keep-all;
         }

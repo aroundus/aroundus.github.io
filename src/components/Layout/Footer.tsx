@@ -67,7 +67,7 @@ export function Footer() {
     <footer className={styles.container}>
       <Container
         maxWidth="md"
-        sx={{ mx: 'auto', px: isMobile ? 12 : 0, py: isMobile ? 10 : 20 }}
+        sx={{ mx: 'auto', px: isMobile ? 6 : 0, py: isMobile ? 10 : 20 }}
         disableGutters
       >
         <Box>

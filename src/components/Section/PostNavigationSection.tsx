@@ -15,7 +15,7 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
       component="section"
       disableGutters
       maxWidth="md"
-      sx={{ mx: 'auto', px: 8, py: 5 }}
+      sx={{ mx: 'auto', p: 6 }}
     >
       <Box
         display="flex"
