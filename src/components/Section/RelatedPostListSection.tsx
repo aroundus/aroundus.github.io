@@ -59,7 +59,8 @@ export function RelatedPostListSection({ query, posts }: RelatedPostListSectionP
               {post.title}
             </Typography>
             <Typography
-              color={colors.grey[500]}
+              color={colors.grey[700]}
+              sx={{ fontVariantNumeric: 'tabular-nums' }}
               variant="body2"
             >
               {post.date}
