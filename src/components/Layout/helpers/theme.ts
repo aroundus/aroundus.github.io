@@ -210,7 +210,16 @@ export const theme = createTheme(
           }
 
           li {
-            font-size: 0.86em;
+            font-size: 14px;
+
+            &:last-child {
+              margin-bottom: 8px;
+            }
+
+            p {
+              margin-bottom: 4px;
+              margin-top: 4px;
+            }
 
             a {
               border-bottom: 2px solid ${colors.cyan[400]};
@@ -223,12 +232,18 @@ export const theme = createTheme(
             }
 
             code {
-              margin-right: 2px;
-              padding: 0 8px;
+              background-color: ${colors.grey[100]};
               border-radius: 4px;
               color: ${colors.cyan[700]};
-              background-color: ${colors.grey[100]};
+              margin-right: 2px;
+              padding: 0 8px;
               zoom: 0.86;
+            }
+
+            table {
+              font-size: 14px;
+              margin-top: 4px;
+              margin-bottom: 8px;
             }
           }
 
