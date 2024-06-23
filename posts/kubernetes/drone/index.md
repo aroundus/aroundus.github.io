@@ -52,7 +52,7 @@ Drone 공식 문서의 [GitHub](https://docs.drone.io/server/provider/github/) �
 
 ## Drone 템플릿 추출
 
-필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Drone.io](https://github.com/helm/charts/tree/master/stable/drone) 내용을 참조해 주세요.
+필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Drone.io](https://github.com/helm/charts/tree/master/stable/drone) 내용을 확인해 주세요.
 
 [values.yaml](https://github.com/helm/charts/blob/master/stable/drone/values.yaml) 템플릿을 복사한 후 다음 필드를 수정해 주세요.
 
@@ -167,7 +167,7 @@ kubectl get namespaces
 echo -n '<drone-rpc-secret>' | base64
 ```
 
-* `-n`: 개행 문자 인코딩을 방지합니다. (자세한 정보는 `$ man echo` 내용을 참조해 주세요.)
+* `-n`: 개행 문자 인코딩을 방지합니다. (자세한 정보는 `$ man echo` 내용을 확인해 주세요.)
 
 
 변환한 정보를 `<secret>` 필드에 삽입합니다.

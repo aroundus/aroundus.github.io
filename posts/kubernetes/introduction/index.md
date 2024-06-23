@@ -8,7 +8,7 @@ date: 2020-05-25
 
 # 시작하기
 
-> 노마드 코더의 [쿠버네티스가 대세가 된 이유 3가지](https://youtu.be/S3FVcdZcZnA) 영상의 내용을 재구성한 글입니다. 자세한 정보는 [쿠버네티스 공식 문서](https://kubernetes.io/ko/docs/concepts/overview/what-is-kubernetes/) 내용을 참조해 주세요.
+> 노마드 코더의 [쿠버네티스가 대세가 된 이유 3가지](https://youtu.be/S3FVcdZcZnA) 영상의 내용을 재구성한 글입니다. 자세한 정보는 [쿠버네티스 공식 문서](https://kubernetes.io/ko/docs/concepts/overview/what-is-kubernetes/) 내용을 확인해 주세요.
 
 **Kubernetes**(쿠버네티스)는 구글이 만든 컨테이너화된 애플리케이션을 자동으로 배포, 스케일링 및 관리하는 **오픈 소스 컨테이너 관리 플랫폼**입니다. 줄여서 K8s(케이츠, 케이에이츠) 또는 Kube(큐브)로 부릅니다. 구글이 설립한 [CNCF](https://www.cncf.io/)<small>(Cloud Native Computing Foundation, 클라우드 네이티브 컴퓨팅 재단)</small>의 졸업 단계 프로젝트에 속한다고 하네요.
 

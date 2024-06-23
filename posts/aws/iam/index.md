@@ -18,7 +18,7 @@ date: 2020-05-18
 
 ## 사용자 추가
 
-IAM 사용자의 주된 용도는 대화형 작업을 위해 AWS Management 콘솔에 로그인하고 API 또는 CLI를 사용해 AWS 서비스로 프로그래밍 방식의 요청을 보내는 데 사용할 수 있는 능력을 사람들에게 제공하는 것입니다. 자세한 정보는 Amazon EKS 워크샵 문서의 [IAM 사용자 만들기](https://awskrug.github.io/eks-workshop/prerequisites/self_paced/account/) 내용을 참조해 주세요.
+IAM 사용자의 주된 용도는 대화형 작업을 위해 AWS Management 콘솔에 로그인하고 API 또는 CLI를 사용해 AWS 서비스로 프로그래밍 방식의 요청을 보내는 데 사용할 수 있는 능력을 사람들에게 제공하는 것입니다. 자세한 정보는 Amazon EKS 워크샵 문서의 [IAM 사용자 만들기](https://awskrug.github.io/eks-workshop/prerequisites/self_paced/account/) 내용을 확인해 주세요.
 
 |종류|설명|
 |:---:|---|

@@ -11,7 +11,7 @@ date: 2023-05-10
 
 # Dart Sass
 
-자세한 정보는 [LibSass is Deprecated](https://sass-lang.com/blog/libsass-is-deprecated/) 내용을 참조해 주세요.
+자세한 정보는 [LibSass is Deprecated](https://sass-lang.com/blog/libsass-is-deprecated/) 내용을 확인해 주세요.
 
 ## package.json
 
@@ -22,7 +22,7 @@ date: 2023-05-10
 
 ## craco.config.js
 
-sass-loader 옵션에서 implementation node-sass 기본값을 sass로 변경합니다. 자세한 정보는 [Use Dart Sass](https://craco.js.org/recipes/use-dart-sass/) 내용을 참조해 주세요.
+sass-loader 옵션에서 implementation node-sass 기본값을 sass로 변경합니다. 자세한 정보는 [Use Dart Sass](https://craco.js.org/recipes/use-dart-sass/) 내용을 확인해 주세요.
 
 ```diff
 style: {

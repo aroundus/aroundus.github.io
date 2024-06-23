@@ -16,7 +16,7 @@ date: 2023-10-10
 * 스프레드시트 서식 업데이트
 * 연결된 시트 관리
 
-Google Sheets API는 할당량 요청 한도를 초과해도 추가 요금이 발생하지 않으며 분당 할당량을 지키면 하루에 전송할 수 있는 요청 수에 제한이 없습니다. 자세한 정보는 [사용 제한](https://developers.google.com/sheets/api/limits?hl=ko) 내용을 참조해 주세요.
+Google Sheets API는 할당량 요청 한도를 초과해도 추가 요금이 발생하지 않으며 분당 할당량을 지키면 하루에 전송할 수 있는 요청 수에 제한이 없습니다. 자세한 정보는 [사용 제한](https://developers.google.com/sheets/api/limits?hl=ko) 내용을 확인해 주세요.
 
 ## 검토하기
 
