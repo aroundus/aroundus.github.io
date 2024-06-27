@@ -2,17 +2,11 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import {
-  Box, colors, Container, Grid, Link, Typography, useMediaQuery,
-} from '@mui/material';
+import { Box, colors, Container, Grid, Link, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import {
-  GitHub as GitHubIcon,
-  Instagram as InstagramIcon,
-  Mail as MailIcon,
-} from '@mui/icons-material';
+import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
 
-import Logo from '~components/Logo';
+import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
 
 interface Data {
   site: {
@@ -32,39 +26,37 @@ interface Data {
   };
 }
 
-const Footer = () => {
+export function Footer() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const { site }: Data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            author {
-              name
-              summary
-              email
-              url {
-                github
-                instagram
-              }
+  const { site }: Data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          author {
+            name
+            summary
+            email
+            url {
+              github
+              instagram
             }
-            description
           }
+          description
         }
       }
-    `,
-  );
+    }
+  `);
 
   const meta = site.siteMetadata;
 
   const useStyles = createUseStyles({
     container: {
       '&': `
-        margin-top: ${theme.spacing(12)};
         border-top: 2px solid ${colors.cyan[100]};
+        margin-top: ${theme.spacing(12)};
       `,
     },
   });
@@ -75,47 +67,45 @@ const Footer = () => {
     <footer className={styles.container}>
       <Container
         maxWidth="md"
-        sx={{ mx: 'auto', px: isMobile ? 12 : 0, py: isMobile ? 10 : 20 }}
+        sx={{ mx: 'auto', px: isMobile ? 6 : 0, py: isMobile ? 10 : 20 }}
         disableGutters
       >
         <Box>
           <Grid
-            spacing={isMobile ? 6 : 12}
-            justifyContent="space-between"
             container
+            justifyContent="space-between"
+            spacing={isMobile ? 6 : 12}
           >
             <Grid
-              sx={{ maxWidth: 260 }}
               item
+              sx={{ maxWidth: 260 }}
             >
-              <Logo
-                height={14}
-                style={{ fill: colors.common.black }}
-              />
-              <Typography
-                variant="caption"
-                sx={{ ml: 2, verticalAlign: 'text-bottom' }}
+              <Box
+                alignItems="baseline"
+                display="flex"
+                gap={1}
               >
-                어라운드어스
-              </Typography>
+                <SymbolmarkIcon height={13} />
+                <LogoIcon height={13} />
+                <Typography variant="caption">어라운드어스</Typography>
+              </Box>
               <Typography
-                variant="subtitle1"
-                fontSize={12}
-                color={colors.grey[700]}
+                color={colors.grey[600]}
+                sx={{ mb: 3, mt: 1 }}
+                variant="body2"
               >
                 {meta.description}
               </Typography>
               <Typography
-                variant="caption"
-                component="p"
                 color={colors.grey[700]}
-                sx={{ mt: 3 }}
+                component="p"
+                variant="caption"
               >
                 이 블로그는{' '}
                 <Link
                   href="https://www.gatsbyjs.com/"
-                  underline="none"
                   target="_blank"
+                  underline="none"
                 >
                   Gatsby
                 </Link>
@@ -124,15 +114,15 @@ const Footer = () => {
             </Grid>
             <Grid item>
               <Typography
-                variant="subtitle1"
                 fontSize={15}
                 fontWeight={600}
+                variant="subtitle1"
               >
                 {meta.author.name}
               </Typography>
               <Typography
-                variant="subtitle1"
                 fontSize={12}
+                variant="subtitle1"
               >
                 {meta.author.summary}
               </Typography>
@@ -146,8 +136,8 @@ const Footer = () => {
                   target="_blank"
                 >
                   <GitHubIcon
-                    fontSize="small"
                     color="action"
+                    fontSize="small"
                   />
                 </Link>
                 <Link
@@ -155,8 +145,8 @@ const Footer = () => {
                   target="_blank"
                 >
                   <InstagramIcon
-                    fontSize="small"
                     color="action"
+                    fontSize="small"
                   />
                 </Link>
                 <Link
@@ -164,8 +154,8 @@ const Footer = () => {
                   target="_blank"
                 >
                   <MailIcon
-                    fontSize="small"
                     color="action"
+                    fontSize="small"
                   />
                 </Link>
               </Box>
@@ -175,6 +165,4 @@ const Footer = () => {
       </Container>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,10 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import dotenv from 'dotenv';
 import path from 'path';
 import { GatsbyNode as GatsbyNodeType } from 'gatsby';
 import { GitalkPluginHelper } from 'gatsby-plugin-gitalk';
 import { createFilePath } from 'gatsby-source-filesystem';
-import type { AnyObject } from '~types/global';
+
+import type { AnyObject } from '@/types/global';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const gitalkCreateIssueToken = process.env.GITALK_CREATE_ISSUE_TOKEN;
@@ -18,17 +18,8 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   const fetchedPostsQuery = await graphql(`
     {
       allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            draft: {
-              ne: true
-            }
-          }
-        }
-        sort: {
-          fields: [frontmatter___date, frontmatter___index, frontmatter___title],
-          order: [DESC, DESC, ASC]
-        }
+        filter: { frontmatter: { draft: { ne: true } } }
+        sort: { fields: [frontmatter___date, frontmatter___index, frontmatter___title], order: [DESC, DESC, ASC] }
       ) {
         nodes {
           id
@@ -48,10 +39,7 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   `);
 
   if (fetchedPostsQuery.errors) {
-    reporter.panicOnBuild(
-      'There was an error loading your blog posts',
-      fetchedPostsQuery.errors as Error,
-    );
+    reporter.panicOnBuild('There was an error loading your blog posts', fetchedPostsQuery.errors as Error);
     return;
   }
 
@@ -91,10 +79,12 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
         personalToken: gitalkCreateIssueToken,
       };
 
-      issueOptionsPromises.push((() => {
-        GitalkPluginHelper.createIssue(issueOptions);
-        reporter.success(`createIssue - ${issueOptions.title}`);
-      })());
+      issueOptionsPromises.push(
+        (() => {
+          GitalkPluginHelper.createIssue(issueOptions);
+          reporter.success(`createIssue - ${issueOptions.title}`);
+        })(),
+      );
     }
 
     await Promise.all(issueOptionsPromises);

@@ -39,9 +39,9 @@ kubectl port-forward service/maxscale 4006:4006 --namespace=<your-namespace>
 
 ### Deployment
 
-**Deployment**(디플로이먼트) 오브젝트는 파드와 레플리카셋에 대한 선언적 업데이트를 제공합니다. 자세한 정보는 쿠버네티스 공식 문서의 [디플로이먼트](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/) 내용을 참조해 주세요.
+**Deployment**(디플로이먼트) 오브젝트는 파드와 레플리카셋에 대한 선언적 업데이트를 제공합니다. 자세한 정보는 쿠버네티스 공식 문서의 [디플로이먼트](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/) 내용을 확인해 주세요.
 
-`containers` 필드에 컨테이너 이미지에 대한 정보를 입력합니다. 자세한 정보는 쿠버네티스 공식 문서의 [컨테이너 이미지](https://kubernetes.io/ko/docs/concepts/containers/#컨테이너-이미지) 내용을 참조해 주세요.
+`containers` 필드에 컨테이너 이미지에 대한 정보를 입력합니다. 자세한 정보는 쿠버네티스 공식 문서의 [컨테이너 이미지](https://kubernetes.io/ko/docs/concepts/containers/#컨테이너-이미지) 내용을 확인해 주세요.
 
 * `image`: 컨테이너가 항상 같은 버전의 이미지를 사용하도록 하기 위해 `<image>:<digest>` 형태의 **다이제스트** 정보를 명시하는 것이 좋습니다. 다이제스트는 특정 버전의 이미지를 고유하게 식별하며 다이제스트 값을 변경하지 않는 한 쿠버네티스에 의해 절대로 변경되지 않습니다.
 * `imagePullPolicy`: 이미지 Pull(풀) 정책을 설정합니다.

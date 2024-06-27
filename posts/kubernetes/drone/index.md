@@ -52,7 +52,7 @@ Drone 공식 문서의 [GitHub](https://docs.drone.io/server/provider/github/) �
 
 ## Drone 템플릿 추출
 
-필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Drone.io](https://github.com/helm/charts/tree/master/stable/drone) 내용을 참조해 주세요.
+필자는 **Helm**(헬름)에서 제공하는 차트를 사용하였습니다. 헬름 차트에 대한 자세한 정보는 헬름 공식 문서의 [Drone.io](https://github.com/helm/charts/tree/master/stable/drone) 내용을 확인해 주세요.
 
 [values.yaml](https://github.com/helm/charts/blob/master/stable/drone/values.yaml) 템플릿을 복사한 후 다음 필드를 수정해 주세요.
 
@@ -167,7 +167,7 @@ kubectl get namespaces
 echo -n '<drone-rpc-secret>' | base64
 ```
 
-* `-n`: 개행 문자 인코딩을 방지합니다. (자세한 정보는 `$ man echo` 내용을 참조해 주세요.)
+* `-n`: 개행 문자 인코딩을 방지합니다. (자세한 정보는 `$ man echo` 내용을 확인해 주세요.)
 
 
 변환한 정보를 `<secret>` 필드에 삽입합니다.
@@ -629,13 +629,13 @@ kubectl get ingresses --namespace=<your-namespace>
 >
 > (+) *- 필자의 경험에 의하면 -* `Unhealthy` 경고를 표시하더라도 `paths` 필드에 해당하는 오브젝트를 배포하면 주소를 찾으면서 엔드포인트 값이 들어오는 것으로 보입니다.
 
-브라우저에서 [`<your-drone-server-host>`]() 접속 후 다음과 같은 화면이 보인다면 드론 서버가 잘 구동된 것입니다.
+브라우저에서 `<your-drone-server-host>` 접속 후 다음과 같은 화면이 보인다면 드론 서버가 잘 구동된 것입니다.
 
 ![GATSBY_EMPTY_ALT](./drone-ci-repositories.jpg)
 
 ### [ERROR] Login Failed. Bad credentials
 
-[`<your-drone-server-host>`/login/error?message=Bad%20credentials]() 주소로 이동하면서 다음과 같은 문구를 화면에 표시하면 `DRONE_GITHUB_CLIENT_SECRET` 값을 검토할 필요가 있습니다.
+`<your-drone-server-host>`/login/error?message=Bad%20credentials 주소로 이동하면서 다음과 같은 문구를 화면에 표시하면 `DRONE_GITHUB_CLIENT_SECRET` 값을 검토할 필요가 있습니다.
 
 ![GATSBY_EMPTY_ALT](./drone-ci-login-failed-bad-credentials.jpg)
 

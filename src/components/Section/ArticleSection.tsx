@@ -5,17 +5,15 @@ interface ArticleSectionProps {
   html: string;
 }
 
-const ArticleSection = forwardRef<HTMLElement, ArticleSectionProps>(({
-  html,
-}, ref) => (
-  <Container
-    ref={ref}
-    component="section"
-    maxWidth="md"
-    sx={{ mx: 'auto', px: 8, py: 10 }}
-    dangerouslySetInnerHTML={{ __html: html }}
-    disableGutters
-  />
-));
-
-export default ArticleSection;
+export const ArticleSection = forwardRef<HTMLElement, ArticleSectionProps>(function ({ html }, ref) {
+  return (
+    <Container
+      component="section"
+      dangerouslySetInnerHTML={{ __html: html }}
+      disableGutters
+      maxWidth="md"
+      ref={ref}
+      sx={{ mx: 'auto', px: 6, py: 10 }}
+    />
+  );
+});

@@ -99,7 +99,7 @@ declare module 'gatsby-plugin-gitalk' {
        *
        * @default "last"
        */
-      pagerDirection?: "last" | "first";
+      pagerDirection?: 'last' | 'first';
 
       /**
        * By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users.
@@ -153,16 +153,9 @@ declare module 'gatsby-plugin-gitalk' {
     export { createIssue };
   }
 
-  export type IssueOptions = Pick<Gitalk.GitalkOptions,
-    'clientID' |
-    'clientSecret' |
-    'repo' |
-    'owner' |
-    'id' |
-    'title' |
-    'description' |
-    'url' |
-    'personalToken'
+  export type IssueOptions = Pick<
+    Gitalk.GitalkOptions,
+    'clientID' | 'clientSecret' | 'repo' | 'owner' | 'id' | 'title' | 'description' | 'url' | 'personalToken'
   >;
 
   declare function createIssue(options: IssueOptions, reporter?: Console): Promise<void>;

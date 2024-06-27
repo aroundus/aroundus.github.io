@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Property } from 'csstype';
 import { createUseStyles } from 'react-jss';
 
-import {
-  Box, Step, StepLabel, Stepper, Typography,
-} from '@mui/material';
+import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 interface FloatingTOCProps {
@@ -17,19 +15,19 @@ interface TOCStep {
   yOffset: number;
 }
 
-const FloatingTOC = ({
-  html: htmlString,
-  target,
-}: FloatingTOCProps) => {
+export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
   const theme = useTheme();
 
-  const styles = createUseStyles({
-    container: `
-      transition: position 0.2s;
-    `,
-  }, {
-    name: 'FloatingTOC',
-  })();
+  const styles = createUseStyles(
+    {
+      container: `
+        transition: position 0.2s;
+      `,
+    },
+    {
+      name: 'FloatingTOC',
+    },
+  )();
 
   const [activeStep, setActiveStep] = useState(0);
   const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
@@ -37,7 +35,7 @@ const FloatingTOC = ({
   const [xOffset, setXOffset] = useState(0);
   const [yOffset, setYOffset] = useState(0);
 
-  const setTOCStepsOffset = () => {
+  function setTOCStepsOffset() {
     const parser = new DOMParser();
     const html = parser.parseFromString(htmlString, 'text/html');
     const steps: TOCStep[] = [];
@@ -72,17 +70,17 @@ const FloatingTOC = ({
     });
 
     setTOCSteps(steps);
-  };
+  }
 
-  const handleStepClick = (top: number) => {
+  function handleStepClick(top: number) {
     window.scroll({
       top,
       behavior: 'smooth',
     });
-  };
+  }
 
   useEffect(() => {
-    const listener = () => {
+    function listener() {
       const { pageYOffset } = window;
 
       tocSteps.forEach((step, index) => {
@@ -90,7 +88,7 @@ const FloatingTOC = ({
           setActiveStep(index);
         }
       });
-    };
+    }
 
     listener();
     window.addEventListener('scroll', listener);
@@ -179,6 +177,4 @@ const FloatingTOC = ({
       </Box>
     </aside>
   );
-};
-
-export default FloatingTOC;
+}

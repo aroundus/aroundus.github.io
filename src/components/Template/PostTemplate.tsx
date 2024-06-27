@@ -5,15 +5,14 @@ import isEmpty from 'lodash-es/isEmpty';
 import { Divider } from '@mui/material';
 import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
-import Layout from '~components/Layout';
-import {
-  CommentSection, PostNavigationSection, RelatedPostListSection,
-} from '~components/Section';
-import SEO from '~components/SEO';
-import Post from '~components/Post';
-import { getPostCoverImageURL } from '~helpers/image';
-import { getSearchPosts } from '~helpers/search';
-import type { AnyObject, Post as PostType } from '~types/global';
+import { Layout } from '@/components/Layout';
+import { Post } from '@/components/Post';
+import { CommentSection, PostNavigationSection, RelatedPostListSection } from '@/components/Section';
+import { SEO } from '@/components/SEO';
+import { getPostCoverImageURL } from '@/helpers/image';
+import { getSearchPosts } from '@/helpers/search';
+import type { AnyObject } from '@/types/global';
+import type { Post as PostType } from '@/types/post';
 
 interface PostTemplateProps {
   data: {
@@ -23,12 +22,7 @@ interface PostTemplateProps {
   };
 }
 
-const PostTemplate = ({
-  data,
-  data: {
-    markdownRemark,
-  },
-}: PostTemplateProps) => {
+export default function PostTemplate({ data, data: { markdownRemark } }: PostTemplateProps) {
   const post = {
     id: markdownRemark.id,
     path: markdownRemark.fields.slug,
@@ -39,26 +33,30 @@ const PostTemplate = ({
 
   const prevPost = data.prevPost
     ? {
-      path: data.prevPost.fields.slug,
-      category: data.prevPost.frontmatter.category,
-      title: data.prevPost.frontmatter.title,
-    } : undefined;
+        path: data.prevPost.fields.slug,
+        category: data.prevPost.frontmatter.category,
+        title: data.prevPost.frontmatter.title,
+      }
+    : undefined;
 
   const nextPost = data.nextPost
     ? {
-      path: data.nextPost.fields.slug,
-      category: data.nextPost.frontmatter.category,
-      title: data.nextPost.frontmatter.title,
-    } : undefined;
+        path: data.nextPost.fields.slug,
+        category: data.nextPost.frontmatter.category,
+        title: data.nextPost.frontmatter.title,
+      }
+    : undefined;
 
   const [searchPosts, setSearchPosts] = useState<PostType[]>([]);
 
   useEffect(() => {
     if (post.category) {
-      setSearchPosts(getSearchPosts(post.category)
-        .filter((searchPost) => searchPost.id !== post.id)
-        .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
-        .slice(0, 5));
+      setSearchPosts(
+        getSearchPosts(post.category)
+          .filter((searchPost) => searchPost.id !== post.id)
+          .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+          .slice(0, 5),
+      );
     }
   }, [post.category]);
 
@@ -94,14 +92,10 @@ const PostTemplate = ({
       </Layout>
     </>
   );
-};
+}
 
 export const query = graphql`
-  query Post(
-    $id: String!
-    $prevPostID: String
-    $nextPostID: String
-  ) {
+  query Post($id: String!, $prevPostID: String, $nextPostID: String) {
     site {
       siteMetadata {
         title
@@ -113,9 +107,7 @@ export const query = graphql`
         slug
       }
       html
-      tableOfContents(
-        maxDepth: 2
-      )
+      tableOfContents(maxDepth: 2)
       frontmatter {
         category
         index
@@ -145,5 +137,3 @@ export const query = graphql`
     }
   }
 `;
-
-export default PostTemplate;

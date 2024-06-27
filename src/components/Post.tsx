@@ -3,19 +3,17 @@ import React, { useRef } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import FloatingTOC from '~components/FloatingTOC';
-import { ArticleSection, KeyVisualSection } from '~components/Section';
-import type { Post as PostType } from '~types/global';
+import { FloatingTOC } from '@/components/FloatingTOC';
+import { ArticleSection, KeyVisualSection } from '@/components/Section';
+import type { Post as PostType } from '@/types/post';
 
 interface PostProps {
   post: PostType;
 }
 
-const Post = ({
-  post,
-}: PostProps) => {
+export function Post({ post }: PostProps) {
   const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('xl'));
 
   const articleRef = useRef<HTMLElement>(null);
 
@@ -24,11 +22,11 @@ const Post = ({
       <KeyVisualSection post={post} />
       {post.html && (
         <ArticleSection
-          ref={articleRef}
           html={post.html}
+          ref={articleRef}
         />
       )}
-      {post.tableOfContents && !isTablet && (
+      {post.tableOfContents && isDesktop && (
         <FloatingTOC
           html={post.tableOfContents}
           target={articleRef.current}
@@ -36,6 +34,4 @@ const Post = ({
       )}
     </>
   );
-};
-
-export default Post;
+}

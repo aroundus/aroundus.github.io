@@ -19,20 +19,18 @@ interface SEOProps {
   image?: string;
 }
 
-const SEO = (props: SEOProps) => {
-  const { site }: Data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            image
-          }
+export function SEO(props: SEOProps) {
+  const { site }: Data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          image
         }
       }
-    `,
-  );
+    }
+  `);
 
   const title = props.title || site.siteMetadata.title;
   const description = props.description || site.siteMetadata.description;
@@ -41,12 +39,18 @@ const SEO = (props: SEOProps) => {
 
   return (
     <Helmet
+      defaultTitle={site.siteMetadata.title}
       htmlAttributes={{
         lang: 'ko',
       }}
-      defaultTitle={site.siteMetadata.title}
-      title={props.title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
+        },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
+        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
+      ]}
       meta={[
         { name: 'description', content: description },
         { property: 'og:type', content: 'website' },
@@ -63,13 +67,8 @@ const SEO = (props: SEOProps) => {
         { property: 'twitter:description', content: description },
         { property: 'twitter:image', content: props.image },
       ]}
-      link={[
-        { rel: 'stylesheet', href: 'https://v1.fontapi.ir/css/SFMono' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
-      ]}
+      title={props.title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
     />
   );
-};
-
-export default SEO;
+}

@@ -23,7 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
@@ -63,6 +65,7 @@ jobs:
           echo "GITALK_GITHUB_CLIENT_SECRET=${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}" >> .env.production
           echo "GITALK_CREATE_ISSUE_TOKEN=${{ secrets.GITALK_CREATE_ISSUE_TOKEN }}" >> .env.production
           echo "GOOGLE_SITE_VERIFICATION=${{ secrets.GOOGLE_SITE_VERIFICATION }}" >> .env.production
+          echo "NAVER_SITE_VERIFICATION=${{ secrets.NAVER_SITE_VERIFICATION }}" >> .env.production
 
           echo "GATSBY_TITLE=$GATSBY_TITLE" >> .env.production
           echo "GATSBY_DESCRIPTION=$GATSBY_DESCRIPTION" >> .env.production

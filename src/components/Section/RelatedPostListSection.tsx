@@ -1,30 +1,26 @@
 import React from 'react';
 
-import {
-  colors, Container, List, ListItemButton, ListItemButtonProps, Typography,
-} from '@mui/material';
+import { colors, Container, List, ListItemButton, ListItemButtonProps, Typography } from '@mui/material';
 import { Recommend as RecommendIcon } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '~types/global';
+import type { Post } from '@/types/post';
 
 interface RelatedPostListSectionProps {
-  query: string;
   posts: Post[];
+  query: string;
 }
 
-const RelatedPostListSection = ({
-  query,
-  posts,
-}: RelatedPostListSectionProps) => {
+export function RelatedPostListSection({ query, posts }: RelatedPostListSectionProps) {
   const StyledListItem = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
-      transition: 'color 0.2s linear',
       justifyContent: 'space-between',
+      transition: 'color 0.2s linear',
     },
+
     '&:hover': {
-      color: colors.cyan[600],
       backgroundColor: 'transparent',
+      color: colors.cyan[600],
     },
   }));
 
@@ -35,39 +31,37 @@ const RelatedPostListSection = ({
   return (
     <Container
       component="section"
-      maxWidth="md"
-      sx={{ mx: 'auto', px: 8, py: 5 }}
       disableGutters
+      maxWidth="md"
+      sx={{ mx: 'auto', p: 6 }}
     >
       <Typography
-        variant="caption"
         color={colors.grey[500]}
+        variant="caption"
       >
-        <RecommendIcon sx={{ mx: 1, height: 20, verticalAlign: 'middle' }} />
+        <RecommendIcon sx={{ height: 20, verticalAlign: 'middle' }} />
         <strong style={{ color: colors.cyan[600] }}>{query}</strong> 관련 글
       </Typography>
-      <List sx={{ mx: 3, mt: 2 }}>
+      <List sx={{ mt: 2 }}>
         {posts.map((post) => (
           <StyledListItem
+            divider
             key={post.id}
             sx={{ py: 1 }}
-            disableGutters
-            divider
             onClick={() => handleClick(post.path as string)}
           >
             <Typography
-              variant="subtitle1"
-              fontSize="0.8em"
               flex="1 0 0"
-              sx={{ mr: 4 }}
               noWrap
+              sx={{ mr: 4 }}
+              variant="body2"
             >
               {post.title}
             </Typography>
             <Typography
-              variant="subtitle1"
-              color={colors.grey[500]}
-              fontSize={13}
+              color={colors.grey[700]}
+              sx={{ fontVariantNumeric: 'tabular-nums' }}
+              variant="body2"
             >
               {post.date}
             </Typography>
@@ -76,6 +70,4 @@ const RelatedPostListSection = ({
       </List>
     </Container>
   );
-};
-
-export default RelatedPostListSection;
+}
