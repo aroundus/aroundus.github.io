@@ -57,7 +57,7 @@ IAM 태그에 이메일, 직책 등 사용자에 대한 부가 정보를 설정�
 
 ## 사용자 설정
 
-다음 명령어를 입력합니다.
+다음 명령어를 실행합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 aws configure
@@ -86,7 +86,7 @@ aws configure list
 
 ![GATSBY_EMPTY_ALT](./aws-configure.jpg)
 
-다음 명령어를 입력하면 사용자 프로필을 변경할 수 있습니다.
+다음 명령어를 실행하면 사용자 프로필을 변경할 수 있습니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 export AWS_DEFAULT_PROFILE=<your-iam-user-name>

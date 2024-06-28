@@ -146,7 +146,7 @@ release "drone" uninstalled
 
 ### Namespace
 
-쿠버네티스에 드론 서버를 설치하기 위해 가장 먼저 해야 할 일은 **네임스페이스**를 생성하는 것입니다. 다음 명령어를 입력합니다.
+쿠버네티스에 드론 서버를 설치하기 위해 가장 먼저 해야 할 일은 **네임스페이스**를 생성하는 것입니다. 다음 명령어를 실행합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl create namespace <insert-your-namespace-name>
@@ -639,13 +639,13 @@ kubectl get ingresses --namespace=<your-namespace>
 
 ![GATSBY_EMPTY_ALT](./drone-ci-login-failed-bad-credentials.jpg)
 
-다음 명령어를 입력하여 `drone-server` 내부로 접속합니다.
+다음 명령어를 실행하여 `drone-server` 내부로 접속합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl exec -it <drone-server-pod> --namespace=<your-namespace> sh
 ```
 
-다음 명령어를 입력하면 *- 다소 복잡하긴 하지만 -* 파드를 조회하는 과정을 생략할 수 있습니다.
+다음 명령어를 실행하면 *- 다소 복잡하긴 하지만 -* 파드를 조회하는 과정을 생략할 수 있습니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl exec -it $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "component=server,app=drone") --namespace=<your-namespace> sh

@@ -62,7 +62,7 @@ spec:
 * metadata: 유일한 오브젝트로 구분하기 위한 데이터
 * spec: 오브젝트에 대한 상태
 
-오브젝트 `spec`에 대한 정확한 포맷은 모든 쿠버네티스 오브젝트마다 다르고, 그 오브젝트 특유의 중첩된 필드를 포함합니다. 다음 명령어를 입력하여 오브젝트를 생성합니다.
+오브젝트 `spec`에 대한 정확한 포맷은 모든 쿠버네티스 오브젝트마다 다르고, 그 오브젝트 특유의 중첩된 필드를 포함합니다. 다음 명령어를 실행하여 오브젝트를 생성합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl apply -f deployment.yaml
@@ -376,7 +376,7 @@ spec:
       terminationGracePeriodSeconds: 60
 ```
 
-`--aws-vpc-id` 필드에 대한 정보는 *- AWS > VPC 메뉴 또는 -* 다음 명령어를 입력해 확인할 수 있습니다. 자세한 정보는 AWS 공식 문서의 [describe-cluster](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-cluster.html) 내용을 확인해 주세요.
+`--aws-vpc-id` 필드에 대한 정보는 *- AWS > VPC 메뉴 또는 -* 다음 명령어를 실행해 확인할 수 있습니다. 자세한 정보는 AWS 공식 문서의 [describe-cluster](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-cluster.html) 내용을 확인해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 aws eks describe-cluster --name=<your-cluster-name>
@@ -423,7 +423,7 @@ kubectl get namespace
 * `kube-system`: 쿠버네티스 시스템에서 생성한 오브젝트를 위한 네임스페이스
 * `kube-public`: 모든 사용자(인증되지 않은 사용자 포함)가 읽기 권한으로 접근할 수 있는 네임스페이스
 
-다음 명령어를 입력하여 네임스페이스를 생성합니다.
+다음 명령어를 실행하여 네임스페이스를 생성합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl create namespace <insert-your-namespace-name>
@@ -431,7 +431,7 @@ kubectl create namespace <insert-your-namespace-name>
 
 ![GATSBY_EMPTY_ALT](./create-namespace.jpg)
 
-> 필자는 `fms` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성해 주세요. 네임스페이스를 삭제하고 싶다면 다음 명령어를 입력해 주세요.
+> 필자는 `fms` 네임스페이스를 생성하였습니다. 여러분이 원하는 네임스페이스를 생성해 주세요. 네임스페이스를 삭제하고 싶다면 다음 명령어를 실행해 주세요.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl delete namespace <insert-your-namespace-name>
@@ -610,7 +610,7 @@ kubectl get pods --namespace=<your-namespace>
 
 > 필자의 경우 *- 지속적 연결 상태 확인 목적으로 -* `args` 필드에 60초마다 현재 시각을 출력하는 스크립트를 정의해 놓았습니다. 여러분은 다른 스크립트로 정의하거나 정의하지 않아도 됩니다. `kubectl logs -f <mariadb-cli-pod> --namespace=<your-namespace>` 명령어로 확인할 수 있습니다.
 
-다음 명령어를 입력하면 *- 다소 복잡하긴 하지만 -* 파드를 조회하는 과정을 생략할 수 있습니다.
+다음 명령어를 실행하면 *- 다소 복잡하긴 하지만 -* 파드를 조회하는 과정을 생략할 수 있습니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "app=mariadb-cli") --namespace=<your-namespace> --timestamps
@@ -620,7 +620,7 @@ kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --nam
 
 ![GATSBY_EMPTY_ALT](./apply-mariadb-cli-2.jpg)
 
-다음 명령어를 입력하여 `mariadb-cli` 내부로 접속합니다.
+다음 명령어를 실행하여 `mariadb-cli` 내부로 접속합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl exec -it <mariadb-cli-pod> --namespace=<your-namespace> bash
