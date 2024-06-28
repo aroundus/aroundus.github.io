@@ -212,10 +212,6 @@ export const theme = createTheme(
           li {
             font-size: 14px;
 
-            &:last-child {
-              margin-bottom: 8px;
-            }
-
             p {
               margin-bottom: 4px;
               margin-top: 4px;

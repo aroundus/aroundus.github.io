@@ -42,11 +42,12 @@ export function PaginationSection({ currentPage, totalPageCount, onChange }: Pag
           <Pagination
             color="primary"
             count={totalPageCount}
-            onChange={handleChange}
             page={currentPage}
             showFirstButton
             showLastButton
             size="small"
+            aria-label="페이지네이션 내비게이션"
+            onChange={handleChange}
           />
         </Box>
       </Container>
