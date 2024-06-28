@@ -24,9 +24,9 @@ git config --global user.email "zingugi@wadiz.kr"
 
 <mark>코드의 **일관성**을 유지</mark>하는 것은 매우 중요합니다. 이는 코드를 더 읽기 쉽고 유지 관리하기 쉽게 만들 뿐만 아니라 팀원 간의 협업을 원활하게 합니다.
 
-* **ESLint**: 문법 규칙 유지 (예시: [**eslint.config.js**](https://github.com/aroundus/aroundus.github.io/blob/main/eslint.config.js))
-* **Prettier**: 코드 형식 유지 (예시: [**.prettierrc**](https://github.com/aroundus/aroundus.github.io/blob/main/.prettierrc))
-* **Stylelint**: 스타일 문법 규칙 유지 (예시: [**.stylelintrc**](https://github.com/aroundus/aroundus.github.io/blob/main/.stylelintrc.json))
+- **ESLint**: 문법 규칙 유지 (예시: [**eslint.config.js**](https://github.com/aroundus/aroundus.github.io/blob/main/eslint.config.js))
+- **Prettier**: 코드 형식 유지 (예시: [**.prettierrc**](https://github.com/aroundus/aroundus.github.io/blob/main/.prettierrc))
+- **Stylelint**: 스타일 문법 규칙 유지 (예시: [**.stylelintrc**](https://github.com/aroundus/aroundus.github.io/blob/main/.stylelintrc.json))
 
 ## README.md 파일을 작성합니다
 
@@ -45,12 +45,14 @@ git config --global user.email "zingugi@wadiz.kr"
 
 ## 목차
 
-1. [시작하기](#시작하기)
-2. [기술 스택](#기술-스택)
-3. [기능](#기능)
-4. [프로젝트 구조](#프로젝트-구조)
-5. [CI/CD](#cicd)
-6. [팀원](#팀원)
+1. [소개](#소개)
+2. [사용 기술](#사용-기술)
+3. [설치 방법](#설치-방법)
+4. [빌드 및 테스트](#빌드-및-테스트)
+5. [기능](#기능)
+6. [프로젝트 구조](#프로젝트-구조)
+7. [배포](#배포)
+8. [팀원](#팀원)
 
 ...
 ```

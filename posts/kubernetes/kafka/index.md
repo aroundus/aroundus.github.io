@@ -697,7 +697,7 @@ kubectl apply -f kafka-manager.yaml
 
 ![GATSBY_EMPTY_ALT](./apply-kafka-manager.jpg)
 
-쿠버네티스의 API 서버로 프록시하는 명령어를 입력해서 카프카 매니저 웹 서비스에 접속해 봅시다.
+쿠버네티스의 API 서버로 프록시하는 명령어를 실행해서 카프카 매니저 웹 서비스에 접속해 봅시다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl proxy
@@ -713,7 +713,7 @@ kubectl proxy
 
 ![GATSBY_EMPTY_ALT](./kafka-manager-failed.jpg)
 
-오류 문구에 당황하지 마시고 주키퍼 클라이언트에서 해당 노드를 생성한 후 다음 명령어를 입력해 파드를 삭제해 주세요. 쿠버네티스의 `delete` 명령어로 파드를 삭제하면 새로운 파드를 다시 생성하기 때문에 `restart` 개념과 유사합니다.
+오류 문구에 당황하지 마시고 주키퍼 클라이언트에서 해당 노드를 생성한 후 다음 명령어를 실행해 파드를 삭제해 주세요. 쿠버네티스의 `delete` 명령어로 파드를 삭제하면 새로운 파드를 다시 생성하기 때문에 `restart` 개념과 유사합니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl delete pod/<kafka-manager-pod> --namespace=<your-namespace>

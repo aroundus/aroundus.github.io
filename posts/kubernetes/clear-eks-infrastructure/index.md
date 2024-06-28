@@ -45,7 +45,7 @@ RDS - 데이터베이스 - 삭제 버튼을 클릭하여 데이터베이스를 �
 
 ## EKS 클러스터 삭제
 
-다음 명령어를 입력해 주세요. 약 10~20분 정도 소요됩니다.
+다음 명령어를 실행해 주세요. 약 10~20분 정도 소요됩니다.
 
 ```shell{promptUser: user}{promptHost: localhost}
 eksctl delete cluster <your-cluster-name>
