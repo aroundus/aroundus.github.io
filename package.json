@@ -22,7 +22,8 @@
     "lunr": "node scripts/lunr.js",
     "serve": "gatsby serve --prefix-paths",
     "start": "yarn lunr && yarn develop",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@eastuni/lunr-languages-ko": "^1.4.0",
