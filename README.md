@@ -12,8 +12,8 @@
 
 1. [소개](#소개)
 2. [사용 기술](#사용-기술)
-3. [설치 방법](#설치-방법)
-4. [빌드 및 테스트](#빌드-및-테스트)
+3. [설치 및 실행](#설치-및-방법)
+4. [빌드 및 확인](#빌드-및-확인)
 5. [기능](#기능)
 6. [프로젝트 구조](#프로젝트-구조)
 7. [배포](#배포)
@@ -42,7 +42,7 @@
 - CI/CD: GitHub Actions
 - 호스팅: [GitHub Pages](https://pages.github.com)
 
-## 설치 방법
+## 설치 및 실행
 
 ```shell
 nvm use
@@ -74,7 +74,7 @@ GraphQL은 특별한 설치 없이 Gatsby에서 사용할 수 있습니다. `yar
   <img alt="GraphQL Explorer" src="https://github.com/aroundus/aroundus.github.io/assets/16731356/4c5ead93-15e8-424f-b9a1-930c49c2de64" />
 </details>
 
-## 빌드 및 테스트
+## 빌드 및 확인
 
 ```shell
 yarn build
@@ -85,6 +85,13 @@ $ gatsby serve --prefix-paths
 You can now view aroundus in the browser.
 ⠀
   http://localhost:9000/
+```
+
+## 테스트
+
+```shell
+yarn run test
+yarn run test:watch
 ```
 
 ## 기능
