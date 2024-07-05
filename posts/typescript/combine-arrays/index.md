@@ -83,4 +83,4 @@ const combineArrays = <T extends unknown>(...arrays: T[][]): T[] | T[][] => {
 
 ## Playground 🚀
 
-<iframe width="100%" height="450" src="//jsfiddle.net/specialguest/g3pLve06/embedded/result,js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe height="300" style="width: 100%;" scrolling="no" src="https://codepen.io/aroundus/embed/BawXKZa?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
