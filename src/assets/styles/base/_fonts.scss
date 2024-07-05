@@ -3,3 +3,11 @@
 $base-font-family: Pretendard, "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 $code-font-family: "SF Mono", "Roboto Mono", Consolas, monospace;
 $heading-font-family: Montserrat, Pretendard, "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+// CodePen
+@font-face {
+  font-family: "SFMono-Regular";
+  src: url("https://cdn.fontcdn.ir/Fonts/SFMono/7e2da23c271edd52cd24a7e4e2b9d397b2564313293dba126cde8784f78270bc.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
