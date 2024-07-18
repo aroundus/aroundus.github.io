@@ -60,7 +60,7 @@ export const theme = createTheme(
         styleOverrides: `
           html {
             -webkit-font-smoothing: auto;
-            font-feature-settings: 'case' 1, 'ss03' 1;
+            font-feature-settings: 'case' 1, 'ss03' 1, 'ss06' 1;
             font-size: 10px;
           }
 
