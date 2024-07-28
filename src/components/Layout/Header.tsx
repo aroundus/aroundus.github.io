@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
 
-export function Navbar() {
+export function Header() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 

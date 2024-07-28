@@ -9,7 +9,7 @@ import { theme } from './helpers/theme';
 
 import { Content } from './Content';
 import { Footer } from './Footer';
-import { Navbar } from './Navbar';
+import { Header } from './Header';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export function Layout({ children }: LayoutProps) {
     >
       <ThemeProvider theme={theme}>
         <CSSBaseline />
-        <Navbar />
+        <Header />
         <Content>{children}</Content>
         <Footer />
       </ThemeProvider>
