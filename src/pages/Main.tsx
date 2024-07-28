@@ -16,7 +16,7 @@ import type { Post } from '@/types/post';
 
 const CATEGORY_ALL = '전체';
 
-export default function Main() {
+export function Main() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
