@@ -96,17 +96,20 @@ export function KeyVisualSection({
       <div className={styles.content}>
         <Typography
           color={colors.grey[200]}
+          fontFamily="Montserrat"
+          fontSize={20}
+          fontWeight={700}
           position="relative"
           sx={{ mb: 2 }}
-          variant="h6"
         >
           #{post.category} Episode {post.index}
         </Typography>
         <Typography
           color={colors.common.white}
+          fontSize={isMobile ? 40 : 48}
           position="relative"
-          sx={{ mb: 3 }}
-          variant={isMobile ? 'h4' : 'h3'}
+          sx={{ mt: 0, mb: 3 }}
+          variant="h1"
         >
           {typewriter?.title ? (
             <>

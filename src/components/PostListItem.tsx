@@ -44,13 +44,18 @@ export function PostListItem({ post }: PostListItemProps) {
         <Grid sx={{ width: '100%', maxWidth: 640 }}>
           <Typography
             color={colors.grey[500]}
-            fontSize={16}
-            sx={{ mb: 2 }}
-            variant="h6"
+            fontFamily="Montserrat"
+            fontWeight={700}
+            variant="body2"
           >
             #{post.category || 'empty'}
           </Typography>
-          <Typography variant="h4">{post.title}</Typography>
+          <Typography
+            sx={{ mt: 0 }}
+            variant="h2"
+          >
+            {post.title}
+          </Typography>
           <Typography
             color={colors.grey[700]}
             sx={{ mt: 6 }}

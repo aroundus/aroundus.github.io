@@ -31,28 +31,55 @@ export const theme = createTheme(
         fontWeight: 'normal',
       },
       h1: {
-        fontFamily: HEADING_FONT_FAMILY,
-        fontWeight: 'bold',
+        fontFamily: undefined,
+        fontSize: undefined,
+        fontWeight: 700,
+        lineHeight: undefined,
+        margin: undefined,
       },
       h2: {
-        fontFamily: HEADING_FONT_FAMILY,
-        fontWeight: 'bold',
+        fontFamily: undefined,
+        fontSize: undefined,
+        fontWeight: 700,
+        lineHeight: 1.35,
+        margin: undefined,
       },
       h3: {
-        fontFamily: HEADING_FONT_FAMILY,
-        fontWeight: 'bold',
+        fontFamily: undefined,
+        fontSize: undefined,
+        fontWeight: 700,
+        lineHeight: undefined,
+        margin: undefined,
       },
       h4: {
-        fontFamily: HEADING_FONT_FAMILY,
-        fontWeight: 'bold',
+        fontFamily: undefined,
+        fontSize: undefined,
+        fontWeight: 700,
+        lineHeight: undefined,
+        margin: undefined,
       },
       h5: {
-        fontFamily: HEADING_FONT_FAMILY,
-        fontWeight: 'bold',
+        fontFamily: undefined,
+        fontSize: undefined,
+        fontWeight: 700,
+        lineHeight: undefined,
+        margin: undefined,
       },
       h6: {
-        fontFamily: HEADING_FONT_FAMILY,
-        fontWeight: 'bold',
+        fontFamily: undefined,
+        fontSize: undefined,
+        fontWeight: 700,
+        lineHeight: undefined,
+        margin: undefined,
+      },
+      body1: {
+        lineHeight: undefined,
+        margin: undefined,
+      },
+      body2: {
+        fontSize: 14,
+        lineHeight: undefined,
+        margin: undefined,
       },
     },
     components: {
@@ -70,6 +97,7 @@ export const theme = createTheme(
             font-family: ${BASE_FONT_FAMILY};
             font-weight: 400;
             line-height: 1.5;
+            margin: 0;
             overflow-wrap: break-word;
             word-break: keep-all;
           }
@@ -90,6 +118,9 @@ export const theme = createTheme(
           h5,
           h6 {
             font-family: ${HEADING_FONT_FAMILY};
+            line-height: 1.35;
+            margin-top: 1.6em;
+            margin-bottom: 0.4em;
 
             .icon-heading-link {
               border-bottom: none;
@@ -101,29 +132,36 @@ export const theme = createTheme(
 
             a,
             u {
-              border-bottom: 2px solid ${colors.cyan[400]};
+              border-bottom: 0.2em solid ${colors.cyan[400]};
               text-decoration: none;
             }
           }
 
           h1 {
-            font-size: 2.2em;
-            margin-top: 2.2em;
+            font-size: 48px;
           }
 
           h2 {
-            font-size: 2em;
-            margin-top: 2em;
+            font-size: 36px;
           }
 
           h3 {
-            font-size: 1.6em;
-            margin-top: 1.8em;
+            font-size: 32px;
           }
 
           h4 {
-            font-size: 1.4em;
-            margin-top: 1.8em;
+            font-size: 28px;
+            line-height: 1.5;
+          }
+
+          h5 {
+            font-size: 24px;
+            line-height: 1.5;
+          }
+
+          h6 {
+            font-size: 20px;
+            line-height: 1.5;
           }
 
           a {
@@ -142,7 +180,7 @@ export const theme = createTheme(
 
             a,
             u {
-              border-bottom: 2px solid ${colors.cyan[400]};
+              border-bottom: 0.2em solid ${colors.cyan[400]};
               text-decoration: none;
             }
 
