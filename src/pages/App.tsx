@@ -4,9 +4,9 @@ import AOS from 'aos';
 import { Layout } from '@/components/Layout';
 import { SEO } from '@/components/SEO';
 
-import { Main } from '@/pages/Main';
+import Main from '@/pages/Main';
 
-export function App() {
+export default function App() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
