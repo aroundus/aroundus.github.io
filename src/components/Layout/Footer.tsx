@@ -6,7 +6,7 @@ import { Box, colors, Container, Grid, Link, Typography, useMediaQuery } from '@
 import { useTheme } from '@mui/material/styles';
 import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
 
-import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
+import { LogoIcon, SymbolMarkIcon } from '@/components/Icon';
 
 interface Data {
   site: {
@@ -85,7 +85,7 @@ export function Footer() {
                 display="flex"
                 gap={1}
               >
-                <SymbolmarkIcon height={13} />
+                <SymbolMarkIcon height={13} />
                 <LogoIcon height={13} />
                 <Typography variant="caption">어라운드어스</Typography>
               </Box>

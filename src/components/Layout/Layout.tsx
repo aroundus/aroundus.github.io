@@ -13,11 +13,12 @@ import { Header } from './Header';
 
 interface LayoutProps {
   children: React.ReactNode;
+  header?: React.ReactElement;
 }
 
 const sheetsRegistry = new SheetsRegistry();
 
-export function Layout({ children }: LayoutProps) {
+export function Layout({ children, header }: LayoutProps) {
   return (
     <JSSProvider
       isSSR
@@ -25,7 +26,7 @@ export function Layout({ children }: LayoutProps) {
     >
       <ThemeProvider theme={theme}>
         <CSSBaseline />
-        <Header />
+        {header || <Header />}
         <Content>{children}</Content>
         <Footer />
       </ThemeProvider>

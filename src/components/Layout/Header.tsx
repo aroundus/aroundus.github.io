@@ -4,7 +4,7 @@ import { createUseStyles } from 'react-jss';
 import { AppBar, colors, Link, Toolbar, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import { LogoIcon, SymbolmarkIcon } from '@/components/Icon';
+import { LogoIcon, SymbolMarkIcon } from '@/components/Icon';
 
 export function Header() {
   const theme = useTheme();
@@ -54,7 +54,7 @@ export function Header() {
           href="/"
           sx={{ textDecoration: 'none' }}
         >
-          <SymbolmarkIcon
+          <SymbolMarkIcon
             height={12}
             style={{ fill: colors.common.white }}
           />
