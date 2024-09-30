@@ -74,12 +74,10 @@ export const theme = createTheme(
       },
       body1: {
         lineHeight: undefined,
-        margin: undefined,
       },
       body2: {
         fontSize: 14,
         lineHeight: undefined,
-        margin: undefined,
       },
     },
     components: {
