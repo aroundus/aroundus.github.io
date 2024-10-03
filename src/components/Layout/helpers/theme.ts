@@ -94,7 +94,7 @@ export const theme = createTheme(
             color: ${colors.common.black};
             font-family: ${BASE_FONT_FAMILY};
             font-weight: 400;
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0;
             overflow-wrap: break-word;
             word-break: keep-all;
@@ -117,8 +117,17 @@ export const theme = createTheme(
           h6 {
             font-family: ${HEADING_FONT_FAMILY};
             line-height: 1.35;
-            margin-top: 1.6em;
             margin-bottom: 0.4em;
+            margin-top: 3.6em;
+
+            & + h1,
+            & + h2,
+            & + h3,
+            & + h4,
+            & + h5,
+            & + h6 {
+              margin-top: 1.2em;
+            }
 
             .icon-heading-link {
               border-bottom: none;
@@ -149,17 +158,17 @@ export const theme = createTheme(
 
           h4 {
             font-size: 28px;
-            line-height: 1.5;
+            line-height: 1.6;
           }
 
           h5 {
             font-size: 24px;
-            line-height: 1.5;
+            line-height: 1.6;
           }
 
           h6 {
             font-size: 20px;
-            line-height: 1.5;
+            line-height: 1.6;
           }
 
           a {
@@ -173,8 +182,8 @@ export const theme = createTheme(
 
           p {
             color: ${colors.grey[900]};
+            margin-bottom: 2em;
             margin-top: 1.4em;
-            margin-bottom: 1.4em;
 
             a,
             u {
@@ -206,8 +215,19 @@ export const theme = createTheme(
             font-size: 0.96em;
             color: ${colors.grey[600]};
 
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              margin-top: 0.4em;
+            }
+
             p {
               color: ${colors.grey[600]};
+              margin-bottom: 1.4em;
+              margin-top: 1.4em;
             }
           }
 
