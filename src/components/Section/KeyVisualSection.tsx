@@ -113,8 +113,8 @@ export function KeyVisualSection({
         >
           {typewriter?.title ? (
             <>
-              <div style={{ position: 'absolute' }}>{typewriter.title}</div>
-              <div style={{ opacity: 0 }}>{post.title} |</div>
+              <div style={{ maxWidth: '100%', position: 'absolute' }}>{typewriter.title}</div>
+              <div style={{ maxWidth: '100%', opacity: 0 }}>{post.title} |</div>
             </>
           ) : (
             post.title
