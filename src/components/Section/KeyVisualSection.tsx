@@ -75,7 +75,7 @@ export function KeyVisualSection({
       content: `
         margin: auto;
         width: 80%;
-        min-width: 320px;
+        min-width: 300px;
         max-width: 900px;
       `,
     },

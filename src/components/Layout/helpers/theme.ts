@@ -26,6 +26,7 @@ export const theme = createTheme(
     },
     typography: {
       fontFamily: BASE_FONT_FAMILY,
+      fontSize: 15.75, // https://mui.com/material-ui/customization/typography/#font-size
       htmlFontSize: 10,
       button: {
         fontWeight: 'normal',
@@ -76,7 +77,7 @@ export const theme = createTheme(
         lineHeight: undefined,
       },
       body2: {
-        fontSize: 14,
+        fontSize: 16,
         lineHeight: undefined,
       },
     },
@@ -91,7 +92,7 @@ export const theme = createTheme(
 
           body {
             background-color: ${colors.common.white};
-            color: ${colors.common.black};
+            color: ${colors.grey[900]};
             font-family: ${BASE_FONT_FAMILY};
             font-weight: 400;
             line-height: 1.6;
@@ -115,6 +116,7 @@ export const theme = createTheme(
           h4,
           h5,
           h6 {
+            color: CanvasText;
             font-family: ${HEADING_FONT_FAMILY};
             line-height: 1.35;
             margin-bottom: 0.4em;
@@ -181,7 +183,6 @@ export const theme = createTheme(
           }
 
           p {
-            color: ${colors.grey[900]};
             margin-bottom: 2em;
             margin-top: 1.4em;
 
@@ -266,11 +267,9 @@ export const theme = createTheme(
           }
 
           li {
-            font-size: 14px;
-
             p {
-              margin-bottom: 4px;
-              margin-top: 4px;
+              margin-bottom: 0.2em;
+              margin-top: 0.2em;
             }
 
             a {
