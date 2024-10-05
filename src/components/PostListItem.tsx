@@ -13,14 +13,13 @@ export function PostListItem({ post }: PostListItemProps) {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&:hover': {
       backgroundColor: 'transparent',
-    },
 
-    '& .MuiTypography-h2': {
-      transition: 'color 0.2s linear',
-
-      '&:hover': {
+      '& .MuiTypography-h2': {
         color: colors.cyan[600],
       },
+    },
+    '& .MuiTypography-h2': {
+      transition: 'color 0.2s linear',
     },
   }));
 
