@@ -35,7 +35,7 @@ export function PostSearchSection({ onChange: handleChange }: PostSearchSectionP
           display="flex"
           gap={3}
         >
-          <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+          <SearchIcon sx={{ mr: 1, my: 0.5 }} />
           <TextField
             fullWidth
             label="검색어를 입력해 주세요"

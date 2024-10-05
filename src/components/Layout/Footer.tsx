@@ -85,12 +85,18 @@ export function Footer() {
                 display="flex"
                 gap={1}
               >
-                <SymbolMarkIcon height={13} />
-                <LogoIcon height={13} />
+                <SymbolMarkIcon
+                  fill="CanvasText"
+                  height={13}
+                />
+                <LogoIcon
+                  fill="CanvasText"
+                  height={13}
+                />
                 <Typography variant="caption">어라운드어스</Typography>
               </Box>
               <Typography
-                color={colors.grey[600]}
+                color="secondary"
                 sx={{ mb: 3, mt: 1 }}
                 variant="body2"
               >
