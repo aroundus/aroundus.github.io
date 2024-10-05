@@ -77,12 +77,7 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
             >
               #{nextPost.category}
             </Typography>
-            <Typography
-              color={colors.grey[900]}
-              variant="subtitle1"
-            >
-              {nextPost.title}
-            </Typography>
+            <Typography variant="subtitle1">{nextPost.title}</Typography>
           </Button>
         )}
       </Box>

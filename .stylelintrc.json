@@ -1,8 +1,10 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-styled-components-order"],
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-scss", "stylelint-order"],
   "rules": {
     "function-name-case": null,
     "no-duplicate-selectors": null,
+    "order/properties-alphabetical-order": true,
     "property-no-unknown": null,
     "selector-class-pattern": null,
     "selector-type-no-unknown": null,
