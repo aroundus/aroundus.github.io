@@ -51,7 +51,6 @@ export function PostListItem({ post }: PostListItemProps) {
             #{post.category || 'empty'}
           </Typography>
           <Typography
-            fontSize={36}
             sx={{ mt: 0 }}
             variant="h2"
           >
