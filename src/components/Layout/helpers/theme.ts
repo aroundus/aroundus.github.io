@@ -170,12 +170,6 @@ export const theme = createTheme(
             max-width: 100%;
           }
 
-          mark {
-            background-color: transparent;
-            color: inherit;
-            background-image: linear-gradient(to top, ${colors.cyan[100]} 40%, transparent 10%, transparent 50%);
-          }
-
           section {
             position: relative;
           }
