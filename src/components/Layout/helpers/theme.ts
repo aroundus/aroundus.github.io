@@ -92,7 +92,7 @@ export const theme = createTheme(
 
           body {
             background-color: Canvas;
-            color: color-mix(in srgb, ${colors.grey[400]} 50%, CanvasText 50%);
+            color: CanvasText;
             color-scheme: light dark;
             font-family: ${BASE_FONT_FAMILY};
             font-weight: 400;
@@ -130,7 +130,6 @@ export const theme = createTheme(
           h4,
           h5,
           h6 {
-            color: CanvasText;
             font-family: ${HEADING_FONT_FAMILY};
             line-height: 1.35;
           }
@@ -174,10 +173,6 @@ export const theme = createTheme(
 
           section {
             position: relative;
-          }
-
-          strong {
-            color: CanvasText;
           }
 
           u {
