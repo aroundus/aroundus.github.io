@@ -14,7 +14,6 @@
   // 링크
   a {
     border-bottom: 0.2em solid var(--color-cyan-400);
-    color: CanvasText;
 
     @media (hover: hover) {
       &:hover {
@@ -192,7 +191,6 @@
 
     th {
       background-color: var(--color-gray-600);
-      color: CanvasText;
     }
   }
 
