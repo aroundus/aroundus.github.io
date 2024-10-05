@@ -26,7 +26,14 @@ export function Layout({ children, header }: LayoutProps) {
       isSSR
       registry={sheetsRegistry}
     >
-      <ThemeProvider theme={{ ...theme, palette: { ...theme.palette, mode: isDarkMode ? 'dark' : 'light' } }}>
+      <ThemeProvider
+        defaultMode="system"
+        theme={{
+          ...theme,
+          colorSchemes: { dark: isDarkMode },
+          palette: { ...theme.palette, mode: isDarkMode ? 'dark' : 'light' },
+        }}
+      >
         <CSSBaseline />
         {header || <Header />}
         <Content>{children}</Content>

@@ -17,11 +17,9 @@ export const theme = createTheme(
     palette: {
       primary: {
         main: colors.cyan[400],
-        contrastText: 'Canvas',
       },
       secondary: {
         main: colors.grey[500],
-        contrastText: 'Canvas',
       },
     },
     typography: {
@@ -29,6 +27,7 @@ export const theme = createTheme(
       fontSize: 15.75, // https://mui.com/material-ui/customization/typography/#font-size
       htmlFontSize: 10,
       body1: {
+        color: 'CanvasText',
         lineHeight: undefined,
       },
       body2: {
@@ -79,6 +78,12 @@ export const theme = createTheme(
         fontWeight: 700,
         lineHeight: undefined,
         margin: undefined,
+      },
+      subtitle1: {
+        color: 'CanvasText',
+      },
+      subtitle2: {
+        color: 'CanvasText',
       },
     },
     components: {
@@ -184,6 +189,7 @@ export const theme = createTheme(
       MuiPaginationItem: {
         styleOverrides: {
           root: {
+            color: 'CanvasText',
             fontFamily: HEADING_FONT_FAMILY,
           },
         },
@@ -191,6 +197,7 @@ export const theme = createTheme(
       MuiStepIcon: {
         styleOverrides: {
           text: {
+            fill: 'CanvasText',
             fontFamily: HEADING_FONT_FAMILY,
           },
         },

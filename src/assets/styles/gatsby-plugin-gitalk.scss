@@ -28,6 +28,10 @@
 .gt-container {
   @extend %anchor;
 
+  a {
+    color: CanvasText !important;
+  }
+
   .gt-meta,
   .gt-no-init {
     @extend %anchor;
