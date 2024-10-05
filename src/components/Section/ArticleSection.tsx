@@ -8,6 +8,7 @@ interface ArticleSectionProps {
 export const ArticleSection = forwardRef<HTMLElement, ArticleSectionProps>(function ({ html }, ref) {
   return (
     <Container
+      id="article"
       component="section"
       dangerouslySetInnerHTML={{ __html: html }}
       disableGutters
