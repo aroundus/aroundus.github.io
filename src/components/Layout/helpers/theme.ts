@@ -96,7 +96,7 @@ export const theme = createTheme(
             color-scheme: light dark;
             font-family: ${BASE_FONT_FAMILY};
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.5;
             margin: 0;
             overflow-wrap: break-word;
             word-break: keep-all;
@@ -148,17 +148,17 @@ export const theme = createTheme(
 
           h4 {
             font-size: 28px;
-            line-height: 1.6;
+            line-height: 1.5;
           }
 
           h5 {
             font-size: 24px;
-            line-height: 1.6;
+            line-height: 1.5;
           }
 
           h6 {
             font-size: 20px;
-            line-height: 1.6;
+            line-height: 1.5;
           }
 
           img {
