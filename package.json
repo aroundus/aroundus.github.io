@@ -101,8 +101,9 @@
     "sass": "^1.77.2",
     "sass-loader": "^14.2.1",
     "stylelint": "^16.6.0",
-    "stylelint-config-standard": "^36.0.0",
-    "stylelint-styled-components-order": "^1.0.6",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.2.1",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.10.0"

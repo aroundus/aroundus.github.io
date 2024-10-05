@@ -2,7 +2,7 @@ import React from 'react';
 import { JssProvider as JSSProvider } from 'react-jss';
 import { SheetsRegistry } from 'jss';
 
-import { CssBaseline as CSSBaseline } from '@mui/material';
+import { CssBaseline as CSSBaseline, useMediaQuery } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 
 import { theme } from './helpers/theme';
@@ -19,12 +19,14 @@ interface LayoutProps {
 const sheetsRegistry = new SheetsRegistry();
 
 export function Layout({ children, header }: LayoutProps) {
+  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
   return (
     <JSSProvider
       isSSR
       registry={sheetsRegistry}
     >
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={{ ...theme, palette: { ...theme.palette, mode: isDarkMode ? 'dark' : 'light' } }}>
         <CSSBaseline />
         {header || <Header />}
         <Content>{children}</Content>

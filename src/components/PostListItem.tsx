@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { colors, Grid, ListItem, ListItemButton, ListItemButtonProps, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { colors, Grid, ListItem, ListItemButton, ListItemButtonProps, Typography, useMediaQuery } from '@mui/material';
+import { styled, useTheme } from '@mui/material/styles';
 
 import type { Post } from '@/types/post';
 
@@ -10,12 +10,15 @@ interface PostListItemProps {
 }
 
 export function PostListItem({ post }: PostListItemProps) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&:hover': {
       backgroundColor: 'transparent',
     },
 
-    '& .MuiTypography-h4': {
+    '& .MuiTypography-h2': {
       transition: 'color 0.2s linear',
 
       '&:hover': {
@@ -51,13 +54,13 @@ export function PostListItem({ post }: PostListItemProps) {
             #{post.category || 'empty'}
           </Typography>
           <Typography
+            fontSize={isMobile ? 32 : 36}
             sx={{ mt: 0 }}
             variant="h2"
           >
             {post.title}
           </Typography>
           <Typography
-            color={colors.grey[700]}
             sx={{ mt: 6 }}
             variant="body1"
           >

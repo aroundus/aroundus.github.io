@@ -1,7 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import { Box, colors, Container, TextField } from '@mui/material';
+import { Box, Container, TextField } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 
 interface PostSearchSectionProps {
@@ -14,7 +14,7 @@ export function PostSearchSection({ onChange: handleChange }: PostSearchSectionP
       container: `
         position: sticky;
         top: 0;
-        background-color: ${colors.common.white};
+        background-color: Canvas;
         z-index: 1;
       `,
     },
