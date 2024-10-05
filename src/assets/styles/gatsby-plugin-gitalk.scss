@@ -14,14 +14,14 @@
 }
 
 %gt-btn {
-  border-color: $color-cyan-400;
   background-color: $color-cyan-400;
+  border-color: $color-cyan-400;
   font-size: 0.85em;
   transition: 0.2s;
 
   &:hover {
-    border-color: $color-cyan-600;
     background-color: $color-cyan-600;
+    border-color: $color-cyan-600;
   }
 }
 
@@ -59,8 +59,8 @@
           color: $color-cyan-400;
 
           &:hover {
-            border-color: $color-cyan-600;
             background-color: inherit;
+            border-color: $color-cyan-600;
             color: $color-cyan-600;
           }
         }
@@ -69,16 +69,16 @@
           background-color: $color-cyan-400;
 
           &:hover {
-            border-color: $color-cyan-600;
             background-color: $color-cyan-600;
+            border-color: $color-cyan-600;
           }
         }
       }
     }
 
     .gt-header-preview {
-      border-color: $color-grey-300;
       background-color: $color-grey-100;
+      border-color: $color-grey-300;
       border-radius: 4px;
     }
   }
@@ -94,8 +94,8 @@
     }
 
     .gt-comment-content {
-      border: 1px solid $color-cyan-200;
       background-color: white;
+      border: 1px solid $color-cyan-200;
       border-radius: 4px;
     }
 

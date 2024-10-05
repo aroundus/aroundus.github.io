@@ -74,9 +74,10 @@ export function KeyVisualSection({
       },
       content: `
         margin: auto;
-        width: 80%;
-        min-width: 320px;
         max-width: 900px;
+        min-width: 320px;
+        padding: ${theme.spacing(6)};
+        width: 80%;
       `,
     },
     {

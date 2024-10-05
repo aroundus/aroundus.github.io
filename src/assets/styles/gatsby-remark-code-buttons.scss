@@ -4,19 +4,19 @@
   top: 8px;
 
   .gatsby-code-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
     display: flex;
     font-size: 13px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
 
     svg {
+      align-self: center;
+      fill: white;
+      height: 24px;
+      margin-left: 2px;
       position: relative;
       top: -1px;
-      height: 24px;
-      align-self: center;
-      margin-left: 2px;
-      fill: white;
       transition: 0.3s;
     }
 
@@ -30,7 +30,6 @@
 
 .gatsby-code-button-toaster {
   &-text {
-    max-width: 400px;
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 4px 24px -16px $color-grey-600;
@@ -38,5 +37,6 @@
     font-family: $base-font-family;
     font-size: 0.86em;
     letter-spacing: 0;
+    max-width: 400px;
   }
 }
