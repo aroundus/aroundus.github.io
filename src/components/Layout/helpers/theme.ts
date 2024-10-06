@@ -5,22 +5,13 @@ import { createTheme } from '@mui/material/styles';
 export const BASE_FONT_FAMILY =
   'Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 export const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
-export const HEADING_FONT_FAMILY =
-  'Montserrat, Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+export const HEADING_FONT_FAMILY = `Montserrat, ${BASE_FONT_FAMILY}`;
 
 export const theme = createTheme(
   {
     spacing: 4,
     shape: {
       borderRadius: 4,
-    },
-    palette: {
-      primary: {
-        main: colors.cyan[400],
-      },
-      secondary: {
-        main: colors.grey[500],
-      },
     },
     typography: {
       fontFamily: BASE_FONT_FAMILY,
@@ -222,3 +213,27 @@ export const theme = createTheme(
   },
   koKR,
 );
+
+export const darkTheme = createTheme(theme, {
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: colors.cyan[400],
+    },
+    secondary: {
+      main: colors.grey[400],
+    },
+  },
+});
+
+export const lightTheme = createTheme(theme, {
+  palette: {
+    mode: 'light',
+    primary: {
+      main: colors.cyan[400],
+    },
+    secondary: {
+      main: colors.grey[500],
+    },
+  },
+});
