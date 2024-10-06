@@ -18,6 +18,7 @@ export function PostListItem({ post }: PostListItemProps) {
         color: colors.cyan[600],
       },
     },
+
     '& .MuiTypography-h2': {
       transition: 'color 0.2s linear',
     },
@@ -50,7 +51,7 @@ export function PostListItem({ post }: PostListItemProps) {
             #{post.category || 'empty'}
           </Typography>
           <Typography
-            sx={{ mt: 0 }}
+            sx={{ mt: 4 }}
             variant="h2"
           >
             {post.title}
@@ -63,7 +64,6 @@ export function PostListItem({ post }: PostListItemProps) {
           </Typography>
           <Typography
             color={colors.grey[500]}
-            sx={{ mt: 4 }}
             variant="subtitle1"
           >
             {post.date}

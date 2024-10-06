@@ -28,11 +28,11 @@ export const theme = createTheme(
       htmlFontSize: 10,
       body1: {
         color: 'CanvasText',
-        lineHeight: undefined,
+        marginBottom: '1.8em',
+        marginTop: '1.8em',
       },
       body2: {
         fontSize: 14,
-        lineHeight: undefined,
       },
       button: {
         fontWeight: 'normal',
@@ -42,48 +42,56 @@ export const theme = createTheme(
         fontSize: undefined,
         fontWeight: 700,
         lineHeight: undefined,
-        margin: undefined,
+        marginBottom: '0.4em',
+        marginTop: '3.6em',
       },
       h2: {
         fontFamily: undefined,
         fontSize: undefined,
         fontWeight: 700,
-        lineHeight: 1.35,
-        margin: undefined,
+        lineHeight: undefined,
+        marginBottom: '0.4em',
+        marginTop: '3.6em',
       },
       h3: {
         fontFamily: undefined,
         fontSize: undefined,
         fontWeight: 700,
         lineHeight: undefined,
-        margin: undefined,
+        marginBottom: '0.4em',
+        marginTop: '3.6em',
       },
       h4: {
         fontFamily: undefined,
         fontSize: undefined,
         fontWeight: 700,
         lineHeight: undefined,
-        margin: undefined,
+        marginBottom: '0.4em',
+        marginTop: '3.6em',
       },
       h5: {
         fontFamily: undefined,
         fontSize: undefined,
         fontWeight: 700,
         lineHeight: undefined,
-        margin: undefined,
+        marginBottom: '0.4em',
+        marginTop: '3.6em',
       },
       h6: {
         fontFamily: undefined,
         fontSize: undefined,
         fontWeight: 700,
         lineHeight: undefined,
-        margin: undefined,
+        marginBottom: '0.4em',
+        marginTop: '3.6em',
       },
       subtitle1: {
         color: 'CanvasText',
+        lineHeight: undefined,
       },
       subtitle2: {
         color: 'CanvasText',
+        lineHeight: undefined,
       },
     },
     components: {
@@ -179,6 +187,20 @@ export const theme = createTheme(
             text-decoration: none;
           }
         `,
+      },
+      MuiInput: {
+        styleOverrides: {
+          root: {
+            margin: 0,
+          },
+        },
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          root: {
+            margin: 0,
+          },
+        },
       },
       MuiPaginationItem: {
         styleOverrides: {
