@@ -204,7 +204,6 @@ export const theme = createTheme(
       MuiStepIcon: {
         styleOverrides: {
           text: {
-            fill: 'CanvasText',
             fontFamily: HEADING_FONT_FAMILY,
           },
         },
