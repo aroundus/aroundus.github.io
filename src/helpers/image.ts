@@ -1,4 +1,4 @@
-export const getPostCoverImageURL = (image?: string) => {
+export const getArticleCoverImageURL = (image?: string) => {
   if (!image) return '/aroundus.jpg';
   if (image.startsWith('http')) return image;
 

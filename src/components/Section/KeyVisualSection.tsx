@@ -4,20 +4,20 @@ import { createUseStyles } from 'react-jss';
 import { Button, ButtonProps, colors, Typography, useMediaQuery } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 
-import { getPostCoverImageURL } from '@/helpers/image';
-import type { Post } from '@/types/post';
+import { getArticleCoverImageURL } from '@/helpers/image';
+import type { Article } from '@/types/article';
 
 interface KeyVisualSectionProps {
+  article: Article;
   isButtonVisible?: boolean;
   isGradientEnabled?: boolean;
-  post: Post;
   typewriter?: { title?: React.ReactNode };
 }
 
 export function KeyVisualSection({
+  article,
   isButtonVisible = false,
   isGradientEnabled = false,
-  post,
   typewriter,
 }: KeyVisualSectionProps) {
   const theme = useTheme();
@@ -47,7 +47,7 @@ export function KeyVisualSection({
       container: {
         '&': `
           background-color: ${colors.grey[600]};
-          background-image: url(${getPostCoverImageURL(post.image || post.category)});
+          background-image: url(${getArticleCoverImageURL(article.image || article.category)});
           background: no-repeat center / cover;
           z-index: 2;
         `,
@@ -103,7 +103,7 @@ export function KeyVisualSection({
           position="relative"
           sx={{ mb: 2 }}
         >
-          #{post.category} Episode {post.index}
+          #{article.category} Episode {article.index}
         </Typography>
         <Typography
           color={colors.common.white}
@@ -115,10 +115,10 @@ export function KeyVisualSection({
           {typewriter?.title ? (
             <>
               <div style={{ maxWidth: '100%', position: 'absolute' }}>{typewriter.title}</div>
-              <div style={{ maxWidth: '100%', opacity: 0 }}>{post.title} |</div>
+              <div style={{ maxWidth: '100%', opacity: 0 }}>{article.title} |</div>
             </>
           ) : (
-            post.title
+            article.title
           )}
         </Typography>
         <Typography
@@ -126,7 +126,7 @@ export function KeyVisualSection({
           position="relative"
           variant="body1"
         >
-          {post.description}
+          {article.description}
         </Typography>
         <Typography
           color={colors.grey[300]}
@@ -134,11 +134,11 @@ export function KeyVisualSection({
           sx={{ mt: 6 }}
           variant="subtitle1"
         >
-          {post.date}
+          {article.date}
         </Typography>
         {isButtonVisible && (
           <StyledButton
-            href={post.path}
+            href={article.path}
             size="large"
             sx={{ mt: 6, px: 10 }}
           >

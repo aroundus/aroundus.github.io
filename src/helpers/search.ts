@@ -1,7 +1,8 @@
 import { Index } from 'lunr';
 import isEmpty from 'lodash-es/isEmpty';
 
-import type { AnyObject, Post } from '@/types/global';
+import type { Article } from '@/types/article';
+import type { AnyObject } from '@/types/global';
 
 declare global {
   interface Window {
@@ -16,7 +17,7 @@ declare global {
   }
 }
 
-export const getSearchPosts = (query: string): Post[] => {
+export const getSearchArticles = (query: string): Article[] => {
   if (isEmpty(query) || isEmpty(window.__LUNR__)) return [];
 
   const lunr = window.__LUNR__.ko;
@@ -30,6 +31,6 @@ export const getSearchPosts = (query: string): Post[] => {
         ...lunr.store[ref],
         id: ref,
         date: lunr.store[ref].date.split('T')[0],
-      }) as Post,
+      }) as Article,
   );
 };

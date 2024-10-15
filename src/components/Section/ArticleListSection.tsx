@@ -4,15 +4,15 @@ import { List } from '@mui/material';
 import isEmpty from 'lodash-es/isEmpty';
 import dayjs from 'dayjs';
 
-import type { Post } from '@/types/post';
+import type { Article } from '@/types/article';
 
-import { PostListItem } from '../PostListItem';
+import { ArticleListItem } from '../ArticleListItem';
 
-interface PostListSectionProps {
-  posts: Post[];
+interface ArticleListSectionProps {
+  articles: Article[];
 }
 
-export function PostListSection({ posts }: PostListSectionProps) {
+export function ArticleListSection({ articles }: ArticleListSectionProps) {
   const styles = createUseStyles(
     {
       container: `
@@ -20,16 +20,16 @@ export function PostListSection({ posts }: PostListSectionProps) {
       `,
     },
     {
-      name: 'PostListSection',
+      name: 'ArticleListSection',
     },
   )();
 
   return (
     <section className={styles.container}>
       <List sx={{ mx: 'auto', maxWidth: 800 }}>
-        {isEmpty(posts) ? (
-          <PostListItem
-            post={{
+        {isEmpty(articles) ? (
+          <ArticleListItem
+            article={{
               date: dayjs().format('YYYY-MM-DD'),
               description:
                 '아쉽지만 검색 결과가 나오지 않았어요. 당신이 원하는 글이 나올 수 있도록 노력해 볼게요. 이 글은 클릭해도 이동하지 않아요.',
@@ -37,10 +37,10 @@ export function PostListSection({ posts }: PostListSectionProps) {
             }}
           />
         ) : (
-          posts.map((post) => (
-            <PostListItem
-              key={post.id}
-              post={post}
+          articles.map((article) => (
+            <ArticleListItem
+              article={article}
+              key={article.id}
             />
           ))
         )}

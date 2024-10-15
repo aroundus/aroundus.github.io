@@ -19,13 +19,13 @@ date: 2020-05-25
 6. [RDS 데이터베이스 생성](#RDS-데이터베이스-생성)
 7. [네임스페이스 생성](#네임스페이스-생성)
 8. [ExternalName 설정](#ExternalName-설정)
-9.  [MariaDB CLI 배포](#MariaDB-CLI-배포)
+9. [MariaDB CLI 배포](#MariaDB-CLI-배포)
 10. [MaxScale 배포](#MaxScale-배포)
 11. [Docker 자격 증명 기반 Secret 배포](#Docker-자격-증명-기반-Secret-배포)
 
 ## IAM 사용자 추가
 
-AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/post/aws/iam) 내용을 확인해 주세요.
+AWS 서비스를 사용하기 위해 루트 사용자 이메일 주소로 **IAM**(Identity and Access Management, 아이에이앰)에 사용자를 추가해야 합니다. 자세한 정보는 [IAM](/articles/aws/iam) 내용을 확인해 주세요.
 
 ## Kubernetes API
 
@@ -615,6 +615,7 @@ kubectl get pods --namespace=<your-namespace>
 ```shell{promptUser: user}{promptHost: localhost}
 kubectl logs -f $(kubectl get pods -o jsonpath="{.items[0].metadata.name}" --namespace=<your-namespace> -l "app=mariadb-cli") --namespace=<your-namespace> --timestamps
 ```
+
 * `-l, --selector`: 레이블 셀렉터. 쿠버네티스 오브젝트를 식별합니다. 자세한 정보는 쿠버네티스 공식 문서의 [레이블과 셀렉터](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/labels/#레이블-셀렉터) 내용을 확인해 주세요.
 * `-o, --output`: 반환된 목록의 각 파드에서 이름을 가져오는 표현식을 지정합니다.
 
@@ -632,7 +633,7 @@ Enter Password: <mariadb-password>
 
 > `<mariadb-external-name>` 필드의 경우 엔드포인트 주소 그대로 입력해도 무방하지만 미리 정의해 놓은 별칭을 사용하는 것이 좋습니다.
 
-### [ERROR] Connection Failed.
+### [ERROR] Connection Failed
 
 접속에 실패할 경우 로드 밸런서 및 보안 그룹 설정을 검토해 주세요.
 
@@ -907,4 +908,4 @@ spec:
 
 # ㅗㅜㅑ 🤭<br />설마 여기까지 온 건가요?
 
-이 엄청난 스크롤의 압박을 극복한 당신은 최소 쿠버네티스 사랑꾼! 👍 이제 서비스를 구성하는 파드를 쿠버네티스 오브젝트로 만들고 배포하는 단계가 남았습니다. 심호흡하고 [Amazon EKS 프로젝트 배포하기](/post/kubernetes/deploy-project) 글을 살펴보세요.
+이 엄청난 스크롤의 압박을 극복한 당신은 최소 쿠버네티스 사랑꾼! 👍 이제 서비스를 구성하는 파드를 쿠버네티스 오브젝트로 만들고 배포하는 단계가 남았습니다. 심호흡하고 [Amazon EKS 프로젝트 배포하기](/articles/kubernetes/deploy-project) 글을 살펴보세요.

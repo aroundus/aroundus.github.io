@@ -107,14 +107,14 @@ yarn run test:watch
 ## 프로젝트 구조
 
 ```plaintext
-  ㄴ posts
+  ㄴ articles
   ㄴ scripts
     - lunr.js
   ㄴ src
     ㄴ assets
     ㄴ components
       ㄴ Template
-        - PostTemplate.tsx // 게시물 페이지를 생성하는 템플릿
+        - ArticleTemplate.tsx // 게시물 페이지를 생성하는 템플릿
     ㄴ config
     ㄴ helpers
     ㄴ pages
@@ -123,21 +123,33 @@ yarn run test:watch
     ㄴ types
 ```
 
-- **posts**: 블로그의 게시물을 담는 폴더
+- **articles**: 블로그의 게시물을 담는 폴더
 - **src/pages**: 블로그의 페이지를 관리하는 폴더
 
-### posts
+### articles
 
-블로그의 게시물을 관리합니다. 경로의 경우 `gatsby-config.js` 파일에서 다음과 같이 설정합니다.
+블로그의 게시물을 관리합니다.
+
+#### `gatsby-config.js`
 
 ```javascript
 {
   resolve: 'gatsby-source-filesystem',
   options: {
-    name: 'post',
-    path: `${__dirname}/posts`,
+    name: 'articles',
+    path: `${__dirname}/articles`,
   },
 },
+```
+
+#### `gatsby-node.ts`
+
+```typescript
+createNodeField({
+  name: 'slug',
+  node,
+  value: `/articles${value}`,
+});
 ```
 
 ### [scripts/lunr.js](scripts/lunr.js)
@@ -146,7 +158,7 @@ Lunr의 한글 적용이 불가한 문제를 해결하기 위하여 [@eastuni/lu
 
 ### src/pages
 
-`gatsby-plugin-page-creator` 플러그인이 `src/pages` 폴더의 모든 파일을 자동으로 페이지로 변환합니다. PostTemplate 컴포넌트는 게시물 페이지를 생성하는 템플릿 컴포넌트로 `src/pages` 폴더에 넣지 않습니다.
+`gatsby-plugin-page-creator` 플러그인이 `src/pages` 폴더의 모든 파일을 자동으로 페이지로 변환합니다. ArticleTemplate 컴포넌트는 게시물 페이지를 생성하는 템플릿 컴포넌트로 `src/pages` 폴더에 넣지 않습니다.
 
 <details>
   <summary>메인 페이지</summary>

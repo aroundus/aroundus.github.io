@@ -41,8 +41,8 @@ let plugins = [
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      name: 'post',
-      path: `${__dirname}/posts`,
+      name: 'articles',
+      path: `${__dirname}/articles`,
     },
   },
   {
