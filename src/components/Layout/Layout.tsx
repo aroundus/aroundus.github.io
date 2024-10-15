@@ -5,7 +5,7 @@ import { SheetsRegistry } from 'jss';
 import { CssBaseline as CSSBaseline, useMediaQuery } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 
-import { theme } from './helpers/theme';
+import { darkTheme, lightTheme } from './helpers/theme';
 
 import { Content } from './Content';
 import { Footer } from './Footer';
@@ -28,11 +28,7 @@ export function Layout({ children, header }: LayoutProps) {
     >
       <ThemeProvider
         defaultMode="system"
-        theme={{
-          ...theme,
-          colorSchemes: { dark: isDarkMode },
-          palette: { ...theme.palette, mode: isDarkMode ? 'dark' : 'light' },
-        }}
+        theme={isDarkMode ? darkTheme : lightTheme}
       >
         <CSSBaseline />
         {header || <Header />}
