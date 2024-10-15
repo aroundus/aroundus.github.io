@@ -4,14 +4,14 @@ import { colors, Container, List, ListItemButton, ListItemButtonProps, Typograph
 import { Recommend as RecommendIcon } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '@/types/post';
+import type { Article } from '@/types/article';
 
-interface RelatedPostListSectionProps {
-  posts: Post[];
+interface RelatedArticleListSectionProps {
+  articles: Article[];
   query: string;
 }
 
-export function RelatedPostListSection({ query, posts }: RelatedPostListSectionProps) {
+export function RelatedArticleListSection({ articles, query }: RelatedArticleListSectionProps) {
   const StyledListItem = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&': {
       justifyContent: 'space-between',
@@ -43,12 +43,12 @@ export function RelatedPostListSection({ query, posts }: RelatedPostListSectionP
         <strong style={{ color: colors.cyan[600] }}>{query}</strong> 관련 글
       </Typography>
       <List sx={{ mt: 2 }}>
-        {posts.map((post) => (
+        {articles.map((article) => (
           <StyledListItem
             divider
-            key={post.id}
+            key={article.id}
             sx={{ py: 1 }}
-            onClick={() => handleClick(post.path as string)}
+            onClick={() => handleClick(article.path as string)}
           >
             <Typography
               flex="1 0 0"
@@ -56,14 +56,14 @@ export function RelatedPostListSection({ query, posts }: RelatedPostListSectionP
               sx={{ mr: 4 }}
               variant="body2"
             >
-              {post.title}
+              {article.title}
             </Typography>
             <Typography
               color={colors.grey[700]}
               sx={{ fontVariantNumeric: 'tabular-nums' }}
               variant="body2"
             >
-              {post.date}
+              {article.date}
             </Typography>
           </StyledListItem>
         ))}

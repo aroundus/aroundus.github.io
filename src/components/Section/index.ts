@@ -1,9 +1,9 @@
+export { ArticleListSection } from './ArticleListSection';
+export { ArticleNavigationSection } from './ArticleNavigationSection';
+export { ArticleSearchSection } from './ArticleSearchSection';
 export { ArticleSection } from './ArticleSection';
 export { CategorySection } from './CategorySection';
 export { CommentSection } from './CommentSection';
 export { KeyVisualSection } from './KeyVisualSection';
 export { PaginationSection } from './PaginationSection';
-export { PostListSection } from './PostListSection';
-export { PostNavigationSection } from './PostNavigationSection';
-export { PostSearchSection } from './PostSearchSection';
-export { RelatedPostListSection } from './RelatedPostListSection';
+export { RelatedArticleListSection } from './RelatedArticleListSection';

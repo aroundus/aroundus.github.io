@@ -4,15 +4,15 @@ import uniq from 'lodash-es/uniq';
 import Typewriter from 'typewriter-effect';
 
 import {
+  ArticleListSection,
+  ArticleSearchSection,
   CategorySection,
   KeyVisualSection,
   PaginationSection,
-  PostListSection,
-  PostSearchSection,
 } from '@/components/Section';
-import { getSearchPosts } from '@/helpers/search';
+import { getSearchArticles } from '@/helpers/search';
+import type { Article } from '@/types/article';
 import type { AnyObject } from '@/types/global';
-import type { Post } from '@/types/post';
 
 const CATEGORY_ALL = '전체';
 
@@ -43,26 +43,28 @@ export default function Main() {
     }
   `);
 
-  const fetchedPosts: Post[] = allMarkdownRemark.nodes.map((node: AnyObject) => ({
+  const fetchedArticles: Article[] = allMarkdownRemark.nodes.map((node: AnyObject) => ({
     id: node.id,
     path: node.fields.slug,
     ...node.frontmatter,
   }));
 
   const categories: string[] = uniq(
-    fetchedPosts.map((post) => post.category || '').sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0)),
+    fetchedArticles
+      .map((article) => article.category || '')
+      .sort((a: string, b: string) => a.charCodeAt(0) - b.charCodeAt(0)),
   );
 
   const [selectedCategory, setSelectedCategory] = useState(CATEGORY_ALL);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
-  const [pagedPosts, setPagedPosts] = useState<Post[]>([]);
+  const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
+  const [pagedArticles, setPagedArticles] = useState<Article[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postCountPerPage] = useState(5);
+  const [articleCountPerPage] = useState(5);
   const [totalPageCount, setTotalPageCount] = useState(1);
 
   useEffect(() => {
-    let posts = searchQuery ? getSearchPosts(searchQuery) : fetchedPosts;
+    let articles = searchQuery ? getSearchArticles(searchQuery) : fetchedArticles;
 
     /**
      * 대표 글 포함: 선택한 카테고리가 있거나 검색한 단어가 있는 경우
@@ -70,13 +72,13 @@ export default function Main() {
      */
     if (selectedCategory === CATEGORY_ALL) {
       if (searchQuery === '') {
-        posts = posts.filter((_, index) => index);
+        articles = articles.filter((_, index) => index);
       }
     } else {
-      posts = posts.filter((post) => post.category === selectedCategory);
+      articles = articles.filter((article) => article.category === selectedCategory);
     }
 
-    setFilteredPosts(posts);
+    setFilteredArticles(articles);
   }, [selectedCategory, searchQuery, currentPage]);
 
   useEffect(() => {
@@ -84,14 +86,16 @@ export default function Main() {
   }, [selectedCategory, searchQuery]);
 
   useEffect(() => {
-    setTotalPageCount(Math.ceil(filteredPosts.length / postCountPerPage));
-    setPagedPosts(filteredPosts.slice((currentPage - 1) * postCountPerPage, currentPage * postCountPerPage));
-  }, [filteredPosts]);
+    setTotalPageCount(Math.ceil(filteredArticles.length / articleCountPerPage));
+    setPagedArticles(
+      filteredArticles.slice((currentPage - 1) * articleCountPerPage, currentPage * articleCountPerPage),
+    );
+  }, [filteredArticles]);
 
   return (
     <>
       <KeyVisualSection
-        post={fetchedPosts[0]}
+        article={fetchedArticles[0]}
         typewriter={{
           title: (
             <Typewriter
@@ -99,7 +103,7 @@ export default function Main() {
                 delay: 100,
               }}
               onInit={(typewriter) => {
-                typewriter.typeString(fetchedPosts[0].title).start();
+                typewriter.typeString(fetchedArticles[0].title).start();
               }}
             />
           ),
@@ -112,8 +116,8 @@ export default function Main() {
         selectedCategory={selectedCategory}
         onClick={(category: string) => setSelectedCategory(category)}
       />
-      <PostSearchSection onChange={(query) => setSearchQuery(query)} />
-      <PostListSection posts={pagedPosts} />
+      <ArticleSearchSection onChange={(query) => setSearchQuery(query)} />
+      <ArticleListSection articles={pagedArticles} />
       <PaginationSection
         currentPage={currentPage}
         totalPageCount={totalPageCount}

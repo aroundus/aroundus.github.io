@@ -15,7 +15,7 @@ const GatsbyNode: GatsbyNodeType = {};
 
 GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
-  const fetchedPostsQuery = await graphql(`
+  const fetchedArticlesQuery = await graphql(`
     {
       allMarkdownRemark(
         filter: { frontmatter: { draft: { ne: true } } }
@@ -38,25 +38,25 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
-  if (fetchedPostsQuery.errors) {
-    reporter.panicOnBuild('There was an error loading your blog posts', fetchedPostsQuery.errors as Error);
+  if (fetchedArticlesQuery.errors) {
+    reporter.panicOnBuild('There was an error loading your blog articles', fetchedArticlesQuery.errors as Error);
     return;
   }
 
-  const posts = (fetchedPostsQuery.data as AnyObject).allMarkdownRemark.nodes;
-  const PostTemplate = path.resolve(__dirname, '../components/Template/PostTemplate.tsx');
+  const articles = (fetchedArticlesQuery.data as AnyObject).allMarkdownRemark.nodes;
+  const ArticleTemplate = path.resolve(__dirname, '../components/Template/ArticleTemplate.tsx');
 
-  posts.forEach((post: AnyObject, index: number) => {
-    const prevPostID = index === posts.length - 1 ? null : posts[index + 1].id;
-    const nextPostID = index === 0 ? null : posts[index - 1].id;
+  articles.forEach((article: AnyObject, index: number) => {
+    const prevArticleID = index === articles.length - 1 ? null : articles[index + 1].id;
+    const nextArticleID = index === 0 ? null : articles[index - 1].id;
 
     createPage({
-      path: post.fields.slug,
-      component: PostTemplate,
+      path: article.fields.slug,
+      component: ArticleTemplate,
       context: {
-        id: post.id,
-        prevPostID,
-        nextPostID,
+        id: article.id,
+        prevArticleID,
+        nextArticleID,
       },
     });
   });
@@ -64,18 +64,18 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   if (isProduction && gitalkCreateIssueToken) {
     const issueOptionsPromises = [];
 
-    for (let i = 0; i < posts.length; i += 1) {
-      const post = posts[i];
+    for (let i = 0; i < articles.length; i += 1) {
+      const article = articles[i];
 
       const issueOptions = {
         clientID: process.env.GITALK_GITHUB_CLIENT_ID as string,
         clientSecret: process.env.GITALK_GITHUB_CLIENT_SECRET as string,
         repo: process.env.SITE_DOMAIN as string,
         owner: process.env.GITHUB_USER_NAME as string,
-        id: post.id,
-        title: `${post.frontmatter.title} #${post.frontmatter.category}`,
-        description: post.frontmatter.description,
-        url: `https://${process.env.SITE_DOMAIN}${post.fields.slug}`,
+        id: article.id,
+        title: `${article.frontmatter.title} #${article.frontmatter.category}`,
+        description: article.frontmatter.description,
+        url: `https://${process.env.SITE_DOMAIN}${article.fields.slug}`,
         personalToken: gitalkCreateIssueToken,
       };
 
@@ -100,7 +100,7 @@ GatsbyNode.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: 'slug',
       node,
-      value: `/post${value}`,
+      value: `/articles${value}`,
     });
   }
 };

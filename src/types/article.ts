@@ -1,4 +1,4 @@
-export interface Post {
+export interface Article {
   category?: string;
   date: string;
   description: string;
@@ -12,7 +12,7 @@ export interface Post {
   title: string;
 }
 
-export interface PostNavigation {
+export interface ArticleNavigation {
   category: string;
   path: string;
   title: string;

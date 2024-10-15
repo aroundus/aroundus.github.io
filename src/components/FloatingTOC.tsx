@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Property } from 'csstype';
 import { createUseStyles } from 'react-jss';
 
 import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
@@ -31,7 +30,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
 
   const [activeStep, setActiveStep] = useState(0);
   const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
-  const [position, setPosition] = useState<Property.Position>('absolute');
+  const [position, setPosition] = useState<React.CSSProperties['position']>('absolute');
   const [xOffset, setXOffset] = useState(0);
   const [yOffset, setYOffset] = useState(0);
 

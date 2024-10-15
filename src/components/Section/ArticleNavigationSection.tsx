@@ -2,14 +2,14 @@ import React from 'react';
 import { Box, Button, colors, Container, Typography } from '@mui/material';
 import { ArrowBackIos as ArrowLeftIcon, ArrowForwardIos as ArrowRightIcon } from '@mui/icons-material';
 
-import type { PostNavigation } from '@/types/post';
+import type { ArticleNavigation } from '@/types/article';
 
-interface PostNavigationSectionProps {
-  nextPost?: PostNavigation;
-  prevPost?: PostNavigation;
+interface ArticleNavigationSectionProps {
+  nextArticle?: ArticleNavigation;
+  prevArticle?: ArticleNavigation;
 }
 
-export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSectionProps) {
+export function ArticleNavigationSection({ nextArticle, prevArticle }: ArticleNavigationSectionProps) {
   return (
     <Container
       component="section"
@@ -19,12 +19,12 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
     >
       <Box
         display="flex"
-        justifyContent={prevPost ? 'space-between' : 'flex-end'}
+        justifyContent={prevArticle ? 'space-between' : 'flex-end'}
       >
-        {prevPost && (
+        {prevArticle && (
           <Button
             color="inherit"
-            href={prevPost.path}
+            href={prevArticle.path}
             size="large"
             sx={{ display: 'block', textAlign: 'left', textTransform: 'inherit' }}
             variant="text"
@@ -43,15 +43,15 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
               sx={{ mt: 3 }}
               variant="subtitle1"
             >
-              #{prevPost.category}
+              #{prevArticle.category}
             </Typography>
-            <Typography variant="subtitle1">{prevPost.title}</Typography>
+            <Typography variant="subtitle1">{prevArticle.title}</Typography>
           </Button>
         )}
-        {nextPost && (
+        {nextArticle && (
           <Button
             color="inherit"
-            href={nextPost.path}
+            href={nextArticle.path}
             size="large"
             sx={{ display: 'block', textAlign: 'right', textTransform: 'inherit' }}
             variant="text"
@@ -70,9 +70,9 @@ export function PostNavigationSection({ nextPost, prevPost }: PostNavigationSect
               sx={{ mt: 3 }}
               variant="subtitle1"
             >
-              #{nextPost.category}
+              #{nextArticle.category}
             </Typography>
-            <Typography variant="subtitle1">{nextPost.title}</Typography>
+            <Typography variant="subtitle1">{nextArticle.title}</Typography>
           </Button>
         )}
       </Box>

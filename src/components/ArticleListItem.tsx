@@ -3,13 +3,13 @@ import React from 'react';
 import { colors, Grid, ListItem, ListItemButton, ListItemButtonProps, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import type { Post } from '@/types/post';
+import type { Article } from '@/types/article';
 
-interface PostListItemProps {
-  post: Post;
+interface ArticleListItemProps {
+  article: Article;
 }
 
-export function PostListItem({ post }: PostListItemProps) {
+export function ArticleListItem({ article }: ArticleListItemProps) {
   const StyledContent = styled(ListItemButton)<ListItemButtonProps>(() => ({
     '&:hover': {
       backgroundColor: 'transparent',
@@ -25,7 +25,7 @@ export function PostListItem({ post }: PostListItemProps) {
   }));
 
   const handleClick = () => {
-    if (post.path) window.location.pathname = post.path;
+    if (article.path) window.location.pathname = article.path;
   };
 
   return (
@@ -48,25 +48,25 @@ export function PostListItem({ post }: PostListItemProps) {
             fontWeight={700}
             variant="body2"
           >
-            #{post.category || 'empty'}
+            #{article.category || 'empty'}
           </Typography>
           <Typography
             sx={{ mt: 4 }}
             variant="h2"
           >
-            {post.title}
+            {article.title}
           </Typography>
           <Typography
             sx={{ mt: 6 }}
             variant="body1"
           >
-            {post.description}
+            {article.description}
           </Typography>
           <Typography
             color={colors.grey[500]}
             variant="subtitle1"
           >
-            {post.date}
+            {article.date}
           </Typography>
         </Grid>
       </StyledContent>

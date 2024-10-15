@@ -33,7 +33,6 @@
     "@mui/material": "^6.1.2",
     "aos": "^2.3.4",
     "classnames": "^2.3.1",
-    "csstype": "^3.0.10",
     "dayjs": "^1.10.7",
     "dotenv": "^15.0.0",
     "gatsby": "^5.13.5",

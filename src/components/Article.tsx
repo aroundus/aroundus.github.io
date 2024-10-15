@@ -5,13 +5,13 @@ import { useTheme } from '@mui/material/styles';
 
 import { FloatingTOC } from '@/components/FloatingTOC';
 import { ArticleSection, KeyVisualSection } from '@/components/Section';
-import type { Post as PostType } from '@/types/post';
+import type { Article as ArticleType } from '@/types/article';
 
-interface PostProps {
-  post: PostType;
+interface ArticleProps {
+  article: ArticleType;
 }
 
-export function Post({ post }: PostProps) {
+export function Article({ article }: ArticleProps) {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('xl'));
 
@@ -19,16 +19,16 @@ export function Post({ post }: PostProps) {
 
   return (
     <>
-      <KeyVisualSection post={post} />
-      {post.html && (
+      <KeyVisualSection article={article} />
+      {article.html && (
         <ArticleSection
-          html={post.html}
+          html={article.html}
           ref={articleRef}
         />
       )}
-      {post.tableOfContents && isDesktop && (
+      {article.tableOfContents && isDesktop && (
         <FloatingTOC
-          html={post.tableOfContents}
+          html={article.tableOfContents}
           target={articleRef.current}
         />
       )}

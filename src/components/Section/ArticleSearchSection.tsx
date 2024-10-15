@@ -4,11 +4,11 @@ import { createUseStyles } from 'react-jss';
 import { Box, Container, TextField } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 
-interface PostSearchSectionProps {
+interface ArticleSearchSectionProps {
   onChange: (value: string) => void;
 }
 
-export function PostSearchSection({ onChange: handleChange }: PostSearchSectionProps) {
+export function ArticleSearchSection({ onChange: handleChange }: ArticleSearchSectionProps) {
   const styles = createUseStyles(
     {
       container: `
@@ -19,7 +19,7 @@ export function PostSearchSection({ onChange: handleChange }: PostSearchSectionP
       `,
     },
     {
-      name: 'PostSearchSection',
+      name: 'ArticleSearchSection',
     },
   )();
 
