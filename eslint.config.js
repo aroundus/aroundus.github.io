@@ -2,11 +2,11 @@ const js = require('@eslint/js');
 const globals = require('globals');
 const ts = require('typescript-eslint');
 
+/** @type {import('typescript-eslint').Config} */
 module.exports = [
   js.configs.recommended,
   ...ts.configs.recommended,
   {
-    ignores: ['@types', 'babel.config.js', 'build', 'gatsby-*.js', 'node_modules'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -43,4 +43,10 @@ module.exports = [
       ],
     },
   },
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'warn',
+    },
+  },
+  { ignores: ['@types', '*.config.js', 'build', 'gatsby-*.js', 'node_modules'] },
 ];
