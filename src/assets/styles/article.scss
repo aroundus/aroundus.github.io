@@ -11,17 +11,6 @@
 }
 
 #article {
-  // 링크
-  a {
-    border-bottom: 0.2em solid var(--color-cyan-400);
-
-    @media (hover: hover) {
-      &:hover {
-        color: color-mix(in srgb, var(--color-cyan-400) 70%, CanvasText 30%);
-      }
-    }
-  }
-
   // 헤더
   h1 {
     counter-reset: heading-2;
