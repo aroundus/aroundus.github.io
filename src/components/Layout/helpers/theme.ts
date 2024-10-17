@@ -107,13 +107,14 @@ export const theme = createTheme(
           }
 
           a {
+            border-bottom: 0.2em solid ${colors.cyan[400]};
             color: CanvasText;
             text-decoration: none;
             transition: 200ms;
 
             @media (hover: hover) {
               &:hover {
-                color: ${colors.cyan[600]};
+                color: color-mix(in srgb, ${colors.cyan[400]} 70%, CanvasText 30%);
               }
             }
           }
@@ -136,6 +137,10 @@ export const theme = createTheme(
           h6 {
             font-family: ${HEADING_FONT_FAMILY};
             line-height: 1.35;
+
+            & + [class*="MuiTypography"] {
+              margin-top: 1.6em;
+            }
           }
 
           h1 {

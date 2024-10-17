@@ -128,6 +128,7 @@ export function Footer() {
               </Typography>
               <Typography
                 fontSize={12}
+                style={{ marginTop: 0 }}
                 variant="subtitle1"
               >
                 {meta.author.summary}

@@ -21,7 +21,9 @@ export function Header() {
       },
 
       link: {
+        borderBottom: 'none',
         opacity: 0.9,
+        textDecoration: 'none',
 
         '&:hover': {
           opacity: 1,
@@ -52,7 +54,6 @@ export function Header() {
           display="flex"
           gap={1}
           href="/"
-          sx={{ textDecoration: 'none' }}
         >
           <SymbolMarkIcon
             height={12}
