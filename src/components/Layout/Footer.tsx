@@ -111,7 +111,6 @@ export function Footer() {
                 <Link
                   href="https://www.gatsbyjs.com/"
                   target="_blank"
-                  underline="none"
                 >
                   Gatsby
                 </Link>
@@ -139,6 +138,7 @@ export function Footer() {
                 sx={{ mt: 3 }}
               >
                 <Link
+                  borderBottom="none"
                   href={meta.author.url.github}
                   target="_blank"
                 >
@@ -148,6 +148,7 @@ export function Footer() {
                   />
                 </Link>
                 <Link
+                  borderBottom="none"
                   href={meta.author.url.instagram}
                   target="_blank"
                 >
@@ -157,6 +158,7 @@ export function Footer() {
                   />
                 </Link>
                 <Link
+                  borderBottom="none"
                   href={`mailto:${meta.author.email}?subject=[AROUNDUS] 제목을 작성해 주세요.`}
                   target="_blank"
                 >
