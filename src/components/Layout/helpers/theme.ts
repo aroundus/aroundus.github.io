@@ -112,6 +112,10 @@ export const theme = createTheme(
             text-decoration: none;
             transition: 200ms;
 
+            &[class*="MuiTypography"] {
+              text-decoration: none;
+            }
+
             @media (hover: hover) {
               &:hover {
                 color: color-mix(in srgb, ${colors.cyan[400]} 70%, CanvasText 30%);
