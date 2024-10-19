@@ -26,7 +26,7 @@ export function ArticleListSection({ articles }: ArticleListSectionProps) {
 
   return (
     <section className={styles.container}>
-      <List sx={{ mx: 'auto', maxWidth: 800 }}>
+      <List sx={{ mx: 'auto', maxWidth: 640, minWidth: 320, width: '80%' }}>
         {isEmpty(articles) ? (
           <ArticleListItem
             article={{
