@@ -3,13 +3,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 import uniq from 'lodash-es/uniq';
 import Typewriter from 'typewriter-effect';
 
-import {
-  ArticleListSection,
-  ArticleSearchSection,
-  CategorySection,
-  KeyVisualSection,
-  PaginationSection,
-} from '@/components/Section';
+import { ArticleListSection } from '@/components/ArticleListSection';
+import { ArticleSearchSection } from '@/components/ArticleSearchSection';
+import { CategorySection } from '@/components/CategorySection';
+import { KeyVisualSection } from '@/components/KeyVisualSection';
+import { PaginationSection } from '@/components/PaginationSection';
 import { getSearchArticles } from '@/helpers/search';
 import type { Article } from '@/types/article';
 import type { AnyObject } from '@/types/global';

@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 
 import type { Article } from '@/types/article';
 
-import { ArticleListItem } from '../ArticleListItem';
+import { ArticleListItem } from './ArticleListItem';
 
 interface ArticleListSectionProps {
   articles: Article[];
