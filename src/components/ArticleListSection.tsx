@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 
 import type { Article } from '@/types/article';
 
-import { ArticleListItem } from '../ArticleListItem';
+import { ArticleListItem } from './ArticleListItem';
 
 interface ArticleListSectionProps {
   articles: Article[];
@@ -26,7 +26,7 @@ export function ArticleListSection({ articles }: ArticleListSectionProps) {
 
   return (
     <section className={styles.container}>
-      <List sx={{ mx: 'auto', maxWidth: 800 }}>
+      <List sx={{ mx: 'auto', maxWidth: 640, minWidth: 320, width: '80%' }}>
         {isEmpty(articles) ? (
           <ArticleListItem
             article={{

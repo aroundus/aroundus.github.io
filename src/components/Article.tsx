@@ -3,8 +3,9 @@ import React, { useRef } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
+import { ArticleSection } from '@/components/ArticleSection';
 import { FloatingTOC } from '@/components/FloatingTOC';
-import { ArticleSection, KeyVisualSection } from '@/components/Section';
+import { KeyVisualSection } from '@/components/KeyVisualSection';
 import type { Article as ArticleType } from '@/types/article';
 
 interface ArticleProps {

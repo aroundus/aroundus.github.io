@@ -5,9 +5,11 @@ import isEmpty from 'lodash-es/isEmpty';
 import { Divider } from '@mui/material';
 import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 
-import { Layout } from '@/components/Layout';
 import { Article } from '@/components/Article';
-import { ArticleNavigationSection, CommentSection, RelatedArticleListSection } from '@/components/Section';
+import { ArticleNavigationSection } from '@/components/ArticleNavigationSection';
+import { CommentSection } from '@/components/CommentSection';
+import { Layout } from '@/components/Layout';
+import { RelatedArticleListSection } from '@/components/RelatedArticleListSection';
 import { SEO } from '@/components/SEO';
 import { getArticleCoverImageURL } from '@/helpers/image';
 import { getSearchArticles } from '@/helpers/search';
