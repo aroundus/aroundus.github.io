@@ -79,7 +79,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
   }
 
   useEffect(() => {
-    function listener() {
+    function handleWindowScroll() {
       const { scrollY } = window;
 
       tocSteps.forEach((step, index) => {
@@ -89,17 +89,19 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       });
     }
 
-    listener();
-    window.addEventListener('scroll', listener);
+    handleWindowScroll();
+    window.addEventListener('scroll', handleWindowScroll);
 
     return () => {
-      window.removeEventListener('scroll', listener);
+      window.removeEventListener('scroll', handleWindowScroll);
     };
   }, [tocSteps]);
 
   useEffect(() => {
-    const listener = () => {
-      if (target === null) return;
+    const handleWindowScroll = () => {
+      if (target === null) {
+        return;
+      }
 
       const targetRect = target.getBoundingClientRect();
       const { scrollY } = window;
@@ -117,16 +119,16 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       }
     };
 
-    listener();
+    handleWindowScroll();
     ['resize', 'orientationChange', 'scroll'].forEach((type) => {
-      window.addEventListener(type, listener);
+      window.addEventListener(type, handleWindowScroll);
     });
 
     setTOCStepsOffset();
 
     return () => {
       ['resize', 'orientationChange', 'scroll'].forEach((type) => {
-        window.removeEventListener(type, listener);
+        window.removeEventListener(type, handleWindowScroll);
       });
     };
   }, [htmlString, target]);
