@@ -28,7 +28,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
     },
   )();
 
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStepIndex, setActiveStepIndex] = useState(0);
   const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
   const [position, setPosition] = useState<React.CSSProperties['position']>('absolute');
   const [xOffset, setXOffset] = useState(0);
@@ -60,11 +60,11 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       if (heading === null) return;
 
       const headingRect = heading.getBoundingClientRect();
-      const { pageYOffset } = window;
+      const { scrollY } = window;
 
       steps.push({
         text: anchor.innerHTML.replace(/<\/?(br|mark|u)>/g, ' '),
-        yOffset: headingRect.top + pageYOffset - 60,
+        yOffset: headingRect.top + scrollY - 60,
       });
     });
 
@@ -79,37 +79,39 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
   }
 
   useEffect(() => {
-    function listener() {
-      const { pageYOffset } = window;
+    function handleWindowScroll() {
+      const { scrollY } = window;
 
       tocSteps.forEach((step, index) => {
-        if (step.yOffset < pageYOffset + 20) {
-          setActiveStep(index);
+        if (step.yOffset < scrollY + 20) {
+          setActiveStepIndex(index);
         }
       });
     }
 
-    listener();
-    window.addEventListener('scroll', listener);
+    handleWindowScroll();
+    window.addEventListener('scroll', handleWindowScroll);
 
     return () => {
-      window.removeEventListener('scroll', listener);
+      window.removeEventListener('scroll', handleWindowScroll);
     };
   }, [tocSteps]);
 
   useEffect(() => {
-    const listener = () => {
-      if (target === null) return;
+    const handleWindowScroll = () => {
+      if (target === null) {
+        return;
+      }
 
       const targetRect = target.getBoundingClientRect();
-      const { pageYOffset } = window;
+      const { scrollY } = window;
 
       setXOffset(targetRect.left + targetRect.width);
 
-      if (pageYOffset < target.offsetTop) {
+      if (scrollY < target.offsetTop) {
         setPosition('absolute');
         setYOffset(target.offsetTop);
-      } else if (pageYOffset < targetRect.height) {
+      } else if (scrollY < targetRect.height) {
         setPosition('fixed');
         setYOffset(0);
       } else {
@@ -117,22 +119,22 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       }
     };
 
-    listener();
+    handleWindowScroll();
     ['resize', 'orientationChange', 'scroll'].forEach((type) => {
-      window.addEventListener(type, listener);
+      window.addEventListener(type, handleWindowScroll);
     });
 
     setTOCStepsOffset();
 
     return () => {
       ['resize', 'orientationChange', 'scroll'].forEach((type) => {
-        window.removeEventListener(type, listener);
+        window.removeEventListener(type, handleWindowScroll);
       });
     };
   }, [htmlString, target]);
 
   return (
-    <aside
+    <div
       className={styles.container}
       style={{
         position,
@@ -142,7 +144,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
     >
       <Box sx={{ minWidth: 160 }}>
         <Stepper
-          activeStep={activeStep}
+          activeStep={activeStepIndex}
           orientation="vertical"
           connector={null}
           nonLinear
@@ -174,6 +176,6 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
           ))}
         </Stepper>
       </Box>
-    </aside>
+    </div>
   );
 }

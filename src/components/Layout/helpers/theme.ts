@@ -108,7 +108,7 @@ export const theme = createTheme(
 
           a {
             border-bottom: 0.2em solid ${colors.cyan[400]};
-            color: CanvasText;
+            color: ${colors.cyan[400]};
             text-decoration: none;
             transition: 200ms;
 
