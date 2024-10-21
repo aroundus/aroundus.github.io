@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
+import { throttle } from 'lodash-es';
 
 import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -79,7 +80,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
   }
 
   useEffect(() => {
-    function handleWindowScroll() {
+    function handleScroll() {
       const { scrollY } = window;
 
       tocSteps.forEach((step, index) => {
@@ -89,16 +90,18 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       });
     }
 
-    handleWindowScroll();
-    window.addEventListener('scroll', handleWindowScroll);
+    const throttledScroll = throttle(handleScroll, 50);
+
+    handleScroll();
+    window.addEventListener('scroll', throttledScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleWindowScroll);
+      window.removeEventListener('scroll', throttledScroll);
     };
   }, [tocSteps]);
 
   useEffect(() => {
-    const handleWindowScroll = () => {
+    const handleScroll = () => {
       if (target === null) {
         return;
       }
@@ -119,16 +122,18 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       }
     };
 
-    handleWindowScroll();
+    const throttledScroll = throttle(handleScroll, 50);
+
+    handleScroll();
     ['resize', 'orientationChange', 'scroll'].forEach((type) => {
-      window.addEventListener(type, handleWindowScroll);
+      window.addEventListener(type, throttledScroll);
     });
 
     setTOCStepsOffset();
 
     return () => {
       ['resize', 'orientationChange', 'scroll'].forEach((type) => {
-        window.removeEventListener(type, handleWindowScroll);
+        window.removeEventListener(type, throttledScroll);
       });
     };
   }, [htmlString, target]);
