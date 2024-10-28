@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 
 import { Button, ButtonProps, colors, Typography, useMediaQuery } from '@mui/material';
@@ -22,6 +22,8 @@ export function KeyVisualSection({
 }: KeyVisualSectionProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const [isMounted, setIsMounted] = useState(false);
 
   const StyledButton = styled(Button)<ButtonProps>(() => ({
     '&': {
@@ -87,6 +89,10 @@ export function KeyVisualSection({
 
   const styles = useStyles();
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section
       className={styles.container}
@@ -94,58 +100,60 @@ export function KeyVisualSection({
         padding: `${theme.spacing(isMobile ? 32 : 64)} ${theme.spacing(isMobile ? 6 : 12)} ${theme.spacing(16)}`,
       }}
     >
-      <div className={styles.content}>
-        <Typography
-          color={colors.grey[200]}
-          fontFamily="Montserrat"
-          fontSize={20}
-          fontWeight={700}
-          position="relative"
-          sx={{ mb: 2 }}
-        >
-          #{article.category} Episode {article.index}
-        </Typography>
-        <Typography
-          color={colors.common.white}
-          fontSize={isMobile ? 40 : 48}
-          position="relative"
-          sx={{ mt: 0, mb: 3 }}
-          variant="h1"
-        >
-          {typewriter?.title ? (
-            <>
-              <div style={{ maxWidth: '100%', position: 'absolute' }}>{typewriter.title}</div>
-              <div style={{ maxWidth: '100%', opacity: 0 }}>{article.title} |</div>
-            </>
-          ) : (
-            article.title
-          )}
-        </Typography>
-        <Typography
-          color={colors.common.white}
-          position="relative"
-          variant="body1"
-        >
-          {article.description}
-        </Typography>
-        <Typography
-          color={colors.grey[300]}
-          position="relative"
-          sx={{ mt: 6 }}
-          variant="subtitle1"
-        >
-          {article.date}
-        </Typography>
-        {isButtonVisible && (
-          <StyledButton
-            href={article.path}
-            size="large"
-            sx={{ mt: 6, px: 10 }}
+      {isMounted && (
+        <div className={styles.content}>
+          <Typography
+            color={colors.grey[200]}
+            fontFamily="Montserrat"
+            fontSize={20}
+            fontWeight={700}
+            position="relative"
+            sx={{ mb: 2 }}
           >
-            내용 읽기
-          </StyledButton>
-        )}
-      </div>
+            #{article.category} Episode {article.index}
+          </Typography>
+          <Typography
+            color={colors.common.white}
+            fontSize={isMobile ? 40 : 48}
+            position="relative"
+            sx={{ mt: 0, mb: 3 }}
+            variant="h1"
+          >
+            {typewriter?.title ? (
+              <>
+                <div style={{ maxWidth: '100%', position: 'absolute' }}>{typewriter.title}</div>
+                <div style={{ maxWidth: '100%', opacity: 0 }}>{article.title} |</div>
+              </>
+            ) : (
+              article.title
+            )}
+          </Typography>
+          <Typography
+            color={colors.common.white}
+            position="relative"
+            variant="body1"
+          >
+            {article.description}
+          </Typography>
+          <Typography
+            color={colors.grey[300]}
+            position="relative"
+            sx={{ mt: 6 }}
+            variant="subtitle1"
+          >
+            {article.date}
+          </Typography>
+          {isButtonVisible && (
+            <StyledButton
+              href={article.path}
+              size="large"
+              sx={{ mt: 6, px: 10 }}
+            >
+              내용 읽기
+            </StyledButton>
+          )}
+        </div>
+      )}
     </section>
   );
 }
