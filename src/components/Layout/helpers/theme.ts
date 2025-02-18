@@ -3,7 +3,7 @@ import { koKR } from '@mui/material/locale';
 import { createTheme } from '@mui/material/styles';
 
 export const BASE_FONT_FAMILY =
-  'Pretendard, "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
+  '"Wanted Sans", "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
 export const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
 export const HEADING_FONT_FAMILY = `Montserrat, ${BASE_FONT_FAMILY}`;
 
@@ -90,7 +90,6 @@ export const theme = createTheme(
         styleOverrides: `
           html {
             -webkit-font-smoothing: auto;
-            font-feature-settings: 'case' 1, 'ss01' 1, 'ss03' 1;
             font-size: 10px;
           }
 
