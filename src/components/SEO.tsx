@@ -46,7 +46,7 @@ export function SEO(props: SEOProps) {
       link={[
         {
           rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
+          href: 'https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css',
         },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
         { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/sf-mono' },
