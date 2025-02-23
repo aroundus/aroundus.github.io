@@ -195,7 +195,7 @@ module.exports = {
   siteMetadata: {
     author: {
       email: 'specialguest@kakao.com',
-      name: '백은주 sally',
+      name: '백은주 Sara',
       summary: 'Frontend Developer @wadiz',
       url: {
         github: `https://github.com/${process.env.GITHUB_USER_NAME}`,
