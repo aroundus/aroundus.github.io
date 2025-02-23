@@ -19,7 +19,7 @@ import { Layout } from '@/widgets/layout/ui';
 
 const CATEGORY_ALL = '전체';
 
-export default function Main() {
+export default function HomePage() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
