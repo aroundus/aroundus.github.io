@@ -8,6 +8,5 @@ fs.copyFile(
     if (error) {
       console.error(error);
     }
-  }
+  },
 );
-

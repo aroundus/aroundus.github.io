@@ -4,8 +4,8 @@ import { Dvr as DvrIcon, GitHub as GitHubIcon } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 import Typewriter from 'typewriter-effect';
 
-import { ReactIcon, SymbolMarkIcon } from '@/components/Icon';
-import { Layout } from '@/components/Layout';
+import { ReactIcon, SymbolMarkIcon } from '@/shared/ui';
+import { Layout } from '@/widgets/layout/ui';
 
 export default function TistorySkinTemplate() {
   const theme = useTheme();

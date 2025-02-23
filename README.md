@@ -48,23 +48,6 @@
 nvm use
 yarn install
 yarn start
-
-$ yarn lunr && yarn develop
-$ node scripts/lunr.js
-$ gatsby develop
-
-⠀
-You can now view aroundus in the browser.
-⠀
-  http://localhost:8000/
-⠀
-View GraphiQL, an in-browser IDE, to explore your site's data and schema
-⠀
-  http://localhost:8000/___graphql
-⠀
-Note that the development build is not optimized.
-To create a production build, use gatsby build
-⠀
 ```
 
 GraphQL은 특별한 설치 없이 Gatsby에서 사용할 수 있습니다. `yarn start` 명령어를 실행하면 스키마를 자동으로 추론하여 생성합니다. 자세한 정보는 [GraphQL API](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/graphql-api/) 내용을 참조해 주세요.
@@ -79,12 +62,6 @@ GraphQL은 특별한 설치 없이 Gatsby에서 사용할 수 있습니다. `yar
 ```shell
 yarn build
 yarn serve
-
-$ gatsby serve --prefix-paths
-⠀
-You can now view aroundus in the browser.
-⠀
-  http://localhost:9000/
 ```
 
 ## 테스트
@@ -106,21 +83,25 @@ yarn run test:watch
 
 ## 프로젝트 구조
 
+[FSD(Feature-Sliced Design)](https://feature-sliced.design) 아키텍처 방법론을 기반으로 구성하였습니다. 다만, pages 폴더의 경우 Next.js 15 라우팅 방식을 채택하였습니다.
+
 ```plaintext
-  ㄴ articles
-  ㄴ scripts
-    - lunr.js
-  ㄴ src
-    ㄴ assets
-    ㄴ components
-      ㄴ Template
-        - ArticleTemplate.tsx // 게시물 페이지를 생성하는 템플릿
-    ㄴ config
-    ㄴ helpers
-    ㄴ pages
-      - Main.tsx // 메인 페이지
-    ㄴ scripts
-    ㄴ types
+.
+├── articles
+├── scripts
+│   └── lunr.js
+└── src
+    ├── app
+    │   └── lib
+    │       └── GatsbyNode.ts // 게시물 페이지를 생성하는 스크립트
+    ├── features
+    ├── pages
+    │   ├── article
+    │   │   └── ArticlePage.tsx // 게시물 페이지
+    │   └── (home)
+    │       └── HomePage.tsx // 메인 페이지
+    ├── shared
+    └── widgets
 ```
 
 - **articles**: 블로그의 게시물을 담는 폴더
@@ -194,7 +175,7 @@ yarn deploy // CD
 |                                                                                         | 이름                                  | 역할            |
 | :-------------------------------------------------------------------------------------: | ------------------------------------- | --------------- |
 | <img alt="백은주" height="40" src="https://avatars.githubusercontent.com/u/16731356" /> | [백은주](https://github.com/aroundus) | 프론트엔드 개발 |
-|          <img alt="진국이" height="40" src="src/assets/images/zingugi.png" />           | 진국이                                | 프론트엔드 개발 |
-|             <img alt="지니" height="40" src="src/assets/images/jini.png" />             | 지니                                  | 백엔드 개발     |
-|             <img alt="조이" height="40" src="src/assets/images/joy.png" />              | 조이                                  | 백엔드 개발     |
-|             <img alt="스토" height="40" src="src/assets/images/sto.png" />              | 스토                                  | 데브옵스 개발   |
+|            <img alt="진국이" height="40" src="assets/images/zingugi.png" />             | 진국이                                | 프론트엔드 개발 |
+|               <img alt="지니" height="40" src="assets/images/jini.png" />               | 지니                                  | 백엔드 개발     |
+|               <img alt="조이" height="40" src="assets/images/joy.png" />                | 조이                                  | 백엔드 개발     |
+|               <img alt="스토" height="40" src="assets/images/sto.png" />                | 스토                                  | 데브옵스 개발   |

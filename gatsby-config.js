@@ -49,7 +49,7 @@ let plugins = [
     resolve: 'gatsby-source-filesystem',
     options: {
       name: 'images',
-      path: `${__dirname}/src/assets/images`,
+      path: `${__dirname}/assets/images`,
     },
   },
 
