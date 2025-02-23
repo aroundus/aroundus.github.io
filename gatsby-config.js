@@ -49,7 +49,7 @@ let plugins = [
     resolve: 'gatsby-source-filesystem',
     options: {
       name: 'images',
-      path: `${__dirname}/src/assets/images`,
+      path: `${__dirname}/assets/images`,
     },
   },
 
@@ -195,7 +195,7 @@ module.exports = {
   siteMetadata: {
     author: {
       email: 'specialguest@kakao.com',
-      name: '백은주 sally',
+      name: '백은주 Sara',
       summary: 'Frontend Developer @wadiz',
       url: {
         github: `https://github.com/${process.env.GITHUB_USER_NAME}`,

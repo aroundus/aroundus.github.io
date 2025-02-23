@@ -2,15 +2,12 @@
   "name": "aroundus",
   "version": "1.0.0",
   "private": true,
-  "description": "Coding everything AROUND US",
   "keywords": [
     "gatsby",
     "graphql",
     "mui",
     "typescript"
   ],
-  "homepage": "https://aroundus.github.io",
-  "author": "Sally <specialguest@kakao.com>",
   "scripts": {
     "build": "yarn lunr && gatsby build --prefix-paths",
     "clean": "gatsby clean",
