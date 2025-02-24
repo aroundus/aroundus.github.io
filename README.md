@@ -93,11 +93,10 @@ yarn run test:watch
 └── src
     ├── app
     │   └── lib
+    │       ├── ArticlePageTemplate.tsx // 게시물 페이지 템플릿
     │       └── GatsbyNode.ts // 게시물 페이지를 생성하는 스크립트
     ├── features
     ├── pages
-    │   ├── article
-    │   │   └── ArticlePage.tsx // 게시물 페이지
     │   └── (home)
     │       └── HomePage.tsx // 메인 페이지
     ├── shared
