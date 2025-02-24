@@ -20,6 +20,7 @@ defaults:
 
 jobs:
   ci:
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -75,6 +76,7 @@ jobs:
           path: ./public
 
   cd:
+    name: CD
     needs: ci
     environment:
       name: github-pages
