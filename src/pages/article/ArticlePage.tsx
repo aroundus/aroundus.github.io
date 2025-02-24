@@ -117,7 +117,7 @@ export default function ArticlePage({ data, data: { markdownRemark } }: ArticleP
 }
 
 export const query = graphql`
-  query Post($id: String!, $prevArticleID: String, $nextArticleID: String) {
+  query Article($id: String!, $prevArticleID: String, $nextArticleID: String) {
     site {
       siteMetadata {
         title
