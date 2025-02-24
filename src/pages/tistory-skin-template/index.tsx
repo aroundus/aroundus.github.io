@@ -1,3 +1,3 @@
-import TistorySkinTemplate from './TistorySkinTemplate';
+import TistorySkinTemplatePage from './TistorySkinTemplatePage';
 
-export default TistorySkinTemplate;
+export default TistorySkinTemplatePage;

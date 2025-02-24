@@ -20,7 +20,7 @@ import { SEO } from '@/features/seo/ui';
 import type { AnyObject } from '@/shared/model';
 import { Layout } from '@/widgets/layout/ui';
 
-interface ArticlePageProps {
+interface ArticlePageTemplateProps {
   data: {
     markdownRemark: AnyObject;
     prevArticle: AnyObject;
@@ -28,7 +28,7 @@ interface ArticlePageProps {
   };
 }
 
-export default function ArticlePage({ data, data: { markdownRemark } }: ArticlePageProps) {
+export default function ArticlePageTemplate({ data, data: { markdownRemark } }: ArticlePageTemplateProps) {
   const article = {
     id: markdownRemark.id,
     path: markdownRemark.fields.slug,
@@ -117,7 +117,7 @@ export default function ArticlePage({ data, data: { markdownRemark } }: ArticleP
 }
 
 export const query = graphql`
-  query Post($id: String!, $prevArticleID: String, $nextArticleID: String) {
+  query Article($id: String!, $prevArticleID: String, $nextArticleID: String) {
     site {
       siteMetadata {
         title

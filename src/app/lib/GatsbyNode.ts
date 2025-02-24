@@ -44,7 +44,7 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const articles = (fetchedArticlesQuery.data as AnyObject).allMarkdownRemark.nodes;
-  const ArticlePage = path.resolve(__dirname, '../../pages/article/ArticlePage.tsx');
+  const ArticlePageTemplate = path.resolve(__dirname, './ArticlePageTemplate.tsx');
 
   articles.forEach((article: AnyObject, index: number) => {
     const prevArticleID = index === articles.length - 1 ? null : articles[index + 1].id;
@@ -52,7 +52,7 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: article.fields.slug,
-      component: ArticlePage,
+      component: ArticlePageTemplate,
       context: {
         id: article.id,
         prevArticleID,

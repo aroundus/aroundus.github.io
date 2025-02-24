@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 import { ReactIcon, SymbolMarkIcon } from '@/shared/ui';
 import { Layout } from '@/widgets/layout/ui';
 
-export default function TistorySkinTemplate() {
+export default function TistorySkinTemplatePage() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isMounted, setIsMounted] = useState(false);
