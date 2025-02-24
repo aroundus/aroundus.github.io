@@ -16,7 +16,7 @@ import {
   KeyVisualSection,
   RelatedArticleListSection,
 } from '@/features/article/ui';
-import { SEO } from '@/features/seo/ui';
+import { Helmet } from '@/features/helmet/ui';
 import type { AnyObject } from '@/shared/model';
 import { Layout } from '@/widgets/layout/ui';
 
@@ -71,48 +71,46 @@ export default function ArticlePageTemplate({ data, data: { markdownRemark } }: 
   }, [article.category]);
 
   return (
-    <>
-      <SEO
+    <Layout>
+      <Helmet
         path={article.path}
         title={article.title}
         description={article.description}
         image={getArticleCoverImageURL(article.image || article.category)}
       />
-      <Layout>
-        <KeyVisualSection article={article} />
-        {article.html && (
-          <ArticleSection
-            html={article.html}
-            ref={articleRef}
-          />
-        )}
-        {article.tableOfContents && isDesktop && (
-          <FloatingTOC
-            html={article.tableOfContents}
-            target={articleRef.current}
-          />
-        )}
-        <Divider sx={{ mb: -4 }}>
-          <InsertEmoticonIcon color="primary" />
-        </Divider>
-        <ArticleNavigationSection
-          prevArticle={prevArticle}
-          nextArticle={nextArticle}
+      <KeyVisualSection article={article} />
+      {article.html && (
+        <ArticleSection
+          html={article.html}
+          ref={articleRef}
         />
-        {!isEmpty(searchArticles) && (
-          <RelatedArticleListSection
-            articles={searchArticles}
-            query={article.category as string}
-          />
-        )}
-        <CommentSection
-          options={{
-            id: article.id,
-            title: `${article.title} #${article.category}`,
-          }}
+      )}
+      {article.tableOfContents && isDesktop && (
+        <FloatingTOC
+          html={article.tableOfContents}
+          target={articleRef.current}
         />
-      </Layout>
-    </>
+      )}
+      <Divider sx={{ mb: -4 }}>
+        <InsertEmoticonIcon color="primary" />
+      </Divider>
+      <ArticleNavigationSection
+        prevArticle={prevArticle}
+        nextArticle={nextArticle}
+      />
+      {!isEmpty(searchArticles) && (
+        <RelatedArticleListSection
+          articles={searchArticles}
+          query={article.category as string}
+        />
+      )}
+      <CommentSection
+        options={{
+          id: article.id,
+          title: `${article.title} #${article.category}`,
+        }}
+      />
+    </Layout>
   );
 }
 

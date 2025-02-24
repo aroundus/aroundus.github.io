@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -44,6 +43,15 @@ const HTML = (props) => {
         <meta
           name="naver-site-verification"
           content={process.env.NAVER_SITE_VERIFICATION}
+        />
+
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.cdnfonts.com/css/sf-mono"
         />
 
         {isTitleEmpty && <title>{title}</title>}

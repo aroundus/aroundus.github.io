@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet as ReactHelmet } from 'react-helmet-async';
 import { graphql, useStaticQuery } from 'gatsby';
 
 interface Data {
@@ -12,14 +12,14 @@ interface Data {
   };
 }
 
-interface SEOProps {
+interface HelmetProps {
   path?: string;
   title?: string;
   description?: string;
   image?: string;
 }
 
-export function SEO(props: SEOProps) {
+export function Helmet(props: HelmetProps) {
   const { site }: Data = useStaticQuery(graphql`
     query {
       site {
@@ -38,19 +38,12 @@ export function SEO(props: SEOProps) {
   const url = `https://${domain}${props.path || ''}`;
 
   return (
-    <Helmet
+    <ReactHelmet
       defaultTitle={site.siteMetadata.title}
       htmlAttributes={{
         lang: 'ko',
       }}
-      link={[
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css',
-        },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' },
-        { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/sf-mono' },
-      ]}
+      link={[{ rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css' }]}
       meta={[
         { name: 'description', content: description },
         { property: 'og:type', content: 'website' },

@@ -13,7 +13,7 @@ import {
   KeyVisualSection,
   PaginationSection,
 } from '@/features/article/ui';
-import { SEO } from '@/features/seo/ui';
+import { Helmet } from '@/features/helmet/ui';
 import type { AnyObject } from '@/shared/model';
 import { Layout } from '@/widgets/layout/ui';
 
@@ -105,7 +105,7 @@ export default function HomePage() {
     <>
       {isMounted && (
         <>
-          <SEO />
+          <Helmet />
           <Layout>
             <KeyVisualSection
               article={fetchedArticles[0]}
