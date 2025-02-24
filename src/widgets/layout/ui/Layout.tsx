@@ -1,4 +1,5 @@
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { JssProvider as JSSProvider } from 'react-jss';
 import { SheetsRegistry } from 'jss';
 
@@ -22,16 +23,18 @@ export function Layout({ children, header }: LayoutProps) {
   const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   return (
-    <JSSProvider
-      isSSR
-      registry={sheetsRegistry}
-    >
-      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-        <CSSBaseline />
-        {header || <Header />}
-        <Content>{children}</Content>
-        <Footer />
-      </ThemeProvider>
-    </JSSProvider>
+    <HelmetProvider>
+      <JSSProvider
+        isSSR
+        registry={sheetsRegistry}
+      >
+        <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+          <CSSBaseline />
+          {header || <Header />}
+          <Content>{children}</Content>
+          <Footer />
+        </ThemeProvider>
+      </JSSProvider>
+    </HelmetProvider>
   );
 }
