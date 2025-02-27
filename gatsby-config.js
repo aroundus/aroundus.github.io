@@ -54,6 +54,19 @@ let plugins = [
   },
 
   /**
+   * gatsby-plugin-page-creator
+   *
+   * src/pages 폴더 내 파일들을 페이지로 변환
+   */
+  {
+    resolve: 'gatsby-plugin-page-creator',
+    options: {
+      path: `${__dirname}/src/pages`,
+      ignore: ['**/_*/**'], // 언더스코어(_)로 시작하는 폴더를 라우트에서 제외
+    },
+  },
+
+  /**
    * gatsby-transformer-remark
    *
    * 마크다운 파일 해석 및 HTML 변환

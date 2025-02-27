@@ -14,7 +14,7 @@ dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
 const GatsbyNode: GatsbyNodeType = {};
 
-GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
+GatsbyNode.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const fetchedArticlesQuery = await graphql(`
     {
@@ -92,7 +92,7 @@ GatsbyNode.createPages = async ({ graphql, actions, reporter }) => {
   }
 };
 
-GatsbyNode.onCreateNode = ({ node, actions, getNode }) => {
+GatsbyNode.onCreateNode = ({ actions, getNode, node }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {

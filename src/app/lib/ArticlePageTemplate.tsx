@@ -73,10 +73,10 @@ export default function ArticlePageTemplate({ data, data: { markdownRemark } }: 
   return (
     <Layout>
       <Helmet
-        path={article.path}
-        title={article.title}
         description={article.description}
         image={getArticleCoverImageURL(article.image || article.category)}
+        path={article.path}
+        title={article.title}
       />
       <KeyVisualSection article={article} />
       {article.html && (
@@ -95,8 +95,8 @@ export default function ArticlePageTemplate({ data, data: { markdownRemark } }: 
         <InsertEmoticonIcon color="primary" />
       </Divider>
       <ArticleNavigationSection
-        prevArticle={prevArticle}
         nextArticle={nextArticle}
+        prevArticle={prevArticle}
       />
       {!isEmpty(searchArticles) && (
         <RelatedArticleListSection

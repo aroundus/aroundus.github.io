@@ -48,8 +48,8 @@ export function HighlightSection() {
                 sx={{ height: 36, width: 36 }}
               />
               <Typography
-                variant="h3"
                 sx={{ mt: 3 }}
+                variant="h3"
               >
                 skin.html
               </Typography>
@@ -82,8 +82,8 @@ export function HighlightSection() {
                 sx={{ height: 36, width: 36 }}
               />
               <Typography
-                variant="h3"
                 sx={{ mt: 3 }}
+                variant="h3"
               >
                 index.html
               </Typography>
@@ -155,8 +155,8 @@ export function HighlightSection() {
                 src={viteLogoImage}
               />
               <Typography
-                variant="h3"
                 sx={{ mt: 3 }}
+                variant="h3"
               >
                 Vite
               </Typography>
@@ -212,8 +212,8 @@ export function HighlightSection() {
                 sx={{ height: 36, width: 36 }}
               />
               <Typography
-                variant="h3"
                 sx={{ mt: 3 }}
+                variant="h3"
               >
                 CI/CD
               </Typography>
