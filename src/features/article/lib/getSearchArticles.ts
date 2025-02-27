@@ -1,5 +1,5 @@
-import { Index } from 'lunr';
 import isEmpty from 'lodash-es/isEmpty';
+import { Index } from 'lunr';
 
 import type { Article } from '@/features/article/model';
 import type { AnyObject } from '@/shared/model';

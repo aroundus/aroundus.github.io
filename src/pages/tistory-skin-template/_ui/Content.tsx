@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Container } from '@mui/material';
 
 import { HighlightSection, WelcomeSection } from './Section';

@@ -1,11 +1,12 @@
 import React from 'react';
-import { IconButton, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
+
 import {
   ChevronRightOutlined as ChevronRightOutlinedIcon,
   Dvr as DvrIcon,
   GitHub as GitHubIcon,
   InsightsOutlined as InsightsOutlinedIcon,
 } from '@mui/icons-material';
+import { IconButton, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 
 export function WelcomeSection() {
   const scrollAnimationProps = {

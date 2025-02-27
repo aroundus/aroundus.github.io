@@ -1,8 +1,8 @@
 import React from 'react';
+
+import { Dvr as DvrIcon, GitHub as GitHubIcon } from '@mui/icons-material';
 import { Box, Button, colors, Link, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Dvr as DvrIcon, GitHub as GitHubIcon } from '@mui/icons-material';
-
 import Typewriter from 'typewriter-effect';
 
 import { ReactIcon, SymbolMarkIcon } from '@/shared/ui';

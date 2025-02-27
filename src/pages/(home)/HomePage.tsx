@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+
+import AOS from 'aos';
 import { graphql, useStaticQuery } from 'gatsby';
 import uniq from 'lodash-es/uniq';
 import Typewriter from 'typewriter-effect';
-import AOS from 'aos';
 
 import { getSearchArticles } from '@/features/article/lib';
 import type { Article } from '@/features/article/model';

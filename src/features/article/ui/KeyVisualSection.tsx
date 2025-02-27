@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { createUseStyles } from 'react-jss';
 
 import { Button, ButtonProps, colors, Typography, useMediaQuery } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
+import { createUseStyles } from 'react-jss';
 
 import { getArticleCoverImageURL } from '../lib';
 import type { Article } from '../model';

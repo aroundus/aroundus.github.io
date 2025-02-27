@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { graphql } from 'gatsby';
-import isEmpty from 'lodash-es/isEmpty';
 
+import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 import { Divider, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
+import { graphql } from 'gatsby';
+import isEmpty from 'lodash-es/isEmpty';
 
 import { getArticleCoverImageURL, getSearchArticles } from '@/features/article/lib';
 import type { Article as ArticleType } from '@/features/article/model';

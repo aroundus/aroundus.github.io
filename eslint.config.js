@@ -46,6 +46,25 @@ module.exports = [
   {
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn',
+      'import/order': [
+        'error',
+        {
+          alphabetize: {
+            order: 'asc',
+          },
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'unknown'],
+          'newlines-between': 'always',
+          pathGroups: [
+            { pattern: 'react', group: 'builtin', position: 'after' },
+            { pattern: '@/**', group: 'external', position: 'after' },
+            { pattern: './**/*.*', group: 'unknown', position: 'after' },
+            { pattern: '**/*.css', group: 'unknown', position: 'after' },
+            { pattern: '**/*.scss', group: 'unknown', position: 'after' },
+          ],
+          pathGroupsExcludedImportTypes: ['react'],
+          warnOnUnassignedImports: true,
+        },
+      ],
     },
   },
   { ignores: ['@types', '*.config.js', 'build', 'gatsby-*.js', 'node_modules'] },

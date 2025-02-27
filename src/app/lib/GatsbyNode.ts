@@ -1,5 +1,6 @@
-import dotenv from 'dotenv';
 import path from 'path';
+
+import dotenv from 'dotenv';
 import { GatsbyNode as GatsbyNodeType } from 'gatsby';
 import { GitalkPluginHelper } from 'gatsby-plugin-gitalk';
 import { createFilePath } from 'gatsby-source-filesystem';

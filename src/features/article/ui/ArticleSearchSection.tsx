@@ -1,8 +1,8 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
 
-import { Box, Container, TextField } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
+import { Box, Container, TextField } from '@mui/material';
+import { createUseStyles } from 'react-jss';
 
 interface ArticleSearchSectionProps {
   onChange: (value: string) => void;

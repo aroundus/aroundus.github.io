@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Button, colors, Container, Typography } from '@mui/material';
+
 import { ArrowBackIos as ArrowLeftIcon, ArrowForwardIos as ArrowRightIcon } from '@mui/icons-material';
+import { Box, Button, colors, Container, Typography } from '@mui/material';
 
 import type { ArticleNavigation } from '../model';
 

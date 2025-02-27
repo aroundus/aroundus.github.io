@@ -1,8 +1,8 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
 
 import { AppBar, colors, Link, Toolbar, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { createUseStyles } from 'react-jss';
 
 import { LogoIcon, SymbolMarkIcon } from '@/shared/ui';
 

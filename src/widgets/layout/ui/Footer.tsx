@@ -1,10 +1,10 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
-import { graphql, useStaticQuery } from 'gatsby';
 
+import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
 import { Box, colors, Container, Grid, Link, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { GitHub as GitHubIcon, Instagram as InstagramIcon, Mail as MailIcon } from '@mui/icons-material';
+import { graphql, useStaticQuery } from 'gatsby';
+import { createUseStyles } from 'react-jss';
 
 import { LogoIcon, SymbolMarkIcon } from '@/shared/ui';
 
