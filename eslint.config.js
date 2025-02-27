@@ -65,6 +65,7 @@ module.exports = [
           warnOnUnassignedImports: true,
         },
       ],
+      'react/jsx-sort-props': ['error', { callbacksLast: true }],
     },
   },
   { ignores: ['@types', '*.config.js', 'build', 'gatsby-*.js', 'node_modules'] },
