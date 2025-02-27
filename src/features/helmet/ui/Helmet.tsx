@@ -1,6 +1,7 @@
 import React from 'react';
-import { Helmet as ReactHelmet } from 'react-helmet-async';
+
 import { graphql, useStaticQuery } from 'gatsby';
+import { Helmet as ReactHelmet } from 'react-helmet-async';
 
 interface Data {
   site: {

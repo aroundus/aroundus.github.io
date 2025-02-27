@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, colors, Container, Link, Typography, useMediaQuery } from '@mui/material';
+
 import { Dvr as DvrIcon, GitHub as GitHubIcon } from '@mui/icons-material';
+import { Box, Button, colors, Container, Link, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Typewriter from 'typewriter-effect';
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { createUseStyles } from 'react-jss';
-import { throttle } from 'lodash-es';
 
 import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { throttle } from 'lodash-es';
+import { createUseStyles } from 'react-jss';
 
 interface FloatingTOCProps {
   html: string;

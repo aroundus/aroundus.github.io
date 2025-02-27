@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { graphql } from 'gatsby';
-import isEmpty from 'lodash-es/isEmpty';
 
+import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
 import { Divider, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { InsertEmoticon as InsertEmoticonIcon } from '@mui/icons-material';
+import { graphql } from 'gatsby';
+import isEmpty from 'lodash-es/isEmpty';
 
 import { getArticleCoverImageURL, getSearchArticles } from '@/features/article/lib';
 import type { Article as ArticleType } from '@/features/article/model';
@@ -73,10 +73,10 @@ export default function ArticlePageTemplate({ data, data: { markdownRemark } }: 
   return (
     <Layout>
       <Helmet
-        path={article.path}
-        title={article.title}
         description={article.description}
         image={getArticleCoverImageURL(article.image || article.category)}
+        path={article.path}
+        title={article.title}
       />
       <KeyVisualSection article={article} />
       {article.html && (
@@ -95,8 +95,8 @@ export default function ArticlePageTemplate({ data, data: { markdownRemark } }: 
         <InsertEmoticonIcon color="primary" />
       </Divider>
       <ArticleNavigationSection
-        prevArticle={prevArticle}
         nextArticle={nextArticle}
+        prevArticle={prevArticle}
       />
       {!isEmpty(searchArticles) && (
         <RelatedArticleListSection

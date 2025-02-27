@@ -1,10 +1,10 @@
 import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import { JssProvider as JSSProvider } from 'react-jss';
-import { SheetsRegistry } from 'jss';
 
 import { CssBaseline as CSSBaseline, useMediaQuery } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
+import { SheetsRegistry } from 'jss';
+import { HelmetProvider } from 'react-helmet-async';
+import { JssProvider as JSSProvider } from 'react-jss';
 
 import { darkTheme, lightTheme } from '../lib';
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+
 import { Box, Container, Pagination, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { createUseStyles } from 'react-jss';
 
 interface PaginationSectionProps {
   currentPageNo: number;

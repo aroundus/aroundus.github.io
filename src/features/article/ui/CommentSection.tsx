@@ -1,6 +1,7 @@
 import React from 'react';
-import Gitalk, { GitalkProps } from 'gatsby-plugin-gitalk';
+
 import { Container } from '@mui/material';
+import Gitalk, { GitalkProps } from 'gatsby-plugin-gitalk';
 
 export function CommentSection({ options }: GitalkProps) {
   return (
