@@ -19,11 +19,16 @@ const theme = createTheme(
       htmlFontSize: 10,
       body1: {
         color: 'CanvasText',
-        marginBottom: '1.8em',
-        marginTop: '1.8em',
+        marginBottom: '0.4em',
+        marginTop: '0.4em',
       },
       body2: {
+        fontSize: 16,
+      },
+      caption: {
+        display: 'inline-block',
         fontSize: 14,
+        lineHeight: undefined,
       },
       button: {
         fontWeight: 'normal',
@@ -130,6 +135,7 @@ const theme = createTheme(
           code {
             font-family: ${CODE_FONT_FAMILY};
             font-weight: 500;
+            zoom: 0.9;
           }
 
           h1,
