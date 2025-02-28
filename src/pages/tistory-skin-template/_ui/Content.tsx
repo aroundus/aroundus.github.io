@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from '@mui/material';
 
-import { HighlightSection, PainPointSection, WelcomeSection } from './Section';
+import { HighlightSection, MakeItYoursSection, PainPointSection, WelcomeSection } from './Section';
 
 export function Content() {
   return (
@@ -13,6 +13,7 @@ export function Content() {
       <WelcomeSection />
       <HighlightSection />
       <PainPointSection />
+      <MakeItYoursSection />
     </Container>
   );
 }

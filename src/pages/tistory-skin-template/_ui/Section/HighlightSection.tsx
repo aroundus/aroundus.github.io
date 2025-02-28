@@ -8,6 +8,7 @@ import {
 } from '@mui/icons-material';
 import { Masonry } from '@mui/lab';
 import { Box, Button, Card, CardContent, Link, Typography } from '@mui/material';
+import { createUseStyles } from 'react-jss';
 
 import reactRouterLogoImage from '../assets/images/logo/react-router.png';
 import viteLogoImage from '../assets/images/logo/vite.svg';
@@ -20,8 +21,21 @@ export function HighlightSection() {
     'data-aos': 'fade-up',
   };
 
+  const useStyles = createUseStyles(
+    {
+      container: `
+        position: relative;
+      `,
+    },
+    {
+      name: 'HighlightSection',
+    },
+  );
+
+  const styles = useStyles();
+
   return (
-    <section>
+    <section className={styles.container}>
       <Typography
         {...scrollAnimationProps}
         variant="h2"

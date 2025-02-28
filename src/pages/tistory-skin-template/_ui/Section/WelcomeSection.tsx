@@ -7,6 +7,43 @@ import {
   InsightsOutlined as InsightsOutlinedIcon,
 } from '@mui/icons-material';
 import { IconButton, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
+import { createUseStyles } from 'react-jss';
+
+const list = [
+  {
+    description: '소스 코드를 확인할 수 있습니다.',
+    href: 'https://github.com/aroundus/tistory-skin-template-react',
+    icon: (
+      <GitHubIcon
+        color="primary"
+        style={{ height: 40, width: 40 }}
+      />
+    ),
+    title: 'GitHub 저장소',
+  },
+  {
+    description: '모두 React 컴포넌트로 만들었습니다.',
+    href: 'https://jeongmintax.tistory.com',
+    icon: (
+      <DvrIcon
+        color="info"
+        style={{ height: 40, width: 40 }}
+      />
+    ),
+    title: '데모 사이트',
+  },
+  {
+    description: '데모 사이트의 소스 코드를 확인할 수 있습니다.',
+    href: 'https://github.com/aroundus/jeongmintax.tistory.com',
+    icon: (
+      <GitHubIcon
+        color="info"
+        style={{ height: 40, width: 40 }}
+      />
+    ),
+    title: '데모 GitHub 저장소',
+  },
+];
 
 export function WelcomeSection() {
   const scrollAnimationProps = {
@@ -16,8 +53,21 @@ export function WelcomeSection() {
     'data-aos': 'fade-up',
   };
 
+  const useStyles = createUseStyles(
+    {
+      container: `
+        position: relative;
+      `,
+    },
+    {
+      name: 'WelcomeSection',
+    },
+  );
+
+  const styles = useStyles();
+
   return (
-    <section>
+    <section className={styles.container}>
       <Typography
         {...scrollAnimationProps}
         variant="h1"
@@ -40,48 +90,28 @@ export function WelcomeSection() {
         {...scrollAnimationProps}
         sx={{ mt: 6 }}
       >
-        <ListItem
-          divider
-          secondaryAction={
-            <IconButton
-              href="https://jeongmintax.tistory.com"
-              size="large"
-              target="_blank"
-            >
-              <ChevronRightOutlinedIcon />
-            </IconButton>
-          }
-          sx={{ py: 2 }}
-        >
-          <ListItemAvatar>
-            <DvrIcon style={{ height: 40, width: 40 }} />
-          </ListItemAvatar>
-          <ListItemText
-            primary="데모 사이트"
-            secondary="모두 React 컴포넌트로 만들었습니다."
-          />
-        </ListItem>
-        <ListItem
-          divider
-          secondaryAction={
-            <IconButton
-              href="https://github.com/aroundus/jeongmintax.tistory.com"
-              size="large"
-              target="_blank"
-            >
-              <ChevronRightOutlinedIcon />
-            </IconButton>
-          }
-          sx={{ py: 2 }}
-        >
-          <ListItemAvatar>
-            <GitHubIcon style={{ height: 40, width: 40 }} />
-          </ListItemAvatar>
-          <ListItemText
-            primary="데모 GitHub 저장소"
-            secondary="소스 코드를 확인할 수 있습니다."
-          />
-        </ListItem>
+        {list.map((item) => (
+          <ListItem
+            divider
+            key={item.title}
+            secondaryAction={
+              <IconButton
+                href={item.href}
+                size="large"
+                target="_blank"
+              >
+                <ChevronRightOutlinedIcon />
+              </IconButton>
+            }
+            sx={{ py: 2 }}
+          >
+            <ListItemAvatar>{item.icon}</ListItemAvatar>
+            <ListItemText
+              primary={item.title}
+              secondary={item.description}
+            />
+          </ListItem>
+        ))}
       </List>
     </section>
   );
