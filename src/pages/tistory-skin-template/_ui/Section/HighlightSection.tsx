@@ -16,7 +16,7 @@ import viteLogoImage from '../assets/images/logo/vite.svg';
 export function HighlightSection() {
   const scrollAnimationProps = {
     'data-aos-delay': 100,
-    'data-aos-offset': 100,
+    'data-aos-offset': -200,
     'data-aos-once': false,
     'data-aos': 'fade-up',
   };

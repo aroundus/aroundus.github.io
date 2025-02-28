@@ -30,7 +30,7 @@ const contents = [
 export function PainPointSection() {
   const scrollAnimationProps = {
     'data-aos-delay': 50,
-    'data-aos-offset': 50,
+    'data-aos-offset': -200,
     'data-aos-once': false,
     'data-aos': 'fade-up',
   };
