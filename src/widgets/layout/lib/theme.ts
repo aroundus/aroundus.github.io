@@ -233,12 +233,16 @@ export const darkTheme = createTheme(theme, {
     error: {
       main: colors.red[400],
     },
+    info: {
+      main: colors.blue[300],
+    },
     primary: {
       main: colors.cyan[400],
     },
     secondary: {
       main: colors.grey[400],
     },
+    main: colors.lightGreen[500],
   },
 });
 
@@ -248,11 +252,17 @@ export const lightTheme = createTheme(theme, {
     error: {
       main: colors.red[400],
     },
+    info: {
+      main: colors.blue[300],
+    },
     primary: {
       main: colors.cyan[400],
     },
     secondary: {
       main: colors.grey[500],
+    },
+    success: {
+      main: colors.lightGreen[500],
     },
   },
 });
