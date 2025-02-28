@@ -30,7 +30,7 @@ const contents = [
 export function PainPointSection() {
   const scrollAnimationProps = {
     'data-aos-delay': 50,
-    'data-aos-offset': 50,
+    'data-aos-offset': -200,
     'data-aos-once': false,
     'data-aos': 'fade-up',
   };
@@ -66,7 +66,7 @@ export function PainPointSection() {
         {...scrollAnimationProps}
         variant="body1"
       >
-        기존 티스토리 스킨 개발에는 한계가 많았습니다. 과정은 번거롭고, 제약은 많았죠.
+        기존 티스토리 스킨 개발에는 한계가 있었습니다. 과정은 번거롭고, 제약은 많았죠.
       </Typography>
       <Box
         {...scrollAnimationProps}
