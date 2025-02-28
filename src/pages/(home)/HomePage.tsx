@@ -105,40 +105,38 @@ export default function HomePage() {
   return (
     <>
       {isMounted && (
-        <>
+        <Layout>
           <Helmet />
-          <Layout>
-            <KeyVisualSection
-              article={fetchedArticles[0]}
-              typewriter={{
-                title: (
-                  <Typewriter
-                    options={{
-                      delay: 100,
-                    }}
-                    onInit={(typewriter) => {
-                      typewriter.typeString(fetchedArticles[0].title).start();
-                    }}
-                  />
-                ),
-              }}
-              isButtonVisible
-              isGradientEnabled
-            />
-            <CategorySection
-              categories={[CATEGORY_ALL].concat(categories)}
-              selectedCategory={selectedCategory}
-              onClick={(category: string) => setSelectedCategory(category)}
-            />
-            <ArticleSearchSection onChange={(query) => setSearchQuery(query)} />
-            <ArticleListSection articles={pagedArticles} />
-            <PaginationSection
-              currentPageNo={currentPageNo}
-              totalPageCount={totalPageCount}
-              onChange={(page: number) => setCurrentPageNo(page)}
-            />
-          </Layout>
-        </>
+          <KeyVisualSection
+            article={fetchedArticles[0]}
+            isButtonVisible
+            isGradientEnabled
+            typewriter={{
+              title: (
+                <Typewriter
+                  options={{
+                    delay: 100,
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter.typeString(fetchedArticles[0].title).start();
+                  }}
+                />
+              ),
+            }}
+          />
+          <CategorySection
+            categories={[CATEGORY_ALL].concat(categories)}
+            selectedCategory={selectedCategory}
+            onClick={(category: string) => setSelectedCategory(category)}
+          />
+          <ArticleSearchSection onChange={(query) => setSearchQuery(query)} />
+          <ArticleListSection articles={pagedArticles} />
+          <PaginationSection
+            currentPageNo={currentPageNo}
+            totalPageCount={totalPageCount}
+            onChange={(page: number) => setCurrentPageNo(page)}
+          />
+        </Layout>
       )}
     </>
   );

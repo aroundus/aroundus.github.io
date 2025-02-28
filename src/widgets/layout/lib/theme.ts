@@ -230,6 +230,9 @@ const theme = createTheme(
 export const darkTheme = createTheme(theme, {
   palette: {
     mode: 'dark',
+    error: {
+      main: colors.red[400],
+    },
     primary: {
       main: colors.cyan[400],
     },
@@ -242,6 +245,9 @@ export const darkTheme = createTheme(theme, {
 export const lightTheme = createTheme(theme, {
   palette: {
     mode: 'light',
+    error: {
+      main: colors.red[400],
+    },
     primary: {
       main: colors.cyan[400],
     },
