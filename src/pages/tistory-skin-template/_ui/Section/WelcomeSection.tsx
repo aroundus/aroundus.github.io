@@ -10,7 +10,6 @@ import { IconButton, List, ListItem, ListItemAvatar, ListItemText, Typography } 
 
 export function WelcomeSection() {
   const scrollAnimationProps = {
-    'data-aos-anchor-placement': 'top-bottom',
     'data-aos-delay': 50,
     'data-aos-offset': 100,
     'data-aos-once': false,
@@ -35,7 +34,7 @@ export function WelcomeSection() {
         {...scrollAnimationProps}
         variant="body1"
       >
-        React와 React Router, 그리고 Vite 번들러로 여러분의 스킨을 초기 단계부터 차근차근 개발해 보세요.
+        React와 React Router, 그리고 Vite 번들러로 티스토리 스킨을 초기 단계부터 차근차근 개발해 보세요.
       </Typography>
       <List
         {...scrollAnimationProps}

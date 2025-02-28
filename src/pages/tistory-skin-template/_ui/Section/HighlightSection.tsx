@@ -7,20 +7,15 @@ import {
   SimCardAlertOutlined as SimCardAlertOutlinedIcon,
 } from '@mui/icons-material';
 import { Masonry } from '@mui/lab';
-import { Box, Button, Card, CardContent, colors, Link, Typography, useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Card, CardContent, Link, Typography } from '@mui/material';
 
 import reactRouterLogoImage from '../assets/images/logo/react-router.png';
 import viteLogoImage from '../assets/images/logo/vite.svg';
 
 export function HighlightSection() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
   const scrollAnimationProps = {
-    'data-aos-anchor-placement': 'top-bottom',
-    'data-aos-delay': 50,
-    'data-aos-offset': 10,
+    'data-aos-delay': 100,
+    'data-aos-offset': 100,
     'data-aos-once': false,
     'data-aos': 'fade-up',
   };
@@ -32,6 +27,13 @@ export function HighlightSection() {
         variant="h2"
       >
         일단 핵심부터.
+      </Typography>
+      <Typography
+        {...scrollAnimationProps}
+        variant="body1"
+      >
+        로컬 환경은 index.html, 운영 환경은 skin.html 파일을 사용합니다. React Router 라이브러리로 패스를 구분하며 Vite
+        번들러로 빌드합니다.
       </Typography>
       <Box sx={{ mt: 12 }}>
         <Masonry
