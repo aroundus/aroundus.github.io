@@ -7,7 +7,7 @@ import { createUseStyles } from 'react-jss';
 export function MakeItYoursSection() {
   const scrollAnimationProps = {
     'data-aos-delay': 100,
-    'data-aos-offset': -200,
+    'data-aos-offset': 50,
     'data-aos-once': false,
     'data-aos': 'fade-up',
   };
