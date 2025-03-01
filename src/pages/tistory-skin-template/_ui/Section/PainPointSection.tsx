@@ -7,7 +7,7 @@ import { createUseStyles } from 'react-jss';
 const contents = [
   {
     description:
-      '티스토리 스킨은 skin.html 파일 하나에 모든 정적 마크업과 치환자를 작성해야 합니다. 그래서 화면이 복잡할수록 skin.html 파일에 작성하는 코드도 많습니다.',
+      '티스토리 스킨은 skin.html 파일 하나에 모든 정적 마크업과 치환자를 작성해야 합니다. 그래서 화면이 복잡할수록 skin.html 파일에 작성한 코드도 많아집니다.',
     title: '모두 한곳에. 점점 복잡해지는 코드.',
   },
   {
