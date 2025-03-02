@@ -75,7 +75,7 @@ export function Header() {
       >
         <Button
           color="primary"
-          href="https://github.com/aroundus/tistory-skin-template"
+          href="https://github.com/aroundus/tistory-skin-template-react"
           size="large"
           startIcon={<GitHubIcon />}
           sx={{
