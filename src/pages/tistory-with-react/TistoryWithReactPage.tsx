@@ -8,7 +8,7 @@ import { Layout } from '@/widgets/layout/ui';
 
 import { Content, Header } from './_ui';
 
-export default function TistorySkinTemplatePage() {
+export default function TistoryWithReactPage() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 

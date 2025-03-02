@@ -3,9 +3,9 @@ import React from 'react';
 export function ReactIcon(props: React.SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
-      width="100%"
       height="100%"
       viewBox="-10.5 -9.45 21 18.9"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -15,9 +15,9 @@ export function ReactIcon(props: React.SVGAttributes<HTMLOrSVGElement>) {
         r="2"
       ></circle>
       <g
+        fill="none"
         stroke={props.fill}
         strokeWidth="1"
-        fill="none"
       >
         <ellipse
           rx="10"
