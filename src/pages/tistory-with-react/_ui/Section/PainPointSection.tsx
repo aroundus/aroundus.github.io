@@ -12,8 +12,8 @@ const contents = [
   },
   {
     description:
-      'CSS 전처리기를 사용할 수 없어, 변수를 정의할 수도, 반복적인 스타일을 함수로 만들어서 사용할 수도 없습니다.',
-    title: '스타일 작성에 더 많은 시간과 노력.',
+      'CSS 전처리기를 사용할 수 없어 Sass, StyleX 등을 적용할 수 없습니다. 오직 CSS 파일과 Tailwind CSS 같은 유틸리티 클래스 방식만 사용할 수 있습니다.',
+    title: '제한적인 CSS 환경.',
   },
   {
     description:
