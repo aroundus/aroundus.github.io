@@ -10,8 +10,8 @@ import { Masonry } from '@mui/lab';
 import { Box, Button, Card, CardContent, Link, Typography } from '@mui/material';
 import { createUseStyles } from 'react-jss';
 
-import reactRouterLogoImage from '../assets/images/logo/react-router.png';
-import viteLogoImage from '../assets/images/logo/vite.svg';
+import reactRouterImage from '../assets/images/react-router.png';
+import viteImage from '../assets/images/vite.svg';
 
 export function HighlightSection() {
   const scrollAnimationProps = {
@@ -141,7 +141,7 @@ export function HighlightSection() {
                 <img
                   alt="React Router DOM"
                   height={24}
-                  src={reactRouterLogoImage}
+                  src={reactRouterImage}
                 />
               </Box>
               <Typography variant="body2">로컬 환경에서 운영 환경과 동일한 패스로 페이지를 개발합니다.</Typography>
@@ -168,7 +168,7 @@ export function HighlightSection() {
               <img
                 alt="Vite"
                 height={36}
-                src={viteLogoImage}
+                src={viteImage}
               />
               <Typography
                 sx={{ mt: 3 }}
