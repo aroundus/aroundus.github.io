@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 
 const title = process.env.GATSBY_TITLE;
@@ -29,83 +30,82 @@ const HTML = (props) => {
       <head>
         <meta charSet="UTF-8" />
         <meta
-          httpEquiv="X-UA-Compatible"
           content="IE=edge, chrome=1"
+          httpEquiv="X-UA-Compatible"
         />
         <meta
-          name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport"
         />
         <meta
-          name="google-site-verification"
           content={process.env.GOOGLE_SITE_VERIFICATION}
+          name="google-site-verification"
         />
         <meta
-          name="naver-site-verification"
           content={process.env.NAVER_SITE_VERIFICATION}
+          name="naver-site-verification"
         />
-
         <link
-          rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css"
+          rel="stylesheet"
         />
         <link
-          rel="stylesheet"
           href="https://fonts.cdnfonts.com/css/sf-mono"
+          rel="stylesheet"
         />
 
         {isTitleEmpty && <title>{title}</title>}
         {isDescriptionEmpty && (
           <meta
-            name="description"
             content={description}
+            name="description"
           />
         )}
         {isOpenGraphEmpty && (
           <>
             <meta
+              content={`https://${domain}`}
               property="og:url"
-              content={`https://${domain}`}
             />
             <meta
-              property="og:type"
               content="website"
+              property="og:type"
             />
             <meta
+              content={title}
               property="og:title"
-              content={title}
             />
             <meta
+              content={description}
               property="og:description"
-              content={description}
             />
             <meta
+              content="/aroundus.jpg"
               property="og:image"
-              content="/aroundus.jpg"
             />
             <meta
-              name="twitter:card"
               content="summary_large_image"
+              name="twitter:card"
             />
             <meta
-              property="twitter:domain"
               content={domain}
+              property="twitter:domain"
             />
             <meta
-              property="twitter:url"
               content={`https://${domain}`}
+              property="twitter:url"
             />
             <meta
-              name="twitter:title"
               content={title}
+              name="twitter:title"
             />
             <meta
-              name="twitter:description"
               content={description}
+              name="twitter:description"
             />
             <meta
-              name="twitter:image"
               content="/aroundus.jpg"
+              name="twitter:image"
             />
           </>
         )}
@@ -114,9 +114,9 @@ const HTML = (props) => {
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
-          key="body"
-          id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
+          id="___gatsby"
+          key="body"
         />
         {props.postBodyComponents}
       </body>
