@@ -6,7 +6,7 @@ import AOS from 'aos';
 
 import { Layout } from '@/widgets/layout/ui';
 
-import { Content, Header } from './_ui';
+import { Content, Header, Helmet } from './_ui';
 
 export default function TistoryWithReactPage() {
   const theme = useTheme();
@@ -23,6 +23,7 @@ export default function TistoryWithReactPage() {
     <>
       {isMounted && (
         <Layout header={<></>}>
+          <Helmet />
           <Container
             disableGutters
             maxWidth="md"
