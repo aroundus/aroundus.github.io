@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 
 import { ReactIcon, SymbolMarkIcon } from '@/shared/ui';
 
-import tistoryLogoImage from './assets/images/logo/tistory.png';
+import tistoryImage from './assets/images/tistory.png';
 
 export function Header() {
   const theme = useTheme();
@@ -38,7 +38,7 @@ export function Header() {
         <img
           alt="티스토리 로고 이미지"
           height={60}
-          src={tistoryLogoImage}
+          src={tistoryImage}
         />
         <span style={{ color: colors.grey[300], fontWeight: 400 }}>with</span>
         <Box

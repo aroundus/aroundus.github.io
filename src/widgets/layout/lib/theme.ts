@@ -234,7 +234,7 @@ export const darkTheme = createTheme(theme, {
       main: colors.red[400],
     },
     info: {
-      main: colors.blue[300],
+      main: colors.blue[400],
     },
     primary: {
       main: colors.cyan[400],
@@ -253,7 +253,7 @@ export const lightTheme = createTheme(theme, {
       main: colors.red[400],
     },
     info: {
-      main: colors.blue[300],
+      main: colors.blue[400],
     },
     primary: {
       main: colors.cyan[400],
