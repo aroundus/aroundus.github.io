@@ -16,7 +16,7 @@ import viteImage from '../assets/images/vite.svg';
 export function HighlightSection() {
   const scrollAnimationProps = {
     'data-aos-delay': 100,
-    'data-aos-offset': 50,
+    'data-aos-offset': 0,
     'data-aos-once': false,
     'data-aos': 'fade-up',
   };
@@ -75,7 +75,7 @@ export function HighlightSection() {
               </Typography>
               <Button
                 color="info"
-                href="https://github.com/aroundus/jeongmintax.tistory.com/blob/main/public/skin.html"
+                href="https://github.com/aroundus/tistory-skin-template-react/blob/main/public/skin.html"
                 size="medium"
                 sx={{
                   borderRadius: 5,
@@ -104,28 +104,47 @@ export function HighlightSection() {
                 index.html
               </Typography>
               <Typography variant="body2">
-                skin.html 파일의 치환자가 변환한 Mock 요소를 index.html 파일에 작성합니다.
+                로컬 환경에서 index.html 파일에 운영 환경의 데이터를 기반으로 레이아웃을 구성할 수 있습니다.
               </Typography>
               <Typography
                 color="secondary"
                 sx={{ mt: 2 }}
                 variant="caption"
               >
-                (운영 환경과 동일하게 Mock 요소를 적용해서 화면을 개발할 수 있습니다.)
+                (아직은 수작업이 필요하지만, 자동화를 통해 편리하게 개선할 예정입니다.)
               </Typography>
-              <Button
-                color="info"
-                href="https://github.com/aroundus/jeongmintax.tistory.com/blob/main/index.html"
-                size="medium"
-                sx={{
-                  borderRadius: 5,
-                  mt: 4,
-                }}
-                target="_blank"
-                variant="outlined"
+              <Box
+                display="flex"
+                gap={1}
+                sx={{ mt: 4 }}
               >
-                <Typography variant="caption">소스 코드</Typography>
-              </Button>
+                <Button
+                  color="info"
+                  href="https://github.com/aroundus/tistory-skin-template-react/blob/main/index.html"
+                  size="medium"
+                  sx={{
+                    borderRadius: 5,
+                    mt: 4,
+                  }}
+                  target="_blank"
+                  variant="outlined"
+                >
+                  <Typography variant="caption">소스 코드</Typography>
+                </Button>
+                <Button
+                  color="info"
+                  href="https://github.com/aroundus/tistory-skin-template-react#데이터-동기화"
+                  size="medium"
+                  sx={{
+                    borderRadius: 5,
+                    mt: 4,
+                  }}
+                  target="_blank"
+                  variant="outlined"
+                >
+                  <Typography variant="caption">적용 방법</Typography>
+                </Button>
+              </Box>
             </CardContent>
           </Card>
           <Card
@@ -147,7 +166,7 @@ export function HighlightSection() {
               <Typography variant="body2">로컬 환경에서 운영 환경과 동일한 패스로 페이지를 개발합니다.</Typography>
               <Button
                 color="info"
-                href="https://github.com/aroundus/jeongmintax.tistory.com/blob/main/src/app/routes/root.tsx"
+                href="https://github.com/aroundus/tistory-skin-template-react/blob/main/src/app/routes/root.tsx"
                 size="medium"
                 sx={{
                   borderRadius: 5,
@@ -186,36 +205,18 @@ export function HighlightSection() {
                 </Link>
                 와 동일한 파일로 빌드합니다.
               </Typography>
-              <Box
-                display="flex"
-                gap={1}
-                sx={{ mt: 4 }}
+              <Button
+                color="info"
+                href="https://github.com/aroundus/tistory-skin-template-react/blob/main/vite.config.ts"
+                size="medium"
+                sx={{
+                  borderRadius: 5,
+                }}
+                target="_blank"
+                variant="outlined"
               >
-                <Button
-                  color="info"
-                  href="https://github.com/aroundus/jeongmintax.tistory.com/blob/main/vite.config.ts"
-                  size="medium"
-                  sx={{
-                    borderRadius: 5,
-                  }}
-                  target="_blank"
-                  variant="outlined"
-                >
-                  <Typography variant="caption">소스 코드 1</Typography>
-                </Button>
-                <Button
-                  color="info"
-                  href="https://github.com/aroundus/jeongmintax.tistory.com/blob/main/scripts/postbuild.sh"
-                  size="medium"
-                  sx={{
-                    borderRadius: 5,
-                  }}
-                  target="_blank"
-                  variant="outlined"
-                >
-                  <Typography variant="caption">소스 코드 2</Typography>
-                </Button>
-              </Box>
+                <Typography variant="caption">소스 코드</Typography>
+              </Button>
             </CardContent>
           </Card>
           <Card
@@ -239,7 +240,7 @@ export function HighlightSection() {
               </Typography>
               <Button
                 color="info"
-                href="https://github.com/aroundus/jeongmintax.tistory.com/blob/main/scripts/deploy.ts"
+                href="https://github.com/aroundus/tistory-skin-template-react/blob/main/scripts/deploy.ts"
                 size="medium"
                 sx={{
                   borderRadius: 5,
