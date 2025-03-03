@@ -22,14 +22,14 @@ export default function TistoryWithReactPage() {
 
   return (
     <>
+      <Helmet
+        description="프론트엔드 개발자를 위한 티스토리 템플릿"
+        image="/tistory-with-react.jpg"
+        path="/tistory-with-react"
+        title="Tistory with React"
+      />
       {isMounted && (
         <Layout header={<></>}>
-          <Helmet
-            description="프론트엔드 개발자를 위한 티스토리 템플릿"
-            image="/tistory-with-react.jpg"
-            path="/tistory-with-react"
-            title="Tistory with React"
-          />
           <Container
             disableGutters
             maxWidth="md"
