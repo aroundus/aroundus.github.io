@@ -124,7 +124,6 @@ export function HighlightSection() {
                   size="medium"
                   sx={{
                     borderRadius: 5,
-                    mt: 4,
                   }}
                   target="_blank"
                   variant="outlined"
@@ -137,7 +136,6 @@ export function HighlightSection() {
                   size="medium"
                   sx={{
                     borderRadius: 5,
-                    mt: 4,
                   }}
                   target="_blank"
                   variant="outlined"
@@ -211,6 +209,7 @@ export function HighlightSection() {
                 size="medium"
                 sx={{
                   borderRadius: 5,
+                  mt: 4,
                 }}
                 target="_blank"
                 variant="outlined"
