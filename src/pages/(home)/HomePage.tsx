@@ -104,9 +104,9 @@ export default function HomePage() {
 
   return (
     <>
+      <Helmet />
       {isMounted && (
         <Layout>
-          <Helmet />
           <KeyVisualSection
             article={fetchedArticles[0]}
             isButtonVisible

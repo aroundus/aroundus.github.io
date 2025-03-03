@@ -41,6 +41,7 @@ export function Helmet(props: HelmetProps) {
   return (
     <ReactHelmet
       defaultTitle={site.siteMetadata.title}
+      defer={false}
       htmlAttributes={{
         lang: 'ko',
       }}
