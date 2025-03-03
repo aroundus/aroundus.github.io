@@ -3,7 +3,6 @@ import React from 'react';
 import { CssBaseline as CSSBaseline, useMediaQuery } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { SheetsRegistry } from 'jss';
-import { HelmetProvider } from 'react-helmet-async';
 import { JssProvider as JSSProvider } from 'react-jss';
 
 import { darkTheme, lightTheme } from '../lib';
@@ -23,18 +22,16 @@ export function Layout({ children, header }: LayoutProps) {
   const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   return (
-    <HelmetProvider>
-      <JSSProvider
-        isSSR
-        registry={sheetsRegistry}
-      >
-        <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-          <CSSBaseline />
-          {header || <Header />}
-          <Content>{children}</Content>
-          <Footer />
-        </ThemeProvider>
-      </JSSProvider>
-    </HelmetProvider>
+    <JSSProvider
+      isSSR
+      registry={sheetsRegistry}
+    >
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <CSSBaseline />
+        {header || <Header />}
+        <Content>{children}</Content>
+        <Footer />
+      </ThemeProvider>
+    </JSSProvider>
   );
 }
