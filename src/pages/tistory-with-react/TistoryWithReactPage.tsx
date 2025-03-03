@@ -33,7 +33,7 @@ export default function TistoryWithReactPage() {
           <Container
             disableGutters
             maxWidth="md"
-            sx={{ mx: 'auto', px: 6, py: isMobile ? 40 : 20 }}
+            sx={{ mx: 'auto', px: 6, py: isMobile ? 32 : 20 }}
           >
             <Header />
             <hr />
