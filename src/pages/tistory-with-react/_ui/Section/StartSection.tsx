@@ -30,7 +30,7 @@ export function StartSection() {
         가능성은 무한하게.
       </Typography>
       <Typography variant="body1">
-        이 템플릿은 그저 개발의 시작일 뿐입니다. 코드를 수정하고, 폴더 구조를 바꾸고, 여러분의 입맛에 맞게 구성해
+        이 템플릿은 그저 개발의 시작일 뿐입니다. 코드를 수정하고, 폴더 구조를 바꾸고, 원하는 방식으로 유연하게 구성해
         보세요.
       </Typography>
       <Button
