@@ -49,7 +49,7 @@ export function WelcomeSection() {
   const scrollAnimationProps = {
     'data-aos-delay': 50,
     'data-aos-offset': 100,
-    'data-aos-once': false,
+    'data-aos-once': true,
     'data-aos': 'fade-up',
   };
 
