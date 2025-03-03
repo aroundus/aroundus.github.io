@@ -119,12 +119,6 @@ const theme = createTheme(
             &[class*="MuiTypography"] {
               text-decoration: none;
             }
-
-            @media (hover: hover) {
-              &:hover {
-                color: color-mix(in srgb, ${colors.cyan[400]} 70%, CanvasText 30%);
-              }
-            }
           }
 
           button,
@@ -231,18 +225,25 @@ export const darkTheme = createTheme(theme, {
   palette: {
     mode: 'dark',
     error: {
+      dark: colors.red[500],
       main: colors.red[400],
     },
     info: {
+      dark: colors.blue[500],
       main: colors.blue[400],
     },
     primary: {
+      dark: colors.cyan[500],
       main: colors.cyan[400],
     },
     secondary: {
+      dark: colors.grey[500],
       main: colors.grey[400],
     },
-    main: colors.lightGreen[500],
+    success: {
+      dark: colors.lightGreen[600],
+      main: colors.lightGreen[500],
+    },
   },
 });
 
@@ -250,18 +251,23 @@ export const lightTheme = createTheme(theme, {
   palette: {
     mode: 'light',
     error: {
+      dark: colors.red[600],
       main: colors.red[400],
     },
     info: {
+      dark: colors.blue[600],
       main: colors.blue[400],
     },
     primary: {
+      dark: colors.cyan[600],
       main: colors.cyan[400],
     },
     secondary: {
+      dark: colors.grey[700],
       main: colors.grey[500],
     },
     success: {
+      dark: colors.lightGreen[700],
       main: colors.lightGreen[500],
     },
   },
