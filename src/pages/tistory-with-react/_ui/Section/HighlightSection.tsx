@@ -5,6 +5,7 @@ import {
   HubOutlined as HubOutlinedIcon,
   InsertDriveFileOutlined as InsertDriveFileOutlinedIcon,
   SimCardAlertOutlined as SimCardAlertOutlinedIcon,
+  TuneOutlined as TuneOutlinedIcon,
 } from '@mui/icons-material';
 import { Masonry } from '@mui/lab';
 import { Box, Button, Card, CardContent, Link, Typography } from '@mui/material';
@@ -250,6 +251,58 @@ export function HighlightSection() {
               >
                 <Typography variant="caption">소스 코드</Typography>
               </Button>
+            </CardContent>
+          </Card>
+          <Card
+            {...scrollAnimationProps}
+            variant="outlined"
+          >
+            <CardContent>
+              <TuneOutlinedIcon
+                color="primary"
+                sx={{ height: 36, width: 36 }}
+              />
+              <Typography
+                sx={{ mt: 3 }}
+                variant="h3"
+              >
+                Linter, Formatter
+              </Typography>
+              <Typography variant="body2">
+                ESLint, Prettier, Stylelint까지 설정해 두었으니, 코드 컨벤션 걱정 없이 개발에만 집중하면 됩니다.
+              </Typography>
+              <Box
+                display="flex"
+                gap={1}
+                sx={{ mt: 4 }}
+              >
+                <Button
+                  color="info"
+                  href="https://github.com/aroundus/tistory-skin-template-react/blob/main/eslint.config.js"
+                  size="medium"
+                  sx={{
+                    borderRadius: 5,
+                    textTransform: 'unset',
+                  }}
+                  target="_blank"
+                  variant="outlined"
+                >
+                  <Typography variant="caption">ESLint</Typography>
+                </Button>
+                <Button
+                  color="info"
+                  href="https://github.com/aroundus/tistory-skin-template-react/blob/main/.prettierrc"
+                  size="medium"
+                  sx={{
+                    borderRadius: 5,
+                    textTransform: 'unset',
+                  }}
+                  target="_blank"
+                  variant="outlined"
+                >
+                  <Typography variant="caption">Prettier</Typography>
+                </Button>
+              </Box>
             </CardContent>
           </Card>
         </Masonry>
