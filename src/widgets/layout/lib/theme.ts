@@ -4,7 +4,7 @@ import { createTheme } from '@mui/material/styles';
 
 const BASE_FONT_FAMILY =
   '"Wanted Sans", "SF Pro KR", "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Apple Gothic", -apple-system, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif';
-const CODE_FONT_FAMILY = '"SF Mono", "Roboto Mono", Consolas, monospace';
+const CODE_FONT_FAMILY = '"Geist Mono", "Roboto Mono", Consolas, monospace';
 const HEADING_FONT_FAMILY = `Montserrat, ${BASE_FONT_FAMILY}`;
 
 const theme = createTheme(

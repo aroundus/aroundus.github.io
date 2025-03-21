@@ -1,4 +1,5 @@
-import 'typeface-montserrat';
+import '@fontsource/geist-mono/500.css';
+import '@fontsource/montserrat/700.css';
 
 import 'aos/dist/aos.css';
 import 'prismjs/themes/prism-okaidia.css';

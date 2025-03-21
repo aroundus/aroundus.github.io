@@ -49,10 +49,6 @@ const HTML = (props) => {
           href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css"
           rel="stylesheet"
         />
-        <link
-          href="https://fonts.cdnfonts.com/css/sf-mono"
-          rel="stylesheet"
-        />
 
         {isTitleEmpty && <title>{title}</title>}
         {isDescriptionEmpty && (
