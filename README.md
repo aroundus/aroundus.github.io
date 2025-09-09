@@ -1,6 +1,6 @@
 # aroundus.github.io
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Faroundus%2Faroundus.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![hits](https://myhits.vercel.app/api/hit/https%3A%2F%2Fgithub.com%2Faroundus%2Faroundus.github.io?color=green&label=hits&size=small)](https://myhits.vercel.app)
 ![Gatsby](https://img.shields.io/badge/5.13.5-black?&label=Gatsby&labelColor=663399&logo=Gatsby&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/16.7.1-black?&label=GraphQL&labelColor=E10098&logo=GraphQL&logoColor=white)
 ![MUI](https://img.shields.io/badge/5.15.18-black?&label=MUI&labelColor=007FFF&logo=MUI&logoColor=white)
