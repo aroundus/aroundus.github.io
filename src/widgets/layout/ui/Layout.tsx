@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CssBaseline as CSSBaseline, useMediaQuery } from '@mui/material';
+import { CssBaseline, useMediaQuery } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { SheetsRegistry } from 'jss';
 import { JssProvider as JSSProvider } from 'react-jss';
@@ -27,7 +27,7 @@ export function Layout({ children, header }: LayoutProps) {
       registry={sheetsRegistry}
     >
       <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-        <CSSBaseline />
+        <CssBaseline />
         {header || <Header />}
         <Content>{children}</Content>
         <Footer />
