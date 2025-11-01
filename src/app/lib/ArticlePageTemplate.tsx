@@ -115,7 +115,7 @@ export default function ArticlePageTemplate({ data, data: { markdownRemark } }: 
 }
 
 export const query = graphql`
-  query Article($id: String!, $prevArticleID: String, $nextArticleID: String) {
+  query Article($id: String!, $prevArticleId: String, $nextArticleId: String) {
     site {
       siteMetadata {
         title
@@ -137,7 +137,7 @@ export const query = graphql`
         date(formatString: "YYYY-MM-DD")
       }
     }
-    prevArticle: markdownRemark(id: { eq: $prevArticleID }) {
+    prevArticle: markdownRemark(id: { eq: $prevArticleId }) {
       fields {
         slug
       }
@@ -146,7 +146,7 @@ export const query = graphql`
         title
       }
     }
-    nextArticle: markdownRemark(id: { eq: $nextArticleID }) {
+    nextArticle: markdownRemark(id: { eq: $nextArticleId }) {
       fields {
         slug
       }

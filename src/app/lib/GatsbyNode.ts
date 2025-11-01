@@ -48,16 +48,16 @@ GatsbyNode.createPages = async ({ actions, graphql, reporter }) => {
   const ArticlePageTemplate = path.resolve(__dirname, './ArticlePageTemplate.tsx');
 
   articles.forEach((article: AnyObject, index: number) => {
-    const prevArticleID = index === articles.length - 1 ? null : articles[index + 1].id;
-    const nextArticleID = index === 0 ? null : articles[index - 1].id;
+    const prevArticleId = index === articles.length - 1 ? null : articles[index + 1].id;
+    const nextArticleId = index === 0 ? null : articles[index - 1].id;
 
     createPage({
       path: article.fields.slug,
       component: ArticlePageTemplate,
       context: {
         id: article.id,
-        prevArticleID,
-        nextArticleID,
+        prevArticleId,
+        nextArticleId,
       },
     });
   });
