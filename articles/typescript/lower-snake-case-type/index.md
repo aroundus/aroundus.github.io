@@ -4,6 +4,7 @@ index: 4
 title: LowerSnakeCase Utility Type 만들기
 description: camelCase 표기법을 lower_snake_case 표기법으로 변환하는 유틸리티 타입을 소개합니다. 축약어 대문자 조합인 isCTAButton 이름인 경우에도 is_cta_button 이름으로 변환할 수 있어야 합니다.
 date: 2024-06-09
+draft: true
 ---
 
 # TL;DR

@@ -30,11 +30,11 @@ export function ArticleListItem({ article }: ArticleListItemProps) {
 
   return (
     <ListItem
-      dense
+      data-aos="fade-up"
       data-aos-delay="50"
       data-aos-offset="100"
       data-aos-once="true"
-      data-aos="fade-up"
+      dense
     >
       <StyledContent
         divider
