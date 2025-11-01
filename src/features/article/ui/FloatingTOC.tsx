@@ -30,12 +30,12 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
   )();
 
   const [activeStepIndex, setActiveStepIndex] = useState(0);
-  const [tocSteps, setTOCSteps] = useState<TOCStep[]>([]);
+  const [tocSteps, setTocSteps] = useState<TOCStep[]>([]);
   const [position, setPosition] = useState<React.CSSProperties['position']>('absolute');
   const [xOffset, setXOffset] = useState(0);
   const [yOffset, setYOffset] = useState(0);
 
-  function setTOCStepsOffset() {
+  function setTocStepsOffset() {
     const parser = new DOMParser();
     const html = parser.parseFromString(htmlString, 'text/html');
     const steps: TOCStep[] = [];
@@ -69,7 +69,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       });
     });
 
-    setTOCSteps(steps);
+    setTocSteps(steps);
   }
 
   function handleStepClick(top: number) {
@@ -129,7 +129,7 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       window.addEventListener(type, throttledScroll);
     });
 
-    setTOCStepsOffset();
+    setTocStepsOffset();
 
     return () => {
       ['resize', 'orientationChange', 'scroll'].forEach((type) => {
@@ -150,9 +150,9 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
       <Box sx={{ minWidth: 160 }}>
         <Stepper
           activeStep={activeStepIndex}
-          orientation="vertical"
           connector={null}
           nonLinear
+          orientation="vertical"
         >
           {tocSteps.map((step) => (
             <Step
@@ -170,9 +170,9 @@ export function FloatingTOC({ html: htmlString, target }: FloatingTOCProps) {
                 }}
               >
                 <Typography
-                  variant="subtitle1"
-                  lineHeight={1.3}
                   fontSize={15}
+                  lineHeight={1.3}
+                  variant="subtitle1"
                 >
                   {step.text}
                 </Typography>
