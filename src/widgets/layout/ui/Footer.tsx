@@ -73,13 +73,10 @@ export function Footer() {
         <Box>
           <Grid
             container
-            justifyContent="space-between"
             spacing={isMobile ? 6 : 12}
+            sx={{ justifyContent: 'space-between' }}
           >
-            <Grid
-              item
-              sx={{ maxWidth: 260 }}
-            >
+            <Grid sx={{ maxWidth: 260 }}>
               <Box
                 alignItems="baseline"
                 display="flex"
@@ -117,7 +114,7 @@ export function Footer() {
                 로 만들었습니다.
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid>
               <Typography
                 fontSize={15}
                 fontWeight={600}
